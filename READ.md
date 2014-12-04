@@ -15,6 +15,10 @@ http://github.com/jiangxincode
 
 * 完成猜数字的jsp实现
 
+### Version 0.03
+
+* 完成猜数字的servlet实现
+
 ## 将要进行的改进
 
 * 猜数字jsp实现中js问题
