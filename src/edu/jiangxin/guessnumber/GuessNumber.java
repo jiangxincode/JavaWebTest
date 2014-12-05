@@ -1,4 +1,4 @@
-package edu.jinagxin.guessnumber;
+package edu.jiangxin.guessnumber;
 
 import java.io.IOException;
 import java.util.Random;

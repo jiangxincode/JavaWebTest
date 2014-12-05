@@ -19,6 +19,10 @@ http://github.com/jiangxincode
 
 * 完成猜数字的servlet实现
 
+### Version 0.04
+
+* 初步实现流量统计，但是还有很多问题需要解决
+
 ## 将要进行的改进
 
 * 猜数字jsp实现中js问题
