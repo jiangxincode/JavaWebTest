@@ -49,7 +49,7 @@ public class GuessNumber extends HttpServlet {
 		Integer guess = Integer.parseInt(request.getParameter("input_number"));
 		Integer random = (Integer)request.getSession().getAttribute("random");
 		Integer guessTimes = (Integer)request.getSession().getAttribute("guessTimes");
-		request.getSession().setAttribute("guessTimes", guessTimes);
+		request.getSession().setAttribute("guessTimes", ++guessTimes);
 		
 		if(guess == random) {
 			request.setAttribute("msg", "right");

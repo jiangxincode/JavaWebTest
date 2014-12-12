@@ -3,8 +3,8 @@
 <head>
 </head>
 <body>
-${msg } 你已经猜了${guessTimes }次。本游戏共开了${newGameCnt }局。<a href="<%=request.getContextPath() %>/numberGuessServlet?act=newGame">新游戏</a><br/>
-<form action="<%=request.getContextPath() %>/numberGuessServlet" method="get">
+${msg } 你已经猜了${guessTimes }次。本游戏共开了${newGameCnt }局。<a href="<%=request.getContextPath() %>/GuessNumber?act=newGame">新游戏</a><br/>
+<form action="<%=request.getContextPath() %>/GuessNumber" method="get">
 请填写1~100的数值
 <input type="hidden" name="act" value="guess">
 <input type="text" name="input_number">${param.input_number}

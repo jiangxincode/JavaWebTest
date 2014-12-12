@@ -5,6 +5,6 @@
 <body>
 猜对了，你共猜了${guessTimes}次。
 本游戏共开了${newGameCnt}次。
-<a href="<%=request.getContextPath() %>/numberGuessServlet?act=newGame">开始新游戏</a>
+<a href="<%=request.getContextPath() %>/GuessNumber?act=newGame">开始新游戏</a>
 </body>
 </html>

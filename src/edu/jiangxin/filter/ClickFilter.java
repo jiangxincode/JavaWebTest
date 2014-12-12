@@ -17,10 +17,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
-/**
- * 做个简单的访问统计，统计数据记录在文件里。然后做一个页面访问排行榜的功能，练习排序，Comparator等。
- * 本类是上述作业的参考答案，但没有文件操作的内容，也基本没有注释。因为仅仅是参考答案 ：-)。
- */
+
 public class ClickFilter implements Filter {
 	public final static String ClickstreamMapKey = "simpleClickstreamMap";
 	Map<String,Integer> statMap;
@@ -36,7 +33,7 @@ public class ClickFilter implements Filter {
 			Set<Map.Entry<String,Integer>> entries = statMap.entrySet();
 			List<Map.Entry<String,Integer>> entriesList = new ArrayList<Map.Entry<String,Integer>>();
 			entriesList.addAll(entries);
-			//也可以用Arrays。
+			//也锟斤拷锟斤拷锟斤拷Arrays锟斤拷
 			Collections.sort(entriesList, new Comparator<Map.Entry<String,Integer>>() {
 				public int compare(Entry<String, Integer> o1,
 						Entry<String, Integer> o2) {
