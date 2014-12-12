@@ -180,8 +180,9 @@ public class BookAdmin extends HttpServlet {
 		try {
 			conn = getConnection();
 			stat = conn.createStatement();
-			rs = stat.executeQuery("select * from book while id="+id);
-			Map<String,Object> map = rsToMap(rs);
+			rs = stat.executeQuery("select * from book where id="+id);
+			rs.next();
+			Map<String,Object> map = rsToMap(rs); //why
 			req.setAttribute("book", map);
 			req.getRequestDispatcher("JSP/BookAdmin/book_edit_form.jsp").forward(req, resp);
 			
@@ -377,6 +378,7 @@ public class BookAdmin extends HttpServlet {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("id", rs.getLong("id"));
 		map.put("bookName", rs.getString("bookName"));
+		map.put("author", rs.getString("author"));
 		map.put("price", rs.getString("price"));
 		map.put("publicationDate", rs.getDate("publicationDate"));
 		return map;

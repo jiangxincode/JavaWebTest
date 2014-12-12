@@ -34,6 +34,10 @@ http://github.com/jiangxincode
 * 修复了一些小bugs
 * 数据库，源代码等全部统一为utf8编码
 
+### Version 0.07
+
+* 解决部分数据库作者无法显示的bug
+
 
 ## 将要进行的改进
 
@@ -41,4 +45,4 @@ http://github.com/jiangxincode
 * 重新设计各个页面的格式
 * 删除不必要代码
 * 数据库乱码
-* 数据库作者无法显示
+* 修复why标记
