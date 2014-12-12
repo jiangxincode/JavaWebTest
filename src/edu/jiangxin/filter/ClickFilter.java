@@ -34,7 +34,7 @@ public class ClickFilter implements Filter {
 		statMap.put(uri, clicks);
 		if(uri.endsWith("/Click")){
 			Set<Map.Entry<String,Integer>> entries = statMap.entrySet();
-			List<Map.Entry<String,Integer>> entriesList = new ArrayList();
+			List<Map.Entry<String,Integer>> entriesList = new ArrayList<Map.Entry<String,Integer>>();
 			entriesList.addAll(entries);
 			//也可以用Arrays。
 			Collections.sort(entriesList, new Comparator<Map.Entry<String,Integer>>() {
@@ -51,7 +51,7 @@ public class ClickFilter implements Filter {
 		chain.doFilter(request, response);
 	}
 	public void init(FilterConfig fConfig) throws ServletException {
-		statMap = new Hashtable();
+		statMap = new Hashtable<String, Integer>();
 		fConfig.getServletContext().setAttribute(ClickstreamMapKey, statMap);
 	}
 

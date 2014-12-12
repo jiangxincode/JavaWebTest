@@ -23,6 +23,12 @@ http://github.com/jiangxincode
 
 * 初步实现流量统计，但是还有很多问题需要解决
 
+### Version 0.05
+
+* 初步实现CURD的功能
+* 去除项目全部警告
+
+
 ## 将要进行的改进
 
 * 猜数字jsp实现中js问题

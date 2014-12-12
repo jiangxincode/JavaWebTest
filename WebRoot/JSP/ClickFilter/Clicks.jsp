@@ -7,7 +7,11 @@
 	<body>
 <table>
 	<thead>
-	<th>序号</th><th>URI</th><th>访问次数</th>
+	<tr>
+	<th>序号</th>
+	<th>URI</th>
+	<th>访问次数</th>
+	</tr>
 	</thead>
 	<c:forEach items="${entriesList }" var="entry" varStatus="status">
 	<tr>
