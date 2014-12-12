@@ -6,7 +6,7 @@
 <title>编辑书籍</title>
 </head>
 <body>
-<form action="/hellojavaweb/bookAdmin" method="post">
+<form action="${pageContext.request.contextPath}/BookAdmin" method="post">
 	<input type="hidden" name="act" value="save"/>
 	<input type="hidden" name="id" value=""/>
 	书名<input type="text" name="bookName" value=""><br>
@@ -14,7 +14,7 @@
 	价格<input type="text" name="price" value=""><br>
 	
 	出版日期<input type="text" name="publicationDate" value=""><br>
-	<input type="submit" value="保存"/><a href="/hellojavaweb/bookAdmin">列表</a>
+	<input type="submit" value="保存"/><a href="${pageContext.request.contextPath}/BookAdmin">列表</a>
 </form>
 </body>
 </html>

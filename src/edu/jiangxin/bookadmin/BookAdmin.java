@@ -72,7 +72,7 @@ public class BookAdmin extends HttpServlet {
 			rs = stat.executeQuery(sql);
 			List<Map<String, Object>> list = new ArrayList<Map<String,Object>>();
 			while(rs.next()) {
-				Map<String,Object> map = rsBookMap(rs);
+				Map<String,Object> map = rsToMap(rs);
 				list.add(map);
 			}
 			req.setAttribute("books", list);
@@ -181,7 +181,7 @@ public class BookAdmin extends HttpServlet {
 			conn = getConnection();
 			stat = conn.createStatement();
 			rs = stat.executeQuery("select * from book while id="+id);
-			Map<String,Object> map = rsBookMap(rs);
+			Map<String,Object> map = rsToMap(rs);
 			req.setAttribute("book", map);
 			req.getRequestDispatcher("JSP/BookAdmin/book_edit_form.jsp").forward(req, resp);
 			
@@ -295,7 +295,7 @@ public class BookAdmin extends HttpServlet {
 		
 		Long id = Long.parseLong(req.getParameter("id"));
 		String bookName = req.getParameter("bookName");
-		String author = req.getParameter("auhtor");
+		String author = req.getParameter("author");
 		Float price = null;
 		if((req.getParameter("price") != null) && (!"".equals(req.getParameter("price")))) {
 			price = Float.parseFloat(req.getParameter("price"));
@@ -354,18 +354,26 @@ public class BookAdmin extends HttpServlet {
 	}
 	
 	Connection getConnection() throws ClassNotFoundException, SQLException {
-		String driveClass = "com.mysql.jdbc.Drive";
+		String driveClass = "com.mysql.jdbc.Driver";
 		String url = "jdbc:mysql://localhost:3306/javawebtest?useUnicode=true&characterEncoding=GBK";
 		String user = "root";
 		String password = "";
 		
-		Class.forName(driveClass);
+		try {
+			Class.forName(driveClass).newInstance();
+		} catch (InstantiationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Connection conn = DriverManager.getConnection(url,user,password);
 		return conn;
 		
 	}
 	
-	Map<String,Object> rsBookMap(ResultSet rs) throws SQLException {
+	Map<String,Object> rsToMap(ResultSet rs) throws SQLException {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("id", rs.getLong("id"));
 		map.put("bookName", rs.getString("bookName"));

@@ -27,7 +27,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<li><a href="JSP/GuessNumberJsp/input.jsp">猜数字，采用jsp实</a></li>
     	<li><a href="JSP/GuessNumberServlet/index.jsp">猜数字，使用servlet实现</a></li>
     	<li><a href="JSP/ClickFilter/Clicks.jsp">访问量统计</a></li>
-    	<li>数据库应用</li>
+    	<li><a href="BookAdmin">数据库应用</a></li>
     </ol>
   </body>
 </html>

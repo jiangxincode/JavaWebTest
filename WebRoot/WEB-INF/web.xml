@@ -24,7 +24,7 @@
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>BookAdmin</servlet-name>
-    <url-pattern>/servlet/BookAdmin</url-pattern>
+    <url-pattern>/BookAdmin</url-pattern>
   </servlet-mapping>
     <filter>
         <filter-name>ClickFilter</filter-name>

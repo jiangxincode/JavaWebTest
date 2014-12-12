@@ -8,7 +8,7 @@
 <title>编辑书籍</title>
 </head>
 <body>
-<form action="${pageContext.request.contextPath}/bookAdmin" method="post">
+<form action="${pageContext.request.contextPath}/BookAdmin" method="post">
 	<input type="hidden" name="act" value="save"/>
 	<input type="hidden" name="id" value="${book.id }"/>
 	书名<input type="text" name="bookName" value="${book.bookName }"><br>
@@ -16,7 +16,7 @@
 	价格<input type="text" name="price" value="${book.price }"><br>
 	<fmt:formatDate pattern="yyyy-MM-dd" value="${book.publicationDate }" var="dateFmt"/>
 	出版日期<input type="text" name="publicationDate" value="${dateFmt }"><br>
-	<input type="submit" value="保存"/><a href="${pageContext.request.contextPath}/bookAdmin">列表</a>
+	<input type="submit" value="保存"/><a href="${pageContext.request.contextPath}/BookAdmin">列表</a>
 </form>
 </body>
 </html>
