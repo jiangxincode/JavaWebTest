@@ -41,7 +41,7 @@ public class ClickFilter implements Filter {
 				}
 			});
 			request.setAttribute("entriesList", entriesList);
-			request.getRequestDispatcher("/ClickFilter/Clicks.jsp").forward(request, response);
+			request.getRequestDispatcher("JSP/ClickFilter/Clicks.jsp").forward(request, response);
 			return;
 		}
 	

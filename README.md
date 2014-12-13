@@ -38,6 +38,9 @@ http://github.com/jiangxincode
 
 * 解决部分数据库作者无法显示的bug
 
+### Version 0.08
+
+* 修复了有关流量统计的一些bugs
 
 ## 将要进行的改进
 
