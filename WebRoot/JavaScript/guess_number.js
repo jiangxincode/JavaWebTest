@@ -1,10 +1,18 @@
-function validate(){
+function validate() {
 	var ele = document.getElementById("guess_input");
-	if(!ele){alert("ÕÒ²»µ½ÊäÈë¿ò");return false;}
+	if (!ele) {
+		alert("æ‰¾ä¸åˆ°è¾“å…¥æ¡†ï¼");
+		return false;
+	}
 	var v = ele.value;
 	var pass = true;
-	if(v == "")pass = false;
-	if(/[^\d]/.test(v))pass = false;
-	if(!pass){alert("ÊäÈëÓĞ´íÎó¡£");return false;}
+	if (v == "")
+		pass = false;
+	if (/[^\d]/.test(v))
+		pass = false;
+	if (!pass) {
+		alert("è¾“å…¥æœ‰é”™è¯¯ï¼");
+		return false;
+	}
 	return true;
 }

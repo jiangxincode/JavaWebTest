@@ -40,5 +40,9 @@
             <taglib-location>/WEB-INF/xianlin.tld</taglib-location>
         </taglib>
     </jsp-config>
+    <icon>
+        <small-icon>images/smallicon.jpg</small-icon>
+        <large-icon>images/largeicon.jpg</large-icon>
+    </icon>
 
 </web-app>
