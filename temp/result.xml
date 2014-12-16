@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <list> 
-  <node id="1">
-    <name alias="ÀîåÓ">ÕÅÈı</name>
-    <space>http://wishlife.javaeye.com</space>
+  <node id="1"> 
+    <name alias="æé€µ">å¼ ä¸‰</name>  
+    <space>http://wishlife.javaeye.com</space> 
   </node>  
-  <node>
-    <name>ÀîËÄ</name>
-    <space>http://user.qzone.qq.com/94611981</space>
+  <node> 
+    <name>æå››</name>  
+    <space>http://user.qzone.qq.com/94611981</space> 
   </node> 
 </list>
