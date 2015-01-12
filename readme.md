@@ -9,3 +9,7 @@ modified by jinagxin
 ## Version 0.02
 
 * 修改完com.yuqiaotech.helloj2ee.xml下的文件
+
+## Version 0.03
+
+* 去除所有警告。

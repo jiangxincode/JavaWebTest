@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
 /**
  * jdbc的基本使用。
  *
@@ -12,7 +13,7 @@ import java.sql.Statement;
 public class JDBCSample {
 	public static void main(String[] args) {
 
-		//如果是其他数据库，需要修改这里，并下载相应的JDBC驱动包。xampp  php
+		// 如果是其他数据库，需要修改这里，并下载相应的JDBC驱动包。xampp php
 		String DriverName = "org.gjt.mm.mysql.Driver";
 		String dbURL = "jdbc:mysql://localhost/helloj2ee";
 		String dbuser = "root";
@@ -22,25 +23,25 @@ public class JDBCSample {
 		ResultSet rs = null;
 		try {
 			// 得到一个数据库连接
-			//反射
-			//相当于 new org.gjt.mm.mysql.Driver();
+			// 反射
+			// 相当于 new org.gjt.mm.mysql.Driver();
 			Class.forName(DriverName).newInstance();
 			conn = DriverManager.getConnection(dbURL, dbuser, dbpassword);
 			// 产生一个statement对象，该对象用来执行sql语句。
 			stmt = conn.createStatement();
 
-			//首先向表里插入一些数据
+			// 首先向表里插入一些数据
 			String updateSql = "insert into worker(name,gender,age) values('Tom','male',30)";
-			int cnt = stmt.executeUpdate(updateSql);
-			//对数据进行一些修改
+			stmt.executeUpdate(updateSql);
+			// 对数据进行一些修改
 			String updateSql2 = "update worker set name='Rose',gender='female' where name='Tom'";
 			stmt.executeUpdate(updateSql2);
-			
-			//查询数据
+
+			// 查询数据
 			String sql = "select name,gender from worker";
 			// 查询结果是保存在一个ResultSet的对象里
 			rs = stmt.executeQuery(sql);
-			
+
 			// 对resultset调用next方法，可以讲数据指向第一条，
 			// 调用类似getString之类的方法就可以获取该数据某个字段的值
 			System.out.println("打印查询记录的内容。");
@@ -56,7 +57,7 @@ public class JDBCSample {
 			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}finally{
+		} finally {
 			try {
 				rs.close();
 			} catch (SQLException e) {
@@ -76,14 +77,9 @@ public class JDBCSample {
 	}
 }
 /*
-可以下载xampp一次性安装mysql和mysql的一个管理工具phpmyadmin
-也可以单独下载mysql安装程序，mysql本身没有完善的界面化管理工具，你可以在网上自己找一个。
-CREATE TABLE IF NOT EXISTS worker (
-id int NOT NULL auto_increment,
-name varchar(20) NOT NULL,
-gender varchar(10) default NULL,
-age int(3) default NULL,
-PRIMARY KEY  (`id`)
-) DEFAULT CHARSET=gbk ;
-
-*/
+ * 可以下载xampp一次性安装mysql和mysql的一个管理工具phpmyadmin
+ * 也可以单独下载mysql安装程序，mysql本身没有完善的界面化管理工具，你可以在网上自己找一个。 CREATE TABLE IF NOT EXISTS
+ * worker ( id int NOT NULL auto_increment, name varchar(20) NOT NULL, gender
+ * varchar(10) default NULL, age int(3) default NULL, PRIMARY KEY (`id`) )
+ * DEFAULT CHARSET=gbk ;
+ */

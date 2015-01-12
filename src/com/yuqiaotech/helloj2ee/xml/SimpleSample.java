@@ -10,7 +10,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Stack;
 
-
 /**
  * 大体代码是从http://www.javaeye.com/topic/181865抄来的。 下面这个是被广泛抄袭的，关于java里读取xml的概要介绍。
  * http://blog.csdn.net/geekwang/archive/2008/05/25/2480504.aspx
@@ -36,20 +35,28 @@ public class SimpleSample {
 
 		try {
 			InputStream in = SimpleSample.class.getResourceAsStream(xmlName);
-			javax.xml.parsers.DocumentBuilderFactory factory = javax.xml.parsers.DocumentBuilderFactory.newInstance();
-			javax.xml.parsers.DocumentBuilder builder = factory.newDocumentBuilder();
+			javax.xml.parsers.DocumentBuilderFactory factory = javax.xml.parsers.DocumentBuilderFactory
+					.newInstance();
+			javax.xml.parsers.DocumentBuilder builder = factory
+					.newDocumentBuilder();
 			org.w3c.dom.Document doc = builder.parse(in);
 			org.w3c.dom.NodeList nl = doc.getElementsByTagName("node");
 			for (int i = 0; i < nl.getLength(); i++) {
 				org.w3c.dom.Element ele = (org.w3c.dom.Element) nl.item(i);
-				System.out.println("|| Name: |" + ele.getElementsByTagName("name").item(0).getFirstChild().getNodeValue());
-				System.out.println("|| Space: |" + ele.getElementsByTagName("space").item(0).getFirstChild().getNodeValue());
-				System.out.println("-------------------------------------------------");
+				System.out.println("|| Name: |"
+						+ ele.getElementsByTagName("name").item(0)
+								.getFirstChild().getNodeValue());
+				System.out.println("|| Space: |"
+						+ ele.getElementsByTagName("space").item(0)
+								.getFirstChild().getNodeValue());
+				System.out
+						.println("-------------------------------------------------");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println("耗时：" + (System.currentTimeMillis() - lasting) + " MS");
+		System.out.println("耗时：" + (System.currentTimeMillis() - lasting)
+				+ " MS");
 	}
 
 	/**
@@ -59,32 +66,35 @@ public class SimpleSample {
 		Stack<String> tags = new Stack<String>();
 		String name;
 		String space;
-		public void startElement(String uri, String localName, String qName, org.xml.sax.Attributes attrs) {
-			if(!tags.empty()) {
+
+		public void startElement(String uri, String localName, String qName,
+				org.xml.sax.Attributes attrs) {
+			if (!tags.empty()) {
 				tags.push(qName);
-			} else if(qName.equals("node")) {
+			} else if (qName.equals("node")) {
 				tags.push(qName);
 			}
 		}
-		
+
 		public void characters(char ch[], int start, int length) {
-			if(!tags.empty()) {
+			if (!tags.empty()) {
 				String tag = tags.peek();
-				if(tag.equals("name")) {
-					name = new String(ch,start,length);
-				} else if(tag.equals("space")) {
-					space = new String(ch,start,length);
+				if (tag.equals("name")) {
+					name = new String(ch, start, length);
+				} else if (tag.equals("space")) {
+					space = new String(ch, start, length);
 				}
 			}
 		}
-		
+
 		public void endElement(String uri, String localName, String qName) {
-			if(!tags.empty()) {
+			if (!tags.empty()) {
 				String tag = tags.pop();
-				if((tags.empty()) && tag.equals("node")) {
+				if ((tags.empty()) && tag.equals("node")) {
 					System.out.println("|| Name:  |" + name);
 					System.out.println("||Space:  |" + space);
-					System.out.println("-------------------------------------------------");
+					System.out
+							.println("-------------------------------------------------");
 				}
 			}
 		}
@@ -95,19 +105,22 @@ public class SimpleSample {
 		long lasting = System.currentTimeMillis();
 		try {
 			InputStream in = SimpleSample.class.getResourceAsStream(xmlName);
-			javax.xml.parsers.SAXParserFactory sf = javax.xml.parsers.SAXParserFactory.newInstance();
+			javax.xml.parsers.SAXParserFactory sf = javax.xml.parsers.SAXParserFactory
+					.newInstance();
 			javax.xml.parsers.SAXParser sp = sf.newSAXParser();
 			SaxHandler reader = new SaxHandler();
 			sp.parse(in, reader);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println("SAX 耗时：" + (System.currentTimeMillis() - lasting) + " MS");
+		System.out.println("SAX 耗时：" + (System.currentTimeMillis() - lasting)
+				+ " MS");
 	}
 
 	/**
 	 * JDOM方式
 	 */
+	@SuppressWarnings("unchecked")
 	public void JDOM() {
 		long lasting = System.currentTimeMillis();
 		try {
@@ -115,15 +128,14 @@ public class SimpleSample {
 			InputStream in = SimpleSample.class.getResourceAsStream(xmlName);
 			org.jdom.Document doc = builder.build(in);
 			org.jdom.Element foo = doc.getRootElement();
-			@SuppressWarnings("unchecked")
 			List<org.jdom.Element> allChildren = foo.getChildren();
 			for (int i = 0; i < allChildren.size(); i++) {
 				System.out.println("|| Name:  |"
-						+ ((org.jdom.Element) allChildren.get(i)).getChild("name")
-								.getText());
+						+ ((org.jdom.Element) allChildren.get(i)).getChild(
+								"name").getText());
 				System.out.println("||Space:  |"
-						+ ((org.jdom.Element) allChildren.get(i)).getChild("space")
-								.getText());
+						+ ((org.jdom.Element) allChildren.get(i)).getChild(
+								"space").getText());
 				System.out
 						.println("-------------------------------------------------");
 			}
@@ -137,6 +149,7 @@ public class SimpleSample {
 	/**
 	 * DOM4J方式
 	 */
+	@SuppressWarnings("unchecked")
 	public void DOM4J() {
 		long lasting = System.currentTimeMillis();
 		try {
@@ -145,8 +158,8 @@ public class SimpleSample {
 			org.dom4j.Document doc = reader.read(in); // 注意这里的Document是org.dom4j包下的
 			org.dom4j.Element root = doc.getRootElement();
 			org.dom4j.Element foo;
-			for (@SuppressWarnings("unchecked")
-			Iterator<org.dom4j.Element> i = root.elementIterator("node"); i.hasNext();) {
+			for (Iterator<org.dom4j.Element> i = root.elementIterator("node"); i
+					.hasNext();) {
 				foo = (org.dom4j.Element) i.next();
 				System.out.println("|| Name:  |" + foo.elementText("name"));
 				System.out.println("||Space:  |" + foo.elementText("space"));
@@ -156,7 +169,8 @@ public class SimpleSample {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println("DOM4J 耗时：" + (System.currentTimeMillis() - lasting) + " MS");
+		System.out.println("DOM4J 耗时：" + (System.currentTimeMillis() - lasting)
+				+ " MS");
 	}
 
 	/**
@@ -165,9 +179,12 @@ public class SimpleSample {
 	 * @throws DocumentException
 	 * @throws IOException
 	 */
-	public static void saveDocByDom4J() throws org.dom4j.DocumentException, IOException {
-		Writer out = new OutputStreamWriter(new FileOutputStream(dom4jSaveTo),"UTF-8");
-		org.dom4j.io.OutputFormat format = org.dom4j.io.OutputFormat.createPrettyPrint();
+	public static void saveDocByDom4J() throws org.dom4j.DocumentException,
+			IOException {
+		Writer out = new OutputStreamWriter(new FileOutputStream(dom4jSaveTo),
+				"UTF-8");
+		org.dom4j.io.OutputFormat format = org.dom4j.io.OutputFormat
+				.createPrettyPrint();
 		org.dom4j.io.XMLWriter writer = new org.dom4j.io.XMLWriter(out, format);
 		InputStream in = SimpleSample.class.getResourceAsStream(xmlName);
 		org.dom4j.io.SAXReader reader = new org.dom4j.io.SAXReader();
@@ -180,21 +197,29 @@ public class SimpleSample {
 	 * 使用Transformer和xslt。 http://www.ibm.com/developerworks/cn/xml/x-xslt/
 	 * 
 	 */
-	public static void saveByTransformer() throws javax.xml.parsers.ParserConfigurationException,
-	org.xml.sax.SAXException, IOException {
+	public static void saveByTransformer()
+			throws javax.xml.parsers.ParserConfigurationException,
+			org.xml.sax.SAXException, IOException {
 		try {
 			InputStream in = SimpleSample.class.getResourceAsStream(xmlName);
 			InputStream inXsl = SimpleSample.class.getResourceAsStream(xlst);
 			javax.xml.parsers.DocumentBuilderFactory factory = javax.xml.parsers.DocumentBuilderFactory
 					.newInstance();
-			javax.xml.parsers.DocumentBuilder builder = factory.newDocumentBuilder();
+			javax.xml.parsers.DocumentBuilder builder = factory
+					.newDocumentBuilder();
 			org.w3c.dom.Document doc = builder.parse(in);
-			javax.xml.transform.stream.StreamSource style = new javax.xml.transform.stream.StreamSource(inXsl);
-			javax.xml.transform.TransformerFactory tFactory = javax.xml.transform.TransformerFactory.newInstance();
-			javax.xml.transform.Transformer transformer = tFactory.newTransformer(style);
-			transformer.setOutputProperty(javax.xml.transform.OutputKeys.ENCODING, "GBK");
-			javax.xml.transform.dom.DOMSource source = new javax.xml.transform.dom.DOMSource(doc);
-			javax.xml.transform.stream.StreamResult result = new javax.xml.transform.stream.StreamResult(new File(xsltSaveTo));
+			javax.xml.transform.stream.StreamSource style = new javax.xml.transform.stream.StreamSource(
+					inXsl);
+			javax.xml.transform.TransformerFactory tFactory = javax.xml.transform.TransformerFactory
+					.newInstance();
+			javax.xml.transform.Transformer transformer = tFactory
+					.newTransformer(style);
+			transformer.setOutputProperty(
+					javax.xml.transform.OutputKeys.ENCODING, "GBK");
+			javax.xml.transform.dom.DOMSource source = new javax.xml.transform.dom.DOMSource(
+					doc);
+			javax.xml.transform.stream.StreamResult result = new javax.xml.transform.stream.StreamResult(
+					new File(xsltSaveTo));
 			transformer.transform(source, result);
 		} catch (javax.xml.transform.TransformerConfigurationException e) {
 			throw new RuntimeException(e.getMessage(), e);
@@ -203,8 +228,9 @@ public class SimpleSample {
 		}
 	}
 
-	public static void main(String arge[]) throws javax.xml.parsers.ParserConfigurationException,
-	org.xml.sax.SAXException, IOException, org.dom4j.DocumentException {
+	public static void main(String arge[])
+			throws javax.xml.parsers.ParserConfigurationException,
+			org.xml.sax.SAXException, IOException, org.dom4j.DocumentException {
 		SimpleSample myXML = new SimpleSample();
 		System.out.println("=====================DOM=========================");
 		myXML.DOM();
@@ -214,9 +240,11 @@ public class SimpleSample {
 		myXML.JDOM();
 		System.out.println("=====================DOM4J=======================");
 		myXML.DOM4J();
-		System.out.println("=====================DOM4J的格式化保存=======================");
+		System.out
+				.println("=====================DOM4J的格式化保存=======================");
 		saveDocByDom4J();
-		System.out.println("=====================Transformer和xslt的使用=======================");
+		System.out
+				.println("=====================Transformer和xslt的使用=======================");
 		saveByTransformer();
 	}
 }

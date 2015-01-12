@@ -47,12 +47,12 @@ public class Counter implements InvocationHandler {
 	// interface Intercepter{
 	// void before();
 	// void after();
-	//		
+	//
 	// }
 	// static class IntercepterFactory{
 	// public static Intercepter getIntercepter(String intercepterName){
 	// return null;
 	// }
-	//		
+	//
 	// }
 }
