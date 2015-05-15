@@ -7,6 +7,7 @@ import com.shengsiyuan.junit3.Calculator2;
 import junit.framework.Assert;
 import junit.framework.TestCase;
 
+@SuppressWarnings("deprecation")
 public class Calculator2Test extends TestCase {
 	public void testAdd() {
 		try {

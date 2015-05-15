@@ -7,6 +7,7 @@ import com.shengsiyuan.junit3.DeleteAll;
 import junit.framework.Assert;
 import junit.framework.TestCase;
 
+@SuppressWarnings("deprecation")
 public class DeleteAllTest extends TestCase {
 	public void testDeleteAll() {
 		File file = null;

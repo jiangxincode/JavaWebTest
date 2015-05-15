@@ -5,6 +5,7 @@ import com.shengsiyuan.junit3.MyStack;
 import junit.framework.Assert;
 import junit.framework.TestCase;
 
+@SuppressWarnings("deprecation")
 public class MyStackTest extends TestCase {
 	private MyStack myStack;
 

@@ -5,6 +5,7 @@ import com.shengsiyuan.junit3.Largest;
 import junit.framework.Assert;
 import junit.framework.TestCase;
 
+@SuppressWarnings("deprecation")
 public class LargestTest extends TestCase {
 	private Largest largest;
 

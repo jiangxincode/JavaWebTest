@@ -13,6 +13,7 @@ import junit.framework.TestCase;
  * 1. public的 2. void的 3. 无方法参数 4. 方法名称必须以test开头
  *
  */
+@SuppressWarnings("deprecation")
 public class CalculatorTest extends TestCase {
 	private Calculator cal;
 
