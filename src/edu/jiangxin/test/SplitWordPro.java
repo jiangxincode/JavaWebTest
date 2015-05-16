@@ -1,6 +1,7 @@
+package edu.jiangxin.test;
 /*
- * 描述：用来进行逆向最大匹配分词
- * 作者：蒋鑫
+ * 描述：用来进行�?�向�?大匹配分�?
+ * 作�?�：蒋鑫
  * */
 
 import java.io.BufferedReader;
@@ -14,7 +15,7 @@ import java.util.Vector;
 public class SplitWordPro {
 	Vector<String> vecWord;
 
-	public SplitWordPro(String wordtableFile) { // 初始化词典
+	public SplitWordPro(String wordtableFile) { // 初始化词�?
 		String strFile = wordtableFile;
 		this.vecWord = new Vector<String>();
 		try {

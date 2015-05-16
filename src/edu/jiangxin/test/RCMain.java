@@ -1,3 +1,4 @@
+package edu.jiangxin.test;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -16,9 +17,9 @@ public class RCMain {
 	public static void main(String args[]) throws IOException {
 
 		String sUrl = "E:/temp/java/Test/src"; // 源文件夹
-		String tUrl = "E:/temp/java/Test/srctemp"; // 目标文件夹
-		(new File(tUrl)).mkdirs(); // 创建目标文件夹
-		File[] file = (new File(sUrl)).listFiles(); // 获取源文件夹当前下的文件或目录
+		String tUrl = "E:/temp/java/Test/srctemp"; // 目标文件�?
+		(new File(tUrl)).mkdirs(); // 创建目标文件�?
+		File[] file = (new File(sUrl)).listFiles(); // 获取源文件夹当前下的文件或目�?
 		for (int i = 0; i < file.length; i++) {
 
 			if (file[i].isFile()) {
@@ -69,10 +70,10 @@ public class RCMain {
 			while ((len = inBuff.read(b)) != -1) {
 				outBuff.write(b, 0, len);
 			}
-			// 刷新此缓冲的输出流
+			// 刷新此缓冲的输出�?
 			outBuff.flush();
 		} finally {
-			// 关闭流
+			// 关闭�?
 			if (inBuff != null)
 				inBuff.close();
 			if (outBuff != null)
@@ -80,16 +81,16 @@ public class RCMain {
 		}
 	}
 
-	// 复制文件夹
+	// 复制文件�?
 	public static void copyDirectiory(String sourceDir, String targetDir)
 			throws IOException {
 		// 新建目标目录
 		(new File(targetDir)).mkdirs();
-		// 获取源文件夹当前下的文件或目录
+		// 获取源文件夹当前下的文件或目�?
 		File[] file = (new File(sourceDir)).listFiles();
 		for (int i = 0; i < file.length; i++) {
 			if (file[i].isFile()) {
-				// 源文件
+				// 源文�?
 				File sourceFile = file[i];
 
 				// 复制文件
@@ -113,7 +114,7 @@ public class RCMain {
 
 			}
 			if (file[i].isDirectory()) {
-				// 准备复制的源文件夹
+				// 准备复制的源文件�?
 				String dir1 = sourceDir + "/" + file[i].getName();
 				// 准备复制的目标文件夹
 				String dir2 = targetDir + "/" + file[i].getName();
@@ -123,7 +124,7 @@ public class RCMain {
 	}*/
 
 	/**
-	 * 字符串写入文件
+	 * 字符串写入文�?
 	 * 
 	 * @param content
 	 * @param fileName
