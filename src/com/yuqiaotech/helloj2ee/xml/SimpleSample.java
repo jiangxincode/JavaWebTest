@@ -11,15 +11,7 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * 大体代码是从http://www.javaeye.com/topic/181865抄来的。 下面这个是被广泛抄袭的，关于java里读取xml的概要介绍。
- * http://blog.csdn.net/geekwang/archive/2008/05/25/2480504.aspx
- * 
- * 我主要是把从绝对路径读取xml换成了从classpath读取。 另外添加了Transformer和xslt，以及XPath的演示，以及相关的一些链接。
- * 
- * 另外可以搜一下jaxp了解这个规范的相关内容。
- * 
  * @author YUQIAOTECH
- *
  */
 public class SimpleSample {
 	static String xmlName = "test.xml";
