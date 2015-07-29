@@ -1,0 +1,20 @@
+﻿<player>
+  <playlist>
+    <track>
+      <file>Music/One Night In 塞外.mp3</file>
+      <title>One Night In 塞外</title>
+      <artist>华语群星</artist>
+      <album>-</album>
+    </track>
+	
+    <track>
+      <file>Music/江湖再见.mp3</file>
+      <title>江湖再见</title>
+      <artist>龙门镖局电视原声带</artist>
+      <album>-</album>
+    </track>
+	
+
+
+  </playlist>
+</player>
