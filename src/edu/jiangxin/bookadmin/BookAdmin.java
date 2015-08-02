@@ -356,7 +356,7 @@ public class BookAdmin extends HttpServlet {
 	
 	Connection getConnection() throws ClassNotFoundException, SQLException {
 		String driveClass = "com.mysql.jdbc.Driver";
-		String url = "jdbc:mysql://localhost:3306/javawebtest?useUnicode=true&characterEncoding=GBK";
+		String url = "jdbc:mysql://localhost:3306/javawebtest?useUnicode=true&characterEncoding=utf8";
 		String user = "root";
 		String password = "";
 		

@@ -13,7 +13,7 @@
 <base href="<%=basePath%>">
 <title>Guess Number</title>
 <script type="text/javascript"
-	src="<%=request.getContextPath()%>/JavaScript/guess_number.js"></script>
+	src="JavaScript/guess_number.js"></script>
 
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
