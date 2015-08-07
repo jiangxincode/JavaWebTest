@@ -10,7 +10,7 @@ public class RecursionTest extends TestCase {
 	public void testSort() {
 		String a = "Able was I ere I saw Elba";
 		String b = "Caveat emptor";
-		assertTrue(isPalindrome(a));
+		assertFalse(isPalindrome(a));
 		assertTrue(!isPalindrome(b));
 	}
 

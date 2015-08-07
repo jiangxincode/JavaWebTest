@@ -79,7 +79,7 @@ public class CalculatorTest extends TestCase {
 		}
 
 		Assert.assertEquals(Exception.class, tx.getClass());
-		Assert.assertEquals("0", tx.getMessage());
+		Assert.assertEquals("除数不能为0", tx.getMessage());
 	}
 
 	public static void main(String[] args) {

@@ -10,9 +10,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Stack;
 
-/**
- * @author YUQIAOTECH
- */
+
 public class SimpleSample {
 	static String xmlName = "test.xml";
 	static String xlst = "xslt.xsl";
