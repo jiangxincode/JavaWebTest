@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson004;
+package com.shengsiyuan.lesson004;
 
 public class Variable3 {
 	public static void main(String[] args) {

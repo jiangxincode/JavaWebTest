@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.pattern.composite;
+package com.shengsiyuan.pattern.composite;
 
 public class Client {
 	public static void main(String[] args) {

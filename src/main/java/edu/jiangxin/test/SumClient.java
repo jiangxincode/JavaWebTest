@@ -41,7 +41,7 @@ public class SumClient {
 		intBuffer.put(0, first);
 		intBuffer.put(1, second);
 		channel.write(buffer);
-		System.out.println("发�?�加法请�? " + first + "+" + second);
+		System.out.println("发送加法请求" + first + "+" + second);
 	}
 
 	private int receiveResponse() throws IOException {
@@ -52,7 +52,7 @@ public class SumClient {
 
 	public static void main(String[] args) {
 		SumClient sumClient = new SumClient();
-		System.out.println("加法结果�? :" + sumClient.getSum(100, 324));
+		System.out.println("加法结果 :" + sumClient.getSum(100, 324));
 
 	}
 

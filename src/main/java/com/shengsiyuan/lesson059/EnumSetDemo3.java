@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson059;
+package com.shengsiyuan.lesson059;
 
 import java.util.ArrayList;
 import java.util.EnumSet;

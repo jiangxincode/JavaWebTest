@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson105.clone;
+package com.shengsiyuan.lesson105.clone;
 
 public class CloneTest1 {
 	public static void main(String[] args) throws Throwable {

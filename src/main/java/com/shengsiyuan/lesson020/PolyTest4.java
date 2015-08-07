@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson020;
+package com.shengsiyuan.lesson020;
 
 public class PolyTest4 {
 	public static void main(String[] args) {

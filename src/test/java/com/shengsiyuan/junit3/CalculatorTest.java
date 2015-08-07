@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.junit3;
+package com.shengsiyuan.junit3;
 
 import com.shengsiyuan.junit3.Calculator;
 
@@ -6,11 +6,11 @@ import junit.framework.Assert;
 import junit.framework.TestCase;
 
 /**
- * ���������Ҫ�̳���TestCase����
+ * TestCase
  *
- * ��junit 3.8�У����Է�����Ҫ��������ԭ��
+ * junit 3.8У
  * 
- * 1. public�� 2. void�� 3. �޷������� 4. �������Ʊ�����test��ͷ
+ * 1. public 2. void 3.  4. test
  *
  */
 @SuppressWarnings("deprecation")
@@ -73,13 +73,13 @@ public class CalculatorTest extends TestCase {
 		try {
 			cal.divide(6, 0);
 
-			Assert.fail("����ʧ��");
+			Assert.fail("");
 		} catch (Exception ex) {
 			tx = ex;
 		}
 
 		Assert.assertEquals(Exception.class, tx.getClass());
-		Assert.assertEquals("��������Ϊ0", tx.getMessage());
+		Assert.assertEquals("0", tx.getMessage());
 	}
 
 	public static void main(String[] args) {

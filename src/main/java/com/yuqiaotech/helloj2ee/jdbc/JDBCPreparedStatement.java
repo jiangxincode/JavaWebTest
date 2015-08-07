@@ -1,4 +1,4 @@
-﻿package com.yuqiaotech.helloj2ee.jdbc;
+package com.yuqiaotech.helloj2ee.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson060.common;
+package com.shengsiyuan.lesson060.common;
 
 public class Common {
 	public static final int AGE = 10;

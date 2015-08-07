@@ -1,4 +1,4 @@
-﻿/**
+/**
  * 匿名内部类 anonymous innerclass
  * @author jiangxin
  */
@@ -27,8 +27,8 @@ public class OuterAnonymous {
 		}
 
 		void inner_f2() {
-			//    System.out.println("Outer.i"+j);//静态内部类不能访问外部类的非静态成员
-			//    outer_f2();//包括非静态变量和非静态方法
+			//    System.out.println("Outer.i"+j);//静态内部类不能访问外部类的非静态成员
+			//    outer_f2();//包括非静态变量和非静态方法
 		}
 	}
 

@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson008;
+package com.shengsiyuan.lesson008;
 
 public class BreakContinueTest {
 	public static void main(String[] args) {

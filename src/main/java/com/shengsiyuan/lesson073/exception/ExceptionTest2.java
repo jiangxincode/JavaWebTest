@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson073.exception;
+package com.shengsiyuan.lesson073.exception;
 
 public class ExceptionTest2 {
 	public void method() throws Exception {

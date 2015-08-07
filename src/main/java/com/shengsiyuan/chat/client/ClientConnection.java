@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.chat.client;
+package com.shengsiyuan.chat.client;
 
 import java.io.InputStream;
 import java.io.OutputStream;

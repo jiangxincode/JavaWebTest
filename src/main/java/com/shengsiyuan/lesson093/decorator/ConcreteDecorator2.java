@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson093.decorator;
+package com.shengsiyuan.lesson093.decorator;
 
 public class ConcreteDecorator2 extends Decorator {
 	public ConcreteDecorator2(Component component) {

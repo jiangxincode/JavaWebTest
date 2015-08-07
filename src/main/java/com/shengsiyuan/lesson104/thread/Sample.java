@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson104.thread;
+package com.shengsiyuan.lesson104.thread;
 
 public class Sample {
 	private int number;

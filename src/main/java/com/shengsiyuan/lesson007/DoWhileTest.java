@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson007;
+package com.shengsiyuan.lesson007;
 
 public class DoWhileTest {
 	public static void main(String[] args) {

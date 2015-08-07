@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.chat.util;
+package com.shengsiyuan.chat.util;
 
 import java.io.StringReader;
 import java.util.ArrayList;

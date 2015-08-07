@@ -1,4 +1,4 @@
-﻿package edu.jiangxin.test;
+package edu.jiangxin.test;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -8,15 +8,15 @@ import java.util.HashMap;
 import java.util.Map;
 import org.apache.commons.lang.StringUtils;
 /////
- // 韬唤璇佸伐鍏风被
+ // 韬唤璇佸伐鍏风被
  //
  // @author June
  // @version 1.0, 2010-06-17
  ///
 public class IdcardUtils extends StringUtils {
-    ///// 涓浗鍏皯韬唤璇佸彿鐮佹渶灏忛暱搴︺?? ///
+    ///// 涓浗鍏皯韬唤璇佸彿鐮佹渶灏忛暱搴︺?? ///
     public static final int CHINA_ID_MIN_LENGTH = 15;
-    ///// 涓浗鍏皯韬唤璇佸彿鐮佹渶澶ч暱搴︺?? ///
+    ///// 涓浗鍏皯韬唤璇佸彿鐮佹渶澶ч暱搴︺?? ///
     public static final int CHINA_ID_MAX_LENGTH = 18;
     ///// 鐪併?佺洿杈栧競浠ｇ爜琛? ///
     public static final String cityCode[] = {
@@ -35,9 +35,9 @@ public class IdcardUtils extends StringUtils {
     ///// 鏈?浣庡勾闄? ///
     public static final int MIN = 1930;
     public static Map<String, String> cityCodes = new HashMap<String, String>();
-    ///// 鍙版咕韬唤棣栧瓧姣嶅搴旀暟瀛? ///
+    ///// 鍙版咕韬唤棣栧瓧姣嶅搴旀暟瀛? ///
     public static Map<String, Integer> twFirstCode = new HashMap<String, Integer>();
-    ///// 棣欐腐韬唤棣栧瓧姣嶅搴旀暟瀛? ///
+    ///// 棣欐腐韬唤棣栧瓧姣嶅搴旀暟瀛? ///
     public static Map<String, Integer> hkFirstCode = new HashMap<String, Integer>();
     static {
         cityCodes.put("11", "鍖椾含");
@@ -69,12 +69,12 @@ public class IdcardUtils extends StringUtils {
         cityCodes.put("61", "闄曡タ");
         cityCodes.put("62", "鐢樿們");
         cityCodes.put("63", "闈掓捣");
-        cityCodes.put("64", "瀹佸");
+        cityCodes.put("64", "瀹佸");
         cityCodes.put("65", "鏂扮枂");
         cityCodes.put("71", "鍙版咕");
         cityCodes.put("81", "棣欐腐");
         cityCodes.put("82", "婢抽棬");
-        cityCodes.put("91", "鍥藉");
+        cityCodes.put("91", "鍥藉");
         twFirstCode.put("A", 10);
         twFirstCode.put("B", 11);
         twFirstCode.put("C", 12);
@@ -113,7 +113,7 @@ public class IdcardUtils extends StringUtils {
         hkFirstCode.put("N", 14);
     }
     /////
-     // 灏?15浣嶈韩浠借瘉鍙风爜杞崲涓?18浣?
+     // 灏?15浣嶈韩浠借瘉鍙风爜杞崲涓?18浣?
      //
      // @param idCard
      //            15浣嶈韩浠界紪鐮?
@@ -139,7 +139,7 @@ public class IdcardUtils extends StringUtils {
             // 鑾峰彇鍑虹敓骞?(瀹屽叏琛ㄧ幇褰㈠紡,濡傦細2010)
             String sYear = String.valueOf(cal.get(Calendar.YEAR));
             idCard18 = idCard.substring(0, 6) + sYear + idCard.substring(8);
-            // 杞崲瀛楃鏁扮粍
+            // 杞崲瀛楃鏁扮粍
             char[] cArr = idCard18.toCharArray();
             if (cArr != null) {
                 int[] iCard = converCharToInt(cArr);
@@ -158,7 +158,7 @@ public class IdcardUtils extends StringUtils {
         return idCard18;
     }
     /////
-     // 楠岃瘉韬唤璇佹槸鍚﹀悎娉?
+     // 楠岃瘉韬唤璇佹槸鍚﹀悎娉?
      ///
     public static boolean validateCard(String idCard) {
         String card = idCard.trim();
@@ -179,8 +179,8 @@ public class IdcardUtils extends StringUtils {
     /////
      // 楠岃瘉18浣嶈韩浠界紪鐮佹槸鍚﹀悎娉?
      //
-     // @param idCard 韬唤缂栫爜
-     // @return 鏄惁鍚堟硶
+     // @param idCard 韬唤缂栫爜
+     // @return 鏄惁鍚堟硶
      ///
     public static boolean validateIdCard18(String idCard) {
         boolean bTrue = false;
@@ -210,8 +210,8 @@ public class IdcardUtils extends StringUtils {
      // 楠岃瘉15浣嶈韩浠界紪鐮佹槸鍚﹀悎娉?
      //
      // @param idCard
-     //            韬唤缂栫爜
-     // @return 鏄惁鍚堟硶
+     //            韬唤缂栫爜
+     // @return 鏄惁鍚堟硶
      ///
     public static boolean validateIdCard15(String idCard) {
         if (idCard.length() != CHINA_ID_MIN_LENGTH) {
@@ -244,11 +244,11 @@ public class IdcardUtils extends StringUtils {
     /////
      // 楠岃瘉10浣嶈韩浠界紪鐮佹槸鍚﹀悎娉?
      //
-     // @param idCard 韬唤缂栫爜
-     // @return 韬唤璇佷俊鎭暟缁?
+     // @param idCard 韬唤缂栫爜
+     // @return 韬唤璇佷俊鎭暟缁?
      //         <p>
-     //         [0] - 鍙版咕銆佹境闂ㄣ?侀娓? [1] - 鎬у埆(鐢稭,濂矲,鏈煡N) [2] - 鏄惁鍚堟硶(鍚堟硶true,涓嶅悎娉昮alse)
-     //         鑻ヤ笉鏄韩浠借瘉浠跺彿鐮佸垯杩斿洖null
+     //         [0] - 鍙版咕銆佹境闂ㄣ?侀娓? [1] - 鎬у埆(鐢稭,濂矲,鏈煡N) [2] - 鏄惁鍚堟硶(鍚堟硶true,涓嶅悎娉昮alse)
+     //         鑻ヤ笉鏄韩浠借瘉浠跺彿鐮佸垯杩斿洖null
      //         </p>
      ///
     public static String[] validateIdCard10(String idCard) {
@@ -291,11 +291,11 @@ public class IdcardUtils extends StringUtils {
         return info;
     }
     /////
-     // 楠岃瘉鍙版咕韬唤璇佸彿鐮?
+     // 楠岃瘉鍙版咕韬唤璇佸彿鐮?
      //
      // @param idCard
-     //            韬唤璇佸彿鐮?
-     // @return 楠岃瘉鐮佹槸鍚︾鍚?
+     //            韬唤璇佸彿鐮?
+     // @return 楠岃瘉鐮佹槸鍚︾鍚?
      ///
     public static boolean validateTWCard(String idCard) {
         String start = idCard.substring(0, 1);
@@ -312,17 +312,17 @@ public class IdcardUtils extends StringUtils {
         return (sum % 10 == 0 ? 0 : (10 - sum % 10)) == Integer.valueOf(end) ? true : false;
     }
     /////
-     // 楠岃瘉棣欐腐韬唤璇佸彿鐮?(瀛樺湪Bug锛岄儴浠界壒娈婅韩浠借瘉鏃犳硶妫?鏌?)
+     // 楠岃瘉棣欐腐韬唤璇佸彿鐮?(瀛樺湪Bug锛岄儴浠界壒娈婅韩浠借瘉鏃犳硶妫?鏌?)
      // <p>
-     // 韬唤璇佸墠2浣嶄负鑻辨枃瀛楃锛屽鏋滃彧鍑虹幇涓?涓嫳鏂囧瓧绗﹀垯琛ㄧず绗竴浣嶆槸绌烘牸锛屽搴旀暟瀛?58 鍓?2浣嶈嫳鏂囧瓧绗-Z鍒嗗埆瀵瑰簲鏁板瓧10-35
+     // 韬唤璇佸墠2浣嶄负鑻辨枃瀛楃锛屽鏋滃彧鍑虹幇涓?涓嫳鏂囧瓧绗﹀垯琛ㄧず绗竴浣嶆槸绌烘牸锛屽搴旀暟瀛?58 鍓?2浣嶈嫳鏂囧瓧绗-Z鍒嗗埆瀵瑰簲鏁板瓧10-35
      // 鏈?鍚庝竴浣嶆牎楠岀爜涓?0-9鐨勬暟瀛楀姞涓婂瓧绗?"A"锛?"A"浠ｈ〃10
      // </p>
      // <p>
-     // 灏嗚韩浠借瘉鍙风爜鍏ㄩ儴杞崲涓烘暟瀛楋紝鍒嗗埆瀵瑰簲涔?9-1鐩稿姞鐨勬?诲拰锛屾暣闄?11鍒欒瘉浠跺彿鐮佹湁鏁?
+     // 灏嗚韩浠借瘉鍙风爜鍏ㄩ儴杞崲涓烘暟瀛楋紝鍒嗗埆瀵瑰簲涔?9-1鐩稿姞鐨勬?诲拰锛屾暣闄?11鍒欒瘉浠跺彿鐮佹湁鏁?
      // </p>
      //
-     // @param idCard 韬唤璇佸彿鐮?
-     // @return 楠岃瘉鐮佹槸鍚︾鍚?
+     // @param idCard 韬唤璇佸彿鐮?
+     // @return 楠岃瘉鐮佹槸鍚︾鍚?
      ///
     public static boolean validateHKCard(String idCard) {
         //String card = idCard.replaceAll("[\(|\)]", "");
@@ -354,7 +354,7 @@ public class IdcardUtils extends StringUtils {
      // 灏嗗瓧绗︽暟缁勮浆鎹㈡垚鏁板瓧鏁扮粍
      //
      // @param ca
-     //            瀛楃鏁扮粍
+     //            瀛楃鏁扮粍
      // @return 鏁板瓧鏁扮粍
      ///
     public static int[] converCharToInt(char[] ca) {
@@ -373,7 +373,7 @@ public class IdcardUtils extends StringUtils {
      // 灏嗚韩浠借瘉鐨勬瘡浣嶅拰瀵瑰簲浣嶇殑鍔犳潈鍥犲瓙鐩镐箻涔嬪悗锛屽啀寰楀埌鍜屽??
      //
      // @param iArr
-     // @return 韬唤璇佺紪鐮併??
+     // @return 韬唤璇佺紪鐮併??
      ///
     public static int getPowerSum(int[] iArr) {
         int iSum = 0;
@@ -389,7 +389,7 @@ public class IdcardUtils extends StringUtils {
         return iSum;
     }
     /////
-     // 灏唒ower鍜屽?间笌11鍙栨ā鑾峰緱浣欐暟杩涜鏍￠獙鐮佸垽鏂?
+     // 灏唒ower鍜屽?间笌11鍙栨ā鑾峰緱浣欐暟杩涜鏍￠獙鐮佸垽鏂?
      //
      // @param iSum
      // @return 鏍￠獙浣?
@@ -434,10 +434,10 @@ public class IdcardUtils extends StringUtils {
         return sCode;
     }
     /////
-     // 鏍规嵁韬唤缂栧彿鑾峰彇骞撮緞
+     // 鏍规嵁韬唤缂栧彿鑾峰彇骞撮緞
      //
      // @param idCard
-     //            韬唤缂栧彿
+     //            韬唤缂栧彿
      // @return 骞撮緞
      ///
     public static int getAgeByIdCard(String idCard) {
@@ -452,9 +452,9 @@ public class IdcardUtils extends StringUtils {
         return iAge;
     }
     /////
-     // 鏍规嵁韬唤缂栧彿鑾峰彇鐢熸棩
+     // 鏍规嵁韬唤缂栧彿鑾峰彇鐢熸棩
      //
-     // @param idCard 韬唤缂栧彿
+     // @param idCard 韬唤缂栧彿
      // @return 鐢熸棩(yyyyMMdd)
      ///
     public static String getBirthByIdCard(String idCard) {
@@ -467,9 +467,9 @@ public class IdcardUtils extends StringUtils {
         return idCard.substring(6, 14);
     }
     /////
-     // 鏍规嵁韬唤缂栧彿鑾峰彇鐢熸棩骞?
+     // 鏍规嵁韬唤缂栧彿鑾峰彇鐢熸棩骞?
      //
-     // @param idCard 韬唤缂栧彿
+     // @param idCard 韬唤缂栧彿
      // @return 鐢熸棩(yyyy)
      ///
     public static Short getYearByIdCard(String idCard) {
@@ -482,10 +482,10 @@ public class IdcardUtils extends StringUtils {
         return Short.valueOf(idCard.substring(6, 10));
     }
     /////
-     // 鏍规嵁韬唤缂栧彿鑾峰彇鐢熸棩鏈?
+     // 鏍规嵁韬唤缂栧彿鑾峰彇鐢熸棩鏈?
      //
      // @param idCard
-     //            韬唤缂栧彿
+     //            韬唤缂栧彿
      // @return 鐢熸棩(MM)
      ///
     public static Short getMonthByIdCard(String idCard) {
@@ -498,10 +498,10 @@ public class IdcardUtils extends StringUtils {
         return Short.valueOf(idCard.substring(10, 12));
     }
     /////
-     // 鏍规嵁韬唤缂栧彿鑾峰彇鐢熸棩澶?
+     // 鏍规嵁韬唤缂栧彿鑾峰彇鐢熸棩澶?
      //
      // @param idCard
-     //            韬唤缂栧彿
+     //            韬唤缂栧彿
      // @return 鐢熸棩(dd)
      ///
     public static Short getDateByIdCard(String idCard) {
@@ -514,10 +514,10 @@ public class IdcardUtils extends StringUtils {
         return Short.valueOf(idCard.substring(12, 14));
     }
     /////
-     // 鏍规嵁韬唤缂栧彿鑾峰彇鎬у埆
+     // 鏍规嵁韬唤缂栧彿鑾峰彇鎬у埆
      //
-     // @param idCard 韬唤缂栧彿
-     // @return 鎬у埆(M-鐢凤紝F-濂筹紝N-鏈煡)
+     // @param idCard 韬唤缂栧彿
+     // @return 鎬у埆(M-鐢凤紝F-濂筹紝N-鏈煡)
      ///
     public static String getGenderByIdCard(String idCard) {
         String sGender = "N";
@@ -533,9 +533,9 @@ public class IdcardUtils extends StringUtils {
         return sGender;
     }
     /////
-     // 鏍规嵁韬唤缂栧彿鑾峰彇鎴风睄鐪佷唤
+     // 鏍规嵁韬唤缂栧彿鑾峰彇鎴风睄鐪佷唤
      //
-     // @param idCard 韬唤缂栫爜
+     // @param idCard 韬唤缂栫爜
      // @return 鐪佺骇缂栫爜銆?
      ///
     public static String getProvinceByIdCard(String idCard) {
@@ -558,7 +558,7 @@ public class IdcardUtils extends StringUtils {
         return val == null || "".equals(val) ? false : val.matches("^[0-9]//$");
     }
     /////
-     // 楠岃瘉灏忎簬褰撳墠鏃ユ湡 鏄惁鏈夋晥
+     // 楠岃瘉灏忎簬褰撳墠鏃ユ湡 鏄惁鏈夋晥
      //
      // @param iYear
      //            寰呴獙璇佹棩鏈?(骞?)
@@ -566,7 +566,7 @@ public class IdcardUtils extends StringUtils {
      //            寰呴獙璇佹棩鏈?(鏈? 1-12)
      // @param iDate
      //            寰呴獙璇佹棩鏈?(鏃?)
-     // @return 鏄惁鏈夋晥
+     // @return 鏄惁鏈夋晥
      ///
     public static boolean valiDate(int iYear, int iMonth, int iDate) {
         Calendar cal = Calendar.getInstance();

@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson050;
+package com.shengsiyuan.lesson050;
 
 import java.util.ArrayList;
 import java.util.Collection;

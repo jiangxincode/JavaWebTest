@@ -1,4 +1,4 @@
-﻿package edu.jiangxin.crawler;
+package edu.jiangxin.crawler;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;

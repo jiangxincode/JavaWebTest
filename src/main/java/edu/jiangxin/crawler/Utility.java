@@ -1,4 +1,4 @@
-﻿package edu.jiangxin.crawler;
+package edu.jiangxin.crawler;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;

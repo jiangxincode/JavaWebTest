@@ -1,4 +1,4 @@
-﻿/**
+/**
  * a example that uses BufferWriter to speed the IO operation
  * @author jiangxin
  * @data 2014-6-20

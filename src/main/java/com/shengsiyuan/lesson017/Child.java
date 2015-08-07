@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson017;
+package com.shengsiyuan.lesson017;
 
 public class Child extends Parent {
 	public Child() {

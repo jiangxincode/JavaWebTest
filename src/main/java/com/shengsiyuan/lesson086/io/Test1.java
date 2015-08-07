@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson086.io;
+package com.shengsiyuan.lesson086.io;
 
 public class Test1 {
 	// 循环方式计算阶乘，又叫做迭代方式

@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.junit4;
+package com.shengsiyuan.junit4;
 
 import static org.junit.Assert.fail;
 import junit.framework.Assert;

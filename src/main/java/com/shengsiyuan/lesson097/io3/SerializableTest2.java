@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson097.io3;
+package com.shengsiyuan.lesson097.io3;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

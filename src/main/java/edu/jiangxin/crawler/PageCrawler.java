@@ -1,4 +1,4 @@
-﻿package edu.jiangxin.crawler;
+package edu.jiangxin.crawler;
 import java.io.IOException;
 import java.util.concurrent.atomic.AtomicInteger;
 

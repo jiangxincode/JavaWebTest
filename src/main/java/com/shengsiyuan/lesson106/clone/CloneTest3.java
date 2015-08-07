@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson106.clone;
+package com.shengsiyuan.lesson106.clone;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

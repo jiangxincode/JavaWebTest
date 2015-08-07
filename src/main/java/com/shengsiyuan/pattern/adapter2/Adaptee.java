@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.pattern.adapter2;
+package com.shengsiyuan.pattern.adapter2;
 
 public class Adaptee {
 	public void method2() {

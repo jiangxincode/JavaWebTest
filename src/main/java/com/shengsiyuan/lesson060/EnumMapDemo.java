@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson060;
+package com.shengsiyuan.lesson060;
 
 import java.util.EnumMap;
 import java.util.Map;

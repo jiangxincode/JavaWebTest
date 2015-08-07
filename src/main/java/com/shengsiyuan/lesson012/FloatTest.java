@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson012;
+package com.shengsiyuan.lesson012;
 
 public class FloatTest {
 	public static void main(String[] args) {

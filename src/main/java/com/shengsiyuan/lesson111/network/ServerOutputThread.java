@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson111.network;
+package com.shengsiyuan.lesson111.network;
 
 import java.io.BufferedReader;
 import java.io.IOException;

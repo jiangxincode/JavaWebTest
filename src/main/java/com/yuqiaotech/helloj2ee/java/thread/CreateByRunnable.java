@@ -1,4 +1,4 @@
-﻿package com.yuqiaotech.helloj2ee.java.thread;
+package com.yuqiaotech.helloj2ee.java.thread;
 
 /**
  * 实现java.lang.Runnable接口并实现它的run()方法来创建多线程

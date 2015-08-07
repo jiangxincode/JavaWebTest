@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson009;
+package com.shengsiyuan.lesson009;
 
 public class Test {
 	// 两个整数相加的方法

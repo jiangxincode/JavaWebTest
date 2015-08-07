@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.junit4;
+package com.shengsiyuan.junit4;
 
 public class Calculator {
 	public int add(int a, int b) {

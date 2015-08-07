@@ -1,4 +1,4 @@
-﻿package com.yuqiaotech.helloj2ee.java.thread;
+package com.yuqiaotech.helloj2ee.java.thread;
 
 import java.util.Random;
 

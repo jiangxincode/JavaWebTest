@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson035;
+package com.shengsiyuan.lesson035;
 
 public class BubbleSortTest {
 	public static void bubbleSort(int[] array) {

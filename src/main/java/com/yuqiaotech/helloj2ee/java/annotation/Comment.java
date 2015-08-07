@@ -1,4 +1,4 @@
-﻿package com.yuqiaotech.helloj2ee.java.annotation;
+package com.yuqiaotech.helloj2ee.java.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

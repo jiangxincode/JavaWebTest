@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson069.annotation;
+package com.shengsiyuan.lesson069.annotation;
 
 @AnnotationTest(value2 = EnumTest.Welcome)
 public class AnnotationUsage {

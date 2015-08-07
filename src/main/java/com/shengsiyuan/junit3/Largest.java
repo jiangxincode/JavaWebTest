@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.junit3;
+package com.shengsiyuan.junit3;
 
 public class Largest {
 	public int getLargest(int[] array) throws Exception {

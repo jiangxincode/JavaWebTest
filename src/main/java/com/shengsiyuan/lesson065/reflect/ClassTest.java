@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson065.reflect;
+package com.shengsiyuan.lesson065.reflect;
 
 public class ClassTest {
 	public static void main(String[] args) {

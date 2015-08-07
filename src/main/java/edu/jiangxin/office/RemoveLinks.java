@@ -1,4 +1,4 @@
-﻿package edu.jiangxin.office;
+package edu.jiangxin.office;
 /**
  * POI按行读取word,并去掉属性标签内容：超链接 
  * @author jiangxin

@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson101.thread;
+package com.shengsiyuan.lesson101.thread;
 
 public class FetchMoney {
 	public static void main(String[] args) {

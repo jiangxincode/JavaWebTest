@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson014;
+package com.shengsiyuan.lesson014;
 
 public class ReferenceTest {
 	int a = 4;

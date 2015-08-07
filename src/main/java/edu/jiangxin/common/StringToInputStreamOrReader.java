@@ -1,4 +1,4 @@
-﻿/**
+/**
  * String to InputStream or Reader
  * 关于字符串转化为输入流，一般有2种方法：用StringReader将字符串转化为Reader；用ByteArrayInputStream将字符串转化为InputStream。
  * 还有一个类StringBufferInputStream也可以将String转化为InputStream，但是由于它只支持字符串中每个字符的低八位，所以已经被遗弃了。

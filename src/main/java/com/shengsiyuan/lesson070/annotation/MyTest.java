@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson070.annotation;
+package com.shengsiyuan.lesson070.annotation;
 
 
 @MyAnnotation(hello = "beijing", world = "shanghai")

@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson090.io2;
+package com.shengsiyuan.lesson090.io2;
 
 import java.io.File;
 import java.util.ArrayList;

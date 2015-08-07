@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson125.classloader;
+package com.shengsiyuan.lesson125.classloader;
 
 class CL {
 	static {

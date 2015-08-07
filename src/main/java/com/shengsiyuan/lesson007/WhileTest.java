@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson007;
+package com.shengsiyuan.lesson007;
 
 public class WhileTest {
 	public static void main(String[] args) {

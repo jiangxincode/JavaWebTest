@@ -1,4 +1,4 @@
-﻿package com.yuqiaotech.helloj2ee.java;
+package com.yuqiaotech.helloj2ee.java;
 
 //面向对象
 //这样就定义了一个类，类名叫HelloWorld，

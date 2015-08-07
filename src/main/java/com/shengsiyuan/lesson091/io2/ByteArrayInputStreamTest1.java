@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson091.io2;
+package com.shengsiyuan.lesson091.io2;
 
 import java.io.ByteArrayInputStream;
 

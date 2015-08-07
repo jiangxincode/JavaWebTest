@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.chat.client;
+package com.shengsiyuan.chat.client;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;

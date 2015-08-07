@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.pattern.command;
+package com.shengsiyuan.pattern.command;
 
 public class ConcreteCommand implements Command {
 	private Receiver receiver;

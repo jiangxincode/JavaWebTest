@@ -1,4 +1,4 @@
-﻿/**
+/**
  * 局部内部类 local
  * @author jiangxin
  */

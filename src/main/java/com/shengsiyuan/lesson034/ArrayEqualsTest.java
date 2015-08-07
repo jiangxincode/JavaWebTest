@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson034;
+package com.shengsiyuan.lesson034;
 
 import java.util.Arrays;
 

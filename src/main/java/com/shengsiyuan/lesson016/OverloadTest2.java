@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson016;
+package com.shengsiyuan.lesson016;
 
 public class OverloadTest2 {
 	public int method(int a) {

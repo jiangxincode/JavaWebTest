@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson085.innerclass;
+package com.shengsiyuan.lesson085.innerclass;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

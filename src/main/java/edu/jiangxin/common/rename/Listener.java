@@ -1,4 +1,4 @@
-﻿package edu.jiangxin.common.rename;
+package edu.jiangxin.common.rename;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

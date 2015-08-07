@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson036;
+package com.shengsiyuan.lesson036;
 
 public class ArraySearchTest {
 	public static int search(int[] array, int value) {

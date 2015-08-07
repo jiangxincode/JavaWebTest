@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.pattern.adapter2;
+package com.shengsiyuan.pattern.adapter2;
 
 public class Adapter implements Target {
 	private Adaptee adaptee;

@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson059;
+package com.shengsiyuan.lesson059;
 
 public class EnumTest {
 	public static void doOp(OpConstant opConstant) {

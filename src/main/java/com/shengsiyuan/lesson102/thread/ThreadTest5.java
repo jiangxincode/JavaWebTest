@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson102.thread;
+package com.shengsiyuan.lesson102.thread;
 
 public class ThreadTest5 {
 	public static void main(String[] args) {

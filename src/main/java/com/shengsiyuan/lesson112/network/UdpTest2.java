@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson112.network;
+package com.shengsiyuan.lesson112.network;
 
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;

@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson070.annotation;
+package com.shengsiyuan.lesson070.annotation;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;

@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson054;
+package com.shengsiyuan.lesson054;
 
 public class Generic2<T> {
 	private T[] fooArray;

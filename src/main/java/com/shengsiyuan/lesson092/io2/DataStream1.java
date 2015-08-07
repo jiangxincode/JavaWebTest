@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson092.io2;
+package com.shengsiyuan.lesson092.io2;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

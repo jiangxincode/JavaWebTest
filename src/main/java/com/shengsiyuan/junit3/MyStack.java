@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.junit3;
+package com.shengsiyuan.junit3;
 
 public class MyStack {
 	private String[] elements;

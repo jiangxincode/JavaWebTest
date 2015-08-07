@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson085.innerclass;
+package com.shengsiyuan.lesson085.innerclass;
 
 class StaticInner {
 	private static int a = 4;

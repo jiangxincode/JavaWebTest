@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson125.classloader;
+package com.shengsiyuan.lesson125.classloader;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;

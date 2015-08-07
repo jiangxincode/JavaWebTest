@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson054;
+package com.shengsiyuan.lesson054;
 
 public class WrapperFoo<T> {
 	private GenericFoo3<T> foo;

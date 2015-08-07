@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson108.network;
+package com.shengsiyuan.lesson108.network;
 
 import java.awt.BorderLayout;
 import java.awt.Container;

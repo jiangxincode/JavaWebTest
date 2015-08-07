@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson041;
+package com.shengsiyuan.lesson041;
 
 import java.util.LinkedList;
 

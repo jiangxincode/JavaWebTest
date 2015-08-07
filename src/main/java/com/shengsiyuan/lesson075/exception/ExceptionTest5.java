@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson075.exception;
+package com.shengsiyuan.lesson075.exception;
 
 public class ExceptionTest5 {
 	public void method() {

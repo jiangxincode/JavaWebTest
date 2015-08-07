@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson023;
+package com.shengsiyuan.lesson023;
 
 public class FinalTest3 {
 	public static void main(String[] args) {

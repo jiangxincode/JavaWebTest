@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson034;
+package com.shengsiyuan.lesson034;
 
 public class Swap2 {
 	public static void swap(char[] ch, char c) {

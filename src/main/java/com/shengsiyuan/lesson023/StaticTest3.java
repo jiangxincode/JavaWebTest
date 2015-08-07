@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson023;
+package com.shengsiyuan.lesson023;
 
 public class StaticTest3 {
 	@SuppressWarnings("static-access")

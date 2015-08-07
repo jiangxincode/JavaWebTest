@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson065.proxy;
+package com.shengsiyuan.lesson065.proxy;
 
 public class ProxySubject extends Subject {
 	private RealSubject realSubject; // 代理角色内部引用了真实角色

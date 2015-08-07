@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson059;
+package com.shengsiyuan.lesson059;
 
 public enum Coin {
 	penny("hello"), nickel("world"), dime("welcome"), quarter("hello world");

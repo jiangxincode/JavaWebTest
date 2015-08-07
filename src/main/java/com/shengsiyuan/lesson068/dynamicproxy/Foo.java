@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson068.dynamicproxy;
+package com.shengsiyuan.lesson068.dynamicproxy;
 
 public interface Foo {
 	void doAction();

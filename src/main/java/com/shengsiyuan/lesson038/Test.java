@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson038;
+package com.shengsiyuan.lesson038;
 
 public class Test {
 	public boolean canAccess(int access) {

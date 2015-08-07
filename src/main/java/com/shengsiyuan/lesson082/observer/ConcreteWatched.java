@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson082.observer;
+package com.shengsiyuan.lesson082.observer;
 
 import java.util.ArrayList;
 import java.util.List;

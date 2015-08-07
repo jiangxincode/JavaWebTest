@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.chat.client;
+package com.shengsiyuan.chat.client;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

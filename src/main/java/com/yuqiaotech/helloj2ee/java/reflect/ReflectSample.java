@@ -1,4 +1,4 @@
-﻿package com.yuqiaotech.helloj2ee.java.reflect;
+package com.yuqiaotech.helloj2ee.java.reflect;
 
 import java.lang.reflect.*;
 

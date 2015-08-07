@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson065.proxy;
+package com.shengsiyuan.lesson065.proxy;
 
 public class RealSubject extends Subject {
 	public void request() {

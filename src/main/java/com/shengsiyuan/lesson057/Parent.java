@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson057;
+package com.shengsiyuan.lesson057;
 
 public class Parent<T1, T2> {
 	private T1 foo1;

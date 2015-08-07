@@ -1,4 +1,4 @@
-﻿package edu.jiangxin.crawler;
+package edu.jiangxin.crawler;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.regex.Matcher;

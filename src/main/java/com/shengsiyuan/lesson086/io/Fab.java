@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson086.io;
+package com.shengsiyuan.lesson086.io;
 
 public class Fab {
 	// 使用递归计算斐波纳契数列

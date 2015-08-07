@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson078.awt;
+package com.shengsiyuan.lesson078.awt;
 
 import java.awt.BorderLayout;
 import java.awt.Button;

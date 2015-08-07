@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson080.awt;
+package com.shengsiyuan.lesson080.awt;
 
 import java.awt.Button;
 import java.awt.Frame;

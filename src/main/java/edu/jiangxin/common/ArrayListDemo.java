@@ -1,4 +1,4 @@
-﻿//ArrayList遍历的4种方法 
+//ArrayList遍历的4种方法 
 
 package edu.jiangxin.common;
 

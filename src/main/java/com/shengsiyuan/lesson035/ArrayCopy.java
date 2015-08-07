@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson035;
+package com.shengsiyuan.lesson035;
 
 public class ArrayCopy {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson082.observer;
+package com.shengsiyuan.lesson082.observer;
 
 public class ConcreteWatcher implements Watcher {
 	@Override

@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson063.reflect;
+package com.shengsiyuan.lesson063.reflect;
 
 import java.lang.reflect.Array;
 

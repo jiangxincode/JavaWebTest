@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson038;
+package com.shengsiyuan.lesson038;
 
 public class Authorization {
 	public static final int MANAGER = 1;

@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson061.reflect;
+package com.shengsiyuan.lesson061.reflect;
 
 import java.lang.reflect.Method;
 

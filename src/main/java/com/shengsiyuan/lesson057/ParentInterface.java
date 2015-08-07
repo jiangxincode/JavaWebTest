@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson057;
+package com.shengsiyuan.lesson057;
 
 public interface ParentInterface<T1, T2> {
 	public void setFoo1(T1 foo1);

@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson056;
+package com.shengsiyuan.lesson056;
 
 import java.util.Collections;
 import java.util.Comparator;

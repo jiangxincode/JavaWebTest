@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson011;
+package com.shengsiyuan.lesson011;
 
 public class ParamTest {
 	public static void main(String[] args) {

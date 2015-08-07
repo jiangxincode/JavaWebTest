@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson053;
+package com.shengsiyuan.lesson053;
 
 public class ObjectFoo
 {

@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.pattern.defaultadapter;
+package com.shengsiyuan.pattern.defaultadapter;
 
 import java.awt.Dimension;
 import java.awt.Frame;

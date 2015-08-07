@@ -1,4 +1,4 @@
-﻿package edu.jiangxin.office;
+package edu.jiangxin.office;
 import com.jacob.activeX.ActiveXComponent;
 import com.jacob.com.ComThread;
 import com.jacob.com.Dispatch;

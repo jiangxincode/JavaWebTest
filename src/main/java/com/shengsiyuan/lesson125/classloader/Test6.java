@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson125.classloader;
+package com.shengsiyuan.lesson125.classloader;
 
 class Parent3 {
 	static int a = 3;

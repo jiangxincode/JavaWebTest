@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson037;
+package com.shengsiyuan.lesson037;
 
 import java.util.Random;
 

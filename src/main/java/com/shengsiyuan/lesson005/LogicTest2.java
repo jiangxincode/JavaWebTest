@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson005;
+package com.shengsiyuan.lesson005;
 
 public class LogicTest2 {
 	public static void main(String[] args) {

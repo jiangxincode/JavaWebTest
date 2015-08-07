@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson093.io2;
+package com.shengsiyuan.lesson093.io2;
 
 import java.io.IOException;
 import java.io.InputStream;

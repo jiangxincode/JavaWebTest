@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.chat.server;
+package com.shengsiyuan.chat.server;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

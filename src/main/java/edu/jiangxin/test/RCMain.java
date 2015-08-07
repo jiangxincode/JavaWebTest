@@ -1,4 +1,4 @@
-﻿package edu.jiangxin.test;
+package edu.jiangxin.test;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -17,8 +17,8 @@ public class RCMain {
 	public static void main(String args[]) throws IOException {
 
 		String sUrl = "E:/temp/java/Test/src"; // 婧愭枃浠跺す
-		String tUrl = "E:/temp/java/Test/srctemp"; // 鐩爣鏂囦欢澶?
-		(new File(tUrl)).mkdirs(); // 鍒涘缓鐩爣鏂囦欢澶?
+		String tUrl = "E:/temp/java/Test/srctemp"; // 鐩爣鏂囦欢澶?
+		(new File(tUrl)).mkdirs(); // 鍒涘缓鐩爣鏂囦欢澶?
 		File[] file = (new File(sUrl)).listFiles(); // 鑾峰彇婧愭枃浠跺す褰撳墠涓嬬殑鏂囦欢鎴栫洰褰?
 		for (int i = 0; i < file.length; i++) {
 
@@ -38,7 +38,7 @@ public class RCMain {
 			}
 
 			if (file[i].isDirectory()) {
-				// 澶嶅埗鐩綍
+				// 澶嶅埗鐩綍
 				String sourceDir = sUrl + File.separator + file[i].getName();
 				String targetDir = tUrl + File.separator + file[i].getName();
 				copyDirectiory(sourceDir, targetDir);
@@ -58,10 +58,10 @@ public class RCMain {
 		BufferedInputStream inBuff = null;
 		BufferedOutputStream outBuff = null;
 		try {
-			// 鏂板缓鏂囦欢杈撳叆娴佸苟瀵瑰畠杩涜缂撳啿
+			// 鏂板缓鏂囦欢杈撳叆娴佸苟瀵瑰畠杩涜缂撳啿
 			inBuff = new BufferedInputStream(new FileInputStream(sourceFile));
 
-			// 鏂板缓鏂囦欢杈撳嚭娴佸苟瀵瑰畠杩涜缂撳啿
+			// 鏂板缓鏂囦欢杈撳嚭娴佸苟瀵瑰畠杩涜缂撳啿
 			outBuff = new BufferedOutputStream(new FileOutputStream(targetFile));
 
 			// 缂撳啿鏁扮粍
@@ -84,7 +84,7 @@ public class RCMain {
 	// 澶嶅埗鏂囦欢澶?
 	public static void copyDirectiory(String sourceDir, String targetDir)
 			throws IOException {
-		// 鏂板缓鐩爣鐩綍
+		// 鏂板缓鐩爣鐩綍
 		(new File(targetDir)).mkdirs();
 		// 鑾峰彇婧愭枃浠跺す褰撳墠涓嬬殑鏂囦欢鎴栫洰褰?
 		File[] file = (new File(sourceDir)).listFiles();
@@ -114,9 +114,9 @@ public class RCMain {
 
 			}
 			if (file[i].isDirectory()) {
-				// 鍑嗗澶嶅埗鐨勬簮鏂囦欢澶?
+				// 鍑嗗澶嶅埗鐨勬簮鏂囦欢澶?
 				String dir1 = sourceDir + "/" + file[i].getName();
-				// 鍑嗗澶嶅埗鐨勭洰鏍囨枃浠跺す
+				// 鍑嗗澶嶅埗鐨勭洰鏍囨枃浠跺す
 				String dir2 = targetDir + "/" + file[i].getName();
 				copyDirectiory(dir1, dir2);
 			}
@@ -124,7 +124,7 @@ public class RCMain {
 	}*/
 
 	/**
-	 * 瀛楃涓插啓鍏ユ枃浠?
+	 * 瀛楃涓插啓鍏ユ枃浠?
 	 * 
 	 * @param content
 	 * @param fileName

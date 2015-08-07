@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.lesson041;
+package com.shengsiyuan.lesson041;
 
 public class Node {
 	String data; // 存放节点数据本身

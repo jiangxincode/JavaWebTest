@@ -1,4 +1,4 @@
-﻿package edu.jiangxin.crawler;
+package edu.jiangxin.crawler;
 import java.util.HashSet;
 import java.util.LinkedList;
 
