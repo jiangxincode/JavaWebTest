@@ -1,6 +1,3 @@
-.*
-bin/
-temp/
-doc/
-log/
+.settings/
 /target/
+*.swp
