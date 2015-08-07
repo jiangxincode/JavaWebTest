@@ -1,4 +1,4 @@
-package com.shengsiyuan.chat.util;
+﻿package com.shengsiyuan.chat.util;
 
 public class CharacterUtil {
 	public static final int LOGIN = 1;

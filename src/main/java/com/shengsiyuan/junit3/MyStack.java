@@ -1,4 +1,4 @@
-package com.shengsiyuan.junit3;
+锘縫ackage com.shengsiyuan.junit3;
 
 public class MyStack {
 	private String[] elements;
@@ -12,7 +12,7 @@ public class MyStack {
 
 	public void push(String element) throws Exception {
 		if (100 == nextIndex) {
-			throw new Exception("数组越界异常!");
+			throw new Exception("鏁扮粍瓒婄晫寮傚父!");
 		}
 
 		elements[nextIndex++] = element;
@@ -20,7 +20,7 @@ public class MyStack {
 
 	public String pop() throws Exception {
 		if (0 == nextIndex) {
-			throw new Exception("数组越界异常!");
+			throw new Exception("鏁扮粍瓒婄晫寮傚父!");
 		}
 
 		return elements[--nextIndex];
@@ -28,7 +28,7 @@ public class MyStack {
 
 	public void delete(int n) throws Exception {
 		if (nextIndex - n < 0) {
-			throw new Exception("数组越界异常!");
+			throw new Exception("鏁扮粍瓒婄晫寮傚父!");
 		}
 
 		nextIndex -= n;
@@ -36,7 +36,7 @@ public class MyStack {
 
 	public String top() throws Exception {
 		if (0 == nextIndex) {
-			throw new Exception("数组越界异常!");
+			throw new Exception("鏁扮粍瓒婄晫寮傚父!");
 		}
 
 		return elements[nextIndex - 1];

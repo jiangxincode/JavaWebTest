@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson050;
+ï»¿package com.shengsiyuan.lesson050;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -12,16 +12,16 @@ import java.util.Set;
 import java.util.TreeMap;
 
 /**
- * Ëæ»úÉú³É50¸öÊı×Ö£¨ÕûÊı£©£¬Ã¿¸öÊı×ÖµÄ·¶Î§ÊÇ[10,
- * 50]£¬Í³¼ÆÃ¿¸öÊı×Ö³öÏÖµÄ´ÎÊıÒÔ¼°³öÏÖ´ÎÊı×î¶àµÄÊı×ÖÓëËüµÄ¸öÊı£¬×îºó½«Ã¿¸öÊı×Ö¼°Æä³öÏÖ´ÎÊı´òÓ¡³öÀ´£¬Èç¹ûÄ³¸öÊı×Ö³öÏÖ´ÎÊıÎª0
- * £¬Ôò²»Òª´òÓ¡Ëü¡£´òÓ¡Ê±°´ÕÕÊı×ÖµÄÉıĞòÅÅÁĞ
+ * éšæœºç”Ÿæˆ50ä¸ªæ•°å­—ï¼ˆæ•´æ•°ï¼‰ï¼Œæ¯ä¸ªæ•°å­—çš„èŒƒå›´æ˜¯[10,
+ * 50]ï¼Œç»Ÿè®¡æ¯ä¸ªæ•°å­—å‡ºç°çš„æ¬¡æ•°ä»¥åŠå‡ºç°æ¬¡æ•°æœ€å¤šçš„æ•°å­—ä¸å®ƒçš„ä¸ªæ•°ï¼Œæœ€åå°†æ¯ä¸ªæ•°å­—åŠå…¶å‡ºç°æ¬¡æ•°æ‰“å°å‡ºæ¥ï¼Œå¦‚æœæŸä¸ªæ•°å­—å‡ºç°æ¬¡æ•°ä¸º0
+ * ï¼Œåˆ™ä¸è¦æ‰“å°å®ƒã€‚æ‰“å°æ—¶æŒ‰ç…§æ•°å­—çš„å‡åºæ’åˆ—
  * 
  * @author zhanglong
  * 
  */
 public class RandomTest {
 	public static void main(String[] args) {
-		Map<Integer, Integer> map = new TreeMap<Integer, Integer>(); // ´æ´¢Êı×Ö¼°Æä³öÏÖµÄ´ÎÊı£¨keyÎªÊı×Ö£¬valueÎªÊı×Ö³öÏÖµÄ´ÎÊı£©
+		Map<Integer, Integer> map = new TreeMap<Integer, Integer>(); // å­˜å‚¨æ•°å­—åŠå…¶å‡ºç°çš„æ¬¡æ•°ï¼ˆkeyä¸ºæ•°å­—ï¼Œvalueä¸ºæ•°å­—å‡ºç°çš„æ¬¡æ•°ï¼‰
 
 		Random random = new Random();
 
@@ -44,7 +44,7 @@ public class RandomTest {
 
 		Set<Entry<Integer, Integer>> set = map.entrySet();
 
-		List<Integer> list = new ArrayList<Integer>(); // ´æ´¢³öÏÖ´ÎÊı×î´óµÄÊı×Ö
+		List<Integer> list = new ArrayList<Integer>(); // å­˜å‚¨å‡ºç°æ¬¡æ•°æœ€å¤§çš„æ•°å­—
 
 		for (Iterator<Entry<Integer, Integer>> iter = set.iterator(); iter
 				.hasNext();) {
@@ -61,9 +61,9 @@ public class RandomTest {
 			System.out.println(key + " : " + value);
 		}
 
-		System.out.println("³öÏÖµÄ×î¶à´ÎÊıÎª£º" + maxOccurs);
+		System.out.println("å‡ºç°çš„æœ€å¤šæ¬¡æ•°ä¸ºï¼š" + maxOccurs);
 
-		System.out.println("ÕâĞ©Êı×Ö·Ö±ğÊÇ£º");
+		System.out.println("è¿™äº›æ•°å­—åˆ†åˆ«æ˜¯ï¼š");
 
 		for (Iterator<Integer> iter = list.iterator(); iter.hasNext();) {
 			System.out.println(iter.next());

@@ -1,8 +1,8 @@
-package com.shengsiyuan.lesson008;
+ï»¿package com.shengsiyuan.lesson008;
 
 public class Test {
 	static {
-		System.loadLibrary("HelloWorld");// ²»Òª¼Óºó×ºÃû
+		System.loadLibrary("HelloWorld");// ä¸è¦åŠ åç¼€å
 	}
 
 	public native void output();

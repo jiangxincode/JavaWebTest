@@ -1,9 +1,9 @@
-package com.shengsiyuan.lesson007;
+锘縫ackage com.shengsiyuan.lesson007;
 
 public class WhileTest {
 	public static void main(String[] args) {
-		int a = 2; // 循环变量
-		int sum = 0; // 存储相加后的结果
+		int a = 2; // 寰幆鍙橀噺
+		int sum = 0; // 瀛樺偍鐩稿姞鍚庣殑缁撴灉
 
 		while (a <= 100) {
 			sum += a;

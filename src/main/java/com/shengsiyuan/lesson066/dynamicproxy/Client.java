@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson066.dynamicproxy;
+ï»¿package com.shengsiyuan.lesson066.dynamicproxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
@@ -11,7 +11,7 @@ public class Client {
 
 		Class<?> classType = handler.getClass();
 
-		// ÏÂÃæµÄ´úÂëÒ»´ÎĞÔÉú³É´úÀí
+		// ä¸‹é¢çš„ä»£ç ä¸€æ¬¡æ€§ç”Ÿæˆä»£ç†
 
 		Subject subject = (Subject) Proxy.newProxyInstance(classType
 				.getClassLoader(), realSubject.getClass().getInterfaces(),

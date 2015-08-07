@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson068.dynamicproxy;
+﻿package com.shengsiyuan.lesson068.dynamicproxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

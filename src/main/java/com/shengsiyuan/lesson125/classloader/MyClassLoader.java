@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson125.classloader;
+ï»¿package com.shengsiyuan.lesson125.classloader;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -6,20 +6,20 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 
 public class MyClassLoader extends ClassLoader {
-	private String name; // Àà¼ÓÔØÆ÷µÄÃû×Ö
+	private String name; // ç±»åŠ è½½å™¨çš„åå­—
 
-	private String path = "d:\\"; // ¼ÓÔØÀàµÄÂ·¾¶
+	private String path = "d:\\"; // åŠ è½½ç±»çš„è·¯å¾„
 
-	private final String fileType = ".class"; // classÎÄ¼şµÄÀ©Õ¹Ãû
+	private final String fileType = ".class"; // classæ–‡ä»¶çš„æ‰©å±•å
 
 	public MyClassLoader(String name) {
-		super(); // ÈÃÏµÍ³Àà¼ÓÔØÆ÷³ÉÎª¸ÃÀà¼ÓÔØÆ÷µÄ¸¸¼ÓÔØÆ÷
+		super(); // è®©ç³»ç»Ÿç±»åŠ è½½å™¨æˆä¸ºè¯¥ç±»åŠ è½½å™¨çš„çˆ¶åŠ è½½å™¨
 
 		this.name = name;
 	}
 
 	public MyClassLoader(ClassLoader parent, String name) {
-		super(parent); // ÏÔÊ½Ö¸¶¨¸ÃÀà¼ÓÔØÆ÷µÄ¸¸¼ÓÔØÆ÷
+		super(parent); // æ˜¾å¼æŒ‡å®šè¯¥ç±»åŠ è½½å™¨çš„çˆ¶åŠ è½½å™¨
 
 		this.name = name;
 	}

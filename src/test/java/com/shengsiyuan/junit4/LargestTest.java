@@ -1,4 +1,4 @@
-package com.shengsiyuan.junit4;
+ï»¿package com.shengsiyuan.junit4;
 
 import static org.junit.Assert.fail;
 import junit.framework.Assert;
@@ -29,7 +29,7 @@ public class LargestTest {
 		try {
 			result = largest.getLargest(array);
 		} catch (Exception ex) {
-			fail("²âÊÔÊ§°Ü");
+			fail("æµ‹è¯•å¤±è´¥");
 		}
 
 		Assert.assertEquals(34, result);

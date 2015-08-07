@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson125.classloader;
+﻿package com.shengsiyuan.lesson125.classloader;
 
 class FinalTest {
 	public static final int x = 6 / 3;

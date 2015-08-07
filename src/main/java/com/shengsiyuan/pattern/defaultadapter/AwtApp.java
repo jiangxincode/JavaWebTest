@@ -1,4 +1,4 @@
-package com.shengsiyuan.pattern.defaultadapter;
+ï»¿package com.shengsiyuan.pattern.defaultadapter;
 
 import java.awt.Dimension;
 import java.awt.Frame;
@@ -21,7 +21,7 @@ public class AwtApp {
 		frame.addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent e) {
-				System.out.println("¹Ø±Õ´°¿Ú");
+				System.out.println("å…³é—­çª—å£");
 
 				System.exit(0);
 			}

@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson084.observer;
+﻿package com.shengsiyuan.lesson084.observer;
 
 import java.util.Observable;
 import java.util.Observer;

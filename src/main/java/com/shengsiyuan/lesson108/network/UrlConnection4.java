@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson108.network;
+ï»¿package com.shengsiyuan.lesson108.network;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -35,7 +35,7 @@ class Win extends JFrame implements ActionListener, Runnable {
 	public Win() {
 		text = new JTextField(20);
 		area = new JTextArea(12, 12);
-		button = new JButton("È·¶¨");
+		button = new JButton("ç¡®å®š");
 
 		button.addActionListener(this);
 
@@ -43,7 +43,7 @@ class Win extends JFrame implements ActionListener, Runnable {
 
 		JPanel p = new JPanel();
 
-		p.add(new JLabel("ÊäÈëÍøÖ·:"));
+		p.add(new JLabel("è¾“å…¥ç½‘å€:"));
 		p.add(text);
 		p.add(button);
 
@@ -66,7 +66,7 @@ class Win extends JFrame implements ActionListener, Runnable {
 		try {
 			thread.start();
 		} catch (Exception ee) {
-			JOptionPane.showMessageDialog(this, "ÎÒÕıÔÚ¶ÁÈ¡£¬ÇëÉÔºó", "ÌáÊ¾ĞÅÏ¢",
+			JOptionPane.showMessageDialog(this, "æˆ‘æ­£åœ¨è¯»å–ï¼Œè¯·ç¨å", "æç¤ºä¿¡æ¯",
 					JOptionPane.ERROR_MESSAGE);
 		}
 	}

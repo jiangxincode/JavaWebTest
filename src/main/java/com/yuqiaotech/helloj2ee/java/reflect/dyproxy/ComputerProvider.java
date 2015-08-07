@@ -1,4 +1,4 @@
-package com.yuqiaotech.helloj2ee.java.reflect.dyproxy;
+﻿package com.yuqiaotech.helloj2ee.java.reflect.dyproxy;
 
 public interface ComputerProvider {
 	void sellComputer();

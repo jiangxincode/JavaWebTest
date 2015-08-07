@@ -1,11 +1,11 @@
-package com.shengsiyuan.lesson070.annotation;
+ï»¿package com.shengsiyuan.lesson070.annotation;
 
 
 @MyAnnotation(hello = "beijing", world = "shanghai")
 public class MyTest {
 	@MyAnnotation(hello = "tianjin", world = "shangdi")
 	@Deprecated
-	// @SuppressWarnings("unchecked") //Ò»¸ö·½·¨¿ÉÒÔÓÉ¶à¸ö×¢½âĞŞ
+	// @SuppressWarnings("unchecked") //ä¸€ä¸ªæ–¹æ³•å¯ä»¥ç”±å¤šä¸ªæ³¨è§£ä¿®
 	public void output() {
 		System.out.println("output something!");
 	}

@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson060;
+ï»¿package com.shengsiyuan.lesson060;
 
 import java.util.EnumMap;
 import java.util.Map;
@@ -7,9 +7,9 @@ public class EnumMapDemo {
 	public static void main(String[] args) {
 		Map<Action, String> map = new EnumMap<Action, String>(Action.class);
 
-		map.put(Action.TURN_RIGHT, "ÏòÓÒ×ª");
-		map.put(Action.SHOOT, "Éä»÷");
-		map.put(Action.TURN_LEFT, "Ïò×ó×ª");
+		map.put(Action.TURN_RIGHT, "å‘å³è½¬");
+		map.put(Action.SHOOT, "å°„å‡»");
+		map.put(Action.TURN_LEFT, "å‘å·¦è½¬");
 
 		for (Action action : Action.values()) {
 			System.out.println(map.get(action));

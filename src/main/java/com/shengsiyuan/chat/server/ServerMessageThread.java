@@ -1,4 +1,4 @@
-package com.shengsiyuan.chat.server;
+ï»¿package com.shengsiyuan.chat.server;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -29,13 +29,13 @@ public class ServerMessageThread extends Thread {
 		}
 	}
 
-	// ¸üĞÂÓÃ»§ÁĞ±í
-	// Ê×ÏÈ¸üĞÂ·şÎñÆ÷¶ËµÄÓÃ»§ÁĞ±í
-	// È»ºó¸üĞÂ¿Í»§¶ËµÄÓÃ»§ÁĞ±í
+	// æ›´æ–°ç”¨æˆ·åˆ—è¡¨
+	// é¦–å…ˆæ›´æ–°æœåŠ¡å™¨ç«¯çš„ç”¨æˆ·åˆ—è¡¨
+	// ç„¶åæ›´æ–°å®¢æˆ·ç«¯çš„ç”¨æˆ·åˆ—è¡¨
 	public void updateUserList() {
-		// »ñµÃÓÃ»§ÃûµÄ¼¯ºÏ
+		// è·å¾—ç”¨æˆ·åçš„é›†åˆ
 		Set<String> users = this.server.getMap().keySet();
-		// ¹¹ÔìÏò¿Í»§¶Ë·¢ËÍµÄÔÚÏßÓÃ»§ÁĞ±íÊı¾İxml
+		// æ„é€ å‘å®¢æˆ·ç«¯å‘é€çš„åœ¨çº¿ç”¨æˆ·åˆ—è¡¨æ•°æ®xml
 		String xml = XMLUtil.constructUserList(users);
 
 		String str = "";
@@ -44,18 +44,18 @@ public class ServerMessageThread extends Thread {
 			str += user + "\n";
 		}
 
-		// Ê×ÏÈ¸üĞÂ·şÎñÆ÷¶ËµÄÓÃ»§ÁĞ±í
+		// é¦–å…ˆæ›´æ–°æœåŠ¡å™¨ç«¯çš„ç”¨æˆ·åˆ—è¡¨
 		this.server.getJTextArea().setText(str);
 
 		Collection<ServerMessageThread> cols = this.server.getMap().values();
 
-		// ±éÀúÓëÃ¿Ò»¸ö¿Í»§¶Ë¶ÔÓ¦µÄÏß³Ì£¬ÏòÃ¿Ò»¸ö¿Í»§¶Ë·¢ËÍÔÚÏßÓÃ»§ÁĞ±í
+		// éå†ä¸æ¯ä¸€ä¸ªå®¢æˆ·ç«¯å¯¹åº”çš„çº¿ç¨‹ï¼Œå‘æ¯ä¸€ä¸ªå®¢æˆ·ç«¯å‘é€åœ¨çº¿ç”¨æˆ·åˆ—è¡¨
 		for (ServerMessageThread smt : cols) {
 			smt.sendMessage(xml);
 		}
 	}
 
-	// Ïò¿Í»§¶Ë·¢ËÍÊı¾İ
+	// å‘å®¢æˆ·ç«¯å‘é€æ•°æ®
 	public void sendMessage(String message) {
 		try {
 			os.write(message.getBytes());
@@ -72,21 +72,21 @@ public class ServerMessageThread extends Thread {
 
 				int length = this.is.read(buf);
 
-				// ¿Í»§¶Ë·¢À´µÄÏûÏ¢
+				// å®¢æˆ·ç«¯å‘æ¥çš„æ¶ˆæ¯
 				String xml = new String(buf, 0, length);
 
 				int type = Integer.parseInt(XMLUtil.extractType(xml));
 
-				// ÁÄÌìÊı¾İ
+				// èŠå¤©æ•°æ®
 				if (CharacterUtil.CLIENT_MESSAGE == type) {
-					// ÓÃ»§Ãû£¨Ë­·¢À´µÄÏûÏ¢£©
+					// ç”¨æˆ·åï¼ˆè°å‘æ¥çš„æ¶ˆæ¯ï¼‰
 					String username = XMLUtil.extractUsername(xml);
-					// ÁÄÌìµÄÎÄ±¾ÄÚÈİ
+					// èŠå¤©çš„æ–‡æœ¬å†…å®¹
 					String content = XMLUtil.extractContent(xml);
 
-					// ¹¹ÔìÏòËùÓĞ¿Í»§¶Ë·¢ËÍµÄÏûÏ¢
+					// æ„é€ å‘æ‰€æœ‰å®¢æˆ·ç«¯å‘é€çš„æ¶ˆæ¯
 					String message = username + " : " + content;
-					// ÏòËùÓĞ¿Í»§¶Ë·¢ËÍµÄXMLÁÄÌìÊı¾İ
+					// å‘æ‰€æœ‰å®¢æˆ·ç«¯å‘é€çš„XMLèŠå¤©æ•°æ®
 					String messageXML = XMLUtil
 							.constructServerMessageXML(message);
 
@@ -95,31 +95,31 @@ public class ServerMessageThread extends Thread {
 					Collection<ServerMessageThread> cols = map.values();
 
 					for (ServerMessageThread smt : cols) {
-						// ÏòXMLÁÄÌìÊı¾İ·¢ËÍ¸øÃ¿Ò»¸ö¿Í»§¶Ë
+						// å‘XMLèŠå¤©æ•°æ®å‘é€ç»™æ¯ä¸€ä¸ªå®¢æˆ·ç«¯
 						smt.sendMessage(messageXML);
 					}
 				}
-				// ¹Ø±Õ¿Í»§¶Ë´°¿Ú
+				// å…³é—­å®¢æˆ·ç«¯çª—å£
 				else if (CharacterUtil.CLOSE_CLIENT_WINDOW == type) {
 					String username = XMLUtil.extractUsername(xml);
-					// »ñµÃ´ıÉ¾³ıÓÃ»§Ëù¶ÔÓ¦µÄÏß³Ì¶ÔÏó
+					// è·å¾—å¾…åˆ é™¤ç”¨æˆ·æ‰€å¯¹åº”çš„çº¿ç¨‹å¯¹è±¡
 					ServerMessageThread smt = this.server.getMap()
 							.get(username);
-					// ¹¹Ôì³öÏò¿Í»§¶ËÈ·ÈÏ¹Ø±ÕµÄXMLĞÅÏ¢
+					// æ„é€ å‡ºå‘å®¢æˆ·ç«¯ç¡®è®¤å…³é—­çš„XMLä¿¡æ¯
 					String confirmationXML = XMLUtil
 							.constructCloseClientWindowConfirmationXML();
-					// Ïò¿Í»§¶Ë·¢ËÍÈÎÒâÒ»ÌõÈ·ÈÏĞÅÏ¢
+					// å‘å®¢æˆ·ç«¯å‘é€ä»»æ„ä¸€æ¡ç¡®è®¤ä¿¡æ¯
 					smt.sendMessage(confirmationXML);
 
-					// ´ÓÓÃ»§ÁĞ±íµÄMapÖĞ½«¸ÃÓÃ»§È¥³ı
+					// ä»ç”¨æˆ·åˆ—è¡¨çš„Mapä¸­å°†è¯¥ç”¨æˆ·å»é™¤
 					this.server.getMap().remove(username);
-					// ¸üĞÂÔÚÏßÓÃ»§ÁĞ±í
+					// æ›´æ–°åœ¨çº¿ç”¨æˆ·åˆ—è¡¨
 					this.updateUserList();
 
 					this.is.close();
 					this.os.close();
 
-					break; // ½áÊø¸ÃÏß³Ì
+					break; // ç»“æŸè¯¥çº¿ç¨‹
 				}
 			} catch (Exception ex) {
 

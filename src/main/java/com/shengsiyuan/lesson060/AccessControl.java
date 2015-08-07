@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson060;
+﻿package com.shengsiyuan.lesson060;
 
 public class AccessControl {
 	public static boolean checkRight(AccessRight accessRight) {

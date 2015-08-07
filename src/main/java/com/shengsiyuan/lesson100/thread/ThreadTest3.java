@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson100.thread;
+ï»¿package com.shengsiyuan.lesson100.thread;
 
 public class ThreadTest3 {
 	public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class ThreadTest3 {
 }
 
 class HelloThread implements Runnable {
-	//int i; //Á½¸öÏß³Ì·ÃÎÊÍ¬Ò»¸ö¶ÔÏó
+	//int i; //ä¸¤ä¸ªçº¿ç¨‹è®¿é—®åŒä¸€ä¸ªå¯¹è±¡
 
 	@Override
 	public void run() {

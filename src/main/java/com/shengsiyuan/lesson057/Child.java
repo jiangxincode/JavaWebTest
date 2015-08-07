@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson057;
+﻿package com.shengsiyuan.lesson057;
 
 public class Child<T1, T2, T3> extends Parent<T1, T2> {
 	private T3 foo3;

@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson093.decorator;
+ï»¿package com.shengsiyuan.lesson093.decorator;
 
 public class ConcreteDecorator1 extends Decorator {
 	public ConcreteDecorator1(Component component) {
@@ -13,7 +13,7 @@ public class ConcreteDecorator1 extends Decorator {
 	}
 
 	private void doAnotherThing() {
-		System.out.println("¹¦ÄÜB");
+		System.out.println("åŠŸèƒ½B");
 	}
 
 }

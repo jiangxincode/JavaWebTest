@@ -1,17 +1,17 @@
-package com.shengsiyuan.lesson093.decorator;
+ï»¿package com.shengsiyuan.lesson093.decorator;
 
 public class Client {
 	public static void main(String[] args) {
 		/*
-		 * //½ÚµãÁ÷ Component component = new ConcreteComponent();
+		 * //èŠ‚ç‚¹æµ Component component = new ConcreteComponent();
 		 * 
-		 * //¹ıÂËÁ÷ Component component2 = new ConcreteDecorator1(component);
+		 * //è¿‡æ»¤æµ Component component2 = new ConcreteDecorator1(component);
 		 * 
 		 * component2.doSomething();
 		 * 
 		 * System.out.println("------------");
 		 * 
-		 * //¹ıÂËÁ÷ Component component3 = new ConcreteDecorator2(component2);
+		 * //è¿‡æ»¤æµ Component component3 = new ConcreteDecorator2(component2);
 		 * 
 		 * component3.doSomething();
 		 */

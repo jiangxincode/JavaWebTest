@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson041;
+﻿package com.shengsiyuan.lesson041;
 
 public class Node2Test {
 	public static void main(String[] args) {

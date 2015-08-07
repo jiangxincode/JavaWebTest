@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson080.awt;
+ï»¿package com.shengsiyuan.lesson080.awt;
 
 import java.awt.Button;
 import java.awt.Frame;
@@ -49,7 +49,7 @@ class MyWindowListener implements WindowListener {
 
 	@Override
 	public void windowClosing(WindowEvent e) {
-		System.out.println("¹Ø±Õ´°¿Ú");
+		System.out.println("å…³é—­çª—å£");
 		System.exit(0);
 	}
 

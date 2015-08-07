@@ -1,11 +1,11 @@
-package com.shengsiyuan.lesson005;
+ï»¿package com.shengsiyuan.lesson005;
 
 public class Variable {
 	public static void main(String[] args) {
 		int a = 3;
 		// a = a + 1;
 
-		// a += 1; // µÈ¼ÛÓÚ a = a + 1;
+		// a += 1; // ç­‰ä»·äºŽ a = a + 1;
 
 		// a++;
 

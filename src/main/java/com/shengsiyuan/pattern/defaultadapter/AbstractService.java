@@ -1,4 +1,4 @@
-package com.shengsiyuan.pattern.defaultadapter;
+﻿package com.shengsiyuan.pattern.defaultadapter;
 
 public interface AbstractService {
 	public void service1();

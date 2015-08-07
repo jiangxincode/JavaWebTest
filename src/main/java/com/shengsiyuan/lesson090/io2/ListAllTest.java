@@ -1,13 +1,13 @@
-package com.shengsiyuan.lesson090.io2;
+ï»¿package com.shengsiyuan.lesson090.io2;
 
 import java.io.File;
 import java.util.ArrayList;
 
 public class ListAllTest {
-	// ÓÃÓÚÅĞ¶ÏÄ¿Â¼»òÎÄ¼şËù´¦µÄ²ã´Î
+	// ç”¨äºåˆ¤æ–­ç›®å½•æˆ–æ–‡ä»¶æ‰€å¤„çš„å±‚æ¬¡
 	private static int time;
 
-	// µİ¹éµÄ·½·¨
+	// é€’å½’çš„æ–¹æ³•
 	public static void deepList(File file) {
 		if (file.isFile() || 0 == file.listFiles().length) {
 			return;
@@ -41,17 +41,17 @@ public class ListAllTest {
 		}
 	}
 
-	// ÕûÀíÎÄ¼şÊı×é£¬Ê¹µÃÄ¿Â¼ÅÅÔÚÎÄ¼şÖ®Ç°
+	// æ•´ç†æ–‡ä»¶æ•°ç»„ï¼Œä½¿å¾—ç›®å½•æ’åœ¨æ–‡ä»¶ä¹‹å‰
 	private static File[] sort(File[] files) {
 		ArrayList<File> sorted = new ArrayList<File>();
 
-		// Ñ°ÕÒµ½ËùÓĞµÄÄ¿Â¼
+		// å¯»æ‰¾åˆ°æ‰€æœ‰çš„ç›®å½•
 		for (File f : files) {
 			if (f.isDirectory()) {
 				sorted.add(f);
 			}
 		}
-		// Ñ°ÕÒµ½ËùÓĞµÄÎÄ¼ş
+		// å¯»æ‰¾åˆ°æ‰€æœ‰çš„æ–‡ä»¶
 		for (File f : files) {
 			if (f.isFile()) {
 				sorted.add(f);
@@ -61,7 +61,7 @@ public class ListAllTest {
 		return sorted.toArray(new File[files.length]);
 	}
 
-	// ÅĞ¶ÏĞèÒª¼Ó¶àÉÙ tabµÄ·½·¨
+	// åˆ¤æ–­éœ€è¦åŠ å¤šå°‘ tabçš„æ–¹æ³•
 	private static String getTabs(int time) {
 		StringBuffer buffer = new StringBuffer();
 

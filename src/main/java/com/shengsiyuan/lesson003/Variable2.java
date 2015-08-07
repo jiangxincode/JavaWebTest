@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson003;
+ï»¿package com.shengsiyuan.lesson003;
 
 public class Variable2 {
 	public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class Variable2 {
 		// boolean a = true;
 		// System.out.println(a);
 
-		// float a = (float)1.2; //ÕâĞĞ´úÂë±àÒë³ö´í
+		// float a = (float)1.2; //è¿™è¡Œä»£ç ç¼–è¯‘å‡ºé”™
 		// System.out.println(a);
 
 		// float a = 1.2f;

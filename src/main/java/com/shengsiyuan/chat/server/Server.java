@@ -1,4 +1,4 @@
-package com.shengsiyuan.chat.server;
+ï»¿package com.shengsiyuan.chat.server;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -90,17 +90,17 @@ public class Server extends JFrame {
 		jScrollPane = new JScrollPane();
 		jTextArea = new JTextArea();
 
-		jPanel1.setBorder(BorderFactory.createTitledBorder("·şÎñÆ÷ĞÅÏ¢"));
-		jPanel2.setBorder(BorderFactory.createTitledBorder("ÔÚÏßÓÃ»§ÁĞ±í"));
+		jPanel1.setBorder(BorderFactory.createTitledBorder("æœåŠ¡å™¨ä¿¡æ¯"));
+		jPanel2.setBorder(BorderFactory.createTitledBorder("åœ¨çº¿ç”¨æˆ·åˆ—è¡¨"));
 
 		jTextField.setText("5000");
 
-		jLabel1.setText("·şÎñÆ÷×´Ì¬");
-		jLabel2.setText("Í£Ö¹");
+		jLabel1.setText("æœåŠ¡å™¨çŠ¶æ€");
+		jLabel2.setText("åœæ­¢");
 		jLabel2.setForeground(new Color(204, 0, 51));
-		jLabel3.setText("¶Ë¿ÚºÅ");
+		jLabel3.setText("ç«¯å£å·");
 
-		jButton.setText("Æô¶¯·şÎñÆ÷");
+		jButton.setText("å¯åŠ¨æœåŠ¡å™¨");
 
 		jButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
@@ -134,12 +134,12 @@ public class Server extends JFrame {
 		jPanel1.add(jTextField);
 		jPanel1.add(jButton);
 
-		jTextArea.setEditable(false); // ²»ÔÊĞíÓÃ»§ÊÖ¶¯ĞŞ¸ÄÔÚÏßÓÃ»§ÁĞ±í
+		jTextArea.setEditable(false); // ä¸å…è®¸ç”¨æˆ·æ‰‹åŠ¨ä¿®æ”¹åœ¨çº¿ç”¨æˆ·åˆ—è¡¨
 		jTextArea.setRows(20);
 		jTextArea.setColumns(30);
 		jTextArea.setForeground(new Color(0, 51, 204));
 
-		jScrollPane.setViewportView(jTextArea); // ½«JTextArea·ÅÖÃµ½JScrollPaneÖĞ
+		jScrollPane.setViewportView(jTextArea); // å°†JTextAreaæ”¾ç½®åˆ°JScrollPaneä¸­
 
 		jPanel2.add(jScrollPane);
 
@@ -160,7 +160,7 @@ public class Server extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		new Server("·şÎñÆ÷");
+		new Server("æœåŠ¡å™¨");
 	}
 
 }

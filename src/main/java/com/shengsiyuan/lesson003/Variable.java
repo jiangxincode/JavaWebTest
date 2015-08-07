@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson003;
+ï»¿package com.shengsiyuan.lesson003;
 
 public class Variable {
 	public static void main(String[] args) {
@@ -6,11 +6,11 @@ public class Variable {
 		// System.out.println("a");
 
 		/*
-		 * ÕâÊÇ¶àĞĞ×¢ÊÍ ÕâÊÇ¶àĞĞ×¢ÊÍ ÕâÊÇ¶àĞĞ×¢ÊÍ ÕâÊÇ¶àĞĞ×¢ÊÍ
+		 * è¿™æ˜¯å¤šè¡Œæ³¨é‡Š è¿™æ˜¯å¤šè¡Œæ³¨é‡Š è¿™æ˜¯å¤šè¡Œæ³¨é‡Š è¿™æ˜¯å¤šè¡Œæ³¨é‡Š
 		 */
 
 		/**
-		 * ÁíÒ»ÖÖ¶àĞĞ×¢ÊÍ
+		 * å¦ä¸€ç§å¤šè¡Œæ³¨é‡Š
 		 */
 
 		// byte b = 100;

@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson041;
+ï»¿package com.shengsiyuan.lesson041;
 
 import java.util.LinkedList;
 
@@ -17,17 +17,17 @@ public class LinkedListTest1 {
 
 		list.add(1, "A2");
 
-		System.out.println("×î³õµÄ¼¯ºÏ£º" + list);
+		System.out.println("æœ€åˆçš„é›†åˆï¼š" + list);
 
 		list.remove("F");
 		list.remove(2);
 
-		System.out.println("±ä»¯Ö®ºóµÄ¼¯ºÏ£º" + list);
+		System.out.println("å˜åŒ–ä¹‹åçš„é›†åˆï¼š" + list);
 
 		Object value = list.get(2);
 		list.set(2, (String) value + "changed");
 
-		System.out.println("×îºóµÄ¼¯ºÏ£º" + list);
+		System.out.println("æœ€åçš„é›†åˆï¼š" + list);
 
 	}
 }

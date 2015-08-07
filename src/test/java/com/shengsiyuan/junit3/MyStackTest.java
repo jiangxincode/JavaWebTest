@@ -1,4 +1,4 @@
-package com.shengsiyuan.junit3;
+锘縫ackage com.shengsiyuan.junit3;
 
 import com.shengsiyuan.junit3.MyStack;
 
@@ -188,7 +188,7 @@ public class MyStackTest extends TestCase {
 	private void assertData(Throwable tx) {
 		Assert.assertNotNull(tx);
 		Assert.assertEquals(Exception.class, tx.getClass());
-		Assert.assertEquals("数组越界异常!", tx.getMessage());
+		Assert.assertEquals("鏁扮粍瓒婄晫寮傚父!", tx.getMessage());
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.shengsiyuan.pattern.adapter;
+﻿package com.shengsiyuan.pattern.adapter;
 
 public class Adapter extends Adaptee implements Target {
 	@Override

@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson125.classloader;
+﻿package com.shengsiyuan.lesson125.classloader;
 
 public class Test1 {
 	public static void main(String[] args) throws Exception {

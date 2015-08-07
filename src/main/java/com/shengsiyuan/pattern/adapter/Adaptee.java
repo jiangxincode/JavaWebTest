@@ -1,7 +1,7 @@
-package com.shengsiyuan.pattern.adapter;
+锘縫ackage com.shengsiyuan.pattern.adapter;
 
 public class Adaptee {
 	public void method2() {
-		System.out.println("目标方法");
+		System.out.println("鐩爣鏂规硶");
 	}
 }

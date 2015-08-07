@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson051;
+﻿package com.shengsiyuan.lesson051;
 
 public class Environment {
 	private Strategy strategy;

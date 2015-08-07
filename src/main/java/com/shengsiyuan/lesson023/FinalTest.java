@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson023;
+ï»¿package com.shengsiyuan.lesson023;
 
 public class FinalTest {
 	public static void main(String[] args) {
@@ -7,7 +7,7 @@ public class FinalTest {
 	}
 }
 
-// final class E // ¸ÃÀà²»ÄÜ±»¼Ì³Ğ
+// final class E // è¯¥ç±»ä¸èƒ½è¢«ç»§æ‰¿
 class E {
 
 }

@@ -1,27 +1,27 @@
-package com.shengsiyuan.lesson009;
+ï»¿package com.shengsiyuan.lesson009;
 
 public class Test {
-	// Á½¸öÕûÊıÏà¼ÓµÄ·½·¨
+	// ä¸¤ä¸ªæ•´æ•°ç›¸åŠ çš„æ–¹æ³•
 	public int add(int a, int b) {
 		return a + b;
 	}
 
-	// Á½¸öÕûÊıÏà¼õµÄ·½·¨
+	// ä¸¤ä¸ªæ•´æ•°ç›¸å‡çš„æ–¹æ³•
 	public int subtract(int a, int b) {
 		return a - b;
 	}
 
-	// Á½¸öÕûÊıÏà³ËµÄ·½·¨
+	// ä¸¤ä¸ªæ•´æ•°ç›¸ä¹˜çš„æ–¹æ³•
 	public int multiply(int a, int b) {
 		return a * b;
 	}
 
-	// Á½¸öÕûÊıÏà³ıµÄ·½·¨
+	// ä¸¤ä¸ªæ•´æ•°ç›¸é™¤çš„æ–¹æ³•
 	public int divide(int a, int b) {
 		return a / b;
 	}
 
-	// Ê¹ÓÃvoid¹Ø¼ü×Ö±íÊ¾·½·¨²»·µ»ØÖµ
+	// ä½¿ç”¨voidå…³é”®å­—è¡¨ç¤ºæ–¹æ³•ä¸è¿”å›å€¼
 	public void output() {
 		System.out.println("Hello World");
 	}

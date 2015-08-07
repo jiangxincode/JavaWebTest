@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson125.classloader;
+﻿package com.shengsiyuan.lesson125.classloader;
 
 class Singleton {
 	private static Singleton singleton = new Singleton();

@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson041;
+﻿package com.shengsiyuan.lesson041;
 
 public class Node2 {
 	Node2 previous;

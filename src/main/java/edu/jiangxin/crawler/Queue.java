@@ -1,4 +1,4 @@
-package edu.jiangxin.crawler;
+ï»¿package edu.jiangxin.crawler;
 import java.util.HashSet;
 import java.util.LinkedList;
 
@@ -7,7 +7,7 @@ public class Queue {
 	private static LinkedList<String> m_queue = new LinkedList<String>();
 		
 	public synchronized static void Add(String url) {
-    	if( !m_appear.contains(url) ) {	//Î´±£´æ¹ıµÄURL
+    	if( !m_appear.contains(url) ) {	//æœªä¿å­˜è¿‡çš„URL
     		m_appear.add(url);
     		m_queue.addLast(url);
     	}

@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson111.network;
+ï»¿package com.shengsiyuan.lesson111.network;
 
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -11,7 +11,7 @@ public class MainServer {
 		while (true) {
 			Socket socket = serverSocket.accept();
 
-			// Æô¶¯¶ÁĞ´Ïß³Ì
+			// å¯åŠ¨è¯»å†™çº¿ç¨‹
 			new ServerInputThread(socket).start();
 			new ServerOutputThread(socket).start();
 		}

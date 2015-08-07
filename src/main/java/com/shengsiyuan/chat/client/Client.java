@@ -1,4 +1,4 @@
-package com.shengsiyuan.chat.client;
+ï»¿package com.shengsiyuan.chat.client;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -58,14 +58,14 @@ public class Client extends JFrame {
 		this.setAlwaysOnTop(true);
 		this.setResizable(false);
 
-		jPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("ÓÃ»§µÇÂ¼"));
+		jPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("ç”¨æˆ·ç™»å½•"));
 
-		jLabel1.setText("ÓÃ»§Ãû");
-		jLabel2.setText("·şÎñÆ÷");
-		jLabel3.setText("¶Ë¿ÚºÅ");
+		jLabel1.setText("ç”¨æˆ·å");
+		jLabel2.setText("æœåŠ¡å™¨");
+		jLabel3.setText("ç«¯å£å·");
 
-		jButton1.setText("µÇÂ¼");
-		jButton2.setText("ÖØÖÃ");
+		jButton1.setText("ç™»å½•");
+		jButton2.setText("é‡ç½®");
 
 		jButton1.addActionListener(new ActionListener() {
 			@Override
@@ -105,13 +105,13 @@ public class Client extends JFrame {
 		if (clientConnection.login()) {
 			clientConnection.start();
 		} else {
-			JOptionPane.showMessageDialog(this, "ÓÃ»§ÃûÖØ¸´£¡", "´íÎó",
+			JOptionPane.showMessageDialog(this, "ç”¨æˆ·åé‡å¤ï¼", "é”™è¯¯",
 					JOptionPane.ERROR_MESSAGE);
 		}
 	}
 
 	public static void main(String[] args) {
-		new Client("ÓÃ»§µÇÂ¼");
+		new Client("ç”¨æˆ·ç™»å½•");
 	}
 
 }

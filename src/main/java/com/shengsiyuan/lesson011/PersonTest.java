@@ -1,7 +1,7 @@
-package com.shengsiyuan.lesson011;
+ï»¿package com.shengsiyuan.lesson011;
 
 /**
- * ´Ë´¦ËùÓĞµÄPersonÈ«²¿¸ÄÎªPersons£¬·ÀÖ¹ºÍ¸Ã°üÏÂµÄParamTest.javaÖĞµÄPersonÀà³åÍ»
+ * æ­¤å¤„æ‰€æœ‰çš„Personå…¨éƒ¨æ”¹ä¸ºPersonsï¼Œé˜²æ­¢å’Œè¯¥åŒ…ä¸‹çš„ParamTest.javaä¸­çš„Personç±»å†²çª
  * 
  * @author Administrator
  *

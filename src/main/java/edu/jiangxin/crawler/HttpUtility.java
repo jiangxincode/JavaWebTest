@@ -1,4 +1,4 @@
-package edu.jiangxin.crawler;
+ï»¿package edu.jiangxin.crawler;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
@@ -18,7 +18,7 @@ import com.ibm.icu.text.CharsetMatch;
 
 @SuppressWarnings("deprecation")
 public class HttpUtility {
-	// Î±×°ÓÃµÄagent
+	// ä¼ªè£…ç”¨çš„agent
 	private static String[] m_agent = {
 			"Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)",
 			"Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.2)",
@@ -26,14 +26,14 @@ public class HttpUtility {
 
 	private static Logger m_debug = LogManager.getLogger("Debuglogger");
 
-	// È¡µÃ"url"Ö¸¶¨µÄentity
+	// å–å¾—"url"æŒ‡å®šçš„entity
 	public static HttpEntity GetEntity(String url) {
 		CloseableHttpClient client = HttpClients.createDefault();
 		HttpGet getMethod = new HttpGet(UrlUtility.Encode(url));
 		getMethod.getParams().setParameter("http.protocol.cookie-policy",
 				CookiePolicy.BROWSER_COMPATIBILITY);
 
-		// Î±×°agent
+		// ä¼ªè£…agent
 		java.util.Random r = new java.util.Random();
 		getMethod.setHeader("User-Agent", m_agent[r.nextInt(m_agent.length)]);
 
@@ -50,9 +50,9 @@ public class HttpUtility {
 		if ((statusCode == HttpStatus.SC_MOVED_PERMANENTLY)
 				|| (statusCode == HttpStatus.SC_MOVED_TEMPORARILY)
 				|| (statusCode == HttpStatus.SC_SEE_OTHER)
-				|| (statusCode == HttpStatus.SC_TEMPORARY_REDIRECT)) { // ×ªÏò×¥È¡ĞÂÁ´½Ó
+				|| (statusCode == HttpStatus.SC_TEMPORARY_REDIRECT)) { // è½¬å‘æŠ“å–æ–°é“¾æ¥
 			return GetEntity(response.getLastHeader("Location").getValue());
-		} else if (statusCode == HttpStatus.SC_NOT_FOUND) { // ÕÒ²»µ½ÍøÒ³
+		} else if (statusCode == HttpStatus.SC_NOT_FOUND) { // æ‰¾ä¸åˆ°ç½‘é¡µ
 			m_debug.debug(url + " : page was no found");
 			response = null;
 		}
@@ -63,7 +63,7 @@ public class HttpUtility {
 			return null;
 	}
 
-	// ´Ó"entity"µÃµ½ÍøÒ³ÄÚÈİ
+	// ä»"entity"å¾—åˆ°ç½‘é¡µå†…å®¹
 	public static String GetContent(HttpEntity entity) {
 		if (entity != null) {
 			byte[] bytes;
@@ -75,8 +75,8 @@ public class HttpUtility {
 				return null;
 			}
 
-			String charSet = EntityUtils.getContentCharSet(entity); // µÃµ½ÍøÒ³±àÒë¸ñÊ½
-			if (charSet != null) { // ÍøÒ³±¾ÉíÓĞ¸æÖª±àÂë
+			String charSet = EntityUtils.getContentCharSet(entity); // å¾—åˆ°ç½‘é¡µç¼–è¯‘æ ¼å¼
+			if (charSet != null) { // ç½‘é¡µæœ¬èº«æœ‰å‘ŠçŸ¥ç¼–ç 
 				try {
 					return new String(bytes, charSet);
 				} catch (UnsupportedEncodingException e) {
@@ -91,7 +91,7 @@ public class HttpUtility {
 		return null;
 	}
 
-	// Ê¹ÓÃICU4J¼ì²â±àÂë£¬²¢½«±àÂëºóµÄÍøÒ³ÄÚÈİ·µ»Ø
+	// ä½¿ç”¨ICU4Jæ£€æµ‹ç¼–ç ï¼Œå¹¶å°†ç¼–ç åçš„ç½‘é¡µå†…å®¹è¿”å›
 	public static String GetContent(byte[] bytes) {
 		CharsetDetector detector = new CharsetDetector();
 		detector.setText(bytes);

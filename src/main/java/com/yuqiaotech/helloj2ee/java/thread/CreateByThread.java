@@ -1,4 +1,4 @@
-package com.yuqiaotech.helloj2ee.java.thread;
+﻿package com.yuqiaotech.helloj2ee.java.thread;
 
 /**
  * 扩展java.lang.Thread类并重写它的run()方法来创建多线程

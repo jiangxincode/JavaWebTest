@@ -1,4 +1,4 @@
-package com.yuqiaotech.helloj2ee.java.generic;
+﻿package com.yuqiaotech.helloj2ee.java.generic;
 
 public class GenericMethod {
 

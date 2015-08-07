@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson040;
+锘縫ackage com.shengsiyuan.lesson040;
 
 import java.util.ArrayList;
 
@@ -14,7 +14,7 @@ public class ArrayListTest4 {
 		list.add(new Integer(6));
 
 		/*
-		 * 不能将Object[]转换为Integer[]
+		 * 涓嶈兘灏哋bject[]杞崲涓篒nteger[]
 		 */
 
 		Object[] in = list.toArray();

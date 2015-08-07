@@ -1,4 +1,4 @@
-package com.yuqiaotech.helloj2ee.java.generic;
+﻿package com.yuqiaotech.helloj2ee.java.generic;
 
 import java.util.ArrayList;
 import java.util.List;

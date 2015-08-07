@@ -1,4 +1,4 @@
-package edu.jiangxin.test;
+﻿package edu.jiangxin.test;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.Charset;

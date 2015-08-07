@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson079.awt;
+ï»¿package com.shengsiyuan.lesson079.awt;
 
 import java.awt.BorderLayout;
 import java.awt.Button;
@@ -10,7 +10,7 @@ public class TestButton {
 	public static void main(String[] args) {
 		Frame frame = new Frame("Test Button");
 		Button button = new Button("Press Me!");
-		// Ôö¼ÓÊÂ¼ş´¦ÀíÆ÷
+		// å¢åŠ äº‹ä»¶å¤„ç†å™¨
 		button.addActionListener(new ButtonHandler());
 		frame.add(button, BorderLayout.CENTER);
 		frame.pack();

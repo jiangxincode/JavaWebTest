@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson093.decorator;
+﻿package com.shengsiyuan.lesson093.decorator;
 
 public interface Component {
 	public void doSomething();

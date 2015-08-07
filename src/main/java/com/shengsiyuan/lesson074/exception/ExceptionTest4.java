@@ -1,11 +1,11 @@
-package com.shengsiyuan.lesson074.exception;
+ï»¿package com.shengsiyuan.lesson074.exception;
 
 public class ExceptionTest4 {
 	public void method(String str) throws Exception {
 		if (null == str) {
-			throw new MyException("´«ÈëµÄ×Ö·û´®²ÎÊı²»ÄÜÎªnull");
+			throw new MyException("ä¼ å…¥çš„å­—ç¬¦ä¸²å‚æ•°ä¸èƒ½ä¸ºnull");
 		} else if ("hello".equals(str)) {
-			throw new MyException2("´«ÈëµÄ×Ö·û´®²»ÄÜÎªhello");
+			throw new MyException2("ä¼ å…¥çš„å­—ç¬¦ä¸²ä¸èƒ½ä¸ºhello");
 		} else {
 			System.out.println(str);
 		}
@@ -16,19 +16,19 @@ public class ExceptionTest4 {
 			ExceptionTest4 test = new ExceptionTest4();
 			test.method("hello");
 		} catch (MyException e) {
-			System.out.println("½øÈëµ½MyException catch¿é");
+			System.out.println("è¿›å…¥åˆ°MyException catchå—");
 			e.printStackTrace();
 		} catch (MyException2 e) {
-			System.out.println("½øÈëµ½MyException2 catch¿é");
+			System.out.println("è¿›å…¥åˆ°MyException2 catchå—");
 			e.printStackTrace();
 		} catch (Exception e) {
-			System.out.println("½øÈëµ½Exception catch¿é");
+			System.out.println("è¿›å…¥åˆ°Exception catchå—");
 			e.printStackTrace();
 		} finally {
-			System.out.println("Òì³£´¦ÀíÍê±Ï");
+			System.out.println("å¼‚å¸¸å¤„ç†å®Œæ¯•");
 		}
 
-		System.out.println("³ÌĞòÖ´ĞĞÍê±Ï");
+		System.out.println("ç¨‹åºæ‰§è¡Œå®Œæ¯•");
 
 	}
 }

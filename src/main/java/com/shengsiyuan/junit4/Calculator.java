@@ -1,4 +1,4 @@
-package com.shengsiyuan.junit4;
+ï»¿package com.shengsiyuan.junit4;
 
 public class Calculator {
 	public int add(int a, int b) {
@@ -21,7 +21,7 @@ public class Calculator {
 
 	public int divide(int a, int b) throws Exception {
 		if (0 == b) {
-			throw new Exception("³ıÊı²»ÄÜÎª0");
+			throw new Exception("é™¤æ•°ä¸èƒ½ä¸º0");
 		}
 
 		return a / b;

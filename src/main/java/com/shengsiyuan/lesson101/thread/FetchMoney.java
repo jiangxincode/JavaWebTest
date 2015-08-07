@@ -1,14 +1,14 @@
-package com.shengsiyuan.lesson101.thread;
+ï»¿package com.shengsiyuan.lesson101.thread;
 
 public class FetchMoney {
 	public static void main(String[] args) {
 		Bank bank = new Bank();
 
-		Thread t1 = new MoneyThread(bank); // ¹ñÌ¨
+		Thread t1 = new MoneyThread(bank); // æŸœå°
 
 		// bank = new Bank();
 
-		Thread t2 = new MoneyThread(bank); // È¡¿î»ú
+		Thread t2 = new MoneyThread(bank); // å–æ¬¾æœº
 
 		t1.start();
 		t2.start();

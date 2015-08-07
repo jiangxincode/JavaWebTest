@@ -1,8 +1,8 @@
-package com.shengsiyuan.pattern.defaultadapter;
+锘縫ackage com.shengsiyuan.pattern.defaultadapter;
 
 public class ConcreteService extends ServiceAdapter {
 	@Override
 	public void service1() {
-		System.out.println("执行业务方法");
+		System.out.println("鎵ц涓氬姟鏂规硶");
 	}
 }

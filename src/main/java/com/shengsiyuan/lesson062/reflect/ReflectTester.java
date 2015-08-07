@@ -1,10 +1,10 @@
-package com.shengsiyuan.lesson062.reflect;
+ï»¿package com.shengsiyuan.lesson062.reflect;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 public class ReflectTester {
-	// ¸Ã·½·¨ÊµÏÖ¶ÔCustomer¶ÔÏóµÄ¿½±´²Ù×÷
+	// è¯¥æ–¹æ³•å®ç°å¯¹Customerå¯¹è±¡çš„æ‹·è´æ“ä½œ
 	public Object copy(Object object) throws Exception {
 		Class<?> classType = object.getClass();
 		
@@ -13,8 +13,8 @@ public class ReflectTester {
 		
 		// Constructor<?> cons = classType.getConstructor(new Class[] {});
 		// Object obj = cons.newInstance(new Object[] {});
-		// ÒÔÉÏÁ½ĞĞ´úÂëµÈ¼ÛÓÚÏÂÃæÒ»ĞĞ
-		// Object obj2 = classType.newInstance(); //Ö»ÄÜÊ¹ÓÃÎŞ²Î¹¹Ôìº¯Êı
+		// ä»¥ä¸Šä¸¤è¡Œä»£ç ç­‰ä»·äºä¸‹é¢ä¸€è¡Œ
+		// Object obj2 = classType.newInstance(); //åªèƒ½ä½¿ç”¨æ— å‚æ„é€ å‡½æ•°
 
 		// System.out.println(obj);
 		
@@ -22,14 +22,14 @@ public class ReflectTester {
 		Object objectCopy = classType.getConstructor(new Class[] {})
 				.newInstance(new Object[] {});
 
-		// »ñµÃ¶ÔÏóµÄËùÓĞ³ÉÔ±±äÁ¿
+		// è·å¾—å¯¹è±¡çš„æ‰€æœ‰æˆå‘˜å˜é‡
 
 		Field[] fields = classType.getDeclaredFields();
 
 		for (Field field : fields) {
 			String name = field.getName();
 
-			String firstLetter = name.substring(0, 1).toUpperCase();// ½«ÊôĞÔµÄÊ××ÖÄ¸×ª»»Îª´óĞ´
+			String firstLetter = name.substring(0, 1).toUpperCase();// å°†å±æ€§çš„é¦–å­—æ¯è½¬æ¢ä¸ºå¤§å†™
 
 			String getMethodName = "get" + firstLetter + name.substring(1);
 			String setMethodName = "set" + firstLetter + name.substring(1);

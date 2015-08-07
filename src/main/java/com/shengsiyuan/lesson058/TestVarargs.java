@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson058;
+﻿package com.shengsiyuan.lesson058;
 
 public class TestVarargs {
 	private static int sum(String str, int... nums) {

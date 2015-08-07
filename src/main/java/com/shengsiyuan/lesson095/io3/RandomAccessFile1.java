@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson095.io3;
+ï»¿package com.shengsiyuan.lesson095.io3;
 
 import java.io.RandomAccessFile;
 
@@ -12,7 +12,7 @@ public class RandomAccessFile1 {
 
 		Person p2 = new Person();
 
-		raf.seek(0); // ÈÃ¶ÁµÄÎ»ÖÃÖØ»Øµ½ÎÄ¼ş¿ªÍ·
+		raf.seek(0); // è®©è¯»çš„ä½ç½®é‡å›åˆ°æ–‡ä»¶å¼€å¤´
 
 		p2.read(raf);
 

@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson017;
+﻿package com.shengsiyuan.lesson017;
 
 public class InheritenceTest {
 	public static void main(String[] args) {

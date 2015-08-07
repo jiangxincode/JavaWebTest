@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson057;
+ï»¿package com.shengsiyuan.lesson057;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -9,7 +9,7 @@ public class BoxTest {
 
 		Collection<Integer> c = new ArrayList<Integer>();
 
-		c.add(3);// ½«intÀàĞÍµÄ3×ª»»ÎªIntegerÀàĞÍ²¢·Åµ½¼¯ºÏµ±ÖĞ
+		c.add(3);// å°†intç±»å‹çš„3è½¬æ¢ä¸ºIntegerç±»å‹å¹¶æ”¾åˆ°é›†åˆå½“ä¸­
 		c.add(a + 3);
 
 		for (Integer i : c) {

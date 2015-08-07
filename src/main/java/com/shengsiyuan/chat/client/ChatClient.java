@@ -1,4 +1,4 @@
-package com.shengsiyuan.chat.client;
+ï»¿package com.shengsiyuan.chat.client;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -58,10 +58,10 @@ public class ChatClient extends javax.swing.JFrame {
 		jPanel3 = new JPanel();
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setTitle("ÁÄÌìÊÒ");
+		this.setTitle("èŠå¤©å®¤");
 		setResizable(false);
-		jPanel1.setBorder(BorderFactory.createTitledBorder("ÁÄÌìÊÒĞÅÏ¢"));
-		jPanel2.setBorder(BorderFactory.createTitledBorder("ÔÚÏßÓÃ»§ÁĞ±í"));
+		jPanel1.setBorder(BorderFactory.createTitledBorder("èŠå¤©å®¤ä¿¡æ¯"));
+		jPanel2.setBorder(BorderFactory.createTitledBorder("åœ¨çº¿ç”¨æˆ·åˆ—è¡¨"));
 		jTextArea1.setColumns(30);
 		jTextArea1.setRows(25);
 
@@ -84,8 +84,8 @@ public class ChatClient extends javax.swing.JFrame {
 		jScrollPane1.setViewportView(jTextArea1);
 		jScrollPane2.setViewportView(jTextArea2);
 
-		jButton1.setText("·¢ËÍ");
-		jButton2.setText("ÇåÆÁ");
+		jButton1.setText("å‘é€");
+		jButton2.setText("æ¸…å±");
 
 		jButton1.addActionListener(new ActionListener() {
 			@Override
@@ -115,11 +115,11 @@ public class ChatClient extends javax.swing.JFrame {
 	}
 
 	private void sendMessage(ActionEvent event) {
-		// ÓÃ»§ÁÄÌìµÄÊı¾İ
+		// ç”¨æˆ·èŠå¤©çš„æ•°æ®
 		String message = this.jTextField.getText();
-		// Çå¿ÕÁÄÌìÊı¾İ
+		// æ¸…ç©ºèŠå¤©æ•°æ®
 		this.jTextField.setText("");
-		// Ïò·şÎñÆ÷¶Ë·¢ËÍÁÄÌìÊı¾İ
+		// å‘æœåŠ¡å™¨ç«¯å‘é€èŠå¤©æ•°æ®
 		this.clientConnection.sendMessage(message, "2");
 	}
 

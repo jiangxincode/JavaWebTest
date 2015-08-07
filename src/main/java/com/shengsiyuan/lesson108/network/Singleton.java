@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson108.network;
+﻿package com.shengsiyuan.lesson108.network;
 
 public class Singleton {
 	private static Singleton singleton;

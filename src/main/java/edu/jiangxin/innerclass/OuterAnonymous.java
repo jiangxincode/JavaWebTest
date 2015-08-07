@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 匿名内部类 anonymous innerclass
  * @author jiangxin
  */

@@ -1,7 +1,7 @@
-package com.shengsiyuan.lesson086.io;
+锘縫ackage com.shengsiyuan.lesson086.io;
 
 public class Test1 {
-	// 循环方式计算阶乘，又叫做迭代方式
+	// 寰幆鏂瑰紡璁＄畻闃朵箻锛屽張鍙仛杩唬鏂瑰紡
 	public int compute(int number) {
 		int result = 1;
 
@@ -12,7 +12,7 @@ public class Test1 {
 		return result;
 	}
 
-	// 使用递归方式计算阶乘
+	// 浣跨敤閫掑綊鏂瑰紡璁＄畻闃朵箻
 	public int compute2(int number) {
 		if (1 == number) {
 			return 1;

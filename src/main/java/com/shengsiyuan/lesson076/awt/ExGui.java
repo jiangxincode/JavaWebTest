@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson076.awt;
+﻿package com.shengsiyuan.lesson076.awt;
 
 import java.awt.Button;
 //import java.awt.FlowLayout;

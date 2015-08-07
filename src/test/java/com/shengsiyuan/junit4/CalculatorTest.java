@@ -1,4 +1,4 @@
-package com.shengsiyuan.junit4;
+﻿package com.shengsiyuan.junit4;
 
 import static org.junit.Assert.assertEquals;
 

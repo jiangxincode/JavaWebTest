@@ -1,15 +1,15 @@
-package com.shengsiyuan.lesson038;
+ï»¿package com.shengsiyuan.lesson038;
 
 public class Test {
 	public boolean canAccess(int access) {
 		if (access == Authorization.MANAGER) {
-			return true; // ¾­Àí·ÃÎÊÈ¨ÏŞ
+			return true; // ç»ç†è®¿é—®æƒé™
 		}
 		if (access == Authorization.DEPARTMENT) {
-			return false; // ²¿ÃÅ¾­Àí·ÃÎÊÈ¨ÏŞ
+			return false; // éƒ¨é—¨ç»ç†è®¿é—®æƒé™
 		}
 		if (access == Authorization.EMPLOYEE) {
-			return false; // ÆÕÍ¨Ô±¹¤·ÃÎÊÈ¨ÏŞ
+			return false; // æ™®é€šå‘˜å·¥è®¿é—®æƒé™
 		}
 
 		return false;

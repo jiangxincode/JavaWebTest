@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson072.junit;
+﻿package com.shengsiyuan.lesson072.junit;
 
 import org.junit.Test;
 

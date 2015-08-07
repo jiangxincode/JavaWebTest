@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 静态内部类 static
  * @author jiangxin
  */

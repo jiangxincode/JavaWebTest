@@ -1,4 +1,4 @@
-package edu.jiangxin.crawler;
+ï»¿package edu.jiangxin.crawler;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -23,18 +23,18 @@ public class Zerocrawler {
 	public static void Crawl(String url, String savePath) {
 		int cnt = 1;
 		long startTime = System.currentTimeMillis();
-		AtomicInteger numberOfThreads = new AtomicInteger(); // ¼ÇÂ¼µ±Ç°Ê¹ÓÃµÄÅÀ³æÊı
+		AtomicInteger numberOfThreads = new AtomicInteger(); // è®°å½•å½“å‰ä½¿ç”¨çš„çˆ¬è™«æ•°
 		ThreadPoolExecutor executor = new ThreadPoolExecutor(m_maxThreads,
 				m_maxThreads, 3, TimeUnit.SECONDS,
-				new LinkedBlockingQueue<Runnable>()); // ½¨Á¢Ïß³Ì³Ø
+				new LinkedBlockingQueue<Runnable>()); // å»ºç«‹çº¿ç¨‹æ± 
 
-		Queue.Add(UrlUtility.Encode(UrlUtility.Normalizer(url))); // Ìí¼Ó³õÊ¼URLµ½QueueÖĞ
+		Queue.Add(UrlUtility.Encode(UrlUtility.Normalizer(url))); // æ·»åŠ åˆå§‹URLåˆ°Queueä¸­
 		try {
 			while ((url = Queue.Fetch()) != null) {
-				executor.execute(new PageCrawler(url, savePath, numberOfThreads)); // ½«URL½»¸øÅÀ³æ
+				executor.execute(new PageCrawler(url, savePath, numberOfThreads)); // å°†URLäº¤ç»™çˆ¬è™«
 
 				while ((Queue.Size() == 0 && numberOfThreads.get() != 0)
-						|| (numberOfThreads.get() == m_maxThreads)) { // ·ÀÖ¹ÌáÇ°ÍË³ö
+						|| (numberOfThreads.get() == m_maxThreads)) { // é˜²æ­¢æå‰é€€å‡º
 					sleep();
 				}
 

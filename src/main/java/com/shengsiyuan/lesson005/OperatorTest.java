@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson005;
+﻿package com.shengsiyuan.lesson005;
 
 public class OperatorTest {
 	public static void main(String[] args) {

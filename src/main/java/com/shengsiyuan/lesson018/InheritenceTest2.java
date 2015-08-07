@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson018;
+锘縫ackage com.shengsiyuan.lesson018;
 
 public class InheritenceTest2 {
 	public static void main(String[] args) {
@@ -16,6 +16,6 @@ class Animal {
 class Dog extends Animal {
 	public void run() {
 		System.out.println("dog is running");
-		super.run(); // 调用父类的run方法
+		super.run(); // 璋冪敤鐖剁被鐨剅un鏂规硶
 	}
 }

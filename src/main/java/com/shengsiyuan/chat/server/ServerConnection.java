@@ -1,4 +1,4 @@
-package com.shengsiyuan.chat.server;
+ï»¿package com.shengsiyuan.chat.server;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -20,16 +20,16 @@ public class ServerConnection extends Thread {
 
 			this.serverSocket = new ServerSocket(port);
 
-			// ÏÂÃæÁ½ĞĞ´úÂë²»ÄÜ·Åµ½ÉÏÃæÒ»ĞĞ´úÂëÖ®Ç°
-			// ÒòÎª·şÎñÆ÷Æô¶¯Ê±ÓĞ¿ÉÄÜ»áÅ×³öÒì³£
-			// Èç¹û·ÅÔÚÉÏÃæ£¬Ôò·¢ÉúÒì³£Ê±Ò²»áµ¼ÖÂlabelÉÏµÄÎÄ±¾·¢Éú±ä»¯
-			// ÕâÓëÊµ¼ÊÇé¿ö²»·û
-			this.server.getJLabel2().setText("ÔËĞĞ");
+			// ä¸‹é¢ä¸¤è¡Œä»£ç ä¸èƒ½æ”¾åˆ°ä¸Šé¢ä¸€è¡Œä»£ç ä¹‹å‰
+			// å› ä¸ºæœåŠ¡å™¨å¯åŠ¨æ—¶æœ‰å¯èƒ½ä¼šæŠ›å‡ºå¼‚å¸¸
+			// å¦‚æœæ”¾åœ¨ä¸Šé¢ï¼Œåˆ™å‘ç”Ÿå¼‚å¸¸æ—¶ä¹Ÿä¼šå¯¼è‡´labelä¸Šçš„æ–‡æœ¬å‘ç”Ÿå˜åŒ–
+			// è¿™ä¸å®é™…æƒ…å†µä¸ç¬¦
+			this.server.getJLabel2().setText("è¿è¡Œ");
 			this.server.getJButton().setEnabled(false);
 		} catch (Exception ex) {
 			ex.printStackTrace();
 
-			JOptionPane.showMessageDialog(this.server, "¶Ë¿ÚºÅ±»Õ¼ÓÃ£¡", "¾¯¸æ",
+			JOptionPane.showMessageDialog(this.server, "ç«¯å£å·è¢«å ç”¨ï¼", "è­¦å‘Š",
 					JOptionPane.ERROR_MESSAGE);
 		}
 	}
@@ -46,23 +46,23 @@ public class ServerConnection extends Thread {
 				byte[] buf = new byte[5000];
 				int length = is.read(buf);
 
-				// ¿Í»§¶Ë·¢À´µÄÁ¬½ÓĞÅÏ¢£¨°üÀ¨ÁËÓÃ»§Ãû£©
+				// å®¢æˆ·ç«¯å‘æ¥çš„è¿æ¥ä¿¡æ¯ï¼ˆåŒ…æ‹¬äº†ç”¨æˆ·åï¼‰
 				String loginXML = new String(buf, 0, length);
 
-				// ´Ó¿Í»§¶ËµÇÂ¼Êı¾İÖĞÌáÈ¡³öÓÃ»§ÃûĞÅÏ¢£¨username£©
+				// ä»å®¢æˆ·ç«¯ç™»å½•æ•°æ®ä¸­æå–å‡ºç”¨æˆ·åä¿¡æ¯ï¼ˆusernameï¼‰
 				String username = XMLUtil.extractUsername(loginXML);
 
 				String loginResult = null;
 
-				// ÅĞ¶ÏÓÃ»§ÊÇ·ñµÇÂ¼³É¹¦
+				// åˆ¤æ–­ç”¨æˆ·æ˜¯å¦ç™»å½•æˆåŠŸ
 				boolean isLogin = false;
 
-				// ÅĞ¶ÏÓÃ»§ÃûÊÇ·ñÖØ¸´
-				// ÓÃ»§ÃûÖØ¸´
+				// åˆ¤æ–­ç”¨æˆ·åæ˜¯å¦é‡å¤
+				// ç”¨æˆ·åé‡å¤
 				if (this.server.getMap().containsKey(username)) {
 					loginResult = "failure";
 				}
-				// ÓÃ»§Ãû²»ÖØ¸´
+				// ç”¨æˆ·åä¸é‡å¤
 				else {
 					loginResult = "success";
 
@@ -73,15 +73,15 @@ public class ServerConnection extends Thread {
 
 				os.write(xml.getBytes());
 
-				// Èç¹ûÓÃ»§µÇÂ¼³É¹¦£¬Æô¶¯Ïß³Ì
+				// å¦‚æœç”¨æˆ·ç™»å½•æˆåŠŸï¼Œå¯åŠ¨çº¿ç¨‹
 				if (isLogin) {
-					// ×¼±¸´´½¨ĞÂµÄÏß³Ì£¬ÓÃÓÚ´¦ÀíÓÃ»§µÄÁÄÌìÊı¾İ£¬Ã¿Ò»¸öÁ¬½ÓÉÏµÄÓÃ»§¶¼»á¶ÔÓ¦Ò»¸ö¸ÃÏß³Ì
+					// å‡†å¤‡åˆ›å»ºæ–°çš„çº¿ç¨‹ï¼Œç”¨äºå¤„ç†ç”¨æˆ·çš„èŠå¤©æ•°æ®ï¼Œæ¯ä¸€ä¸ªè¿æ¥ä¸Šçš„ç”¨æˆ·éƒ½ä¼šå¯¹åº”ä¸€ä¸ªè¯¥çº¿ç¨‹
 					ServerMessageThread serverMessageThread = new ServerMessageThread(
 							this.server, socket);
-					// ½«ÓÃ»§Ãû¼°ÓëÖ®¶ÔÓ¦µÄÏß³Ì¶ÔÏó ·Åµ½MapÖĞ
+					// å°†ç”¨æˆ·ååŠä¸ä¹‹å¯¹åº”çš„çº¿ç¨‹å¯¹è±¡ æ”¾åˆ°Mapä¸­
 					this.server.getMap().put(username, serverMessageThread);
 
-					// ¸üĞÂÓÃ»§ÁĞ±í£¨·şÎñÆ÷¶Ë+¿Í»§¶Ë£©
+					// æ›´æ–°ç”¨æˆ·åˆ—è¡¨ï¼ˆæœåŠ¡å™¨ç«¯+å®¢æˆ·ç«¯ï¼‰
 					serverMessageThread.updateUserList();
 
 					serverMessageThread.start();

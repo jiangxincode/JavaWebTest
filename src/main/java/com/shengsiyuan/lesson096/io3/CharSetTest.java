@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson096.io3;
+﻿package com.shengsiyuan.lesson096.io3;
 
 import java.nio.charset.Charset;
 import java.util.Iterator;

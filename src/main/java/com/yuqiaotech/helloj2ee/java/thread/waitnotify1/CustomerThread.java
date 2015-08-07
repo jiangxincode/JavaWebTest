@@ -1,4 +1,4 @@
-package com.yuqiaotech.helloj2ee.java.thread.waitnotify1;
+﻿package com.yuqiaotech.helloj2ee.java.thread.waitnotify1;
 
 import java.util.List;
 import java.util.Random;

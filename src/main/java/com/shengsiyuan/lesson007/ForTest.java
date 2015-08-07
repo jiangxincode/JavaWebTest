@@ -1,8 +1,8 @@
-package com.shengsiyuan.lesson007;
+锘縫ackage com.shengsiyuan.lesson007;
 
 public class ForTest {
 	public static void main(String[] args) {
-		int sum = 0; // 存储相加后的结果
+		int sum = 0; // 瀛樺偍鐩稿姞鍚庣殑缁撴灉
 
 		for (int i = 2; i <= 100; i += 2) {
 			sum += i;
@@ -10,7 +10,7 @@ public class ForTest {
 
 		System.out.println(sum);
 
-		int sum2 = 0; // 存储相加后的结果
+		int sum2 = 0; // 瀛樺偍鐩稿姞鍚庣殑缁撴灉
 
 		for (int i = 100; i >= 1; i--) {
 			sum2 += i;

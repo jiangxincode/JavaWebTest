@@ -1,4 +1,4 @@
-package com.yuqiaotech.helloj2ee.xml;
+﻿package com.yuqiaotech.helloj2ee.xml;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson056;
+﻿package com.shengsiyuan.lesson056;
 
 public class Person {
 	private int id;

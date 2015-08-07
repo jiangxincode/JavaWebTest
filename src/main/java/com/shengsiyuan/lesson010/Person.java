@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson010;
+﻿package com.shengsiyuan.lesson010;
 
 public class Person {
 	int age;

@@ -1,4 +1,4 @@
-package com.shengsiyuan.chat.util;
+ï»¿package com.shengsiyuan.chat.util;
 
 import java.io.StringReader;
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * ¿Í»§¶ËµÇÂ¼Ê±Ïò·şÎñÆ÷¶Ë·¢ËÍµÄXMLÊı¾İ
+	 * å®¢æˆ·ç«¯ç™»å½•æ—¶å‘æœåŠ¡å™¨ç«¯å‘é€çš„XMLæ•°æ®
 	 * 
 	 * @return
 	 */
@@ -48,7 +48,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * ´Ó¿Í»§¶ËµÇÂ¼Ëù·¢ËÍµÄXMLÊı¾İÖĞ½âÎö³öÓÃ»§Ãû£¨username£©
+	 * ä»å®¢æˆ·ç«¯ç™»å½•æ‰€å‘é€çš„XMLæ•°æ®ä¸­è§£æå‡ºç”¨æˆ·åï¼ˆusernameï¼‰
 	 */
 	public static String extractUsername(String xml) {
 		try {
@@ -67,7 +67,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * ¹¹ÔìÏò¿Í»§¶Ë·¢ËÍµÄÔÚÏßÓÃ»§ÁĞ±íxmlÊı¾İ
+	 * æ„é€ å‘å®¢æˆ·ç«¯å‘é€çš„åœ¨çº¿ç”¨æˆ·åˆ—è¡¨xmlæ•°æ®
 	 */
 
 	public static String constructUserList(Set<String> users) {
@@ -86,7 +86,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * ´ÓXMLĞÅÏ¢ÖĞÌáÈ¡³öËùÓĞµÄÔÚÏßÓÃ»§ÁĞ±íĞÅÏ¢
+	 * ä»XMLä¿¡æ¯ä¸­æå–å‡ºæ‰€æœ‰çš„åœ¨çº¿ç”¨æˆ·åˆ—è¡¨ä¿¡æ¯
 	 */
 	public static List<String> extractUserList(String xml) {
 		List<String> list = new ArrayList<String>();
@@ -110,7 +110,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * ´ÓxmlÏûÏ¢ÖĞ½âÎö³öÀàĞÍÖµ
+	 * ä»xmlæ¶ˆæ¯ä¸­è§£æå‡ºç±»å‹å€¼
 	 */
 	public static String extractType(String xml) {
 		try {
@@ -130,7 +130,7 @@ public class XMLUtil {
 
 	/**
 	 * 
-	 * ¹¹Ôì¿Í»§¶ËÏò·şÎñÆ÷¶Ë·¢ËÍµÄÁÄÌìÊı¾İxml
+	 * æ„é€ å®¢æˆ·ç«¯å‘æœåŠ¡å™¨ç«¯å‘é€çš„èŠå¤©æ•°æ®xml
 	 * 
 	 * @param username
 	 * @param message
@@ -153,7 +153,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * ¹¹Ôì·şÎñÆ÷¶ËÏòËùÓĞ¿Í»§¶Ë·¢ËÍµÄXMLÁÄÌìÊı¾İ
+	 * æ„é€ æœåŠ¡å™¨ç«¯å‘æ‰€æœ‰å®¢æˆ·ç«¯å‘é€çš„XMLèŠå¤©æ•°æ®
 	 * 
 	 */
 	public static String constructServerMessageXML(String message) {
@@ -170,7 +170,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * ´Ó¿Í»§¶ËÏò·şÎñÆ÷¶Ë·¢ËÍµÄXMLÁÄÌìÊı¾İÖĞ½âÎö³öÁÄÌìÄÚÈİ
+	 * ä»å®¢æˆ·ç«¯å‘æœåŠ¡å™¨ç«¯å‘é€çš„XMLèŠå¤©æ•°æ®ä¸­è§£æå‡ºèŠå¤©å†…å®¹
 	 */
 	public static String extractContent(String xml) {
 		try {
@@ -190,7 +190,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * ¹¹Ôì·şÎñÆ÷¶Ë´°¿Ú¹Ø±ÕµÄXMLÊı¾İ
+	 * æ„é€ æœåŠ¡å™¨ç«¯çª—å£å…³é—­çš„XMLæ•°æ®
 	 * 
 	 */
 	public static String constructCloseServerWindowXML() {
@@ -204,7 +204,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * ¹¹Ôì¿Í»§¶Ë´°¿Ú¹Ø±ÕµÄXMLÊı¾İ
+	 * æ„é€ å®¢æˆ·ç«¯çª—å£å…³é—­çš„XMLæ•°æ®
 	 */
 	public static String constructCloseClientWindowXML(String username) {
 		Document document = constructDocument();
@@ -220,7 +220,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * ¹¹Ôì·şÎñÆ÷¶ËÈ·ÈÏ¿Í»§¶Ë¹Ø±ÕµÄXMLĞÅÏ¢
+	 * æ„é€ æœåŠ¡å™¨ç«¯ç¡®è®¤å®¢æˆ·ç«¯å…³é—­çš„XMLä¿¡æ¯
 	 */
 
 	public static String constructCloseClientWindowConfirmationXML() {
@@ -234,7 +234,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * ¹¹ÔìÏò¿Í»§¶Ë·µ»ØµÄµÇÂ¼½á¹ûXML
+	 * æ„é€ å‘å®¢æˆ·ç«¯è¿”å›çš„ç™»å½•ç»“æœXML
 	 */
 	public static String constructLoginResultXML(String result) {
 		Document document = constructDocument();
@@ -250,7 +250,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * ´ÓxmlÊı¾İÖĞ½âÎö³öµÇÂ¼½á¹û
+	 * ä»xmlæ•°æ®ä¸­è§£æå‡ºç™»å½•ç»“æœ
 	 */
 
 	public static String extractLoginResult(String xml) {

@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson064.reflect;
+ï»¿package com.shengsiyuan.lesson064.reflect;
 
 import java.lang.reflect.Field;
 
@@ -10,7 +10,7 @@ public class TestPrivate2 {
 
 		Field field = classType.getDeclaredField("name");
 
-		field.setAccessible(true);// Ñ¹ÖÆJava¶Ô·ÃÎÊÐÞÊÎ·ûµÄ¼ì²é
+		field.setAccessible(true);// åŽ‹åˆ¶Javaå¯¹è®¿é—®ä¿®é¥°ç¬¦çš„æ£€æŸ¥
 
 		field.set(p, "lisi");
 

@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson025;
+﻿package com.shengsiyuan.lesson025;
 
 public class SingletonTest {
 	public static void main(String[] args) {

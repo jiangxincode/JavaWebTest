@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson031;
+﻿package com.shengsiyuan.lesson031;
 public class IntegerTest
 {
 	public static void main(String[] args)

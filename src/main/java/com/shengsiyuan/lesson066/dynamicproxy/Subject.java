@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson066.dynamicproxy;
+﻿package com.shengsiyuan.lesson066.dynamicproxy;
 
 public interface Subject {
 	public void request();

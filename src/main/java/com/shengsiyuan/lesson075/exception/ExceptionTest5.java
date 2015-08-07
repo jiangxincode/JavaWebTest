@@ -1,17 +1,17 @@
-package com.shengsiyuan.lesson075.exception;
+ï»¿package com.shengsiyuan.lesson075.exception;
 
 public class ExceptionTest5 {
 	public void method() {
 		try {
-			System.out.println("½øÈëµ½try¿é");
+			System.out.println("è¿›å…¥åˆ°tryå—");
 			System.exit(0);
 		} catch (Exception ex) {
-			System.out.println("Òì³£·¢ÉúÁË");
+			System.out.println("å¼‚å¸¸å‘ç”Ÿäº†");
 		} finally {
-			System.out.println("½øÈëµ½finally¿é");
+			System.out.println("è¿›å…¥åˆ°finallyå—");
 		}
 
-		System.out.println("Òì³£´¦ÀíºóĞøµÄ´úÂë");
+		System.out.println("å¼‚å¸¸å¤„ç†åç»­çš„ä»£ç ");
 	}
 
 	public static void main(String[] args) {

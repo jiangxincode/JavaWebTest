@@ -1,18 +1,18 @@
-package com.shengsiyuan.lesson059;
+ï»¿package com.shengsiyuan.lesson059;
 
 public class EnumTest {
 	public static void doOp(OpConstant opConstant) {
 		switch (opConstant) {
 		case TURN_LEFT:
-			System.out.println("Ïò×ó×ª");
+			System.out.println("å‘å·¦è½¬");
 			break;
 
 		case TURN_RIGHT:
-			System.out.println("ÏòÓÒ×ª");
+			System.out.println("å‘å³è½¬");
 			break;
 
 		case SHOOT:
-			System.out.println("Éä»÷");
+			System.out.println("å°„å‡»");
 			break;
 		}
 	}

@@ -1,4 +1,4 @@
-package edu.jiangxin.test;
+﻿package edu.jiangxin.test;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -8,73 +8,73 @@ import java.util.HashMap;
 import java.util.Map;
 import org.apache.commons.lang.StringUtils;
 /////
- // 身份证工具类
+ // 韬唤璇佸伐鍏风被
  //
  // @author June
  // @version 1.0, 2010-06-17
  ///
 public class IdcardUtils extends StringUtils {
-    ///// 中国公民身份证号码最小长度�?? ///
+    ///// 涓浗鍏皯韬唤璇佸彿鐮佹渶灏忛暱搴︺?? ///
     public static final int CHINA_ID_MIN_LENGTH = 15;
-    ///// 中国公民身份证号码最大长度�?? ///
+    ///// 涓浗鍏皯韬唤璇佸彿鐮佹渶澶ч暱搴︺?? ///
     public static final int CHINA_ID_MAX_LENGTH = 18;
-    ///// 省�?�直辖市代码�? ///
+    ///// 鐪併?佺洿杈栧競浠ｇ爜琛? ///
     public static final String cityCode[] = {
             "11", "12", "13", "14", "15", "21", "22", "23", "31", "32", "33", "34", "35", "36", "37", "41",
             "42", "43", "44", "45", "46", "50", "51", "52", "53", "54", "61", "62", "63", "64", "65", "71",
             "81", "82", "91"
     };
-    ///// 每位加权因子 ///
+    ///// 姣忎綅鍔犳潈鍥犲瓙 ///
     public static final int power[] = {
             7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2
     };
-    ///// �?18位校�?�? ///
+    ///// 绗?18浣嶆牎妫?鐮? ///
     public static final String verifyCode[] = {
             "1", "0", "X", "9", "8", "7", "6", "5", "4", "3", "2"
     };
-    ///// �?低年�? ///
+    ///// 鏈?浣庡勾闄? ///
     public static final int MIN = 1930;
     public static Map<String, String> cityCodes = new HashMap<String, String>();
-    ///// 台湾身份首字母对应数�? ///
+    ///// 鍙版咕韬唤棣栧瓧姣嶅搴旀暟瀛? ///
     public static Map<String, Integer> twFirstCode = new HashMap<String, Integer>();
-    ///// 香港身份首字母对应数�? ///
+    ///// 棣欐腐韬唤棣栧瓧姣嶅搴旀暟瀛? ///
     public static Map<String, Integer> hkFirstCode = new HashMap<String, Integer>();
     static {
-        cityCodes.put("11", "北京");
-        cityCodes.put("12", "天津");
-        cityCodes.put("13", "河北");
-        cityCodes.put("14", "山西");
-        cityCodes.put("15", "内蒙�?");
-        cityCodes.put("21", "辽宁");
-        cityCodes.put("22", "吉林");
-        cityCodes.put("23", "黑龙�?");
-        cityCodes.put("31", "上海");
-        cityCodes.put("32", "江苏");
-        cityCodes.put("33", "浙江");
-        cityCodes.put("34", "安徽");
-        cityCodes.put("35", "福建");
-        cityCodes.put("36", "江西");
-        cityCodes.put("37", "山东");
-        cityCodes.put("41", "河南");
-        cityCodes.put("42", "湖北");
-        cityCodes.put("43", "湖南");
-        cityCodes.put("44", "广东");
-        cityCodes.put("45", "广西");
-        cityCodes.put("46", "海南");
-        cityCodes.put("50", "重庆");
-        cityCodes.put("51", "四川");
-        cityCodes.put("52", "贵州");
-        cityCodes.put("53", "云南");
-        cityCodes.put("54", "西藏");
-        cityCodes.put("61", "陕西");
-        cityCodes.put("62", "甘肃");
-        cityCodes.put("63", "青海");
-        cityCodes.put("64", "宁夏");
-        cityCodes.put("65", "新疆");
-        cityCodes.put("71", "台湾");
-        cityCodes.put("81", "香港");
-        cityCodes.put("82", "澳门");
-        cityCodes.put("91", "国外");
+        cityCodes.put("11", "鍖椾含");
+        cityCodes.put("12", "澶╂触");
+        cityCodes.put("13", "娌冲寳");
+        cityCodes.put("14", "灞辫タ");
+        cityCodes.put("15", "鍐呰挋鍙?");
+        cityCodes.put("21", "杈藉畞");
+        cityCodes.put("22", "鍚夋灄");
+        cityCodes.put("23", "榛戦緳姹?");
+        cityCodes.put("31", "涓婃捣");
+        cityCodes.put("32", "姹熻嫃");
+        cityCodes.put("33", "娴欐睙");
+        cityCodes.put("34", "瀹夊窘");
+        cityCodes.put("35", "绂忓缓");
+        cityCodes.put("36", "姹熻タ");
+        cityCodes.put("37", "灞变笢");
+        cityCodes.put("41", "娌冲崡");
+        cityCodes.put("42", "婀栧寳");
+        cityCodes.put("43", "婀栧崡");
+        cityCodes.put("44", "骞夸笢");
+        cityCodes.put("45", "骞胯タ");
+        cityCodes.put("46", "娴峰崡");
+        cityCodes.put("50", "閲嶅簡");
+        cityCodes.put("51", "鍥涘窛");
+        cityCodes.put("52", "璐靛窞");
+        cityCodes.put("53", "浜戝崡");
+        cityCodes.put("54", "瑗胯棌");
+        cityCodes.put("61", "闄曡タ");
+        cityCodes.put("62", "鐢樿們");
+        cityCodes.put("63", "闈掓捣");
+        cityCodes.put("64", "瀹佸");
+        cityCodes.put("65", "鏂扮枂");
+        cityCodes.put("71", "鍙版咕");
+        cityCodes.put("81", "棣欐腐");
+        cityCodes.put("82", "婢抽棬");
+        cityCodes.put("91", "鍥藉");
         twFirstCode.put("A", 10);
         twFirstCode.put("B", 11);
         twFirstCode.put("C", 12);
@@ -113,11 +113,11 @@ public class IdcardUtils extends StringUtils {
         hkFirstCode.put("N", 14);
     }
     /////
-     // �?15位身份证号码转换�?18�?
+     // 灏?15浣嶈韩浠借瘉鍙风爜杞崲涓?18浣?
      //
      // @param idCard
-     //            15位身份编�?
-     // @return 18位身份编�?
+     //            15浣嶈韩浠界紪鐮?
+     // @return 18浣嶈韩浠界紪鐮?
      ///
     public static String conver15CardTo18(String idCard) {
         String idCard18 = "";
@@ -125,7 +125,7 @@ public class IdcardUtils extends StringUtils {
             return null;
         }
         if (isNum(idCard)) {
-            // 获取出生年月�?
+            // 鑾峰彇鍑虹敓骞存湀鏃?
             String birthday = idCard.substring(6, 12);
             Date birthDate = null;
             try {
@@ -136,15 +136,15 @@ public class IdcardUtils extends StringUtils {
             Calendar cal = Calendar.getInstance();
             if (birthDate != null)
                 cal.setTime(birthDate);
-            // 获取出生�?(完全表现形式,如：2010)
+            // 鑾峰彇鍑虹敓骞?(瀹屽叏琛ㄧ幇褰㈠紡,濡傦細2010)
             String sYear = String.valueOf(cal.get(Calendar.YEAR));
             idCard18 = idCard.substring(0, 6) + sYear + idCard.substring(8);
-            // 转换字符数组
+            // 杞崲瀛楃鏁扮粍
             char[] cArr = idCard18.toCharArray();
             if (cArr != null) {
                 int[] iCard = converCharToInt(cArr);
                 int iSum17 = getPowerSum(iCard);
-                // 获取校验�?
+                // 鑾峰彇鏍￠獙浣?
                 String sVal = getCheckCode18(iSum17);
                 if (sVal.length() > 0) {
                     idCard18 += sVal;
@@ -158,7 +158,7 @@ public class IdcardUtils extends StringUtils {
         return idCard18;
     }
     /////
-     // 验证身份证是否合�?
+     // 楠岃瘉韬唤璇佹槸鍚﹀悎娉?
      ///
     public static boolean validateCard(String idCard) {
         String card = idCard.trim();
@@ -177,24 +177,24 @@ public class IdcardUtils extends StringUtils {
         return false;
     }
     /////
-     // 验证18位身份编码是否合�?
+     // 楠岃瘉18浣嶈韩浠界紪鐮佹槸鍚﹀悎娉?
      //
-     // @param idCard 身份编码
-     // @return 是否合法
+     // @param idCard 韬唤缂栫爜
+     // @return 鏄惁鍚堟硶
      ///
     public static boolean validateIdCard18(String idCard) {
         boolean bTrue = false;
         if (idCard.length() == CHINA_ID_MAX_LENGTH) {
-            // �?17�?
+            // 鍓?17浣?
             String code17 = idCard.substring(0, 17);
-            // �?18�?
+            // 绗?18浣?
             String code18 = idCard.substring(17, CHINA_ID_MAX_LENGTH);
             if (isNum(code17)) {
                 char[] cArr = code17.toCharArray();
                 if (cArr != null) {
                     int[] iCard = converCharToInt(cArr);
                     int iSum17 = getPowerSum(iCard);
-                    // 获取校验�?
+                    // 鑾峰彇鏍￠獙浣?
                     String val = getCheckCode18(iSum17);
                     if (val.length() > 0) {
                         if (val.equalsIgnoreCase(code18)) {
@@ -207,11 +207,11 @@ public class IdcardUtils extends StringUtils {
         return bTrue;
     }
     /////
-     // 验证15位身份编码是否合�?
+     // 楠岃瘉15浣嶈韩浠界紪鐮佹槸鍚﹀悎娉?
      //
      // @param idCard
-     //            身份编码
-     // @return 是否合法
+     //            韬唤缂栫爜
+     // @return 鏄惁鍚堟硶
      ///
     public static boolean validateIdCard15(String idCard) {
         if (idCard.length() != CHINA_ID_MIN_LENGTH) {
@@ -242,13 +242,13 @@ public class IdcardUtils extends StringUtils {
         return true;
     }
     /////
-     // 验证10位身份编码是否合�?
+     // 楠岃瘉10浣嶈韩浠界紪鐮佹槸鍚﹀悎娉?
      //
-     // @param idCard 身份编码
-     // @return 身份证信息数�?
+     // @param idCard 韬唤缂栫爜
+     // @return 韬唤璇佷俊鎭暟缁?
      //         <p>
-     //         [0] - 台湾、澳门�?�香�? [1] - 性别(男M,女F,未知N) [2] - 是否合法(合法true,不合法false)
-     //         若不是身份证件号码则返回null
+     //         [0] - 鍙版咕銆佹境闂ㄣ?侀娓? [1] - 鎬у埆(鐢稭,濂矲,鏈煡N) [2] - 鏄惁鍚堟硶(鍚堟硶true,涓嶅悎娉昮alse)
+     //         鑻ヤ笉鏄韩浠借瘉浠跺彿鐮佸垯杩斿洖null
      //         </p>
      ///
     public static String[] validateIdCard10(String idCard) {
@@ -258,8 +258,8 @@ public class IdcardUtils extends StringUtils {
         if (card.length() != 8 && card.length() != 9 && idCard.length() != 10) {
             return null;
         }
-        if (idCard.matches("^[a-zA-Z][0-9]{9}$")) { // 台湾
-            info[0] = "台湾";
+        if (idCard.matches("^[a-zA-Z][0-9]{9}$")) { // 鍙版咕
+            info[0] = "鍙版咕";
             System.out.println("11111");
             String char2 = idCard.substring(1, 2);
             if (char2.equals("1")) {
@@ -275,14 +275,14 @@ public class IdcardUtils extends StringUtils {
                 return info;
             }
             info[2] = validateTWCard(idCard) ? "true" : "false";
-       // } else if (idCard.matches("^[1|5|7][0-9]{6}\(?[0-9A-Z]\)?$")) { // 澳门
-        } else if (idCard.matches("^[1|5|7][0-9]{6}(?[0-9A-Z])?$")) { // 澳门
-            info[0] = "澳门";
+       // } else if (idCard.matches("^[1|5|7][0-9]{6}\(?[0-9A-Z]\)?$")) { // 婢抽棬
+        } else if (idCard.matches("^[1|5|7][0-9]{6}(?[0-9A-Z])?$")) { // 婢抽棬
+            info[0] = "婢抽棬";
             info[1] = "N";
             // TODO
-       // } else if (idCard.matches("^[A-Z]{1,2}[0-9]{6}\(?[0-9A]\)?$")) { // 香港
-        } else if (idCard.matches("^[A-Z]{1,2}[0-9]{6}(?[0-9A])?$")) { // 香港
-            info[0] = "香港";
+       // } else if (idCard.matches("^[A-Z]{1,2}[0-9]{6}\(?[0-9A]\)?$")) { // 棣欐腐
+        } else if (idCard.matches("^[A-Z]{1,2}[0-9]{6}(?[0-9A])?$")) { // 棣欐腐
+            info[0] = "棣欐腐";
             info[1] = "N";
             info[2] = validateHKCard(idCard) ? "true" : "false";
         } else {
@@ -291,11 +291,11 @@ public class IdcardUtils extends StringUtils {
         return info;
     }
     /////
-     // 验证台湾身份证号�?
+     // 楠岃瘉鍙版咕韬唤璇佸彿鐮?
      //
      // @param idCard
-     //            身份证号�?
-     // @return 验证码是否符�?
+     //            韬唤璇佸彿鐮?
+     // @return 楠岃瘉鐮佹槸鍚︾鍚?
      ///
     public static boolean validateTWCard(String idCard) {
         String start = idCard.substring(0, 1);
@@ -312,17 +312,17 @@ public class IdcardUtils extends StringUtils {
         return (sum % 10 == 0 ? 0 : (10 - sum % 10)) == Integer.valueOf(end) ? true : false;
     }
     /////
-     // 验证香港身份证号�?(存在Bug，部份特殊身份证无法�?�?)
+     // 楠岃瘉棣欐腐韬唤璇佸彿鐮?(瀛樺湪Bug锛岄儴浠界壒娈婅韩浠借瘉鏃犳硶妫?鏌?)
      // <p>
-     // 身份证前2位为英文字符，如果只出现�?个英文字符则表示第一位是空格，对应数�?58 �?2位英文字符A-Z分别对应数字10-35
-     // �?后一位校验码�?0-9的数字加上字�?"A"�?"A"代表10
+     // 韬唤璇佸墠2浣嶄负鑻辨枃瀛楃锛屽鏋滃彧鍑虹幇涓?涓嫳鏂囧瓧绗﹀垯琛ㄧず绗竴浣嶆槸绌烘牸锛屽搴旀暟瀛?58 鍓?2浣嶈嫳鏂囧瓧绗-Z鍒嗗埆瀵瑰簲鏁板瓧10-35
+     // 鏈?鍚庝竴浣嶆牎楠岀爜涓?0-9鐨勬暟瀛楀姞涓婂瓧绗?"A"锛?"A"浠ｈ〃10
      // </p>
      // <p>
-     // 将身份证号码全部转换为数字，分别对应�?9-1相加的�?�和，整�?11则证件号码有�?
+     // 灏嗚韩浠借瘉鍙风爜鍏ㄩ儴杞崲涓烘暟瀛楋紝鍒嗗埆瀵瑰簲涔?9-1鐩稿姞鐨勬?诲拰锛屾暣闄?11鍒欒瘉浠跺彿鐮佹湁鏁?
      // </p>
      //
-     // @param idCard 身份证号�?
-     // @return 验证码是否符�?
+     // @param idCard 韬唤璇佸彿鐮?
+     // @return 楠岃瘉鐮佹槸鍚︾鍚?
      ///
     public static boolean validateHKCard(String idCard) {
         //String card = idCard.replaceAll("[\(|\)]", "");
@@ -351,11 +351,11 @@ public class IdcardUtils extends StringUtils {
         return (sum % 11 == 0) ? true : false;
     }
     /////
-     // 将字符数组转换成数字数组
+     // 灏嗗瓧绗︽暟缁勮浆鎹㈡垚鏁板瓧鏁扮粍
      //
      // @param ca
-     //            字符数组
-     // @return 数字数组
+     //            瀛楃鏁扮粍
+     // @return 鏁板瓧鏁扮粍
      ///
     public static int[] converCharToInt(char[] ca) {
         int len = ca.length;
@@ -370,10 +370,10 @@ public class IdcardUtils extends StringUtils {
         return iArr;
     }
     /////
-     // 将身份证的每位和对应位的加权因子相乘之后，再得到和�??
+     // 灏嗚韩浠借瘉鐨勬瘡浣嶅拰瀵瑰簲浣嶇殑鍔犳潈鍥犲瓙鐩镐箻涔嬪悗锛屽啀寰楀埌鍜屽??
      //
      // @param iArr
-     // @return 身份证编码�??
+     // @return 韬唤璇佺紪鐮併??
      ///
     public static int getPowerSum(int[] iArr) {
         int iSum = 0;
@@ -389,10 +389,10 @@ public class IdcardUtils extends StringUtils {
         return iSum;
     }
     /////
-     // 将power和�?�与11取模获得余数进行校验码判�?
+     // 灏唒ower鍜屽?间笌11鍙栨ā鑾峰緱浣欐暟杩涜鏍￠獙鐮佸垽鏂?
      //
      // @param iSum
-     // @return 校验�?
+     // @return 鏍￠獙浣?
      ///
     public static String getCheckCode18(int iSum) {
         String sCode = "";
@@ -434,11 +434,11 @@ public class IdcardUtils extends StringUtils {
         return sCode;
     }
     /////
-     // 根据身份编号获取年龄
+     // 鏍规嵁韬唤缂栧彿鑾峰彇骞撮緞
      //
      // @param idCard
-     //            身份编号
-     // @return 年龄
+     //            韬唤缂栧彿
+     // @return 骞撮緞
      ///
     public static int getAgeByIdCard(String idCard) {
         int iAge = 0;
@@ -452,10 +452,10 @@ public class IdcardUtils extends StringUtils {
         return iAge;
     }
     /////
-     // 根据身份编号获取生日
+     // 鏍规嵁韬唤缂栧彿鑾峰彇鐢熸棩
      //
-     // @param idCard 身份编号
-     // @return 生日(yyyyMMdd)
+     // @param idCard 韬唤缂栧彿
+     // @return 鐢熸棩(yyyyMMdd)
      ///
     public static String getBirthByIdCard(String idCard) {
         Integer len = idCard.length();
@@ -467,10 +467,10 @@ public class IdcardUtils extends StringUtils {
         return idCard.substring(6, 14);
     }
     /////
-     // 根据身份编号获取生日�?
+     // 鏍规嵁韬唤缂栧彿鑾峰彇鐢熸棩骞?
      //
-     // @param idCard 身份编号
-     // @return 生日(yyyy)
+     // @param idCard 韬唤缂栧彿
+     // @return 鐢熸棩(yyyy)
      ///
     public static Short getYearByIdCard(String idCard) {
         Integer len = idCard.length();
@@ -482,11 +482,11 @@ public class IdcardUtils extends StringUtils {
         return Short.valueOf(idCard.substring(6, 10));
     }
     /////
-     // 根据身份编号获取生日�?
+     // 鏍规嵁韬唤缂栧彿鑾峰彇鐢熸棩鏈?
      //
      // @param idCard
-     //            身份编号
-     // @return 生日(MM)
+     //            韬唤缂栧彿
+     // @return 鐢熸棩(MM)
      ///
     public static Short getMonthByIdCard(String idCard) {
         Integer len = idCard.length();
@@ -498,11 +498,11 @@ public class IdcardUtils extends StringUtils {
         return Short.valueOf(idCard.substring(10, 12));
     }
     /////
-     // 根据身份编号获取生日�?
+     // 鏍规嵁韬唤缂栧彿鑾峰彇鐢熸棩澶?
      //
      // @param idCard
-     //            身份编号
-     // @return 生日(dd)
+     //            韬唤缂栧彿
+     // @return 鐢熸棩(dd)
      ///
     public static Short getDateByIdCard(String idCard) {
         Integer len = idCard.length();
@@ -514,10 +514,10 @@ public class IdcardUtils extends StringUtils {
         return Short.valueOf(idCard.substring(12, 14));
     }
     /////
-     // 根据身份编号获取性别
+     // 鏍规嵁韬唤缂栧彿鑾峰彇鎬у埆
      //
-     // @param idCard 身份编号
-     // @return 性别(M-男，F-女，N-未知)
+     // @param idCard 韬唤缂栧彿
+     // @return 鎬у埆(M-鐢凤紝F-濂筹紝N-鏈煡)
      ///
     public static String getGenderByIdCard(String idCard) {
         String sGender = "N";
@@ -533,10 +533,10 @@ public class IdcardUtils extends StringUtils {
         return sGender;
     }
     /////
-     // 根据身份编号获取户籍省份
+     // 鏍规嵁韬唤缂栧彿鑾峰彇鎴风睄鐪佷唤
      //
-     // @param idCard 身份编码
-     // @return 省级编码�?
+     // @param idCard 韬唤缂栫爜
+     // @return 鐪佺骇缂栫爜銆?
      ///
     public static String getProvinceByIdCard(String idCard) {
         int len = idCard.length();
@@ -549,24 +549,24 @@ public class IdcardUtils extends StringUtils {
         return sProvince;
     }
     /////
-     // 数字验证
+     // 鏁板瓧楠岃瘉
      //
      // @param val
-     // @return 提取的数字�??
+     // @return 鎻愬彇鐨勬暟瀛椼??
      ///
     public static boolean isNum(String val) {
         return val == null || "".equals(val) ? false : val.matches("^[0-9]//$");
     }
     /////
-     // 验证小于当前日期 是否有效
+     // 楠岃瘉灏忎簬褰撳墠鏃ユ湡 鏄惁鏈夋晥
      //
      // @param iYear
-     //            待验证日�?(�?)
+     //            寰呴獙璇佹棩鏈?(骞?)
      // @param iMonth
-     //            待验证日�?(�? 1-12)
+     //            寰呴獙璇佹棩鏈?(鏈? 1-12)
      // @param iDate
-     //            待验证日�?(�?)
-     // @return 是否有效
+     //            寰呴獙璇佹棩鏈?(鏃?)
+     // @return 鏄惁鏈夋晥
      ///
     public static boolean valiDate(int iYear, int iMonth, int iDate) {
         Calendar cal = Calendar.getInstance();

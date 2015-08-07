@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson037;
+ï»¿package com.shengsiyuan.lesson037;
 
 import java.util.Random;
 
@@ -21,7 +21,7 @@ public class RandomTest2 {
 				continue;
 			}
 
-			System.out.println((10 + i) + "³öÏÖ´ÎÊı£º" + count[i]);
+			System.out.println((10 + i) + "å‡ºç°æ¬¡æ•°ï¼š" + count[i]);
 		}
 
 		int max = count[0];
@@ -32,7 +32,7 @@ public class RandomTest2 {
 			}
 		}
 
-		System.out.println("³öÏÖµÄ×î´ó´ÎÊıÎª£º" + max + "´Î");
+		System.out.println("å‡ºç°çš„æœ€å¤§æ¬¡æ•°ä¸ºï¼š" + max + "æ¬¡");
 
 		for (int i = 0; i < count.length; i++) {
 			if (max == count[i]) {

@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson035;
+ï»¿package com.shengsiyuan.lesson035;
 
 public class BubbleSortTest {
 	public static void bubbleSort(int[] array) {
@@ -12,7 +12,7 @@ public class BubbleSortTest {
 
 			}
 
-			System.out.println("µÚ" + (i + 1) + "ÌËÅÅĞò");
+			System.out.println("ç¬¬" + (i + 1) + "è¶Ÿæ’åº");
 
 			for (int k = 0; k < array.length; k++) {
 				System.out.print(array[k] + " ");

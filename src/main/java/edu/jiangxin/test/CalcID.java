@@ -1,10 +1,10 @@
-package edu.jiangxin.test;
+﻿package edu.jiangxin.test;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * 身份证号码生成的�?
+ * 韬唤璇佸彿鐮佺敓鎴愮殑绫?
  * 
  * @author Guanweili
  * @since 2011-04-29
@@ -12,270 +12,270 @@ import java.io.InputStreamReader;
 public class CalcID {
 
 	/**
-	 * 计算并输出身份证号的主要方法 写的比较累赘比较笨，但条理应该比较清晰�??
+	 * 璁＄畻骞惰緭鍑鸿韩浠借瘉鍙风殑涓昏鏂规硶 鍐欑殑姣旇緝绱禈姣旇緝绗紝浣嗘潯鐞嗗簲璇ユ瘮杈冩竻鏅般??
 	 */
 	public static void Calculate() {
 
-		String areaCode = ""; // 用于存放用户输入的区域编�?
-		String birthday = ""; // 用户存放用户输入的出生日�?
-		String sex = ""; // 用户存放用户输入的�?�别
-		String idNo = ""; // 用户存放用户输入的顺序编�?
+		String areaCode = ""; // 鐢ㄤ簬瀛樻斁鐢ㄦ埛杈撳叆鐨勫尯鍩熺紪鍙?
+		String birthday = ""; // 鐢ㄦ埛瀛樻斁鐢ㄦ埛杈撳叆鐨勫嚭鐢熸棩鏈?
+		String sex = ""; // 鐢ㄦ埛瀛樻斁鐢ㄦ埛杈撳叆鐨勬?у埆
+		String idNo = ""; // 鐢ㄦ埛瀛樻斁鐢ㄦ埛杈撳叆鐨勯『搴忕紪鍙?
 
 		InputStreamReader reader = new InputStreamReader(System.in);
 		BufferedReader in = new BufferedReader(reader);
 
-		System.out.println("说明：身份证号码生成器：目前仅能支持江苏省的新身份证�?(18�?)的生成，" + "\r"
-				+ "您可以用生成的身份证号去网站注册�?个帐号，而不必担心真实姓名和身份证号无法对应�?" + "\r"
-				+ "可能无法生成和你期望的号码一致的身份证号，这是因为顺序编号和性别编号范围值导致的�?" + "\r"
-				+ "比如要生成一个和您身份证�?致的号码，这两个编号就必须吻合，" + "顺序编号在身份证号的左起�?15�?16位，"
-				+ "\r" + "性别编号在身份证号的左起�?17位，" + "\r"
-				+ "可以按个人需要添加到省份编号，或做成读取文件的形式比较方便，这里仅仅是一个演示�??" + "\r");
+		System.out.println("璇存槑锛氳韩浠借瘉鍙风爜鐢熸垚鍣細鐩墠浠呰兘鏀寔姹熻嫃鐪佺殑鏂拌韩浠借瘉鍙?(18浣?)鐨勭敓鎴愶紝" + "\r"
+				+ "鎮ㄥ彲浠ョ敤鐢熸垚鐨勮韩浠借瘉鍙峰幓缃戠珯娉ㄥ唽涓?涓笎鍙凤紝鑰屼笉蹇呮媴蹇冪湡瀹炲鍚嶅拰韬唤璇佸彿鏃犳硶瀵瑰簲锛?" + "\r"
+				+ "鍙兘鏃犳硶鐢熸垚鍜屼綘鏈熸湜鐨勫彿鐮佷竴鑷寸殑韬唤璇佸彿锛岃繖鏄洜涓洪『搴忕紪鍙峰拰鎬у埆缂栧彿鑼冨洿鍊煎鑷寸殑锛?" + "\r"
+				+ "姣斿瑕佺敓鎴愪竴涓拰鎮ㄨ韩浠借瘉涓?鑷寸殑鍙风爜锛岃繖涓や釜缂栧彿灏卞繀椤诲惢鍚堬紝" + "椤哄簭缂栧彿鍦ㄨ韩浠借瘉鍙风殑宸﹁捣绗?15锛?16浣嶏紝"
+				+ "\r" + "鎬у埆缂栧彿鍦ㄨ韩浠借瘉鍙风殑宸﹁捣绗?17浣嶏紝" + "\r"
+				+ "鍙互鎸変釜浜洪渶瑕佹坊鍔犲埌鐪佷唤缂栧彿锛屾垨鍋氭垚璇诲彇鏂囦欢鐨勫舰寮忔瘮杈冩柟渚匡紝杩欓噷浠呬粎鏄竴涓紨绀恒??" + "\r");
 
-		System.out.println("现在请输入您�?在的�?/�?/县的名称，格�?(如南京市玄武区就输入：玄武区就行�?): ");
+		System.out.println("鐜板湪璇疯緭鍏ユ偍鎵?鍦ㄧ殑甯?/鍖?/鍘跨殑鍚嶇О锛屾牸寮?(濡傚崡浜競鐜勬鍖哄氨杈撳叆锛氱巹姝﹀尯灏辫浜?): ");
 
 		try {
 			areaCode = in.readLine();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.out.println("请输入您的出生日期，格式(19891019): "); // 获取用户输入的出生日期的�?
+		System.out.println("璇疯緭鍏ユ偍鐨勫嚭鐢熸棩鏈燂紝鏍煎紡(19891019): "); // 鑾峰彇鐢ㄦ埛杈撳叆鐨勫嚭鐢熸棩鏈熺殑鍊?
 		try {
 			birthday = in.readLine();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.out.println("请输入您的�?�别，格�?(范围�?1-9，男：奇数，女：偶数): "); // 获取用户输入的�?�别的�??
+		System.out.println("璇疯緭鍏ユ偍鐨勬?у埆锛屾牸寮?(鑼冨洿锛?1-9锛岀敺锛氬鏁帮紝濂筹細鍋舵暟): "); // 鑾峰彇鐢ㄦ埛杈撳叆鐨勬?у埆鐨勫??
 		try {
 			sex = in.readLine();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.out.println("请输入您希望�?(两位)顺序号，格式(00-99): "); // 获取用户输入的顺序编号的值，此编号在�?定程度生决定了您的身份证号不与他人重�?
+		System.out.println("璇疯緭鍏ユ偍甯屾湜鐨?(涓や綅)椤哄簭鍙凤紝鏍煎紡(00-99): "); // 鑾峰彇鐢ㄦ埛杈撳叆鐨勯『搴忕紪鍙风殑鍊硷紝姝ょ紪鍙峰湪涓?瀹氱▼搴︾敓鍐冲畾浜嗘偍鐨勮韩浠借瘉鍙蜂笉涓庝粬浜洪噸澶?
 		try {
 			idNo = in.readLine();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
-		// 判断输入的市/�?/县的名称与之对应的编号，目前仅支持江苏省
-		if (areaCode.trim().equals("玄武�?")) {
+		// 鍒ゆ柇杈撳叆鐨勫競/鍖?/鍘跨殑鍚嶇О涓庝箣瀵瑰簲鐨勭紪鍙凤紝鐩墠浠呮敮鎸佹睙鑻忕渷
+		if (areaCode.trim().equals("鐜勬鍖?")) {
 			areaCode = Integer.toString(320102);
-		} else if (areaCode.trim().equals("白下�?")) {
+		} else if (areaCode.trim().equals("鐧戒笅鍖?")) {
 			areaCode = Integer.toString(320103);
-		} else if (areaCode.trim().equals("秦淮�?")) {
+		} else if (areaCode.trim().equals("绉︽樊鍖?")) {
 			areaCode = Integer.toString(320104);
-		} else if (areaCode.trim().equals("建邺�?")) {
+		} else if (areaCode.trim().equals("寤洪偤鍖?")) {
 			areaCode = Integer.toString(320105);
-		} else if (areaCode.trim().equals("鼓楼�?")) {
+		} else if (areaCode.trim().equals("榧撴ゼ鍖?")) {
 			areaCode = Integer.toString(320106);
-		} else if (areaCode.trim().equals("下关�?")) {
+		} else if (areaCode.trim().equals("涓嬪叧鍖?")) {
 			areaCode = Integer.toString(320107);
-		} else if (areaCode.trim().equals("浦口�?")) {
+		} else if (areaCode.trim().equals("娴﹀彛鍖?")) {
 			areaCode = Integer.toString(320111);
-		} else if (areaCode.trim().equals("栖霞�?")) {
+		} else if (areaCode.trim().equals("鏍栭湠鍖?")) {
 			areaCode = Integer.toString(320113);
-		} else if (areaCode.equals("雨花台区")) {
+		} else if (areaCode.equals("闆ㄨ姳鍙板尯")) {
 			areaCode = Integer.toString(320114);
-		} else if (areaCode.trim().equals("江宁�?")) {
+		} else if (areaCode.trim().equals("姹熷畞鍖?")) {
 			areaCode = Integer.toString(320115);
-		} else if (areaCode.trim().equals("六合�?")) {
+		} else if (areaCode.trim().equals("鍏悎鍖?")) {
 			areaCode = Integer.toString(320116);
-		} else if (areaCode.trim().equals("溧水�?")) {
+		} else if (areaCode.trim().equals("婧ф按鍘?")) {
 			areaCode = Integer.toString(320124);
-		} else if (areaCode.trim().equals("高淳�?")) {
+		} else if (areaCode.trim().equals("楂樻烦鍘?")) {
 			areaCode = Integer.toString(320125);
-		} else if (areaCode.trim().equals("崇安�?")) {
+		} else if (areaCode.trim().equals("宕囧畨鍖?")) {
 			areaCode = Integer.toString(320202);
-		} else if (areaCode.trim().equals("南长�?")) {
+		} else if (areaCode.trim().equals("鍗楅暱鍖?")) {
 			areaCode = Integer.toString(320203);
-		} else if (areaCode.trim().equals("北塘�?")) {
+		} else if (areaCode.trim().equals("鍖楀鍖?")) {
 			areaCode = Integer.toString(320204);
-		} else if (areaCode.trim().equals("锡山�?")) {
+		} else if (areaCode.trim().equals("閿″北鍖?")) {
 			areaCode = Integer.toString(320205);
-		} else if (areaCode.trim().equals("惠山�?")) {
+		} else if (areaCode.trim().equals("鎯犲北鍖?")) {
 			areaCode = Integer.toString(320206);
-		} else if (areaCode.trim().equals("滨湖�?")) {
+		} else if (areaCode.trim().equals("婊ㄦ箹鍖?")) {
 			areaCode = Integer.toString(320211);
-		} else if (areaCode.trim().equals("江阴�?")) {
+		} else if (areaCode.trim().equals("姹熼槾甯?")) {
 			areaCode = Integer.toString(320281);
-		} else if (areaCode.trim().equals("宜兴�?")) {
+		} else if (areaCode.trim().equals("瀹滃叴甯?")) {
 			areaCode = Integer.toString(320282);
-		} else if (areaCode.trim().equals("鼓楼�?")) {
+		} else if (areaCode.trim().equals("榧撴ゼ鍖?")) {
 			areaCode = Integer.toString(320302);
-		} else if (areaCode.trim().equals("云龙�?")) {
+		} else if (areaCode.trim().equals("浜戦緳鍖?")) {
 			areaCode = Integer.toString(320303);
-		} else if (areaCode.trim().equals("九里�?")) {
+		} else if (areaCode.trim().equals("涔濋噷鍖?")) {
 			areaCode = Integer.toString(320304);
-		} else if (areaCode.trim().equals("贾汪�?")) {
+		} else if (areaCode.trim().equals("璐炬豹鍖?")) {
 			areaCode = Integer.toString(320305);
-		} else if (areaCode.trim().equals("泉山�?")) {
+		} else if (areaCode.trim().equals("娉夊北鍖?")) {
 			areaCode = Integer.toString(320311);
-		} else if (areaCode.trim().equals("丰县")) {
+		} else if (areaCode.trim().equals("涓板幙")) {
 			areaCode = Integer.toString(320321);
-		} else if (areaCode.trim().equals("沛县")) {
+		} else if (areaCode.trim().equals("娌涘幙")) {
 			areaCode = Integer.toString(320322);
-		} else if (areaCode.trim().equals("铜山�?")) {
+		} else if (areaCode.trim().equals("閾滃北鍘?")) {
 			areaCode = Integer.toString(320323);
-		} else if (areaCode.trim().equals("睢宁�?")) {
+		} else if (areaCode.trim().equals("鐫㈠畞鍘?")) {
 			areaCode = Integer.toString(320324);
-		} else if (areaCode.trim().equals("新沂�?")) {
+		} else if (areaCode.trim().equals("鏂版矀甯?")) {
 			areaCode = Integer.toString(320381);
-		} else if (areaCode.trim().equals("邳州�?")) {
+		} else if (areaCode.trim().equals("閭冲窞甯?")) {
 			areaCode = Integer.toString(320382);
-		} else if (areaCode.trim().equals("天宁�?")) {
+		} else if (areaCode.trim().equals("澶╁畞鍖?")) {
 			areaCode = Integer.toString(320402);
-		} else if (areaCode.trim().equals("钟楼�?")) {
+		} else if (areaCode.trim().equals("閽熸ゼ鍖?")) {
 			areaCode = Integer.toString(320404);
-		} else if (areaCode.trim().equals("戚墅堰区")) {
+		} else if (areaCode.trim().equals("鎴氬鍫板尯")) {
 			areaCode = Integer.toString(320405);
-		} else if (areaCode.trim().equals("新北�?")) {
+		} else if (areaCode.trim().equals("鏂板寳鍖?")) {
 			areaCode = Integer.toString(320411);
-		} else if (areaCode.trim().equals("武进�?")) {
+		} else if (areaCode.trim().equals("姝﹁繘鍖?")) {
 			areaCode = Integer.toString(320412);
-		} else if (areaCode.trim().equals("溧阳�?")) {
+		} else if (areaCode.trim().equals("婧ч槼甯?")) {
 			areaCode = Integer.toString(320481);
-		} else if (areaCode.trim().equals("金坛�?")) {
+		} else if (areaCode.trim().equals("閲戝潧甯?")) {
 			areaCode = Integer.toString(320482);
-		} else if (areaCode.trim().equals("沧浪�?")) {
+		} else if (areaCode.trim().equals("娌ф氮鍖?")) {
 			areaCode = Integer.toString(320502);
-		} else if (areaCode.trim().equals("平江�?")) {
+		} else if (areaCode.trim().equals("骞虫睙鍖?")) {
 			areaCode = Integer.toString(320503);
-		} else if (areaCode.trim().equals("金阊�?")) {
+		} else if (areaCode.trim().equals("閲戦槉鍖?")) {
 			areaCode = Integer.toString(320504);
-		} else if (areaCode.trim().equals("虎丘�?")) {
+		} else if (areaCode.trim().equals("铏庝笜鍖?")) {
 			areaCode = Integer.toString(320505);
-		} else if (areaCode.trim().equals("吴中�?")) {
+		} else if (areaCode.trim().equals("鍚翠腑鍖?")) {
 			areaCode = Integer.toString(320506);
-		} else if (areaCode.trim().equals("相城�?")) {
+		} else if (areaCode.trim().equals("鐩稿煄鍖?")) {
 			areaCode = Integer.toString(320507);
-		} else if (areaCode.trim().equals("常熟�?")) {
+		} else if (areaCode.trim().equals("甯哥啛甯?")) {
 			areaCode = Integer.toString(320581);
-		} else if (areaCode.trim().equals("张家港市")) {
+		} else if (areaCode.trim().equals("寮犲娓競")) {
 			areaCode = Integer.toString(320582);
-		} else if (areaCode.trim().equals("昆山�?")) {
+		} else if (areaCode.trim().equals("鏄嗗北甯?")) {
 			areaCode = Integer.toString(320583);
-		} else if (areaCode.trim().equals("吴江�?")) {
+		} else if (areaCode.trim().equals("鍚存睙甯?")) {
 			areaCode = Integer.toString(320584);
-		} else if (areaCode.trim().equals("太仓�?")) {
+		} else if (areaCode.trim().equals("澶粨甯?")) {
 			areaCode = Integer.toString(320585);
-		} else if (areaCode.trim().equals("崇川�?")) {
+		} else if (areaCode.trim().equals("宕囧窛鍖?")) {
 			areaCode = Integer.toString(320602);
-		} else if (areaCode.trim().equals("港闸�?")) {
+		} else if (areaCode.trim().equals("娓椄鍖?")) {
 			areaCode = Integer.toString(320611);
-		} else if (areaCode.trim().equals("通州�?")) {
+		} else if (areaCode.trim().equals("閫氬窞鍖?")) {
 			areaCode = Integer.toString(320612);
-		} else if (areaCode.trim().equals("海安�?")) {
+		} else if (areaCode.trim().equals("娴峰畨鍘?")) {
 			areaCode = Integer.toString(320621);
-		} else if (areaCode.trim().equals("如东�?")) {
+		} else if (areaCode.trim().equals("濡備笢鍘?")) {
 			areaCode = Integer.toString(320623);
-		} else if (areaCode.trim().equals("启东�?")) {
+		} else if (areaCode.trim().equals("鍚笢甯?")) {
 			areaCode = Integer.toString(320681);
-		} else if (areaCode.trim().equals("如皋�?")) {
+		} else if (areaCode.trim().equals("濡傜殝甯?")) {
 			areaCode = Integer.toString(320682);
-		} else if (areaCode.trim().equals("海门�?")) {
+		} else if (areaCode.trim().equals("娴烽棬甯?")) {
 			areaCode = Integer.toString(320684);
-		} else if (areaCode.trim().equals("连云�?")) {
+		} else if (areaCode.trim().equals("杩炰簯鍖?")) {
 			areaCode = Integer.toString(320703);
-		} else if (areaCode.trim().equals("新浦�?")) {
+		} else if (areaCode.trim().equals("鏂版郸鍖?")) {
 			areaCode = Integer.toString(320705);
-		} else if (areaCode.trim().equals("海州�?")) {
+		} else if (areaCode.trim().equals("娴峰窞鍖?")) {
 			areaCode = Integer.toString(320706);
-		} else if (areaCode.trim().equals("赣榆�?")) {
+		} else if (areaCode.trim().equals("璧ｆ鍘?")) {
 			areaCode = Integer.toString(320721);
-		} else if (areaCode.trim().equals("东海�?")) {
+		} else if (areaCode.trim().equals("涓滄捣鍘?")) {
 			areaCode = Integer.toString(320722);
-		} else if (areaCode.trim().equals("灌云�?")) {
+		} else if (areaCode.trim().equals("鐏屼簯鍘?")) {
 			areaCode = Integer.toString(320723);
-		} else if (areaCode.trim().equals("灌南�?")) {
+		} else if (areaCode.trim().equals("鐏屽崡鍘?")) {
 			areaCode = Integer.toString(320724);
-		} else if (areaCode.trim().equals("清河�?")) {
+		} else if (areaCode.trim().equals("娓呮渤鍖?")) {
 			areaCode = Integer.toString(320802);
-		} else if (areaCode.trim().equals("楚州�?")) {
+		} else if (areaCode.trim().equals("妤氬窞鍖?")) {
 			areaCode = Integer.toString(320803);
-		} else if (areaCode.trim().equals("淮阴�?")) {
+		} else if (areaCode.trim().equals("娣槾鍖?")) {
 			areaCode = Integer.toString(320804);
-		} else if (areaCode.trim().equals("清浦�?")) {
+		} else if (areaCode.trim().equals("娓呮郸鍖?")) {
 			areaCode = Integer.toString(320811);
-		} else if (areaCode.trim().equals("涟水�?")) {
+		} else if (areaCode.trim().equals("娑熸按鍘?")) {
 			areaCode = Integer.toString(320826);
-		} else if (areaCode.trim().equals("洪泽�?")) {
+		} else if (areaCode.trim().equals("娲辰鍘?")) {
 			areaCode = Integer.toString(320829);
-		} else if (areaCode.trim().equals("盱眙�?")) {
+		} else if (areaCode.trim().equals("鐩辩湙鍘?")) {
 			areaCode = Integer.toString(320830);
-		} else if (areaCode.trim().equals("金湖�?")) {
+		} else if (areaCode.trim().equals("閲戞箹鍘?")) {
 			areaCode = Integer.toString(320831);
-		} else if (areaCode.trim().equals("亭湖�?")) {
+		} else if (areaCode.trim().equals("浜箹鍖?")) {
 			areaCode = Integer.toString(320902);
-		} else if (areaCode.trim().equals("盐都�?")) {
+		} else if (areaCode.trim().equals("鐩愰兘鍖?")) {
 			areaCode = Integer.toString(320903);
-		} else if (areaCode.trim().equals("响水�?")) {
+		} else if (areaCode.trim().equals("鍝嶆按鍘?")) {
 			areaCode = Integer.toString(320921);
-		} else if (areaCode.trim().equals("滨海�?")) {
+		} else if (areaCode.trim().equals("婊ㄦ捣鍘?")) {
 			areaCode = Integer.toString(320922);
-		} else if (areaCode.trim().equals("阜宁�?")) {
+		} else if (areaCode.trim().equals("闃滃畞鍘?")) {
 			areaCode = Integer.toString(320923);
-		} else if (areaCode.trim().equals("射阳�?")) {
+		} else if (areaCode.trim().equals("灏勯槼鍘?")) {
 			areaCode = Integer.toString(320924);
-		} else if (areaCode.trim().equals("建湖�?")) {
+		} else if (areaCode.trim().equals("寤烘箹鍘?")) {
 			areaCode = Integer.toString(320925);
-		} else if (areaCode.trim().equals("东台�?")) {
+		} else if (areaCode.trim().equals("涓滃彴甯?")) {
 			areaCode = Integer.toString(320981);
-		} else if (areaCode.trim().equals("大丰�?")) {
+		} else if (areaCode.trim().equals("澶т赴甯?")) {
 			areaCode = Integer.toString(320982);
-		} else if (areaCode.trim().equals("广陵�?")) {
+		} else if (areaCode.trim().equals("骞块櫟鍖?")) {
 			areaCode = Integer.toString(321002);
-		} else if (areaCode.trim().equals("邗江�?")) {
+		} else if (areaCode.trim().equals("閭楁睙鍖?")) {
 			areaCode = Integer.toString(321003);
-		} else if (areaCode.trim().equals("维扬�?")) {
+		} else if (areaCode.trim().equals("缁存壃鍖?")) {
 			areaCode = Integer.toString(321011);
-		} else if (areaCode.trim().equals("宝应�?")) {
+		} else if (areaCode.trim().equals("瀹濆簲鍘?")) {
 			areaCode = Integer.toString(321023);
-		} else if (areaCode.trim().equals("仪征�?")) {
+		} else if (areaCode.trim().equals("浠緛甯?")) {
 			areaCode = Integer.toString(321081);
-		} else if (areaCode.trim().equals("高邮�?")) {
+		} else if (areaCode.trim().equals("楂橀偖甯?")) {
 			areaCode = Integer.toString(321084);
-		} else if (areaCode.trim().equals("江都�?")) {
+		} else if (areaCode.trim().equals("姹熼兘甯?")) {
 			areaCode = Integer.toString(321088);
-		} else if (areaCode.trim().equals("京口�?")) {
+		} else if (areaCode.trim().equals("浜彛鍖?")) {
 			areaCode = Integer.toString(321102);
-		} else if (areaCode.trim().equals("润州�?")) {
+		} else if (areaCode.trim().equals("娑﹀窞鍖?")) {
 			areaCode = Integer.toString(321111);
-		} else if (areaCode.trim().equals("丹徒�?")) {
+		} else if (areaCode.trim().equals("涓瑰緬鍖?")) {
 			areaCode = Integer.toString(321112);
-		} else if (areaCode.trim().equals("丹阳�?")) {
+		} else if (areaCode.trim().equals("涓归槼甯?")) {
 			areaCode = Integer.toString(321181);
-		} else if (areaCode.trim().equals("扬中�?")) {
+		} else if (areaCode.trim().equals("鎵腑甯?")) {
 			areaCode = Integer.toString(321182);
-		} else if (areaCode.trim().equals("句容�?")) {
+		} else if (areaCode.trim().equals("鍙ュ甯?")) {
 			areaCode = Integer.toString(321183);
-		} else if (areaCode.trim().equals("海陵�?")) {
+		} else if (areaCode.trim().equals("娴烽櫟鍖?")) {
 			areaCode = Integer.toString(321202);
-		} else if (areaCode.trim().equals("高港�?")) {
+		} else if (areaCode.trim().equals("楂樻腐鍖?")) {
 			areaCode = Integer.toString(321203);
-		} else if (areaCode.trim().equals("兴化�?")) {
+		} else if (areaCode.trim().equals("鍏村寲甯?")) {
 			areaCode = Integer.toString(321281);
-		} else if (areaCode.trim().equals("靖江�?")) {
+		} else if (areaCode.trim().equals("闈栨睙甯?")) {
 			areaCode = Integer.toString(321282);
-		} else if (areaCode.trim().equals("泰兴�?")) {
+		} else if (areaCode.trim().equals("娉板叴甯?")) {
 			areaCode = Integer.toString(321283);
-		} else if (areaCode.trim().equals("姜堰�?")) {
+		} else if (areaCode.trim().equals("濮滃牥甯?")) {
 			areaCode = Integer.toString(321284);
-		} else if (areaCode.trim().equals("宿城�?")) {
+		} else if (areaCode.trim().equals("瀹垮煄鍖?")) {
 			areaCode = Integer.toString(321302);
-		} else if (areaCode.trim().equals("宿豫�?")) {
+		} else if (areaCode.trim().equals("瀹胯鲍鍖?")) {
 			areaCode = Integer.toString(321311);
-		} else if (areaCode.trim().equals("沭阳�?")) {
+		} else if (areaCode.trim().equals("娌槼鍘?")) {
 			areaCode = Integer.toString(321322);
-		} else if (areaCode.trim().equals("泗阳�?")) {
+		} else if (areaCode.trim().equals("娉楅槼鍘?")) {
 			areaCode = Integer.toString(321323);
-		} else if (areaCode.trim().equals("泗洪�?")) {
+		} else if (areaCode.trim().equals("娉楁椽鍘?")) {
 			areaCode = Integer.toString(321324);
 		} else {
-			System.err.println("抱歉身份证编号生成失败，因为没有找到您输入的�?/�?/县的名称与之对应的编号！");
+			System.err.println("鎶辨瓑韬唤璇佺紪鍙风敓鎴愬け璐ワ紝鍥犱负娌℃湁鎵惧埌鎮ㄨ緭鍏ョ殑甯?/鍖?/鍘跨殑鍚嶇О涓庝箣瀵瑰簲鐨勭紪鍙凤紒");
 			return;
 		}
 
-		// �?17位要除以的数�?7 9 10 5 8 4 2 1 6 3 7 9 10 5 8 4 2
+		// 鍓?17浣嶈闄や互鐨勬暟锛?7 9 10 5 8 4 2 1 6 3 7 9 10 5 8 4 2
 		int finalAreaCode = Integer.parseInt(areaCode.substring(0, 1)) * 7
 				+ Integer.parseInt(areaCode.substring(1, 2)) * 9
 				+ Integer.parseInt(areaCode.substring(2, 3)) * 10
@@ -300,9 +300,9 @@ public class CalcID {
 		int checkCode = (finalAreaCode + finalBirthday + NoIs + sexNo) % 11;
 		int finalCheckCode = 0;
 
-		// 余数范围�? 0 1 2 3 4 5 6 7 8 9 10
-		// 余数对应的数�?1 0 X 9 8 7 6 5 4 3 2
-		// 计算出最终的校验码：finalCheckCode
+		// 浣欐暟鑼冨洿锛? 0 1 2 3 4 5 6 7 8 9 10
+		// 浣欐暟瀵瑰簲鐨勬暟锛?1 0 X 9 8 7 6 5 4 3 2
+		// 璁＄畻鍑烘渶缁堢殑鏍￠獙鐮侊細finalCheckCode
 		switch (checkCode) {
 		case 0:
 			finalCheckCode = 1;
@@ -340,14 +340,14 @@ public class CalcID {
 		default:
 			break;
 		}
-		System.out.println("恭喜，生成的身份证号是：" + "\r" + areaCode + birthday + idNo
+		System.out.println("鎭枩锛岀敓鎴愮殑韬唤璇佸彿鏄細" + "\r" + areaCode + birthday + idNo
 				+ sex + finalCheckCode);
-		// 区域编号(6位数)+出生日期(8位数)+顺序编号(2位数)+性别�?(1位数)+校验�?(1位数)=身份证号(18位数)
+		// 鍖哄煙缂栧彿(6浣嶆暟)+鍑虹敓鏃ユ湡(8浣嶆暟)+椤哄簭缂栧彿(2浣嶆暟)+鎬у埆鍙?(1浣嶆暟)+鏍￠獙鐮?(1浣嶆暟)=韬唤璇佸彿(18浣嶆暟)
 
 	}
 
 	/**
-	 * CalcID类的无参构�?�方法，调用此方法即可调用其方法�?
+	 * CalcID绫荤殑鏃犲弬鏋勯?犳柟娉曪紝璋冪敤姝ゆ柟娉曞嵆鍙皟鐢ㄥ叾鏂规硶銆?
 	 */
 	public CalcID() {
 		Calculate();

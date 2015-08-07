@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson015;
+ï»¿package com.shengsiyuan.lesson015;
 
 public class ParamTest {
 	public void changePoint(Point p) {
@@ -20,6 +20,6 @@ public class ParamTest {
 }
 
 class Point {
-	int x; // ºá×ø±ê
-	int y; // ×İ×ø±ê
+	int x; // æ¨ªåæ ‡
+	int y; // çºµåæ ‡
 }

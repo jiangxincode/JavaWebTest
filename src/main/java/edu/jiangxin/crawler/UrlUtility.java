@@ -1,4 +1,4 @@
-package edu.jiangxin.crawler;
+ï»¿package edu.jiangxin.crawler;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.regex.Matcher;
@@ -26,7 +26,7 @@ public class UrlUtility {
 		}
 	}
 
-	// ½«"url"±äÎª±àÂëÎªºÏ·¨µÄURL
+	// å°†"url"å˜ä¸ºç¼–ç ä¸ºåˆæ³•çš„URL
 	public static String Encode(String url) {
 		String res = "";
 		for (char c : url.toCharArray()) {
@@ -53,7 +53,7 @@ public class UrlUtility {
 		return url;
 	}
 
-	// Æ´½ÓURL
+	// æ‹¼æ¥URL
 	public static String Refine(String baseUrl, String relative) {
 		if (baseUrl == null || relative == null) {
 			return null;
@@ -82,7 +82,7 @@ public class UrlUtility {
 		return Normalizer(url.ToUrl());
 	}
 
-	// ²ğ·ÖURL³Éscheme, host, path
+	// æ‹†åˆ†URLæˆscheme, host, path
 	private static Url Parse(String link) {
 		int idx, endIndex;
 		final Url url = new Url();
@@ -125,7 +125,7 @@ public class UrlUtility {
 		return url;
 	}
 
-	// ÅĞ¶ÏschemeÊÇ·ñºÏ·¨£¨Òª´¦ÀíµÄschemeÀàĞÍ£©
+	// åˆ¤æ–­schemeæ˜¯å¦åˆæ³•ï¼ˆè¦å¤„ç†çš„schemeç±»å‹ï¼‰
 	private static boolean IsLegalScheme(String scheme) {
 		if (scheme.equals("http") || scheme.equals("https")
 				|| scheme.equals("ftp"))

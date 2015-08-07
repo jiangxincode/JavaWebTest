@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson054;
+﻿package com.shengsiyuan.lesson054;
 
 public class Generic<T1, T2> {
 	private T1 foo1;

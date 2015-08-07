@@ -1,4 +1,4 @@
-package edu.jiangxin.crawler;
+ï»¿package edu.jiangxin.crawler;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -12,13 +12,13 @@ public class Utility {
 	private static Logger m_debug = LogManager.getLogger("Debuglogger");
 
 	/**
-	 * ´ÓcontentÌáÈ¡beginÖ®ºó£¬endÖ®Ç°µÄ×Ö·û´® ×¢Òâ£¬Èç¹ûbeginÃ»³öÏÖ£¬»á·µ»Ønull, Èç¹ûendÃ»³öÏÖÔòÒ»Ö±¶Á×Ö·û´®Ä©Î²
+	 * ä»contentæå–beginä¹‹åï¼Œendä¹‹å‰çš„å­—ç¬¦ä¸² æ³¨æ„ï¼Œå¦‚æœbeginæ²¡å‡ºç°ï¼Œä¼šè¿”å›null, å¦‚æœendæ²¡å‡ºç°åˆ™ä¸€ç›´è¯»å­—ç¬¦ä¸²æœ«å°¾
 	 * 
 	 * @param content
 	 * @param begin
-	 *            Èç¹ûÎªnull£¬Ôò´ÓµÚ0¸ö×Ö·û¿ªÊ¼£¨°üÀ¨µÚ0¸ö×Ö·û)
+	 *            å¦‚æœä¸ºnullï¼Œåˆ™ä»ç¬¬0ä¸ªå­—ç¬¦å¼€å§‹ï¼ˆåŒ…æ‹¬ç¬¬0ä¸ªå­—ç¬¦)
 	 * @param end
-	 *            Èç¹ûÎªnull£¬ÔòÒ»Ö±¶ÁÈ¡µ½×Ö·û´®½áÎ²
+	 *            å¦‚æœä¸ºnullï¼Œåˆ™ä¸€ç›´è¯»å–åˆ°å­—ç¬¦ä¸²ç»“å°¾
 	 * @return
 	 */
 	public static String GetSubString(String content, String begin, String end) {
@@ -48,9 +48,9 @@ public class Utility {
 		}
 	}
 
-	// ±£´æÍøÒ³
+	// ä¿å­˜ç½‘é¡µ
 	public static boolean SavePage(byte[] bytes, String content, String savePath) {
-		String name = Utility.GetSubString(content, "<title>", "</title>"); // ÌáÈ¡±êÌâÃû£¬×÷Îª±£´æÊ±µÄÎÄ¼şÃû
+		String name = Utility.GetSubString(content, "<title>", "</title>"); // æå–æ ‡é¢˜åï¼Œä½œä¸ºä¿å­˜æ—¶çš„æ–‡ä»¶å
 		if (name != null)
 			name = name.trim() + ".html";
 		else
@@ -63,7 +63,7 @@ public class Utility {
 			fos.write(bytes);
 			fos.close();
 		} catch (FileNotFoundException e) {
-			m_debug.debug("ÎŞ·¨½¨Á¢ÎÄ¼şÃûÎª\"" + name + "\"µÄÎÄ¼ş");
+			m_debug.debug("æ— æ³•å»ºç«‹æ–‡ä»¶åä¸º\"" + name + "\"çš„æ–‡ä»¶");
 			return false;
 		} catch (IOException e) {
 			m_debug.debug(e.getMessage());
@@ -73,7 +73,7 @@ public class Utility {
 		return true;
 	}
 
-	// È¥µôÎÄ¼şÃûÖĞµÄ·Ç·¨×Ö·û
+	// å»æ‰æ–‡ä»¶åä¸­çš„éæ³•å­—ç¬¦
 	public static String FixFileName(String name) {
 		String res = "";
 		for (char c : name.toCharArray()) {

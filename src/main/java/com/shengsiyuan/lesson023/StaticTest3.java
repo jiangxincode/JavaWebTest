@@ -1,11 +1,11 @@
-package com.shengsiyuan.lesson023;
+锘縫ackage com.shengsiyuan.lesson023;
 
 public class StaticTest3 {
 	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		M m = new N();
 
-		m.output(); // 为什么输出M可以查看官方文档，google 搜索java static override
+		m.output(); // 涓轰粈涔堣緭鍑篗鍙互鏌ョ湅瀹樻柟鏂囨。锛実oogle 鎼滅储java static override
 	}
 }
 

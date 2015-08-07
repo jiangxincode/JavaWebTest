@@ -1,9 +1,9 @@
-package com.shengsiyuan.lesson093.decorator;
+ï»¿package com.shengsiyuan.lesson093.decorator;
 
 public class ConcreteComponent implements Component {
 	@Override
 	public void doSomething() {
-		System.out.println("¹¦ÄÜA");
+		System.out.println("åŠŸèƒ½A");
 	}
 
 }

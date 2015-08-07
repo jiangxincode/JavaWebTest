@@ -1,18 +1,18 @@
-package com.shengsiyuan.lesson065.proxy;
+ï»¿package com.shengsiyuan.lesson065.proxy;
 
 public class ProxySubject extends Subject {
-	private RealSubject realSubject; // ´úÀí½ÇÉ«ÄÚ²¿ÒıÓÃÁËÕæÊµ½ÇÉ«
+	private RealSubject realSubject; // ä»£ç†è§’è‰²å†…éƒ¨å¼•ç”¨äº†çœŸå®è§’è‰²
 
 	public void request() {
-		this.preRequest(); // ÔÚÕæÊµ½ÇÉ«²Ù×÷Ö®Ç°Ëù¸½¼ÓµÄ²Ù×÷
+		this.preRequest(); // åœ¨çœŸå®è§’è‰²æ“ä½œä¹‹å‰æ‰€é™„åŠ çš„æ“ä½œ
 
 		if (null == realSubject) {
 			realSubject = new RealSubject();
 		}
 
-		realSubject.request(); // ÕæÊµ½ÇÉ«ËùÍê³ÉµÄÊÂÇé
+		realSubject.request(); // çœŸå®è§’è‰²æ‰€å®Œæˆçš„äº‹æƒ…
 
-		this.postRequest(); // ÔÚÕæÊµ½ÇÉ«²Ù×÷Ö®ºóËù¸½¼ÓµÄ²Ù×÷
+		this.postRequest(); // åœ¨çœŸå®è§’è‰²æ“ä½œä¹‹åæ‰€é™„åŠ çš„æ“ä½œ
 	}
 
 	private void preRequest() {

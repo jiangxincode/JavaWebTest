@@ -1,17 +1,17 @@
-package com.shengsiyuan.lesson019;
+ï»¿package com.shengsiyuan.lesson019;
 
 public class PolyTest2 {
 	public static void main(String[] args) {
 		/*
 		 * Animal animal = new Cat(); Animal animal2 = new Animal();
 		 * 
-		 * animal2 = animal; animal2.sing(); //Ö¸ÏòË­¾ÍÊÇµ÷ÓÃË­µÄ·½·¨
+		 * animal2 = animal; animal2.sing(); //æŒ‡å‘è°å°±æ˜¯è°ƒç”¨è°çš„æ–¹æ³•
 		 */
 
 		/*
 		 * Animal animal = new Cat(); Animal animal2 = new Animal();
 		 * 
-		 * animal = animal2; animal.sing(); //Ö¸ÏòË­¾ÍÊÇµ÷ÓÃË­µÄ·½·¨
+		 * animal = animal2; animal.sing(); //æŒ‡å‘è°å°±æ˜¯è°ƒç”¨è°çš„æ–¹æ³•
 		 */
 
 		/*
@@ -19,17 +19,17 @@ public class PolyTest2 {
 		 */
 
 		/*
-		 * Animal animal = new Animal(); Cat cat = (Cat)animal; ±àÒëÍ¨¹ı£¬ÔËĞĞ³ö´í
+		 * Animal animal = new Animal(); Cat cat = (Cat)animal; ç¼–è¯‘é€šè¿‡ï¼Œè¿è¡Œå‡ºé”™
 		 */
 
-		// ÏòÉÏÀàĞÍ×ª»»
+		// å‘ä¸Šç±»å‹è½¬æ¢
 		Cat cat = new Cat();
 
 		Animal animal = cat;
 
 		animal.sing();
 
-		// ÏòÏÂÀàĞÍ×ª»»
+		// å‘ä¸‹ç±»å‹è½¬æ¢
 		Animal a = new Cat();
 
 		Cat c = (Cat) a;

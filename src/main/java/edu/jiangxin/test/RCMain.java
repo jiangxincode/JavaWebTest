@@ -1,4 +1,4 @@
-package edu.jiangxin.test;
+﻿package edu.jiangxin.test;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -16,14 +16,14 @@ public class RCMain {
 
 	public static void main(String args[]) throws IOException {
 
-		String sUrl = "E:/temp/java/Test/src"; // 源文件夹
-		String tUrl = "E:/temp/java/Test/srctemp"; // 目标文件�?
-		(new File(tUrl)).mkdirs(); // 创建目标文件�?
-		File[] file = (new File(sUrl)).listFiles(); // 获取源文件夹当前下的文件或目�?
+		String sUrl = "E:/temp/java/Test/src"; // 婧愭枃浠跺す
+		String tUrl = "E:/temp/java/Test/srctemp"; // 鐩爣鏂囦欢澶?
+		(new File(tUrl)).mkdirs(); // 鍒涘缓鐩爣鏂囦欢澶?
+		File[] file = (new File(sUrl)).listFiles(); // 鑾峰彇婧愭枃浠跺す褰撳墠涓嬬殑鏂囦欢鎴栫洰褰?
 		for (int i = 0; i < file.length; i++) {
 
 			if (file[i].isFile()) {
-				// 复制文件
+				// 澶嶅埗鏂囦欢
 				
 				String type = file[i].getName().substring(file[i].getName().lastIndexOf(".") + 1);
 				System.out.println(type);
@@ -38,7 +38,7 @@ public class RCMain {
 			}
 
 			if (file[i].isDirectory()) {
-				// 复制目录
+				// 澶嶅埗鐩綍
 				String sourceDir = sUrl + File.separator + file[i].getName();
 				String targetDir = tUrl + File.separator + file[i].getName();
 				copyDirectiory(sourceDir, targetDir);
@@ -47,7 +47,7 @@ public class RCMain {
 	}
 
 	*//**
-	 * 复制非java文件
+	 * 澶嶅埗闈瀓ava鏂囦欢
 	 * 
 	 * @param sourceFile
 	 * @param targetFile
@@ -58,22 +58,22 @@ public class RCMain {
 		BufferedInputStream inBuff = null;
 		BufferedOutputStream outBuff = null;
 		try {
-			// 新建文件输入流并对它进行缓冲
+			// 鏂板缓鏂囦欢杈撳叆娴佸苟瀵瑰畠杩涜缂撳啿
 			inBuff = new BufferedInputStream(new FileInputStream(sourceFile));
 
-			// 新建文件输出流并对它进行缓冲
+			// 鏂板缓鏂囦欢杈撳嚭娴佸苟瀵瑰畠杩涜缂撳啿
 			outBuff = new BufferedOutputStream(new FileOutputStream(targetFile));
 
-			// 缓冲数组
+			// 缂撳啿鏁扮粍
 			byte[] b = new byte[1024 * 5];
 			int len;
 			while ((len = inBuff.read(b)) != -1) {
 				outBuff.write(b, 0, len);
 			}
-			// 刷新此缓冲的输出�?
+			// 鍒锋柊姝ょ紦鍐茬殑杈撳嚭娴?
 			outBuff.flush();
 		} finally {
-			// 关闭�?
+			// 鍏抽棴娴?
 			if (inBuff != null)
 				inBuff.close();
 			if (outBuff != null)
@@ -81,19 +81,19 @@ public class RCMain {
 		}
 	}
 
-	// 复制文件�?
+	// 澶嶅埗鏂囦欢澶?
 	public static void copyDirectiory(String sourceDir, String targetDir)
 			throws IOException {
-		// 新建目标目录
+		// 鏂板缓鐩爣鐩綍
 		(new File(targetDir)).mkdirs();
-		// 获取源文件夹当前下的文件或目�?
+		// 鑾峰彇婧愭枃浠跺す褰撳墠涓嬬殑鏂囦欢鎴栫洰褰?
 		File[] file = (new File(sourceDir)).listFiles();
 		for (int i = 0; i < file.length; i++) {
 			if (file[i].isFile()) {
-				// 源文�?
+				// 婧愭枃浠?
 				File sourceFile = file[i];
 
-				// 复制文件
+				// 澶嶅埗鏂囦欢
 				String type = file[i].getName().substring(
 						file[i].getName().lastIndexOf(".") + 1);
 
@@ -114,9 +114,9 @@ public class RCMain {
 
 			}
 			if (file[i].isDirectory()) {
-				// 准备复制的源文件�?
+				// 鍑嗗澶嶅埗鐨勬簮鏂囦欢澶?
 				String dir1 = sourceDir + "/" + file[i].getName();
-				// 准备复制的目标文件夹
+				// 鍑嗗澶嶅埗鐨勭洰鏍囨枃浠跺す
 				String dir2 = targetDir + "/" + file[i].getName();
 				copyDirectiory(dir1, dir2);
 			}
@@ -124,7 +124,7 @@ public class RCMain {
 	}*/
 
 	/**
-	 * 字符串写入文�?
+	 * 瀛楃涓插啓鍏ユ枃浠?
 	 * 
 	 * @param content
 	 * @param fileName
@@ -148,7 +148,7 @@ public class RCMain {
 	}*/
 
 	/**
-	 * 保存java文件
+	 * 淇濆瓨java鏂囦欢
 	 * 
 	 * @param srcFileName
 	 * @param destFileName

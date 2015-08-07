@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson024;
+﻿package com.shengsiyuan.lesson024;
 
 public class FinalTest4 {
 	final int a;

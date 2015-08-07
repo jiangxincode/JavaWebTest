@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson125.classloader;
+锘縫ackage com.shengsiyuan.lesson125.classloader;
 
 class CL {
 	static {
@@ -8,7 +8,7 @@ class CL {
 
 public class Test7 {
 	public static void main(String[] args) throws Exception {
-		// 获得系统类加载器
+		// 鑾峰緱绯荤粺绫诲姞杞藉櫒
 		ClassLoader loader = ClassLoader.getSystemClassLoader();
 
 		@SuppressWarnings("unused")

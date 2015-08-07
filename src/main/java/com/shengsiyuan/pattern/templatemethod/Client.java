@@ -1,4 +1,4 @@
-package com.shengsiyuan.pattern.templatemethod;
+﻿package com.shengsiyuan.pattern.templatemethod;
 
 public class Client {
 	public static void main(String[] args) {

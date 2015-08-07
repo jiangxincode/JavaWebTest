@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson092.io2;
+ï»¿package com.shengsiyuan.lesson092.io2;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -27,7 +27,7 @@ public class DataStream1 {
 		DataInputStream dis = new DataInputStream(new BufferedInputStream(
 				new FileInputStream("data.txt")));
 
-		// ¶ÁºÍĞ´µÄË³ĞòÒª±£³ÖÒ»ÖÂ
+		// è¯»å’Œå†™çš„é¡ºåºè¦ä¿æŒä¸€è‡´
 		System.out.println(dis.readByte());
 		System.out.println(dis.readInt());
 		System.out.println(dis.readChar());

@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson071.annotation;
+﻿package com.shengsiyuan.lesson071.annotation;
 
 public class DocumentedTest {
 	@DocumentedAnnotation(hello = "welcome")

@@ -1,9 +1,9 @@
-package com.shengsiyuan.lesson086.io;
+ï»¿package com.shengsiyuan.lesson086.io;
 
 public class Fab {
-	// Ê¹ÓÃµİ¹é¼ÆËãì³²¨ÄÉÆõÊıÁĞ
+	// ä½¿ç”¨é€’å½’è®¡ç®—æ–æ³¢çº³å¥‘æ•°åˆ—
 	public int compute(int n) {
-		// µİ¹éµÄ³ö¿Ú
+		// é€’å½’çš„å‡ºå£
 		if (1 == n || 2 == n) {
 			return 1;
 		} else {

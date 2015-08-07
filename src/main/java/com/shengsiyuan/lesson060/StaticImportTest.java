@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson060;
+﻿package com.shengsiyuan.lesson060;
 
 import static com.shengsiyuan.lesson060.common.Common.AGE;
 import static com.shengsiyuan.lesson060.common.Common.output;

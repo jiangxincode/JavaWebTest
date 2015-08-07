@@ -1,4 +1,4 @@
-package com.shengsiyuan.junit3;
+ï»¿package com.shengsiyuan.junit3;
 
 import java.io.File;
 
@@ -31,7 +31,7 @@ public class DeleteAllTest extends TestCase {
 
 	/**
 	 * 
-	 * ¹¹ÔìµÄÊÇÒ»¸öÄ¿Â¼½á¹¹£¬Æä½á¹¹±íÊ¾ÈçÏÂ
+	 * æž„é€ çš„æ˜¯ä¸€ä¸ªç›®å½•ç»“æž„ï¼Œå…¶ç»“æž„è¡¨ç¤ºå¦‚ä¸‹
 	 * 
 	 *         d
 	 *        / \

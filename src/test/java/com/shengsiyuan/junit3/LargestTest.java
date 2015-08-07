@@ -1,4 +1,4 @@
-package com.shengsiyuan.junit3;
+ï»¿package com.shengsiyuan.junit3;
 
 import com.shengsiyuan.junit3.Largest;
 
@@ -21,7 +21,7 @@ public class LargestTest extends TestCase {
 		try {
 			result = largest.getLargest(array);
 		} catch (Exception ex) {
-			Assert.fail("²âÊÔÊ§°Ü");
+			Assert.fail("æµ‹è¯•å¤±è´¥");
 		}
 
 		Assert.assertEquals(34, result);
@@ -35,7 +35,7 @@ public class LargestTest extends TestCase {
 		try {
 			largest.getLargest(array);
 
-			Assert.fail("²âÊÔÊ§°Ü");
+			Assert.fail("æµ‹è¯•å¤±è´¥");
 		} catch (Exception ex) {
 			tx = ex;
 		}
@@ -44,7 +44,7 @@ public class LargestTest extends TestCase {
 
 		Assert.assertEquals(Exception.class, tx.getClass());
 
-		Assert.assertEquals("Êı×é²»ÄÜÎª¿Õ£¡", tx.getMessage());
+		Assert.assertEquals("æ•°ç»„ä¸èƒ½ä¸ºç©ºï¼", tx.getMessage());
 	}
 
 	public void testGetLargest3() {
@@ -64,6 +64,6 @@ public class LargestTest extends TestCase {
 
 		Assert.assertEquals(Exception.class, tx.getClass());
 
-		Assert.assertEquals("Êı×é²»ÄÜÎª¿Õ£¡", tx.getMessage());
+		Assert.assertEquals("æ•°ç»„ä¸èƒ½ä¸ºç©ºï¼", tx.getMessage());
 	}
 }

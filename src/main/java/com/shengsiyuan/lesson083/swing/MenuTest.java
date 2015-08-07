@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson083.swing;
+﻿package com.shengsiyuan.lesson083.swing;
 
 import java.awt.Dimension;
 import javax.swing.JFrame;

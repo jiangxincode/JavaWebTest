@@ -1,7 +1,7 @@
-package com.shengsiyuan.pattern.command;
+ï»¿package com.shengsiyuan.pattern.command;
 
 public class Receiver {
 	public void doAction() {
-		System.out.println("Ö´ĞĞ²Ù×÷£¡");
+		System.out.println("æ‰§è¡Œæ“ä½œï¼");
 	}
 }

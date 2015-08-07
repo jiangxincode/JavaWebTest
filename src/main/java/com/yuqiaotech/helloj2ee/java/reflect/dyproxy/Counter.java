@@ -1,4 +1,4 @@
-package com.yuqiaotech.helloj2ee.java.reflect.dyproxy;
+﻿package com.yuqiaotech.helloj2ee.java.reflect.dyproxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

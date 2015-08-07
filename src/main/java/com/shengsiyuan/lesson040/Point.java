@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson040;
+﻿package com.shengsiyuan.lesson040;
 
 public class Point {
 	int x;

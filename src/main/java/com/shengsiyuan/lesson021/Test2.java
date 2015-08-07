@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson021;
+锘縫ackage com.shengsiyuan.lesson021;
 
 public class Test2 {
 	public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class Test2 {
 }
 
 abstract class Shape {
-	public abstract int computeArea();// 计算形状面积
+	public abstract int computeArea();// 璁＄畻褰㈢姸闈㈢Н
 }
 
 class Triangle extends Shape {

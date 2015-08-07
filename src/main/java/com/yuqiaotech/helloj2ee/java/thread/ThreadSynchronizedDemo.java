@@ -1,4 +1,4 @@
-package com.yuqiaotech.helloj2ee.java.thread;
+﻿package com.yuqiaotech.helloj2ee.java.thread;
 
 /**
  * 多线程编程中线程同步：Synchronized关键字

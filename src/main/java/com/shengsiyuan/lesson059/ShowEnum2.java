@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson059;
+﻿package com.shengsiyuan.lesson059;
 
 public class ShowEnum2 {
 	public static void main(String[] args) {

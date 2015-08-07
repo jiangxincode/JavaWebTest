@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson078.awt;
+ï»¿package com.shengsiyuan.lesson078.awt;
 
 import java.awt.Button;
 import java.awt.FlowLayout;
@@ -12,7 +12,7 @@ public class MyFlow {
 	public void go() {
 		frame = new Frame("Flow Layout");
 
-		// Ê¹ÓÃFlowLayoutÌæ»»µôÄ¬ÈÏµÄBorderLayout²¼¾Ö¹ÜÀíÆ÷
+		// ä½¿ç”¨FlowLayoutæ›¿æ¢æ‰é»˜è®¤çš„BorderLayoutå¸ƒå±€ç®¡ç†å™¨
 		frame.setLayout(new FlowLayout());
 
 		button1 = new Button("hello");

@@ -1,4 +1,4 @@
-package com.shengsiyuan.pattern.composite2;
+﻿package com.shengsiyuan.pattern.composite2;
 
 import java.util.ArrayList;
 import java.util.List;

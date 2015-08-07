@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson031;
+﻿package com.shengsiyuan.lesson031;
 public class StringBufferTest
 {
 	public static void main(String[] args)

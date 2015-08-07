@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson063.reflect;
+ï»¿package com.shengsiyuan.lesson063.reflect;
 
 import java.lang.reflect.Method;
 
@@ -11,7 +11,7 @@ public class TestPrivate {
 		Method method = classType.getDeclaredMethod("sayHello",
 				new Class[] { String.class });
 
-		method.setAccessible(true);// Ñ¹ÖÆJavaµÄ·ÃÎÊ¿ØÖÆ¼ì²é
+		method.setAccessible(true);// åŽ‹åˆ¶Javaçš„è®¿é—®æŽ§åˆ¶æ£€æŸ¥
 
 		String str = (String) method.invoke(p, new Object[] { "zhangsan" });
 

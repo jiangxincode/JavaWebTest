@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson082.observer;
+ï»¿package com.shengsiyuan.lesson082.observer;
 
 public class Test {
 	public static void main(String[] args) {
@@ -12,11 +12,11 @@ public class Test {
 		girl.addWatcher(watcher2);
 		girl.addWatcher(watcher3);
 
-		girl.notifyWatchers("¿ªĞÄ£¬Ë¬");
+		girl.notifyWatchers("å¼€å¿ƒï¼Œçˆ½");
 
 		girl.removeWatcher(watcher2);
 
-		girl.notifyWatchers("²»Ë¬");
+		girl.notifyWatchers("ä¸çˆ½");
 
 	}
 }

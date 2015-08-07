@@ -1,4 +1,4 @@
-package com.shengsiyuan.lesson021;
+锘縫ackage com.shengsiyuan.lesson021;
 
 public class Test {
 	public static void main(String[] args) {
@@ -7,7 +7,7 @@ public class Test {
 }
 
 abstract class T {
-	public abstract void method(); // 有声明无实现
+	public abstract void method(); // 鏈夊０鏄庢棤瀹炵幇
 
 	public void test() {
 		System.out.println("test");

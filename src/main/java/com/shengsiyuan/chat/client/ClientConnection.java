@@ -1,4 +1,4 @@
-package com.shengsiyuan.chat.client;
+ï»¿package com.shengsiyuan.chat.client;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -34,11 +34,11 @@ public class ClientConnection extends Thread {
 		this.port = port;
 		this.username = username;
 
-		// Á¬½Ó·şÎñÆ÷
+		// è¿æ¥æœåŠ¡å™¨
 		this.connect2Server();
 	}
 
-	// Á¬½Ó·şÎñÆ÷£¬ÓÉ¹¹Ôì·½·¨µ÷ÓÃ
+	// è¿æ¥æœåŠ¡å™¨ï¼Œç”±æ„é€ æ–¹æ³•è°ƒç”¨
 	private void connect2Server() {
 		try {
 			this.socket = new Socket(this.hostAddress, this.port);
@@ -50,32 +50,32 @@ public class ClientConnection extends Thread {
 		}
 	}
 
-	// ÓÃ»§µÇÂ¼£¬Ïò·şÎñÆ÷¶Ë´«ËÍÓÃ»§Ãû
-	// ·µ»Øtrue±íÊ¾µÇÂ¼³É¹¦
-	// ·µ»Øfalse±íÊ¾µÇÂ¼Ê§°Ü
+	// ç”¨æˆ·ç™»å½•ï¼Œå‘æœåŠ¡å™¨ç«¯ä¼ é€ç”¨æˆ·å
+	// è¿”å›trueè¡¨ç¤ºç™»å½•æˆåŠŸ
+	// è¿”å›falseè¡¨ç¤ºç™»å½•å¤±è´¥
 	public boolean login() {
 		try {
 			String xml = XMLUtil.constructLoginXML(this.username);
 
-			os.write(xml.getBytes()); // Ïò·şÎñÆ÷¶Ë·¢ËÍÓÃ»§µÄµÇÂ¼ĞÅÏ¢£¨ÆäÖĞ°üº¬ÁËÓÃ»§Ãû£©
+			os.write(xml.getBytes()); // å‘æœåŠ¡å™¨ç«¯å‘é€ç”¨æˆ·çš„ç™»å½•ä¿¡æ¯ï¼ˆå…¶ä¸­åŒ…å«äº†ç”¨æˆ·åï¼‰
 
 			byte[] buf = new byte[5000];
-			int length = is.read(buf); // ¶ÁÈ¡·şÎñÆ÷¶ËµÄÏìÓ¦½á¹û£¬ÅĞ¶ÏÓÃ»§ÊÇ·ñµÇÂ¼³É¹¦
+			int length = is.read(buf); // è¯»å–æœåŠ¡å™¨ç«¯çš„å“åº”ç»“æœï¼Œåˆ¤æ–­ç”¨æˆ·æ˜¯å¦ç™»å½•æˆåŠŸ
 
 			String loginResultXML = new String(buf, 0, length);
 
 			String loginResult = XMLUtil.extractLoginResult(loginResultXML);
 
-			// µÇÂ¼³É¹¦
+			// ç™»å½•æˆåŠŸ
 			if ("success".equals(loginResult)) {
-				// ´ò¿ªÁÄÌìÊÒÖ÷´°¿Ú
+				// æ‰“å¼€èŠå¤©å®¤ä¸»çª—å£
 				this.chatClient = new ChatClient(this);
 
 				this.client.setVisible(false);
 
 				return true;
 			}
-			// µÇÂ¼Ê§°Ü
+			// ç™»å½•å¤±è´¥
 			else {
 				return false;
 			}
@@ -96,16 +96,16 @@ public class ClientConnection extends Thread {
 
 			String xml = null;
 
-			// ¿Í»§¶ËÏò·şÎñÆ÷¶Ë·¢ËÍÁÄÌìÊı¾İ
+			// å®¢æˆ·ç«¯å‘æœåŠ¡å™¨ç«¯å‘é€èŠå¤©æ•°æ®
 			if (CharacterUtil.CLIENT_MESSAGE == t) {
 				xml = XMLUtil.constructMessageXML(this.username, message);
 			}
-			// ¿Í»§¶ËÏò·şÎñÆ÷¶Ë·¢ËÍ¹Ø±Õ´°¿ÚµÄÊı¾İ
+			// å®¢æˆ·ç«¯å‘æœåŠ¡å™¨ç«¯å‘é€å…³é—­çª—å£çš„æ•°æ®
 			else if (CharacterUtil.CLOSE_CLIENT_WINDOW == t) {
 				xml = XMLUtil.constructCloseClientWindowXML(this.username);
 			}
 
-			// Ïò·şÎñÆ÷¶Ë·¢ËÍÊı¾İ
+			// å‘æœåŠ¡å™¨ç«¯å‘é€æ•°æ®
 			this.os.write(xml.getBytes());
 
 		} catch (Exception ex) {
@@ -124,7 +124,7 @@ public class ClientConnection extends Thread {
 
 				int type = Integer.parseInt(XMLUtil.extractType(xml));
 
-				// ÔÚÏßÓÃ»§ÁĞ±í
+				// åœ¨çº¿ç”¨æˆ·åˆ—è¡¨
 				if (type == CharacterUtil.USER_LIST) {
 					List<String> list = XMLUtil.extractUserList(xml);
 
@@ -136,21 +136,21 @@ public class ClientConnection extends Thread {
 
 					this.chatClient.getJTextArea2().setText(users);
 				}
-				// ·şÎñÆ÷¶Ë·¢À´µÄÁÄÌìÊı¾İ
+				// æœåŠ¡å™¨ç«¯å‘æ¥çš„èŠå¤©æ•°æ®
 				else if (type == CharacterUtil.SERVER_MESSAGE) {
 					String content = XMLUtil.extractContent(xml);
 
 					this.chatClient.getJTextArea1().append(content + "\n");
 				}
-				// ¹Ø±Õ·şÎñÆ÷¶Ë´°¿Ú
+				// å…³é—­æœåŠ¡å™¨ç«¯çª—å£
 				else if (type == CharacterUtil.CLOSE_SERVER_WINDOW) {
 					JOptionPane.showMessageDialog(this.chatClient,
-							"·şÎñÆ÷¶ËÒÑ¹Ø±Õ£¬³ÌĞò½«ÍË³ö£¡", "ĞÅÏ¢",
+							"æœåŠ¡å™¨ç«¯å·²å…³é—­ï¼Œç¨‹åºå°†é€€å‡ºï¼", "ä¿¡æ¯",
 							JOptionPane.INFORMATION_MESSAGE);
 
-					System.exit(0); // ¿Í»§¶ËÍË³ö
+					System.exit(0); // å®¢æˆ·ç«¯é€€å‡º
 				}
-				// ·şÎñÆ÷¶ËÈ·ÈÏ¹Ø±Õ¿Í»§¶Ë´°¿Ú
+				// æœåŠ¡å™¨ç«¯ç¡®è®¤å…³é—­å®¢æˆ·ç«¯çª—å£
 				else if (type == CharacterUtil.CLOSE_CLIENT_WINDOW_CONFIRMATION) {
 					try {
 						this.getSocket().getInputStream().close();
@@ -159,7 +159,7 @@ public class ClientConnection extends Thread {
 					} catch (Exception ex) {
 
 					} finally {
-						System.exit(0);// ÍË³ö¿Í»§¶Ë³ÌĞò
+						System.exit(0);// é€€å‡ºå®¢æˆ·ç«¯ç¨‹åº
 					}
 				}
 			}
