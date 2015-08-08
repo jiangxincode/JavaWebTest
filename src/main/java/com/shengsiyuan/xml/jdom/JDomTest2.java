@@ -1,4 +1,4 @@
-package com.shengsiyuan.xml.lesson04.jdom;
+package com.shengsiyuan.xml.jdom;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -11,40 +11,39 @@ import org.jdom.input.SAXBuilder;
 import org.jdom.output.Format;
 import org.jdom.output.XMLOutputter;
 
-public class JDomTest2
-{
-	public static void main(String[] args) throws Exception
-	{
+public class JDomTest2 {
+	public static void main(String[] args) throws Exception {
+		String path = "target/test-classes/com/shengsiyuan/xml/";
+		
 		SAXBuilder builder = new SAXBuilder();
-		
-		Document doc = builder.build(new File("jdom.xml"));
-		
+
+		Document doc = builder.build(new File(path + "jdom.xml"));
+
 		Element element = doc.getRootElement();
-		
+
 		System.out.println(element.getName());
-		
+
 		Element hello = element.getChild("hello");
-		
+
 		System.out.println(hello.getText());
-		
+
+		@SuppressWarnings("rawtypes")
 		List list = hello.getAttributes();
-		
-		for(int i = 0 ;i < list.size(); i++)
-		{
-			Attribute attr = (Attribute)list.get(i);
-			
+
+		for (int i = 0; i < list.size(); i++) {
+			Attribute attr = (Attribute) list.get(i);
+
 			String attrName = attr.getName();
 			String attrValue = attr.getValue();
-			
+
 			System.out.println(attrName + "=" + attrValue);
 		}
-		
+
 		hello.removeChild("world");
-		
+
 		XMLOutputter out = new XMLOutputter(Format.getPrettyFormat().setIndent("    "));
-		
-		
-		out.output(doc, new FileOutputStream("jdom2.xml"));		
-		
+
+		out.output(doc, new FileOutputStream(path + "jdom2.xml"));
+
 	}
 }

@@ -1,4 +1,4 @@
-package com.shengsiyuan.xml.lesson04.jdom;
+package com.shengsiyuan.xml.jdom;
 
 import java.io.FileWriter;
 
@@ -9,10 +9,10 @@ import org.jdom.Element;
 import org.jdom.output.Format;
 import org.jdom.output.XMLOutputter;
 
-public class JDomTest1
-{
-	public static void main(String[] args) throws Exception
-	{
+public class JDomTest1 {
+	public static void main(String[] args) throws Exception {
+		String path = "target/test-classes/com/shengsiyuan/xml/";
+		
 		Document document = new Document();
 
 		Element root = new Element("root");
@@ -37,36 +37,17 @@ public class JDomTest1
 
 		e.addContent(e2);
 
-		e2.addContent(new Element("aaa").setAttribute("a", "b")
-				.setAttribute("x", "y").setAttribute("gg", "hh").setText("text content"));
+		e2.addContent(new Element("aaa").setAttribute("a", "b").setAttribute("x", "y").setAttribute("gg", "hh")
+				.setText("text content"));
 
-		
 		Format format = Format.getPrettyFormat();
-		
+
 		format.setIndent("    ");
-//		format.setEncoding("gbk");
-		
+		// format.setEncoding("gbk");
+
 		XMLOutputter out = new XMLOutputter(format);
 
-		out.output(document, new FileWriter("jdom.xml"));
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		out.output(document, new FileWriter(path + "jdom.xml"));
 
 	}
 }
