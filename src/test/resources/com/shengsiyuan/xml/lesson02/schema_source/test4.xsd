@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	<xs:attributeGroup name="myAttributeGroup">
+	
+		<xs:attribute name="hello" type="xs:string" use="required"/>
+		<xs:attribute name="world" type="xs:string" use="optional"/>
+	
+	</xs:attributeGroup>
+	
+	<xs:element name="myElement">
+	
+		<xs:complexType>
+			<xs:attributeGroup ref="myAttributeGroup"/>
+		</xs:complexType>
+		
+	</xs:element>
+	
+</xs:schema>
