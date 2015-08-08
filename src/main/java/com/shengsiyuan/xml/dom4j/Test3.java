@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.xml.dom4j;
+package com.shengsiyuan.xml.dom4j;
 
 import java.io.FileWriter;
 
