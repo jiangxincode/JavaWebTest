@@ -55,3 +55,15 @@ http://github.com/jiangxincode
 * 删除不必要代码
 * 数据库乱码
 * 修复why标记
+* tomcat修改缓存的目的
+* 权限，规则 filter /*
+* listerner
+* $(param.guess)与request.getParameter("guess")区别（null）
+* forward和include
+* service和doGet等的关系
+* EL表达式变量的作用范围
+* eclipse调试
+* 各种乱七八糟的Dispatcher
+* html5和CSS3
+* 控制层在filter，显示层配置在*.xml，逻辑层还是需要servlet来完成
+* eclipse快捷键
