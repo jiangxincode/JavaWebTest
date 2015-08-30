@@ -1,0 +1,16 @@
+GET /index.html HTTP/1.1
+Host: www.sohu.com
+
+HEAD /index.html HTTP/1.1
+Host: www.sohu.com
+Connection: close
+
+GET / HTTP/1.1
+Host: localhost
+Connection:Keep-Alive
+
+HEAD / HTTP/1.1
+Host: localhost
+Connection: close
+
+理解Keep-Alive与close之间的区别
