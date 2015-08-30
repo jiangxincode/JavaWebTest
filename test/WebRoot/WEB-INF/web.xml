@@ -4,7 +4,6 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
-  
    
   <servlet>
   	<servlet-name>MyServlet</servlet-name>
@@ -18,9 +17,6 @@
     <servlet-name>ThirdServlet</servlet-name>
     <servlet-class>com.test.servlet.ThirdServlet</servlet-class>
   </servlet>
-
-
-  
   
   <servlet-mapping>
   	<servlet-name>MyServlet</servlet-name>
@@ -35,6 +31,4 @@
     <url-pattern>/ThirdServlet</url-pattern>
   </servlet-mapping>
   
-  
-
 </web-app>

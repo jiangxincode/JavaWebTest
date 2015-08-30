@@ -1,0 +1,9 @@
+.metadata/
+.recommenders/
+RemoteSystemsTempFiles/
+Servers/
+
+*.swp
+
+test/.settings/
+test/WebRoot/WEB-INF/classes/

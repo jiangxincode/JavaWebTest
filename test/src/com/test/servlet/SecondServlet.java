@@ -8,25 +8,23 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class SecondServlet extends HttpServlet
-{
-	public void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException
-	{
+public class SecondServlet extends HttpServlet {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("doGet Invoked");
 		process(request, response);
 	}
 
-	public void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException
-	{
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("doPost invokded");
 		process(request, response);
 	}
 
-	public void process(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException
-	{
+	public void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 

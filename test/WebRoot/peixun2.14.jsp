@@ -3,16 +3,16 @@
 <html>
 	<head><title>网页计数器</title><head>
 <body>
-<%  if (session.getAttribute("counter")==null)
-	session.setAttribute("counter","1");
+<%  if (application.getAttribute("counter")==null)
+	application.setAttribute("counter","1");
 	else{
 		String strnum=null;
-		strnum=session.getAttribute("counter").toString();
+		strnum=application.getAttribute("counter").toString();
 		int icount=0;
 		icount=Integer.valueOf(strnum).intValue();
 		icount++;
-		session.setAttribute("counter",Integer.toString(icount));
+		application.setAttribute("counter",Integer.toString(icount));
 		}  %>
-您是第<%=session.getAttribute("counter")%>位访问者！
+您是第<%=application.getAttribute("counter")%>位访问者！
 </body>
 </html>

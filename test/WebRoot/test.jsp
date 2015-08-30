@@ -25,12 +25,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     
     <form action="result.jsp" method="get">
+<!--     <form action="test/SecondServlet" method="get"> -->
 	用户：<input type="text" name="username" size="20"><br>
 	密码：<input type="password" name="password" size="20"><br>
 	<input type="submit" value="提交">&nbsp;&nbsp;&nbsp;<input type="reset" value="重置">
 	</form>
-
-
     
   </body>
 </html>

@@ -31,6 +31,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    username: <% out.print(username); %><br>
    password: <% out.print(password); %>
    
+<%--    username: <%= username %><br> --%>
+<%--    password: <%= password %> --%>
+   
+   
    
   </body>
 </html>

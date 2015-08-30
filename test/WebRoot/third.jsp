@@ -27,16 +27,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <%Calendar calendar = Calendar.getInstance();
 	int currentHour = calendar.get(Calendar.HOUR_OF_DAY);
 	%>
-    <%if(currentHour < 12){%>
+    <%if(currentHour < 12) {%>
 	Good Morning!
 	<%} else if(currentHour > 12 && currentHour < 18){%>
 	Good Afternoon!
-	<%}else{%>
+	<%} else {%>
 	Good Evening!
 	<%}%>
-    
-    
-    
     
   </body>
 </html>
