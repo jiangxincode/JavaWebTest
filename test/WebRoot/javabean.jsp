@@ -18,6 +18,9 @@
 <%=student.getAge() %> <br>
 <%=student.isSexy() %> <br>
 
+<%--引用Java类库中生成的bean组件 --%>
+<jsp:useBean id="date" scope="page" class="java.util.Date" />
+<%= date.toLocaleString()%><br>
 
 </body>
 </html>

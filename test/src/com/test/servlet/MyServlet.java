@@ -26,6 +26,7 @@ public class MyServlet extends HttpServlet {
 
 	@SuppressWarnings("deprecation")
 	protected void process(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println(req.getClass().getName());
 		resp.setContentType("text/html");
 		PrintWriter out = resp.getWriter();
 

@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'result.jsp' starting page</title>
+    <title>My JSP 'test4.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -24,18 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
    
-   <%String username = request.getParameter("username");
-   	 String password = request.getParameter("password");
-   %>
-   
-   username: <% out.print(username); %><br>
-   password: <% out.print(password); %>
-   
-<%--    username: <%= username %><br> --%>
-<%--    password: <%= password %> --%>
-   
-   username: ${param.username }<br>
-   password: ${param.password }
+   <%= request.getAttribute("test") %>
    
    
   </body>
