@@ -1,8 +1,4 @@
 package edu.jiangxin.office;
-/**
- * POI按行读取word,并去掉属性标签内容：超链接 
- * @author jiangxin
- */
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -11,11 +7,16 @@ import java.io.InputStream;
 
 import org.apache.poi.hwpf.extractor.WordExtractor;
 
-public class RemoveLinks {
-	public static void main(String args[]) {
-		File mydoc = new File("temp/mydoc.doc");
-		readDoc(mydoc);
+import edu.jiangxin.path.GetPath;
 
+/**
+ * POI按行读取word
+ * @author jiangxin
+ */
+public class ReadWordContent {
+	public static void main(String args[]) {
+		File mydoc = new File(GetPath.getTestResourcePathWithPackage(new ReadWordContent()) + "mydoc.doc");
+		System.out.println(readDoc(mydoc));
 	}
 
 	public static String readDoc(File file) {
@@ -28,9 +29,8 @@ public class RemoveLinks {
 			extractor = new WordExtractor(input);
 			paragraphs = extractor.getParagraphText();
 			for (String paragraph : paragraphs) {
-				//System.out.println(buffer);
-				buffer.append(WordExtractor.stripFields(paragraph)).append("\\\r\\\n");
-				System.out.println(buffer);
+				// delete the field except the plain text
+				buffer.append(WordExtractor.stripFields(paragraph)).append("\r\n");
 			}
 			extractor.close();
 		} catch (Exception e) {
