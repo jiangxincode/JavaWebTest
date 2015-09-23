@@ -8,13 +8,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class NoteServlet extends HttpServlet
-{
+public class NoteServlet extends HttpServlet {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private static final String CONTENT_TYPE = "text/html; charset=GB2312";
 
-	public void service(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException
-	{
+	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType(CONTENT_TYPE);
 		PrintWriter out = response.getWriter();
 		out.println("<html>");
@@ -31,21 +32,18 @@ public class NoteServlet extends HttpServlet
 		if (content != null && !content.equals(""))
 			out.println("<p>" + username + "的留言为：" + content + "</P>");
 
-		out.println(" <FORM  action=" + request.getContextPath()
-				+ "/NoteServlet method=POST>");
+		out.println(" <FORM  action=" + request.getContextPath() + "/NoteServlet method=POST>");
 
 		out.println("<b>姓名:</b>");
 		out.println("<input type=text size=10 name=username ><br>");
 		out.println("<b>留言:</b><br>");
-		out
-				.println("<textarea name=content rows=5 cols=20  wrap></textarea><br>");
+		out.println("<textarea name=content rows=5 cols=20  wrap></textarea><br>");
 		out.println("<BR>");
 		out.println("<input type=submit  value=提交>");
 		out.println("</form>");
 		out.println("</body></html>");
 	}
 
-	public void destroy()
-	{
+	public void destroy() {
 	}
 }

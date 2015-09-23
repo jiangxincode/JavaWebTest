@@ -9,43 +9,39 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class LifeServlet extends HttpServlet
-{
+public class LifeServlet extends HttpServlet {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	int ini = 0;
 
 	int ser = 0;
 
 	int des = 0;
 
-	public void init(ServletConfig config) throws ServletException
-	{
+	public void init(ServletConfig config) throws ServletException {
 		ini++;
 		System.out.println("init: " + "The Servlet begins times=" + (ini));
 
 	}
 
-	public void destroy()
-	{
+	public void destroy() {
 		des++;
-		System.out
-				.println("destroy: " + "The Servlet destroyed times=" + (des));
+		System.out.println("destroy: " + "The Servlet destroyed times=" + (des));
 	}
 
-	public void service(HttpServletRequest request, HttpServletResponse response)
-			throws IOException, ServletException
-	{
+	public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		PrintWriter out;
 		ser++;
-		System.out
-				.println("service: "
-						+ "The Servlet are processing request                           times="
-						+ (ser));
+		System.out.println("service: " + "The Servlet are processing request                           times=" + (ser));
 		String title = "Servlet Life Cycle Demo Page";
 		String heading1 = "Init times : " + ini;
 		String heading2 = "Service times : " + ser;
 		String heading3 = "Destroy times : " + des;
 		// set content type.
-		response.setContentType("text/html");    
+		response.setContentType("text/html");
 		// write data or building web page.
 		out = response.getWriter();
 		out.print("<HTML><HEAD><TITLE>" + title + "</TITLE>");

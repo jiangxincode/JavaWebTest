@@ -1,10 +1,9 @@
 package com.test.bean;
 
-public class Student
-{
+public class Student {
 	private long classNo;
 
-	private String name; 
+	private String name;
 
 	private int age;
 
@@ -21,8 +20,7 @@ public class Student
 	/**
 	 * @return 返回 age。
 	 */
-	public int getAge()
-	{
+	public int getAge() {
 		return age;
 	}
 
@@ -30,16 +28,14 @@ public class Student
 	 * @param age
 	 *            要设置的 age。
 	 */
-	public void setAge(int age)
-	{
+	public void setAge(int age) {
 		this.age = age;
 	}
 
 	/**
 	 * @return 返回 classNo。
 	 */
-	public long getClassNo()
-	{
+	public long getClassNo() {
 		return classNo;
 	}
 
@@ -47,16 +43,14 @@ public class Student
 	 * @param classNo
 	 *            要设置的 classNo。
 	 */
-	public void setClassNo(long classNo)
-	{
+	public void setClassNo(long classNo) {
 		this.classNo = classNo;
 	}
 
 	/**
 	 * @return 返回 name。
 	 */
-	public String getName()
-	{
+	public String getName() {
 		return name;
 	}
 
@@ -64,16 +58,14 @@ public class Student
 	 * @param name
 	 *            要设置的 name。
 	 */
-	public void setName(String name)
-	{
+	public void setName(String name) {
 		this.name = name;
 	}
 
 	/**
 	 * @return 返回 sexy。
 	 */
-	public boolean isSexy()
-	{
+	public boolean isSexy() {
 		return sexy;
 	}
 
@@ -81,8 +73,7 @@ public class Student
 	 * @param sexy
 	 *            要设置的 sexy。
 	 */
-	public void setSexy(boolean sexy)
-	{
+	public void setSexy(boolean sexy) {
 		this.sexy = sexy;
 	}
 }

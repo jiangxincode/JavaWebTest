@@ -10,32 +10,29 @@ import javax.servlet.http.HttpServletResponse;
 
 public class HelloServlet2 extends HttpServlet // 第一步： 扩展 HttpServlet 抽象类。
 {
-	//String clientName = null;
+	// String clientName = null;
 
 	// 第二步：覆盖doGet()方法
 
-	public void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws IOException, ServletException
-	{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		// 第三步：获取HTTP 请求中的参数信息
 		String clientName = request.getParameter("clientName");
-		if (clientName != null)
-		{
+		if (clientName != null) {
 			clientName = new String(clientName.getBytes("ISO-8859-1"), "GB2312");
-		}
-		else
-		{
+		} else {
 			clientName = "我的朋友";
 		}
 
 		System.out.println(Thread.currentThread().getName());
-		
-		try
-		{
+
+		try {
 			Thread.sleep(10000);
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 		}
 
 		// 第四步：生成 HTTP 响应结果。

@@ -11,33 +11,27 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
-public class NoteFilter implements Filter
-{
+public class NoteFilter implements Filter {
 	private FilterConfig config = null;
 
 	private String blackList = null;
 
-	public void init(FilterConfig config) throws ServletException
-	{
+	public void init(FilterConfig config) throws ServletException {
 		this.config = config;
 		blackList = config.getInitParameter("blacklist");
 	}
 
-	public void destroy()
-	{
+	public void destroy() {
 		config = null;
 	}
 
-	public void doFilter(ServletRequest request, ServletResponse response,
-			FilterChain chain) throws IOException, ServletException
-	{
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+			throws IOException, ServletException {
 
-		String username = ((HttpServletRequest) request)
-				.getParameter("username");
+		String username = ((HttpServletRequest) request).getParameter("username");
 		if (username != null)
 			username = new String(username.getBytes("ISO-8859-1"), "GB2312");
-		if (username != null && username.indexOf(blackList) != -1)
-		{
+		if (username != null && username.indexOf(blackList) != -1) {
 			response.setContentType("text/html;charset=GB2312");
 			PrintWriter out = response.getWriter();
 			out.println("<html><head></head><body>");
@@ -48,21 +42,16 @@ public class NoteFilter implements Filter
 		}
 
 		long before = System.currentTimeMillis();
-		config.getServletContext().log(
-				"NoteFilter:before call chain.doFilter()");
-		
+		config.getServletContext().log("NoteFilter:before call chain.doFilter()");
+
 		chain.doFilter(request, response);
-		
-		
-		config.getServletContext()
-				.log("NoteFilter:after call chain.doFilter()");
+
+		config.getServletContext().log("NoteFilter:after call chain.doFilter()");
 		long after = System.currentTimeMillis();
 		String name = "";
-		if (request instanceof HttpServletRequest)
-		{
+		if (request instanceof HttpServletRequest) {
 			name = ((HttpServletRequest) request).getRequestURI();
 		}
-		config.getServletContext().log(
-				"NoteFilter:" + name + ": " + (after - before) + "ms");
+		config.getServletContext().log("NoteFilter:" + name + ": " + (after - before) + "ms");
 	}
 }

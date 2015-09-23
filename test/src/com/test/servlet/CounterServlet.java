@@ -10,25 +10,23 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class CounterServlet extends HttpServlet
-{
+public class CounterServlet extends HttpServlet {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private static final String CONTENT_TYPE = "text/html";
 
-	public void init(ServletConfig config) throws ServletException
-	{
+	public void init(ServletConfig config) throws ServletException {
 		super.init(config);
 		System.out.println("init invoked");
 	}
 
-	public void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException
-	{
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
 	}
 
-	public void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException
-	{
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// 获得ServletContext的引用
 		ServletContext context = getServletContext();
@@ -37,8 +35,7 @@ public class CounterServlet extends HttpServlet
 
 		// 如果count属性还没有设置, 那么创建count属性，初始值为0
 		// one and add it to the ServletContext
-		if (count == null)
-		{
+		if (count == null) {
 			count = new Integer(0);
 			context.setAttribute("count", new Integer(0));
 		}
@@ -58,8 +55,7 @@ public class CounterServlet extends HttpServlet
 		context.setAttribute("count", count);
 	}
 
-	public void destroy()
-	{
-		
+	public void destroy() {
+
 	}
 }
