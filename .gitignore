@@ -7,3 +7,6 @@ Servers/
 
 test/.settings/
 test/WebRoot/WEB-INF/classes/
+
+struts2/.settings/
+struts2/WebRoot/WEB-INF/classes/
