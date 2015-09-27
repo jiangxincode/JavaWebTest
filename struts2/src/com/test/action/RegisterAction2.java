@@ -1,0 +1,30 @@
+package com.test.action;
+
+import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
+import com.opensymphony.xwork2.Preparable;
+import com.test.bean.User;
+
+public class RegisterAction2 extends ActionSupport implements ModelDriven<User>, Preparable
+{
+	
+	private User user = new User();
+	
+	public User getModel()
+	{
+		return user;
+	}
+	
+	public void prepare() throws Exception
+	{
+		System.out.println("prepare");
+	}
+	
+	
+	@Override
+	public String execute() throws Exception
+	{
+		System.out.println("execute");
+		return SUCCESS;
+	}
+}

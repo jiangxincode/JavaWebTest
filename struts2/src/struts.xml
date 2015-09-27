@@ -2,24 +2,80 @@
 <!DOCTYPE struts PUBLIC
     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
     "http://struts.apache.org/dtds/struts-2.0.dtd">
-
-<struts>
-
-	<package name="struts2" extends="struts-default">
-
-		<action name="helloworld" class="com.test.action.HelloWorld">
-			<result name="success">/helloworld.jsp</result>
-		</action>
-
-		<action name="login" class="com.test.action.LoginAction">
-			<result name="success">/result.jsp</result>
-		</action>
-
-		<action name="converterAction" class="com.test.action.PointAction"
-			method="test">
-			<result name="success">/output.jsp</result>
-		</action>
-
-	</package>
-
-</struts>
+    
+    <struts>
+    
+    	<package name="struts2" extends="struts-default">
+    	
+    	<interceptors>
+    	
+    		<interceptor name="myInterceptor" class="com.test.interceptor.MyInterceptor">
+    			<param name="hello">world</param>
+    		</interceptor>
+    		
+    		<interceptor name="myInterceptor2" class="com.test.interceptor.MyInterceptor2">
+    		</interceptor>
+    		
+    		<interceptor name="myInterceptor3" class="com.test.interceptor.MyInterceptor3">
+    		</interceptor>
+    		
+    		<interceptor name="authInterceptor" class="com.test.interceptor.AuthInterceptor"></interceptor>
+    		
+    		<interceptor-stack name="myStack">
+    			<interceptor-ref name="authInterceptor"></interceptor-ref>
+    			<interceptor-ref name="myInterceptor"></interceptor-ref>
+    			<interceptor-ref name="myInterceptor2"></interceptor-ref>
+    			<interceptor-ref name="defaultStack"></interceptor-ref>
+    		</interceptor-stack>
+    	
+    	</interceptors>
+    	
+    	<global-results>
+    		<result name="login" type="redirect">/login.jsp</result>
+    		<result name="usernameInvalid">/usernameInvalid.jsp</result>
+    	</global-results>
+    	
+    	<global-exception-mappings>
+    		<exception-mapping result="usernameInvalid" exception="com.test.exception.UsernameException"></exception-mapping>
+    	</global-exception-mappings>
+    	
+    	
+    	
+    	<!-- 
+    	<default-interceptor-ref name="myStack"></default-interceptor-ref>
+    	 -->
+    	
+    		<action name="helloworld" class="com.test.action.HelloWorld">
+    			<result name="success">/helloworld.jsp</result>
+    		</action>
+    		
+    		<action name="login" class="com.test.action.LoginAction">
+    			<result name="success">/result.jsp</result>
+    			<result name="input">/login2.jsp</result>
+    		</action>
+    		
+    		<action name="converterAction" class="com.test.action.PointAction" method="test">
+    			<result name="success">/output.jsp</result>
+    		</action>
+    		
+    		<action name="register" class="com.test.action.RegisterAction">
+    			<result name="success">/success.jsp</result>
+    			<result name="input">/register.jsp</result>
+    			
+    			<!-- 
+    			<interceptor-ref name="myInterceptor"></interceptor-ref>
+    			<interceptor-ref name="myInterceptor2"></interceptor-ref>
+    			 -->
+    			 <interceptor-ref name="myStack"></interceptor-ref>
+    			
+    			 
+    		</action>
+    		
+    		
+    		<action name="upload" class="com.test.action.UploadAction">
+    			<result name="success">/uploadResult.jsp</result>
+    		</action>
+    	
+    	</package>
+    
+    </struts>
