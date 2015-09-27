@@ -6,33 +6,32 @@ import org.apache.struts2.util.StrutsTypeConverter;
 
 import com.test.bean.Point;
 
-public class PointConverter2 extends StrutsTypeConverter
-{
+public class PointConverter2 extends StrutsTypeConverter {
+	@SuppressWarnings("rawtypes")
 	@Override
-	public Object convertFromString(Map context, String[] values, Class toClass)
-	{
+	public Object convertFromString(Map context, String[] values, Class toClass) {
 		Point point = new Point();
-		
+
 		String value = values[0];
-		
+
 		String[] result = value.split(",");
-		
+
 		point.setX(Integer.parseInt(result[0]));
 		point.setY(Integer.parseInt(result[1]));
-		
+
 		return point;
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
-	public String convertToString(Map context, Object o)
-	{
-		Point point = (Point)o;
-		
+	public String convertToString(Map context, Object o) {
+		Point point = (Point) o;
+
 		int x = point.getX();
 		int y = point.getY();
-		
+
 		String result = "x: " + x + " y: " + y;
-		
+
 		return result;
 	}
 

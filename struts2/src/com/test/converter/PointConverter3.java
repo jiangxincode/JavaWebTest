@@ -8,15 +8,13 @@ import org.apache.struts2.util.StrutsTypeConverter;
 
 import com.test.bean.Point;
 
-public class PointConverter3 extends StrutsTypeConverter
-{
+public class PointConverter3 extends StrutsTypeConverter {
+	@SuppressWarnings("rawtypes")
 	@Override
-	public Object convertFromString(Map context, String[] values, Class toClass)
-	{
+	public Object convertFromString(Map context, String[] values, Class toClass) {
 		List<Point> list = new ArrayList<Point>();
 
-		for (String value : values)
-		{
+		for (String value : values) {
 			String[] result = value.split(",");
 			Point point = new Point();
 
@@ -30,17 +28,15 @@ public class PointConverter3 extends StrutsTypeConverter
 	}
 
 	@Override
-	@SuppressWarnings("unchecked")
-	public String convertToString(Map context, Object o)
-	{
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public String convertToString(Map context, Object o) {
 		List<Point> list = (List<Point>) o;
 
 		StringBuffer sb = new StringBuffer();
 
 		int number = 0;
 
-		for (Point point : list)
-		{
+		for (Point point : list) {
 			number++;
 
 			int x = point.getX();
