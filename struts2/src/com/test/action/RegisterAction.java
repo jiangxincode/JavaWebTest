@@ -1,12 +1,15 @@
 package com.test.action;
 
-import java.util.Calendar;
 import java.util.Date;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class RegisterAction extends ActionSupport
-{
+public class RegisterAction extends ActionSupport {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private String username;
 
 	private String password;
@@ -19,69 +22,56 @@ public class RegisterAction extends ActionSupport
 
 	private Date graduation;
 
-	public String getUsername()
-	{
+	public String getUsername() {
 		return username;
 	}
 
-	public void setUsername(String username)
-	{
+	public void setUsername(String username) {
 		this.username = username;
 	}
 
-	public String getPassword()
-	{
+	public String getPassword() {
 		return password;
 	}
 
-	public void setPassword(String password)
-	{
+	public void setPassword(String password) {
 		this.password = password;
 	}
 
-	public String getRepassword()
-	{
+	public String getRepassword() {
 		return repassword;
 	}
 
-	public void setRepassword(String repassword)
-	{
+	public void setRepassword(String repassword) {
 		this.repassword = repassword;
 	}
 
-	public int getAge()
-	{
+	public int getAge() {
 		return age;
 	}
 
-	public void setAge(int age)
-	{
+	public void setAge(int age) {
 		this.age = age;
 	}
 
-	public Date getBirthday()
-	{
+	public Date getBirthday() {
 		return birthday;
 	}
 
-	public void setBirthday(Date birthday)
-	{
+	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
 	}
 
-	public Date getGraduation()
-	{
+	public Date getGraduation() {
 		return graduation;
 	}
 
-	public void setGraduation(Date graduation)
-	{
+	public void setGraduation(Date graduation) {
 		this.graduation = graduation;
 	}
 
 	@Override
-	public String execute() throws Exception
-	{
+	public String execute() throws Exception {
 		System.out.println("execute invoked");
 		return SUCCESS;
 	}
@@ -150,18 +140,15 @@ public class RegisterAction extends ActionSupport
 	// }
 
 	@Override
-	public void validate()
-	{
+	public void validate() {
 		System.out.println("validate~~~~~~~~~~~~~~~~~~~~~~~");
 
-		if (null == username || username.length() < 6 || username.length() > 10)
-		{
+		if (null == username || username.length() < 6 || username.length() > 10) {
 			// 进行错误信息的输出
 			// this.addActionError("username invalid");
 			// this.addFieldError("username","field error: username invalid");
 
-			this.addActionError(this.getText("username.invalid",
-					new String[] { username }));
+			this.addActionError(this.getText("username.invalid", new String[] { username }));
 
 		}
 		//
