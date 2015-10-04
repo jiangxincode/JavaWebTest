@@ -44,15 +44,13 @@ public class LoginAction extends ActionSupport {
 
 	@Override
 	public void validate() {
-		// if(null == username || -1 != username.indexOf("hello"))
-		// {
-		// this.addFieldError("username", "username invalid");
-		// }
-		//
-		// if(null == password || password.length() < 4)
-		// {
-		// this.addFieldError("password","password invalid");
-		// }
+		if (null == username || -1 != username.indexOf("hello")) {
+			this.addFieldError("username", "username invalid");
+		}
+
+		if (null == password || password.length() < 4) {
+			this.addFieldError("password", "password invalid");
+		}
 	}
 
 }
