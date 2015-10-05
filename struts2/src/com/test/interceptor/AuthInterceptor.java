@@ -14,7 +14,7 @@ public class AuthInterceptor extends AbstractInterceptor {
 
 	@Override
 	public String intercept(ActionInvocation invocation) throws Exception {
-		Map map = invocation.getInvocationContext().getSession();
+		Map<String, Object> map = invocation.getInvocationContext().getSession();
 
 		if (null == map.get("user")) // 用户没有登录
 		{
