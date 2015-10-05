@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.hibernate.model.Person" table="person">
+		
+		<id name="id" column="id" type="int">
+			<generator class="increment"> <!-- 主键id的生成方式为自增 -->
+			</generator>
+		</id>
+		
+		<property name="username" column="username" type="string"></property>
+		<property name="password" column="password" type="string"></property>
+		<property name="age" column="age" type="int"></property>
+		<property name="registerdate" column="registerdate" type="date"></property>
+
+	</class>
+
+</hibernate-mapping>
+
