@@ -12,18 +12,18 @@
 			<param-value>hello</param-value>
 		</init-param>
 	</filter>
-	
+
 	<filter>
 		<filter-name>usersFilter</filter-name>
 		<filter-class>com.test.filter.UsersFilter</filter-class>
 	</filter>
-	
-	
+
+
 	<filter-mapping>
 		<filter-name>usersFilter</filter-name>
 		<url-pattern>/ProcessUsersServlet</url-pattern>
 	</filter-mapping>
-	
+
 
 	<filter-mapping>
 		<filter-name>myFilter</filter-name>
@@ -71,32 +71,19 @@
 		<servlet-name>NoteServlet</servlet-name>
 		<servlet-class>com.test.servlet.NoteServlet</servlet-class>
 	</servlet>
-  <servlet>
-    <servlet-name>DispatcherServlet</servlet-name>
-    <servlet-class>com.test.servlet.DispatcherServlet</servlet-class>
-    <load-on-startup>5</load-on-startup>
-  </servlet>
-  <servlet>
-    <servlet-name>DBServlet</servlet-name>
-    <servlet-class>com.test.db.DBServlet</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>ProcessUsersServlet</servlet-name>
-    <servlet-class>com.test.servlet.ProcessUsersServlet</servlet-class>
-  </servlet>
-
-
-
-
-
-
-
-
-
-
-
-
-
+	<servlet>
+		<servlet-name>DispatcherServlet</servlet-name>
+		<servlet-class>com.test.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>DBServlet</servlet-name>
+		<servlet-class>com.test.db.DBServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ProcessUsersServlet</servlet-name>
+		<servlet-class>com.test.servlet.ProcessUsersServlet</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>MyServlet</servlet-name>
@@ -138,23 +125,21 @@
 		<servlet-name>NoteServlet</servlet-name>
 		<url-pattern>/NoteServlet</url-pattern>
 	</servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>DispatcherServlet</servlet-name>
-    <url-pattern>/DispatcherServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>DBServlet</servlet-name>
-    <url-pattern>/DBServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>ProcessUsersServlet</servlet-name>
-    <url-pattern>/ProcessUsersServlet</url-pattern>
-  </servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DispatcherServlet</servlet-name>
+		<url-pattern>/DispatcherServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DBServlet</servlet-name>
+		<url-pattern>/DBServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ProcessUsersServlet</servlet-name>
+		<url-pattern>/ProcessUsersServlet</url-pattern>
+	</servlet-mapping>
 
 	<listener>
-		<listener-class>
-			com.test.listener.OnLineCountListener
-		</listener-class>
+		<listener-class>com.test.listener.OnLineCountListener</listener-class>
 	</listener>
 
 </web-app>
