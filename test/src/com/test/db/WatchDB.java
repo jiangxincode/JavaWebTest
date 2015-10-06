@@ -28,25 +28,28 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class WatchDB
-{
+public class WatchDB {
 
-	public static void main(String[] args)
-	{
+	@SuppressWarnings("deprecation")
+	public static void main(String[] args) {
 		JFrame frame = new WatchDBFrame();
 		frame.show();
 	}
 }
 
-class WatchDBFrame extends JFrame implements ActionListener
-{
+class WatchDBFrame extends JFrame implements ActionListener {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private JButton nextButton;
 
 	private JPanel dataPanel;
 
-	private JComboBox tableNames;
+	private JComboBox<Object> tableNames;
 
-	private ArrayList fields;
+	private ArrayList<Object> fields;
 
 	private Connection con;
 
@@ -56,9 +59,7 @@ class WatchDBFrame extends JFrame implements ActionListener
 
 	private ResultSet rs;
 
-	public static Connection getConnectin() throws IOException,
-			ClassNotFoundException, SQLException
-	{
+	public static Connection getConnectin() throws IOException, ClassNotFoundException, SQLException {
 
 		Properties props = new Properties();
 		String fileName = "C:\\CreateDB.properties";
@@ -66,8 +67,7 @@ class WatchDBFrame extends JFrame implements ActionListener
 		props.load(in);
 
 		String drivers = props.getProperty("jdbc.drivers");
-		if (null != drivers)
-		{
+		if (null != drivers) {
 			Class.forName(drivers);
 		}
 		String url = props.getProperty("jdbc.url");
@@ -75,9 +75,7 @@ class WatchDBFrame extends JFrame implements ActionListener
 		return DriverManager.getConnection(url);
 	}
 
-	private void add(Container p, Component c, GridBagConstraints gbc, int x,
-			int y, int w, int h)
-	{
+	private void add(Container p, Component c, GridBagConstraints gbc, int x, int y, int w, int h) {
 		gbc.gridx = x;
 		gbc.gridy = y;
 		gbc.gridwidth = w;
@@ -85,43 +83,30 @@ class WatchDBFrame extends JFrame implements ActionListener
 		p.add(c, gbc);
 	}
 
-	public void showNextRow()
-	{
-		if (null == rs)
-		{
+	public void showNextRow() {
+		if (null == rs) {
 			return;
 		}
-		try
-		{
-			if (rs.next())
-			{
-				for (int i = 1; i <= fields.size(); i++)
-				{
+		try {
+			if (rs.next()) {
+				for (int i = 1; i <= fields.size(); i++) {
 					String field = rs.getString(i);
 					JTextField tb = (JTextField) fields.get(i - 1);
 					tb.setText(field);
 				}
-			}
-			else
-			{
+			} else {
 				rs.close();
 				rs = null;
 			}
-		}
-		catch (Exception ex)
-		{
+		} catch (Exception ex) {
 			System.out.println("Error:" + ex);
 		}
 	}
 
-	public void actionPerformed(ActionEvent evt)
-	{
-		if (evt.getSource() == nextButton)
-		{
+	public void actionPerformed(ActionEvent evt) {
+		if (evt.getSource() == nextButton) {
 			showNextRow();
-		}
-		else if (evt.getSource() == tableNames)
-		{
+		} else if (evt.getSource() == tableNames) {
 			this.remove(dataPanel);
 			dataPanel = new JPanel();
 			fields.clear();
@@ -129,17 +114,14 @@ class WatchDBFrame extends JFrame implements ActionListener
 			GridBagConstraints gbc = new GridBagConstraints();
 			gbc.weighty = 100;
 
-			try
-			{
+			try {
 				String tableName = (String) tableNames.getSelectedItem();
-				if (null != rs)
-				{
+				if (null != rs) {
 					rs.close();
 				}
 				rs = stmt.executeQuery("select * from " + tableName);
 				ResultSetMetaData rsmd = rs.getMetaData();
-				for (int i = 1; i <= rsmd.getColumnCount(); i++)
-				{
+				for (int i = 1; i <= rsmd.getColumnCount(); i++) {
 					String columnName = rsmd.getColumnLabel(i);
 					int columnWidth = rsmd.getColumnDisplaySize(i);
 					JTextField tb = new JTextField(columnWidth);
@@ -147,8 +129,7 @@ class WatchDBFrame extends JFrame implements ActionListener
 					gbc.weightx = 0;
 					gbc.anchor = GridBagConstraints.EAST;
 					gbc.fill = GridBagConstraints.NONE;
-					this.add(dataPanel, new JLabel(columnName), gbc, 0, i - 1,
-							1, 1);
+					this.add(dataPanel, new JLabel(columnName), gbc, 0, i - 1, 1, 1);
 
 					gbc.weightx = 100;
 					gbc.anchor = GridBagConstraints.WEST;
@@ -156,9 +137,7 @@ class WatchDBFrame extends JFrame implements ActionListener
 					this.add(dataPanel, tb, gbc, 1, i - 1, 1, 1);
 
 				}
-			}
-			catch (Exception ex)
-			{
+			} catch (Exception ex) {
 				JOptionPane.showMessageDialog(this, ex);
 			}
 			this.getContentPane().add(dataPanel, "Center");
@@ -169,21 +148,18 @@ class WatchDBFrame extends JFrame implements ActionListener
 		}
 	}
 
-	public WatchDBFrame()
-	{
+	public WatchDBFrame() {
 		this.setTitle("Êý¾Ý¿â±à³Ì");
 		this.setSize(300, 200);
-		this.addWindowListener(new WindowAdapter()
-		{
-			public void windowClosing(WindowEvent e)
-			{
+		this.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {
 				System.exit(0);
 			}
 		});
 
 		Container contentPane = this.getContentPane();
 
-		tableNames = new JComboBox();
+		tableNames = new JComboBox<Object>();
 		tableNames.addActionListener(this);
 
 		dataPanel = new JPanel();
@@ -196,29 +172,24 @@ class WatchDBFrame extends JFrame implements ActionListener
 		p.add(nextButton);
 		contentPane.add(p, "South");
 
-		fields = new ArrayList();
+		fields = new ArrayList<Object>();
 
-		try
-		{
+		try {
 			con = getConnectin();
 			stmt = con.createStatement();
 			md = con.getMetaData();
 
 			ResultSet rs = md.getTables(null, null, null, null);
-			while (rs.next())
-			{
+			while (rs.next()) {
 				String tableName = rs.getString(3);
-				if ("User".equals(tableName) || "Customer".equals(tableName))
-				{
+				if ("User".equals(tableName) || "Customer".equals(tableName)) {
 					tableNames.addItem(tableName);
 				}
 			}
 
 			rs.close();
 
-		}
-		catch (Exception ex)
-		{
+		} catch (Exception ex) {
 			JOptionPane.showMessageDialog(this, ex);
 		}
 
