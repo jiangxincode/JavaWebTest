@@ -6,12 +6,12 @@ PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 <hibernate-mapping>
 
 	<class name="com.hibernate.model.Person" table="person">
-		
+
 		<id name="id" column="id" type="int">
 			<generator class="increment"> <!-- 主键id的生成方式为自增 -->
 			</generator>
 		</id>
-		
+
 		<property name="username" column="username" type="string"></property>
 		<property name="password" column="password" type="string"></property>
 		<property name="age" column="age" type="int"></property>

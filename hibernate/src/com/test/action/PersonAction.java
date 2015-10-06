@@ -10,8 +10,12 @@ import com.hibernate.model.Person;
 import com.hibernate.persistence.DBPerson;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class PersonAction extends ActionSupport
-{
+public class PersonAction extends ActionSupport {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private int id;
 
 	private String username;
@@ -20,57 +24,47 @@ public class PersonAction extends ActionSupport
 
 	private int age;
 
-	public int getId()
-	{
+	public int getId() {
 		return id;
 	}
 
-	public void setId(int id)
-	{
+	public void setId(int id) {
 		this.id = id;
 	}
 
-	public String getUsername()
-	{
+	public String getUsername() {
 		return username;
 	}
 
-	public void setUsername(String username)
-	{
+	public void setUsername(String username) {
 		this.username = username;
 	}
 
-	public String getPassword()
-	{
+	public String getPassword() {
 		return password;
 	}
 
-	public void setPassword(String password)
-	{
+	public void setPassword(String password) {
 		this.password = password;
 	}
 
-	public int getAge()
-	{
+	public int getAge() {
 		return age;
 	}
 
-	public void setAge(int age)
-	{
+	public void setAge(int age) {
 		this.age = age;
 	}
 
 	// 完成用户增加的操作
-	public String save() throws Exception
-	{
+	public String save() throws Exception {
 		Person person = new Person();
 
 		person.setUsername(username);
 		person.setPassword(password);
 		person.setAge(age);
 
-		java.sql.Date registerDate = new java.sql.Date(new java.util.Date()
-				.getTime());
+		java.sql.Date registerDate = new java.sql.Date(new java.util.Date().getTime());
 
 		person.setRegisterdate(registerDate);
 
@@ -85,8 +79,7 @@ public class PersonAction extends ActionSupport
 		return SUCCESS;
 	}
 
-	public String getPerson() throws Exception
-	{
+	public String getPerson() throws Exception {
 		Person person = DBPerson.getPersonById(id);
 
 		HttpServletRequest request = ServletActionContext.getRequest();
@@ -96,8 +89,7 @@ public class PersonAction extends ActionSupport
 		return SUCCESS;
 	}
 
-	public String deletePerson() throws Exception
-	{
+	public String deletePerson() throws Exception {
 		DBPerson.removePerson(id);
 
 		List<Person> list = DBPerson.listAll();
@@ -109,8 +101,7 @@ public class PersonAction extends ActionSupport
 		return SUCCESS;
 	}
 
-	public String updatePerson() throws Exception
-	{
+	public String updatePerson() throws Exception {
 		Person person = DBPerson.getPersonById(id);
 
 		person.setPassword(password);
