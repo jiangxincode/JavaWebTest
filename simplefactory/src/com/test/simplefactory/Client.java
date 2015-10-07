@@ -1,13 +1,31 @@
 package com.test.simplefactory;
 
 public class Client {
+
 	public static void main(String[] args) {
-		Product productA = Creator.createProduct("A");
+		
+		PersonFactory pf = new PersonFactory();
+		Person p = null;
 
-		System.out.println(productA.getClass().getName());
+		p = pf.getPerson("chinese");
+		System.out.println(p.sayHello("张三"));
+		System.out.println(p.sayGoodBye("张三"));
 
-		Product productB = Creator.createProduct("B");
+		p = pf.getPerson("american");
+		System.out.println(p.sayHello("Tom"));
+		System.out.println(p.sayGoodBye("Tom"));
+		
+		
+/*
+		Person chinese = new Chinese();
 
-		System.out.println(productB.getClass().getName());
+		System.out.println(chinese.sayHello("张三"));
+		System.out.println(chinese.sayGoodBye("张三"));
+
+		Person american = new American();
+
+		System.out.println(american.sayHello("Tom"));
+		System.out.println(american.sayGoodBye("Tom"));
+*/
 	}
 }
