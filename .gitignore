@@ -32,3 +32,6 @@ Spring4/bin/
 
 dependencyCheck/.settings/
 dependencyCheck/bin/
+
+collection/.settings/
+collection/bin/
