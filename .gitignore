@@ -35,3 +35,6 @@ dependencyCheck/bin/
 
 collection/.settings/
 collection/bin/
+
+reflection/.settings/
+reflection/bin/
