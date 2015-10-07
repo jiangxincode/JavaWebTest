@@ -14,5 +14,8 @@ struts2/WebRoot/WEB-INF/classes/
 hibernate/.settings/
 hibernate/WebRoot/WEB-INF/classes/
 
+simplefactory/.settings/
 simplefactory/bin/
 
+Spring1/.settings/
+Spring1/bin/
