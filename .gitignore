@@ -29,3 +29,6 @@ Spring3/bin/
 
 Spring4/.settings/
 Spring4/bin/
+
+dependencyCheck/.settings/
+dependencyCheck/bin/
