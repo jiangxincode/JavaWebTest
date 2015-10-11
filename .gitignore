@@ -15,32 +15,31 @@ hibernate/.settings/
 hibernate/WebRoot/WEB-INF/classes/
 
 hibernate22/.settings/
-hibernate22/bin/
+hibernate22/target/
 
 hibernate33/.settings/
-hibernate33/bin/
+hibernate33/target/
 
 simplefactory/.settings/
 simplefactory/bin/
 
 Spring1/.settings/
-Spring1/bin/
-
+Spring1/target/
 
 Spring2/.settings/
-Spring2/bin/
+Spring2/target/
 
 Spring3/.settings/
-Spring3/bin/
+Spring3/target/
 
 Spring4/.settings/
-Spring4/bin/
+Spring4/target/
 
 dependencyCheck/.settings/
-dependencyCheck/bin/
+dependencyCheck/target/
 
 collection/.settings/
-collection/bin/
+collection/target/
 
 reflection/.settings/
 reflection/bin/
