@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 public class ReflectTester {
 	public Object copy(Object object) throws Exception {
 		// 获得对象的类型
-		Class classType = object.getClass();
+		Class<?> classType = object.getClass();
 		System.out.println("Class:" + classType.getName());
 
 		// 通过默认构造方法创建一个新的对象

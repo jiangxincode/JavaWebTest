@@ -6,31 +6,20 @@
  */
 package persistence;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.util.Iterator;
 import java.util.List;
 
 import model.Student;
 
-import org.hibernate.FlushMode;
-import org.hibernate.Hibernate;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
-import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-/**
- * @author Administrator
- * 
- *         TODO 要更改此生成的类型注释的模板，请转至 窗口 － 首选项 － Java － 代码样式 － 代码模板
- */
 public class StudentDAO extends BaseDAO {
 	static Session session = null;
 	static Transaction tx = null;
 
+	@SuppressWarnings("rawtypes")
 	public static void update() {
 		Student stu = null;
 		try {

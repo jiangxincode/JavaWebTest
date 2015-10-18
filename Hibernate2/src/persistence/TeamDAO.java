@@ -1,13 +1,9 @@
 package persistence;
 
-import java.util.List;
-import java.util.Set;
-
 import model.Student;
 import model.Team;
 
 import org.hibernate.HibernateException;
-import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
