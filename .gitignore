@@ -1,0 +1,7 @@
+*.swp
+
+.metadata/
+RemoteSystemsTempFiles/
+
+shengsiyuan/.settings/
+shengsiyuan/WebRoot/WEB-INF/classes/

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>js3.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+   
+   <script type="text/javascript">
+   
+   function member(name, gender) //构造函数
+   {
+	   this.name = name;
+	   this.gender = gender;
+   }
+   
+   function showProperty(obj, objString)
+   {
+	   var str = "";
+	   
+	   for(var i in obj)
+	   {
+		   str += objString + "." + i + " = " + obj[i] + "<br>";
+	   }
+		   
+	   return str;
+   }
+   
+   var obj = new member("刘德华", "男"); //建立对象实例
+   
+   document.writeln(showProperty(obj,"person"));
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   </script>
+   
+   
+   
+   
+   
+   
+  </body>
+</html>

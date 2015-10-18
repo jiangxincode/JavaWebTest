@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  
+  <display-name>Shengsiyuan Application</display-name>
+  
+  <listener>
+  		<listener-class>com.shengsiyuan.listener.MyServletContextListener</listener-class>
+  </listener>
+  
+  <listener>
+  	<listener-class>com.shengsiyuan.listener.MyServletContextAttributeListener</listener-class>
+  </listener>
+  
+  <listener>
+  		<listener-class>com.shengsiyuan.listener.MySessionListener</listener-class>
+  </listener>
+  
+  <listener>
+  		<listener-class>com.shengsiyuan.listener.MySessionAttributeListener</listener-class>
+  </listener>
+  
+  
+  <!-- 
+  <filter>
+  	<filter-name>LoginFilter</filter-name>
+  	<filter-class>com.shengsiyuan.filter.LoginFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+  	<filter-name>LoginFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>  
+  
+   -->
+   
+   <filter>
+   		<filter-name>CommentFilter</filter-name>
+   		<filter-class>com.shengsiyuan.filter.CommentFilter</filter-class>
+   		<init-param>
+   			<param-name>hello</param-name>
+   			<param-value>world</param-value>
+   		</init-param>
+   		<init-param>
+   			<param-name>zhang</param-name>
+   			<param-value>li</param-value>
+   		</init-param>
+   </filter>
+   
+   <filter>
+   		<filter-name>MyFilter1</filter-name>
+   		<filter-class>com.shengsiyuan.filter.MyFilter1</filter-class>
+   </filter>
+   
+   <filter>
+   		<filter-name>MyFilter2</filter-name>
+   		<filter-class>com.shengsiyuan.filter.MyFilter2</filter-class>
+   </filter>
+   
+   <filter-mapping>
+   		<filter-name>CommentFilter</filter-name>
+   		<url-pattern>/CommentServlet</url-pattern>
+   </filter-mapping>
+   
+   <filter-mapping>
+   		<filter-name>MyFilter1</filter-name>
+   		<url-pattern>/InfoServlet</url-pattern>
+   </filter-mapping>
+   
+   <filter-mapping>
+   		<filter-name>MyFilter2</filter-name>
+   		<url-pattern>/CommentServlet</url-pattern>
+   </filter-mapping>
+   
+   
+   
+   
+  <servlet>
+  	<servlet-name>HelloWorld</servlet-name>
+  	<servlet-class>com.shengsiyuan.servlet.HelloWorldServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<servlet-class>com.shengsiyuan.servlet.LoginServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>com.shengsiyuan.servlet.TestServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.shengsiyuan.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DoubleColorBallServlet</servlet-name>
+    <servlet-class>com.shengsiyuan.servlet.DoubleColorBallServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MyForwardServlet</servlet-name>
+    <servlet-class>com.shengsiyuan.servlet.MyForwardServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ValidateServlet</servlet-name>
+    <servlet-class>com.shengsiyuan.servlet.ValidateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ProcessServlet</servlet-name>
+    <servlet-class>com.shengsiyuan.servlet.ProcessServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ServiceServlet</servlet-name>
+    <servlet-class>com.shengsiyuan.servlet.ServiceServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>InitServlet</servlet-name>
+    <servlet-class>com.shengsiyuan.servlet.InitServlet</servlet-class>
+    <load-on-startup>9</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>CounterServlet</servlet-name>
+    <servlet-class>com.shengsiyuan.servlet.CounterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>HelloServlet</servlet-name>
+    <servlet-class>com.shengsiyuan.servlet.HelloServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CookieServlet</servlet-name>
+    <servlet-class>com.shengsiyuan.servlet.CookieServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UserLoginServlet</servlet-name>
+    <servlet-class>com.shengsiyuan.servlet.UserLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>QueryServlet</servlet-name>
+    <servlet-class>com.shengsiyuan.servlet.QueryServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateServlet</servlet-name>
+    <servlet-class>com.shengsiyuan.servlet.UpdateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MyLoginServlet</servlet-name>
+    <servlet-class>com.shengsiyuan.servlet.MyLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MyQueryServlet</servlet-name>
+    <servlet-class>com.shengsiyuan.servlet.MyQueryServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MyUpdateServlet</servlet-name>
+    <servlet-class>com.shengsiyuan.servlet.MyUpdateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CommentServlet</servlet-name>
+    <servlet-class>com.shengsiyuan.servlet.CommentServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>InfoServlet</servlet-name>
+    <servlet-class>com.shengsiyuan.servlet.InfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>InitServlet2</servlet-name>
+    <servlet-class>com.shengsiyuan.servlet.InitServlet2</servlet-class>
+    <load-on-startup>10</load-on-startup>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <servlet-mapping>
+  	<servlet-name>HelloWorld</servlet-name>
+  	<url-pattern>/aaa</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/TestServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoubleColorBallServlet</servlet-name>
+    <url-pattern>/DoubleColorBallServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MyForwardServlet</servlet-name>
+    <url-pattern>/MyForwardServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ValidateServlet</servlet-name>
+    <url-pattern>/ValidateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProcessServlet</servlet-name>
+    <url-pattern>/ProcessServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServiceServlet</servlet-name>
+    <url-pattern>/ServiceServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InitServlet</servlet-name>
+    <url-pattern>/InitServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CounterServlet</servlet-name>
+    <url-pattern>/CounterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HelloServlet</servlet-name>
+    <url-pattern>/HelloServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CookieServlet</servlet-name>
+    <url-pattern>/CookieServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserLoginServlet</servlet-name>
+    <url-pattern>/UserLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryServlet</servlet-name>
+    <url-pattern>/QueryServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateServlet</servlet-name>
+    <url-pattern>/UpdateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MyLoginServlet</servlet-name>
+    <url-pattern>/MyLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MyQueryServlet</servlet-name>
+    <url-pattern>/MyQueryServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MyUpdateServlet</servlet-name>
+    <url-pattern>/MyUpdateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CommentServlet</servlet-name>
+    <url-pattern>/CommentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InfoServlet</servlet-name>
+    <url-pattern>/InfoServlet</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

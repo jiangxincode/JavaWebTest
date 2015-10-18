@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>js4.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    
+    <script type="text/javascript">
+    
+    var date = new Date();
+    var day = date.getDay();
+    
+    if(0 == day)
+    {
+    	day = "日";
+    }
+    
+    
+    document.writeln("现在时刻： " + (date.getYear() + 1900) + "年 " + (date.getMonth() + 1) + "月" + 
+    	date.getDate() + "日" + " 星期" + day + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds())
+    
+    
+    
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </body>
+</html>
