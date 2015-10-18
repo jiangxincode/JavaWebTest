@@ -24,8 +24,8 @@ public class StringProcessTest {
 	
 	@Test
 	public void testParser01() {
-		System.setProperty("IP", "127.0.0.1");
-		System.setProperty("PORT", "8080");
+		PropertyProcess.setProperty(System.class, "IP", "127.0.0.1");
+		PropertyProcess.setProperty(System.class, "PORT", "8080");
 		
 		String input = "${IP}:${PORT}/console";
 		String expect = "127.0.0.1:8080/console";

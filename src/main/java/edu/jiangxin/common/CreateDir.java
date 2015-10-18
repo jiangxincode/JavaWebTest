@@ -22,7 +22,6 @@ public class CreateDir {
 			output.close();
 			System.out.println("文件创建成功");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

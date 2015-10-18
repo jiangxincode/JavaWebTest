@@ -537,8 +537,6 @@ public class IdcardUtils extends StringUtils {
 
 			info[1] = "N";
 
-			// TODO
-
 		} else if (idCard.matches("^[A-Z]{1,2}[0-9]{6}\\(?[0-9A]\\)?$")) { // 香港
 
 			info[0] = "香港";

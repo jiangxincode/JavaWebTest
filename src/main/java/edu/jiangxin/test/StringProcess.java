@@ -21,7 +21,6 @@ public class StringProcess {
 				end = i;
 				String subStr = input.substring(start,end);
 				sb.append(PropertyProcess.getProperty(System.class, subStr));
-				//sb.append(System.getProperty(subStr));
 			} else {
 				sb.append(input.charAt(i));
 			}

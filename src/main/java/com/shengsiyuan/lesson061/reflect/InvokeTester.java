@@ -17,6 +17,7 @@ public class InvokeTester {
 		// System.out.println(test.echo("tom"));
 
 		Class<?> classType = InvokeTester.class;
+		
 
 		Object invokeTester = classType.newInstance();
 

@@ -40,7 +40,6 @@ public class PoiWordTemplate {
 			this.document = new XWPFDocument(
 			         POIXMLDocument.openPackage(templatePath));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		//this.document = document;
@@ -62,10 +61,8 @@ public class PoiWordTemplate {
 						 try {
 							insertPicture(entry.getValue(),inline,width,height);
 						} catch (InvalidFormatException e) {
-							// TODO Auto-generated catch block
 							e.printStackTrace();
 						} catch (FileNotFoundException e) {
-							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
 				  }
@@ -388,7 +385,6 @@ public class PoiWordTemplate {
 			
 				
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -399,7 +395,6 @@ public class PoiWordTemplate {
 			try {
 				fos = new FileOutputStream(newFile);
 			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			try {
@@ -407,7 +402,6 @@ public class PoiWordTemplate {
 				fos.flush();
 				fos.close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			

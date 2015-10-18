@@ -10,7 +10,6 @@ public class FileTest1 {
 		try {
 			System.out.println(file.createNewFile());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
