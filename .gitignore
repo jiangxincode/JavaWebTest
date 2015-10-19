@@ -52,3 +52,13 @@ collection/target/
 
 reflection/.settings/
 reflection/bin/
+
+init/.settings/
+init/target/
+
+destroy/.settings/
+destroy/target/
+
+strutsspring/.settings/
+strutsspring/WebRoot/WEB-INF/classes/
+
