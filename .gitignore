@@ -64,3 +64,6 @@ strutsspring/WebRoot/WEB-INF/classes/
 
 proxy/bin/
 proxy/.settings/
+
+dynamicproxy/bin/
+dynamicproxy/.settings/
