@@ -67,3 +67,12 @@ proxy/.settings/
 
 dynamicproxy/bin/
 dynamicproxy/.settings/
+
+aopproxy/target/
+aopproxy/.settings/
+
+authority/target/
+authority/.settings/
+
+authority2/target/
+authority2/.settings/
