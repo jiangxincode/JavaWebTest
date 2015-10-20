@@ -62,3 +62,5 @@ destroy/target/
 strutsspring/.settings/
 strutsspring/WebRoot/WEB-INF/classes/
 
+proxy/bin/
+proxy/.settings/
