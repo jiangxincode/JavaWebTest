@@ -76,3 +76,6 @@ authority/.settings/
 
 authority2/target/
 authority2/.settings/
+
+hibernatespring/.settings
+hibernatespring/target/
