@@ -79,3 +79,6 @@ authority2/.settings/
 
 hibernatespring/.settings
 hibernatespring/target/
+
+ssh2/.settings/
+ssh2/WebRoot/WEB-INF/classes/
