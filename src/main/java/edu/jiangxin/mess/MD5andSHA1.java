@@ -1,4 +1,4 @@
-package edu.jiangxin.common;
+package edu.jiangxin.mess;
 
 import java.io.*;
 import java.security.*;

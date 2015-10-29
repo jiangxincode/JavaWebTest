@@ -5,7 +5,7 @@
  * @author jiangxin
  * @data 2014-6-20
  */
-package edu.jiangxin.common;
+package edu.jiangxin.mess;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

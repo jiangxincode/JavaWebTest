@@ -1,4 +1,4 @@
-package edu.jiangxin.test;
+package edu.jiangxin.mess;
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
 import java.nio.channels.SocketChannel;

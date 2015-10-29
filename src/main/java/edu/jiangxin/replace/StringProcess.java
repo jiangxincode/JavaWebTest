@@ -1,4 +1,4 @@
-package edu.jiangxin.test;
+package edu.jiangxin.replace;
 
 public class StringProcess {
 	

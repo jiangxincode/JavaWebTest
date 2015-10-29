@@ -1,4 +1,4 @@
-package edu.jiangxin.test;
+package edu.jiangxin.mess;
 import java.util.HashMap;
 import java.util.Map;
 

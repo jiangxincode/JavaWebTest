@@ -1,9 +1,12 @@
-package edu.jiangxin.test;
+package edu.jiangxin.replace;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import edu.jiangxin.replace.PropertyProcess;
+import edu.jiangxin.replace.StringProcess;
 
 public class StringProcessTest {
 	

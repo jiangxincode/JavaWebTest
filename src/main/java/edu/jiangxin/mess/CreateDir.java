@@ -2,7 +2,7 @@
  * 当文件所在目录不存在时创建父目录
  * @author jiangxin
  */
-package edu.jiangxin.common;
+package edu.jiangxin.mess;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;

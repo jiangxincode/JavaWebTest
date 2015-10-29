@@ -1,4 +1,4 @@
-package edu.jiangxin.common;
+package edu.jiangxin.mess;
 
 /**
  * 程序目的： 从命令行接收一个数，并将其转化为中文金额的大写方式 例如 123.45 --> 壹佰贰拾叁元肆角伍分

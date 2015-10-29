@@ -1,4 +1,4 @@
-package edu.jiangxin.common;
+package edu.jiangxin.mess;
 /************************************************
  * MD5 算法
  * @author 我行我素

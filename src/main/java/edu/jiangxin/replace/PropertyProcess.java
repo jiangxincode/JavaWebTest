@@ -1,4 +1,4 @@
-package edu.jiangxin.test;
+package edu.jiangxin.replace;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

@@ -1,4 +1,4 @@
-package edu.jiangxin.test;
+package edu.jiangxin.mess;
 /*
  * 描述：用来进行正向最大匹配
  * */

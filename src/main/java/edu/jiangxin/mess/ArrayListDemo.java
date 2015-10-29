@@ -1,6 +1,6 @@
 //ArrayList遍历的4种方法 
 
-package edu.jiangxin.common;
+package edu.jiangxin.mess;
 
 import java.util.ArrayList;
 import java.util.Iterator;
