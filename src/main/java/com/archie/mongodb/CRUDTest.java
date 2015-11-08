@@ -1,76 +1,91 @@
 package com.archie.mongodb;
 
 import com.mongodb.BasicDBObject;
+import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
+import com.mongodb.Mongo;
 
-/**
- * 对指定DBCollection集合的CRUD操作
- * @author archie2010
- *
- * since 2012-9-29 下午10:51:24
- */
 public class CRUDTest {
-	/**
-	 * 增加
-	 * @param obj
-	 */
-	public static void add(DBObject obj){
-		DBCollection coll=DBUtil.getDBCollection("dbtest", "emp");
-		coll.insert(obj);
-	}
-	/**
-	 * 删除
-	 * @param obj
-	 */
-	public static void delete(DBObject obj){
-		DBCollection coll=DBUtil.getDBCollection("dbtest", "emp");
-		coll.remove(obj);
-	}
-	/**
-	 * 查询
-	 */
-	public static void query(){
-		DBCollection coll=DBUtil.getDBCollection("dbtest", "emp");
-		// 查询集合中所有的数据
-		DBCursor cur = coll.find();
-		System.out.println("Record Count:" + cur.count());
-		while (cur.hasNext()) {
-			DBObject object = cur.next();
-			System.out.println(object);
-			// 取出对象中列表为'uname'和'upwd'的数据
-			System.out.println("uname:" + object.get("uname") + "\tupwd:"
-					+ object.get("upwd")+"\t_id:"+object.get("_id"));
-		}
-	}
-	/**
-	 * 修改
-	 */
-	public static void modify(DBObject orig,DBObject update){
-		DBCollection coll=DBUtil.getDBCollection("dbtest", "emp");
-		coll.update(orig, update, true, false);
-	}
+
+	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
-		DBObject empObj=new BasicDBObject();
-		empObj.put("uname", "teddy");
-		empObj.put("upwd", "123456");
-		//添加
-		add(empObj);
-		query();
+
+		Mongo mongo = new Mongo(); // Mongo实例代表了一个数据库连接池
+		// Mongo mg = new Mongo("localhost");
+		// Mongo mg = new Mongo("localhost", 27017);
+		for (String name : mongo.getDatabaseNames()) { // 查询所有的数据库
+			System.out.println("DB Name: " + name);
+		}
+
+		DB db = mongo.getDB("dbtest"); // 获取名为“dbtest”的数据库对象
+		for (String name : db.getCollectionNames()) { // 查询该库中所有的集合
+			System.out.println("Collection Name: " + name);
+		}
 		
-		
-		DBObject updateObj=new BasicDBObject();
-		updateObj.put("uname", "teddy");
-		updateObj.put("upwd", "3333");
-		//更新
-		modify(new BasicDBObject("uname","teddy"),updateObj);
+
+		DBCollection dbCollection = db.getCollection("user");
+		DBCursor dbCuror = dbCollection.find(); // 查询集合中所有的数据
+		DBObject dbObject = null;
+
+		System.out.println("-----------------------增加前-------------------");
+		System.out.println("Record Count:" + dbCuror.count());
+		while (dbCuror.hasNext()) {
+			dbObject = dbCuror.next();
+			System.out.println(dbObject);
+			System.out
+					.println("username:" + dbObject.get("username") + "\tuserpassword:" + dbObject.get("userpassword"));
+		}
+
+		/*
+		 * 添加
+		 */
+		dbObject = new BasicDBObject();
+		dbObject.put("username", "teddy");
+		dbObject.put("userpassword", "123456");
+
+		dbCollection.insert(dbObject);
+		dbCuror = dbCollection.find();
+		System.out.println("-----------------------增加后-------------------");
+		System.out.println("Record Count:" + dbCuror.count());
+		while (dbCuror.hasNext()) {
+			DBObject object = dbCuror.next();
+			System.out.println(object);
+			System.out.println("username:" + object.get("username") + "\tuserpassword:" + object.get("userpassword")
+					+ "\t_id:" + object.get("_id"));
+		}
+
+		/*
+		 * 更新
+		 */
+		dbObject = new BasicDBObject();
+		dbObject.put("username", "teddy");
+		dbObject.put("userpassword", "3333");
+
+		dbCollection.update(new BasicDBObject("username", "teddy"), dbObject);
+		dbCuror = dbCollection.find();
 		System.out.println("-----------------------修改后-------------------");
-		query();
-		
-		//删除
-		delete(new BasicDBObject("uname","teddy"));
+		System.out.println("Record Count:" + dbCuror.count());
+		while (dbCuror.hasNext()) {
+			DBObject object = dbCuror.next();
+			System.out.println(object);
+			System.out.println("username:" + object.get("username") + "\tuserpassword:" + object.get("userpassword")
+					+ "\t_id:" + object.get("_id"));
+		}
+
+		/*
+		 * 删除
+		 */
+		dbCollection.remove(new BasicDBObject("username", "teddy"));
 		System.out.println("-----------------------删除后-------------------");
-		query();
+		dbCuror = dbCollection.find();
+		System.out.println("Record Count:" + dbCuror.count());
+		while (dbCuror.hasNext()) {
+			DBObject object = dbCuror.next();
+			System.out.println(object);
+			System.out.println("username:" + object.get("username") + "\tuserpassword:" + object.get("userpassword")
+					+ "\t_id:" + object.get("_id"));
+		}
 	}
 }
