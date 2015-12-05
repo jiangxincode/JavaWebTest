@@ -13,42 +13,108 @@ public class Array2List {
 	
 	public static void main(String[] args) {
 		
-		/**
-		 * Array转List
-		 */
-		String[] strArray1 = {"aa","bb","cc"};
-		
-		List<String> list1 = new ArrayList<String>();
-		Collections.addAll(list1, strArray1);
-		
-		list1 = Arrays.asList(strArray1); // 返回一个受指定数组支持的固定大小的列表,所以不能做add、remove等操作
-		list1 = new ArrayList<String>(Arrays.asList(strArray1)); //这种方式可以进行add remove操作
-		
-		list1 = new ArrayList<String>(strArray1.length);
-		for(String str: strArray1) {
-			list1.add(str);
+		{
+			/**
+			 * Array转List
+			 */
+			String[] strArray = {"aa","bb","cc"};
+			List<String> list = new ArrayList<String>();
+			Collections.addAll(list, strArray);
+			System.out.println(list.toString());
 		}
 		
-		/**
-		 * List转Array
-		 */
-		List<String> list2 = new ArrayList<String>();
-		list2.add("aa");
-		list2.add("bb");
-		String[] strArray2 = (String[]) list2.toArray();
-		
-		//也可以指定大小：
-		final int size = list2.size();
-		strArray2 = (String[])list2.toArray(new String[size]);
-		
-		//笨方法
-		list2 = new ArrayList<String>();
-		list2.add("aa");
-		list2.add("bb");
-		strArray2 = new String[list2.size()];
-		for(int i=0;i<list2.size();i++) {
-			strArray2[i] = list2.get(i);
+		{
+			/**
+			 * Array转List
+			 */
+			String[] strArray = {"aa","bb","cc"};
+			List<String> list = Arrays.asList(strArray); // 返回一个受指定数组支持的固定大小的列表,不能做add、remove等操作
+			System.out.println(list.toString());
 		}
+		
+		{
+			/**
+			 * Array转List
+			 */
+			String[] strArray = {"aa","bb","cc"};
+			List<String> list = new ArrayList<String>(Arrays.asList(strArray)); // 可以进行add remove操作
+			System.out.println(list.toString());
+		}
+		
+		
+		{
+			/**
+			 * Array转List
+			 */
+			String[] strArray = {"aa","bb","cc"};
+			
+			List<String> list = new ArrayList<String>(strArray.length);
+			for(String str: strArray) {
+				list.add(str);
+			}
+			System.out.println(list.toString());
+		}
+		
+		
+		{
+			/**
+			 * List转Array
+			 */
+			List<String> list = new ArrayList<String>();
+			list.add("aa");
+			list.add("bb");
+			list.add("cc");
+			
+			//不要使用强制转换
+			//String[] strArray2 = (String[]) list2.toArray();
+			
+			Object[] objArray = list.toArray(); // 不指定大小
+			
+			for(Object obj : objArray) {
+				System.out.print(obj.toString() + " ");
+			}
+			System.out.println();
+			
+		}
+		
+		{
+			/**
+			 * List转Array
+			 */
+			List<String> list = new ArrayList<String>();
+			list.add("aa");
+			list.add("bb");
+			list.add("cc");
+			
+			String[] strArray = (String[])list.toArray(new String[list.size()]); // 指定大小
+			
+			for(String str : strArray) {
+				System.out.print(str.toString() + " ");
+			}
+			System.out.println();
+			
+		}
+		
+		{
+			/**
+			 * List转Array
+			 */
+			List<String> list = new ArrayList<String>();
+			list.add("aa");
+			list.add("bb");
+			list.add("cc");
+			
+			String[] strArray = new String[list.size()];
+			for(int i=0;i<list.size();i++) {
+				strArray[i] = list.get(i);
+			}
+			
+			for(String str : strArray) {
+				System.out.print(str.toString() + " ");
+			}
+			System.out.println();
+		}
+		
 	}
 
 }

@@ -1,40 +1,51 @@
-//ArrayList遍历的4种方法 
-
 package edu.jiangxin.mess;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * ArrayList遍历的4种方法 
+ *
+ */
 public class ArrayListDemo {
 
 	public static void main(String args[]) {
 
 		List<String> list = new ArrayList<String>();
-		list.add("luojiahui");
-		list.add("luojiafeng");
+		list.add("a");
+		list.add("b");
+		list.add("c");
 
-		// 方法1
-		Iterator<String> it1 = list.iterator();
-		while (it1.hasNext()) {
-			System.out.println(it1.next());
+		{
+			Iterator<String> it = list.iterator();
+			while (it.hasNext()) {
+				System.out.print(it.next() + " ");
+			}
+			System.out.println();
 		}
-
-		// 方法2 怪异！
-		for (Iterator<String> it2 = list.iterator(); it2.hasNext();) {
-			System.out.println(it2.next());
+		
+		{
+			for (Iterator<String> it = list.iterator(); it.hasNext();) {
+				System.out.print(it.next() + " ");
+			}
+			System.out.println();
 		}
+		
 
-		// 方法3
-		for (String tmp : list) {
-			System.out.println(tmp);
+		{
+			for (String str : list) {
+				System.out.print(str + " ");
+			}
+			System.out.println();
 		}
-
-		// 方法4
-		for (int i = 0; i < list.size(); i++) {
-			System.out.println(list.get(i));
+		
+		{
+			for (int i = 0; i < list.size(); i++) {
+				System.out.print(list.get(i) + " ");
+			}
+			System.out.println();
 		}
-
 	}
 
 }
