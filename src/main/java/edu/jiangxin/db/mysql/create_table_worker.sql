@@ -1,0 +1,8 @@
+CREATE TABLE
+IF NOT EXISTS worker (
+    id INT NOT NULL auto_increment,
+    NAME VARCHAR (20) NOT NULL,
+    gender VARCHAR (10) DEFAULT NULL,
+    age INT (3) DEFAULT NULL,
+    PRIMARY KEY (`id`)
+) DEFAULT CHARSET = utf8;
