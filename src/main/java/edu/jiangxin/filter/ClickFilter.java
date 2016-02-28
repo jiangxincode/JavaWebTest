@@ -33,7 +33,6 @@ public class ClickFilter implements Filter {
 			Set<Map.Entry<String,Integer>> entries = statMap.entrySet();
 			List<Map.Entry<String,Integer>> entriesList = new ArrayList<Map.Entry<String,Integer>>();
 			entriesList.addAll(entries);
-			//Ҳ������Arrays��
 			Collections.sort(entriesList, new Comparator<Map.Entry<String,Integer>>() {
 				public int compare(Entry<String, Integer> o1,
 						Entry<String, Integer> o2) {

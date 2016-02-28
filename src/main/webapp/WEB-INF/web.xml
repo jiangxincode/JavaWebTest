@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/classes/applicationContext.xml</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<!-- 页面统计begin -->
+	<filter>
+		<filter-name>logFilter</filter-name>
+		<filter-class>edu.jiangxin.statistics.filter.LogFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>logFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- 页面统计end -->
+
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>GuessNumber</servlet-name>
+		<servlet-class>edu.jiangxin.guessnumber.GuessNumber</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GuessNumber</servlet-name>
+		<url-pattern>/GuessNumber</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>BookAdmin</servlet-name>
+		<servlet-class>edu.jiangxin.bookadmin.BookAdmin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BookAdmin</servlet-name>
+		<url-pattern>/BookAdmin</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>Search</display-name>
+		<servlet-name>Search</servlet-name>
+		<servlet-class>com.db.dao.Search</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Search</servlet-name>
+		<url-pattern>/Search</url-pattern>
+	</servlet-mapping>
+
+	<!-- for Jersey begin -->
+	<servlet>
+		<servlet-name>Jersey REST Service</servlet-name>
+		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>com.sun.jersey.config.property.packages</param-name>
+			<param-value>edu.jiangxin.jersey.resources</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Jersey REST Service</servlet-name>
+		<url-pattern>/rest/*</url-pattern>
+	</servlet-mapping>
+	<!-- for Jersey end -->
+
+	<filter>
+		<filter-name>ClickFilter</filter-name>
+		<filter-class>edu.jiangxin.filter.ClickFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>ClickFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<jsp-config>
+		<taglib>
+			<taglib-uri>http://javaxp.net/xl</taglib-uri>
+			<taglib-location>/WEB-INF/xianlin.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+	<icon>
+		<small-icon>images/smallicon.jpg</small-icon>
+		<large-icon>images/largeicon.jpg</large-icon>
+	</icon>
+
+
+
+</web-app>
