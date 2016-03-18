@@ -5,8 +5,8 @@ import java.util.Iterator;
 import java.util.Set;
 
 /**
- * java事件机制包括三个部分：事件、事件监听器、事件源。
- * 事件源。事件发生的地方，由于事件源的某项属性或状态发生了改变(比如BUTTON被单击、TEXTBOX的值发生改变等等)导致某项事件发生。
+ * 事件源
+ * 事件发生的地方，由于事件源的某项属性或状态发生了改变(比如BUTTON被单击、TEXTBOX的值发生改变等等)导致某项事件发生。
  * 换句话说就是生成了相应的事件对象。因为事件监听器要注册在事件源上,所以事件源类中应该要有盛装监听器的容器(List,Set等等)。
  */
 public class EventSourceObject {

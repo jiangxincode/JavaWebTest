@@ -1,6 +1,6 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>JavaTest</groupId>
 	<artifactId>JavaTest</artifactId>
@@ -17,9 +17,9 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 			<id>osc_thirdparty</id>
 			<url>http://maven.oschina.net/content/repositories/thirdparty/</url>
 		</repository>
-		<!-- <repository> <id>github-releases</id> <url>http://oss.sonatype.org/content/repositories/github-releases/</url> 
+		<!-- <repository> <id>github-releases</id> <url>http://oss.sonatype.org/content/repositories/github-releases/</url>
 			</repository> -->
-		<!-- <repository> <id>clojars.org</id> <url>http://clojars.org/repo</url> 
+		<!-- <repository> <id>clojars.org</id> <url>http://clojars.org/repo</url>
 			</repository> -->
 	</repositories>
 
@@ -44,11 +44,8 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 			<artifactId>jacob</artifactId>
 			<version>1.14.3</version>
 		</dependency>
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.17</version>
-		</dependency>
+		<!-- <dependency> <groupId>log4j</groupId> <artifactId>log4j</artifactId>
+			<version>1.2.17</version> </dependency> -->
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
@@ -62,17 +59,17 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
-			<version>3.10-FINAL</version>
+			<version>3.13</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
-			<version>3.10-FINAL</version>
+			<version>3.13</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-scratchpad</artifactId>
-			<version>3.10-FINAL</version>
+			<version>3.13</version>
 		</dependency>
 		<dependency>
 			<groupId>org.jdom</groupId>
@@ -129,6 +126,12 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 			<groupId>org.apache.hbase</groupId>
 			<artifactId>hbase-client</artifactId>
 			<version>0.96.1-hadoop2</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>jdk.tools</artifactId>
+					<groupId>jdk.tools</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 		<dependency>
@@ -159,6 +162,31 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 			<artifactId>drools-compiler</artifactId>
 			<version>5.1.1</version>
 		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.37</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sourceforge.jexcelapi</groupId>
+			<artifactId>jxl</artifactId>
+			<version>2.6.12</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons.classscan</groupId>
+			<artifactId>bcel</artifactId>
+			<version>0.2-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons.classscan</groupId>
+			<artifactId>api</artifactId>
+			<version>0.2-SNAPSHOT</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

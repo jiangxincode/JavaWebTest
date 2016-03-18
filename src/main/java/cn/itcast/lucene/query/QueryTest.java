@@ -1,11 +1,7 @@
 package cn.itcast.lucene.query;
 
-import java.util.Date;
-
-import org.apache.lucene.document.DateTools;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.NumberTools;
-import org.apache.lucene.document.DateTools.Resolution;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.PhraseQuery;
@@ -35,7 +31,7 @@ public class QueryTest {
 
 	/**
 	 * 关键词查询
-	 * 
+	 *
 	 * name:room
 	 */
 	@Test
@@ -50,9 +46,9 @@ public class QueryTest {
 
 	/**
 	 * 范围查询
-	 * 
+	 *
 	 * 包含边界：size:[0000000000001e TO 000000000000rs]
-	 * 
+	 *
 	 * 不包含边界：size:{0000000000001e TO 000000000000rs}
 	 */
 	@Test
@@ -76,13 +72,13 @@ public class QueryTest {
 
 	/**
 	 * 通配符查询
-	 * 
+	 *
 	 * '?' 代表一个字符， '*' 代表0个或多个字符
-	 * 
+	 *
 	 * name:房*
-	 * 
+	 *
 	 * name:*o*
-	 * 
+	 *
 	 * name:roo?
 	 */
 	@Test
@@ -98,9 +94,9 @@ public class QueryTest {
 
 	/**
 	 * 短语查询
-	 * 
+	 *
 	 * content:"? 绅士 ? ? 饭店"
-	 * 
+	 *
 	 * content:"绅士 饭店"~2
 	 */
 	@Test
@@ -118,11 +114,11 @@ public class QueryTest {
 
 	/**
 	 * +content:"绅士 饭店"~2 -size:[000000000000dw TO 000000000000rs]
-	 * 
+	 *
 	 * +content:"绅士 饭店"~2 +size:[000000000000dw TO 000000000000rs]
-	 * 
+	 *
 	 * content:"绅士 饭店"~2 size:[000000000000dw TO 000000000000rs]
-	 * 
+	 *
 	 * +content:"绅士 饭店"~2 size:[000000000000dw TO 000000000000rs]
 	 */
 	@Test

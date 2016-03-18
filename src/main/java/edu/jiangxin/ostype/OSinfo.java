@@ -5,11 +5,8 @@ package edu.jiangxin.ostype;
  * 获取System.getProperty("os.name")对应的操作系统
  */
 public class OSinfo {
-
 	private static String OS = System.getProperty("os.name").toLowerCase();
-
 	private static OSinfo _instance = new OSinfo();
-
 	private EPlatform platform;
 
 	private OSinfo() {

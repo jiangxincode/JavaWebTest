@@ -3,8 +3,8 @@ package edu.jiangxin.event;
 import java.util.EventObject;
 
 /**
- * java事件机制包括三个部分：事件、事件监听器、事件源。
- * 事件。一般继承自java.util.EventObject类，封装了事件源对象及跟事件相关的信息。
+ * 事件
+ * 一般继承自java.util.EventObject类，封装了事件源对象及跟事件相关的信息。
  */
 public class CusEvent extends EventObject {
 

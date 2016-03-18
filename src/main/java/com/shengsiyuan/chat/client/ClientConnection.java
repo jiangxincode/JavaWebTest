@@ -104,6 +104,9 @@ public class ClientConnection extends Thread {
 			else if (CharacterUtil.CLOSE_CLIENT_WINDOW == t) {
 				xml = XMLUtil.constructCloseClientWindowXML(this.username);
 			}
+			else {
+				throw new Exception();
+			}
 
 			// 向服务器端发送数据
 			this.os.write(xml.getBytes());
