@@ -1,4 +1,4 @@
-package edu.jiangxin.office;
+package edu.jiangxin.properties2xls;
 
 import java.util.Collections;
 import java.util.Enumeration;
