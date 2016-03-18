@@ -11,8 +11,11 @@ import org.jdom.output.XMLOutputter;
 
 public class JDomTest1 {
 	public static void main(String[] args) throws Exception {
+
+		@SuppressWarnings("unused")
+		String test = null;
 		String path = "target/test-classes/com/shengsiyuan/xml/";
-		
+
 		Document document = new Document();
 
 		Element root = new Element("root");

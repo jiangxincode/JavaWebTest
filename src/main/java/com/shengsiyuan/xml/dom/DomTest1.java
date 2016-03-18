@@ -11,16 +11,16 @@ import org.w3c.dom.NodeList;
 
 public class DomTest1 {
 	public static void main(String[] args) throws Exception {
-		
+
 		String path = "target/test-classes/com/shengsiyuan/xml/candidate.xml";
-		
+
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
-		// System.out.println("class name: " + dbf.getClass().getName());
+		System.out.println("class name: " + dbf.getClass().getName());
 
 		DocumentBuilder db = dbf.newDocumentBuilder();
 
-		// System.out.println("class name: " + db.getClass().getName());
+		System.out.println("class name: " + db.getClass().getName());
 
 		Document document = db.parse(new File(path));
 
