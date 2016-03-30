@@ -1,5 +1,10 @@
 package com.shengsiyuan.lesson058;
 
+/**
+ * Java可变参数（可选参数）
+ * @author jiangxin
+ *
+ */
 public class TestVarargs {
 	private static int sum(String str, int... nums) {
 		System.out.println(str);
