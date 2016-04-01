@@ -3,14 +3,13 @@ package com.shengsiyuan.hibernate;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.sql.Timestamp;
-import java.util.Iterator;
-import java.util.List;
 
-import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+
+import com.shengsiyuan.interceptor.TestInterceptor;
 
 public class HibernateTest
 {
@@ -30,20 +29,19 @@ public class HibernateTest
 	
 	public static void main(String[] args) throws Exception
 	{
-		/*
+		
 		People people = new People();
 		
 		people.setUsername("zhangsan");
 		people.setPassword("123456");
 		people.setGender('F');
 		java.sql.Date date = new java.sql.Date(new java.util.Date().getTime());
-		System.out.println(date);
 		people.setBirthday(date);
 		people.setGraduation(false);
 		people.setTelphone(987654);
 		people.setMarryTime(new Timestamp(new java.util.Date().getTime()));
 		
-		InputStream is = new FileInputStream("c:/Hibernate_1.pdf");
+		InputStream is = new FileInputStream("c:/RandomTest.class");
 		
 		int length = is.available();
 		
@@ -53,14 +51,18 @@ public class HibernateTest
 		
 		people.setFile(buffer);
 		
-		Session session = sessionFactory.openSession();
+		Session session = sessionFactory.openSession(new TestInterceptor());
 		Transaction tx = null;
 		
 		try
 		{
 			tx = session.beginTransaction();
 			
-			session.save(people);
+//			session.save(people);
+			
+			People p = (People)session.get(People.class, new Long(1));
+			
+			System.out.println(p.getUsername());
 			
 			tx.commit();
 		}
@@ -78,7 +80,6 @@ public class HibernateTest
 			session.close();
 		}
 		
-		*/
 	
 		
 		/*
@@ -168,16 +169,16 @@ public class HibernateTest
 		*/
 		
 		
-		Session session = sessionFactory.openSession();
-		Transaction tx = null;
+//		Session session = sessionFactory.openSession();
+//		Transaction tx = null;
 		
-		//List<People> list = null;
+//		List<People> list = null;
+//		
+//		Iterator<People> iter = null;
 		
-		Iterator<People> iter = null;
-		
-		try
-		{
-			tx = session.beginTransaction();
+//		try
+//		{
+//			tx = session.beginTransaction();
 			
 			/*
 			Query query = session.createQuery("from People");
@@ -190,9 +191,9 @@ public class HibernateTest
 			}
 			*/
 			
-			Query query = session.createQuery("from People");
-			
-			iter = (Iterator<People>)query.iterate();
+//			Query query = session.createQuery("from People");
+//			
+//			iter = (Iterator<People>)query.iterate();
 			
 			//list = (List<People>)query.list();
 			
@@ -201,23 +202,23 @@ public class HibernateTest
 //				session.delete(iter.next());
 //			}
 			
-			tx.commit();
-		}
-		catch(Exception ex)
-		{
-			if(null != tx)
-			{
-				tx.rollback();
-			}
-		}
-		finally
-		{
-			session.close();
-		}
-		
-		while(iter.hasNext())
-		{
-			System.out.println(iter.next().getId());
-		}
+//			tx.commit();
+//		}
+//		catch(Exception ex)
+//		{
+//			if(null != tx)
+//			{
+//				tx.rollback();
+//			}
+//		}
+//		finally
+//		{
+//			session.close();
+//		}
+//		
+//		while(iter.hasNext())
+//		{
+//			System.out.println(iter.next().getId());
+//		}
 	}
 }
