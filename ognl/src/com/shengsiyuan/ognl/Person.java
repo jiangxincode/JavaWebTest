@@ -3,9 +3,9 @@ package com.shengsiyuan.ognl;
 public class Person
 {
 	private String name;
-	
+
 	private Dog dog;
-	
+
 	public Dog getDog()
 	{
 		return dog;
@@ -18,8 +18,8 @@ public class Person
 
 	public String getName()
 	{
-		System.out.println("getName invoked!");
-		
+		//System.out.println("getName invoked!");
+
 		return name;
 	}
 

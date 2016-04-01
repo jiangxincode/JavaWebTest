@@ -1,4 +1,5 @@
 **/WEB-INF/classes/
 **/bin/
 *.swp
-
+RemoteSystemsTempFiles/
+.metadata/
