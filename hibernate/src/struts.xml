@@ -8,9 +8,25 @@
 	<package name="hibernate" extends="struts-default">
 	
 		<action name="savePerson" class="com.shengsiyuan.action.PersonAction" method="savePerson">
-		
+			<result name="success">/listAll.jsp</result>
 		</action>
-	
+		
+		<action name="deletePerson" class="com.shengsiyuan.action.PersonAction" method="deletePerson">
+			<result name="success">/listAll.jsp</result>
+		</action>
+		
+		<action name="getSinglePerson" class="com.shengsiyuan.action.PersonAction" method="getSinglePerson">
+			<result>/getSinglePerson.jsp</result>
+		</action>
+		
+		<action name="updatePPerson" class="com.shengsiyuan.action.PersonAction" method="getSinglePerson">
+			<result>/updatePerson.jsp</result>
+		</action>
+		
+		<action name="updatePerson" class="com.shengsiyuan.action.PersonAction" method="updatePerson">
+			<result name="success">/listAll.jsp</result>
+		</action>
+		
 	</package>
 	
 </struts>

@@ -6,8 +6,8 @@
 
 	<class name="com.shengsiyuan.model.Person" table="person">
 	
-		<id name="id" column="id" type="int">
-			<generator class="increment"></generator>
+		<id name="id" column="id" type="string">
+			<generator class="uuid"></generator>
 		</id>
 	
 		<property name="username" column="username" type="string"></property>
