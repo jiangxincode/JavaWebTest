@@ -14,7 +14,7 @@
 			<column name="order_number" length="15"></column>
 		</property>
 		
-		<many-to-one name="customer" class="com.shengsiyuan.hibernate.Customer" column="customer_id" lazy="false">
+		<many-to-one name="customer" class="com.shengsiyuan.hibernate.Customer" column="customer_id" lazy="false" outer-join="true">
 		</many-to-one>
 	
 	</class>
