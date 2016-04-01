@@ -43,7 +43,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <table width="80%" align="center" border="1">
     
     <tr>
-    
+    <th>order</th>
     <th>username</th>
     <th>password</th>
     <th>age</th>
@@ -53,16 +53,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
     </tr>
     
-    <s:iterator value="#request.list" id="person">
+    <s:iterator value="#request.list" id="person" status="st">
     
     <tr>
+    
+    <td>
+    	<s:property value="#st.index + 1"/>
+    </td>
+    
     
     <td>
     	<s:a href="getSinglePerson.action?id=%{#person.id}"><s:property value="username"/></s:a>
     </td>
     
     <td>
-    	<s:property value="password"/>
+    	<s:property value="%{password}"/>
     </td>
     
     <td>
