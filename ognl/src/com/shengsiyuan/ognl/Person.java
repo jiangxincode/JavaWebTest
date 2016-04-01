@@ -18,6 +18,8 @@ public class Person
 
 	public String getName()
 	{
+		System.out.println("getName invoked!");
+		
 		return name;
 	}
 

@@ -3,6 +3,18 @@ package com.shengsiyuan.ognl;
 public class Dog
 {
 	private String name;
+	
+	private String[] friends;
+	
+	public String[] getFriends()
+	{
+		return friends;
+	}
+
+	public void setFriends(String[] friends)
+	{
+		this.friends = friends;
+	}
 
 	public String getName()
 	{
