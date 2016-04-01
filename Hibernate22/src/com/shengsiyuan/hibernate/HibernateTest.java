@@ -30,6 +30,8 @@ public class HibernateTest
 		
 		Session session = sessionFactory.openSession();
 		Transaction tx = null;
+		Query query = null;
+		List list = null;
 		
 		try
 		{
@@ -59,22 +61,9 @@ public class HibernateTest
 //				System.out.println(student.getCardId());
 //			}
 			
-			Query query = session.createQuery("from Team t join t.students");
+			query = session.createQuery("from Team t join t.students");
 			
-			List list = query.list();
-			
-			for(int i = 0; i < list.size(); i++)
-			{
-				Object[] obj = (Object[]) list.get(i);
-				
-				Team team = (Team)obj[0];
-				Student student = (Student)obj[1];
-				
-				System.out.println(team.getTeamName());
-				System.out.println(student.getName());
-				
-				System.out.println("----------");
-			}
+			list = query.list();
 			
 			tx.commit(); 
 		}
@@ -90,6 +79,19 @@ public class HibernateTest
 		finally
 		{
 			session.close();
+		}
+		
+		for(int i = 0; i < list.size(); i++)
+		{
+			Object[] obj = (Object[]) list.get(i);
+			
+			Team team = (Team)obj[0];
+			Student student = (Student)obj[1];
+			
+			System.out.println(team.getTeamName());
+			System.out.println(student.getName());
+			
+			System.out.println("----------");
 		}
 	}
 }

@@ -12,8 +12,12 @@
 	
 		<property name="teamName" column="teamName" type="string"></property>
 		
-		<set name="students" inverse="true" fetch="select" lazy="true">
+		<set name="students" inverse="true" fetch="select" lazy="true" cascade="save-update">
+			
+			<cache usage="read-write"/>
+			
 			<key column="team_id"></key>
+			
 			<one-to-many class="com.shengsiyuan.hibernate.Student"/>
 		</set>
 		 
