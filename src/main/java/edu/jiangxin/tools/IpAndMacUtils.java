@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 public class IpAndMacUtils {
 
 	/**
@@ -102,9 +104,11 @@ public class IpAndMacUtils {
 		if (os != null && os.startsWith("Windows")) {
 			try {
 				String command = "cmd.exe /c ipconfig /all";
-				/*System.out.println(System.getProperties());
-				String[] envp = {"user.language=en, user.country=US"};
-				Process p = Runtime.getRuntime().exec(command,envp);*/
+				/*
+				 * System.out.println(System.getProperties()); String[] envp = {
+				 * "user.language=en, user.country=US"}; Process p =
+				 * Runtime.getRuntime().exec(command,envp);
+				 */
 				Process p = Runtime.getRuntime().exec(command);
 
 				BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
@@ -160,9 +164,39 @@ public class IpAndMacUtils {
 	}
 
 	/**
-	 * @param args
+	 * 通过HttpServletRequest返回IP地址.
+	 *
+	 * @param request
+	 *            HttpServletRequest
+	 * @return ip String
+	 * @throws Exception
 	 */
-	public static void main(String[] args) {
+	public static String getIpAddr(HttpServletRequest request) throws Exception {
+		String ip = request.getHeader("x-forwarded-for");
+		if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+			ip = request.getHeader("Proxy-Client-IP");
+		}
+		if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+			ip = request.getHeader("WL-Proxy-Client-IP");
+		}
+		if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+			ip = request.getHeader("HTTP_CLIENT_IP");
+		}
+		if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+			ip = request.getHeader("HTTP_X_FORWARDED_FOR");
+		}
+		if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+			ip = request.getRemoteAddr();
+		}
+		return ip;
+	}
+
+	/**
+	 * @param args
+	 * @throws SocketException
+	 * @throws UnknownHostException
+	 */
+	public static void main(String[] args) throws SocketException, UnknownHostException {
 		getAllLocalHostIP();
 		System.out.println(getLocalIP());
 		System.out.println(getWinLocalIP());
