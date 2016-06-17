@@ -4,7 +4,12 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 
 	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
 		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
 
 	<context-param>
@@ -31,6 +36,21 @@
 	<session-config>
 		<session-timeout>30</session-timeout>
 	</session-config>
+
+	<filter>
+		<filter-name>simplemvc</filter-name>
+		<filter-class>com.yuqiaotech.helloj2ee.mvc.DispatcherFilter</filter-class>
+		<init-param>
+			<param-name>configFile</param-name>
+			<param-value>/mvc.xml</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>simplemvc</filter-name>
+		<url-pattern>*.mvc</url-pattern>
+	</filter-mapping>
+
+
 
 	<servlet>
 		<description>This is the description of my J2EE component</description>
@@ -81,6 +101,19 @@
 		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
 	<!-- for Jersey end -->
+
+
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>WeatherServlet</servlet-name>
+		<servlet-class>cn.it.ws.weather.WeatherServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>WeatherServlet</servlet-name>
+		<url-pattern>/weatherServlet</url-pattern>
+	</servlet-mapping>
 
 	<filter>
 		<filter-name>ClickFilter</filter-name>
