@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- http://www.w3school.com.cn/schema/schema_howto.asp 关键是理解namespace 
-我的理解xsd的作用就是规定xml文件应该如何写，以方便用户检查。
-我工作中涉及到的很少，所以也没深究。
--->
+<!-- http://www.w3school.com.cn/schema/schema_howto.asp 关键是理解namespace -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hello">
 	<xs:element name="email">
 		<xs:complexType>
