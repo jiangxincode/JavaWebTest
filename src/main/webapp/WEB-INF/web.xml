@@ -123,6 +123,19 @@
 		<filter-name>ClickFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+
+	  <!-- 添加  CXF 的Servlet ，处理 webservice的请求 -->
+  <servlet>
+  <servlet-name>cxf</servlet-name>
+  <servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
+  <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>cxf</servlet-name>
+   <url-pattern>/ws/*</url-pattern>
+  </servlet-mapping>
+
+
 	<jsp-config>
 		<taglib>
 			<taglib-uri>http://javaxp.net/xl</taglib-uri>
@@ -134,6 +147,36 @@
 		<large-icon>images/largeicon.jpg</large-icon>
 	</icon>
 
+
+  <filter>
+    <filter-name>struts2</filter-name>
+    <filter-class>
+        org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter
+    </filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>struts2</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <servlet>
+        <servlet-name>freemarker</servlet-name>
+        <servlet-class>
+            freemarker.ext.servlet.FreemarkerServlet
+        </servlet-class>
+        <!--下面的配置freemarke的ftl文件的位置 -->
+        <init-param>
+            <param-name>TemplatePath</param-name>
+            <param-value>/</param-value>
+        </init-param>
+        <!-- 是否和服务器（tommcat)一起启动。0为不。1为是-->
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>freemarker</servlet-name>
+        <url-pattern>*.ftl</url-pattern>
+    </servlet-mapping>
 
 
 </web-app>
