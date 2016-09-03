@@ -13,27 +13,29 @@
 	</properties>
 
 	<repositories>
-		<repository>
-			<id>osc_thirdparty</id>
-			<url>http://maven.oschina.net/content/repositories/thirdparty/</url>
-		</repository>
+
+		<!-- <repository> <id>AsposeJavaAPI</id> <name>Aspose Java API</name> <url>http://maven.aspose.com/artifactory/simple/ext-release-local/</url>
+			</repository> -->
+		<!-- <repository> <id>osc_thirdparty</id> <url>http://maven.oschina.net/content/repositories/thirdparty/</url>
+			</repository> -->
 		<!-- <repository> <id>github-releases</id> <url>http://oss.sonatype.org/content/repositories/github-releases/</url>
 			</repository> -->
 		<!-- <repository> <id>clojars.org</id> <url>http://clojars.org/repo</url>
 			</repository> -->
+
 	</repositories>
 
+
 	<dependencies>
+
+
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 		</dependency>
-		<dependency>
-			<groupId>cpdetector</groupId>
-			<artifactId>cpdetector</artifactId>
-			<version>1.0.7</version>
-		</dependency>
+
 		<dependency>
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
@@ -98,11 +100,7 @@
 			<artifactId>lucene-highlighter</artifactId>
 			<version>2.9.4</version>
 		</dependency>
-		<dependency>
-			<groupId>jeasy</groupId>
-			<artifactId>je-analysis</artifactId>
-			<version>1.5.3</version>
-		</dependency>
+
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
@@ -201,6 +199,34 @@
 			<artifactId>mvel2</artifactId>
 			<version>2.2.8.Final</version>
 		</dependency>
+
+		<!-- local begin -->
+
+		<dependency>
+			<groupId>com.aspose</groupId>
+			<artifactId>aspose-words</artifactId>
+			<version>15.9.0-jdk16</version>
+		</dependency>
+
+		<dependency>
+            <groupId>com.aspose</groupId>
+            <artifactId>aspose-cells</artifactId>
+            <version>8.3.1</version>
+        </dependency>
+
+		<dependency>
+			<groupId>jeasy</groupId>
+			<artifactId>je-analysis</artifactId>
+			<version>1.5.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>cpdetector</groupId>
+			<artifactId>cpdetector</artifactId>
+			<version>1.0.7</version>
+		</dependency>
+
+		<!-- local end -->
 
 
 
