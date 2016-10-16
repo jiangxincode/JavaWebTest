@@ -1,5 +1,7 @@
 # Test
 
+[![Build status](https://ci.appveyor.com/api/projects/status/github/jiangxincode/javawebtest?branch=master&svg=true)]
+
 jiangxinnju@163.com
 
 http://github.com/jiangxincode
