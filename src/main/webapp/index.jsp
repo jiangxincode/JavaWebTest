@@ -28,7 +28,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<li><a href="Click">历史访问量统计</a></li>
     	<li><a href="BookAdmin">数据库应用</a></li>
     	<li><a href="JSP/MongoDB/mongodb.jsp">MongoDB连接池</a></li>
-    	<li><a href="JSP/WeatherService/index.jsp">MongoDB连接池</a></li>
+    	<li><a href="JSP/WeatherService/index.jsp">WeatherService</a></li>
     </ol>
   </body>
 </html>

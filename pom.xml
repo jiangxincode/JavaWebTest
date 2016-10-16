@@ -6,6 +6,12 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
+	<properties>
+        <project.build.sourceEncoding>
+            UTF-8
+        </project.build.sourceEncoding>
+    </properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>mysql</groupId>
@@ -129,6 +135,12 @@
 			<version>2.5.1</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api -->
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.2.1-b03</version>
+		</dependency>
 
 
 
@@ -141,8 +153,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.3</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -151,6 +163,61 @@
 				<configuration>
 					<warSourceDirectory>WebRoot</warSourceDirectory>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.jvnet.jax-ws-commons</groupId>
+				<artifactId>jaxws-maven-plugin</artifactId>
+				<version>2.2</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>wsimport</goal>
+						</goals>
+						<configuration>
+							<!-- CHANGE: added args tag to bind http://www.w3.org/2001/XMLSchema.xsd -->
+							<args>
+								<arg>-b</arg>
+								<arg>http://www.w3.org/2001/XMLSchema.xsd</arg>
+								<arg>-encoding</arg>
+								<arg>UTF-8</arg>
+							</args>
+
+                    <wsdlFiles>
+                    <wsdlFile>${basedir}/src/main/resources/wsdl/jobservice.xml</wsdlFile>
+                    <wsdlFile>${basedir}/src/main/resources/wsdl/phoneService.xml</wsdlFile>
+                    <wsdlFile>${basedir}/src/main/resources/wsdl/languangeService.xml</wsdlFile>
+                    <!-- <wsdlFile>${basedir}/src/main/resources/wsdl/WeatherWS.xml</wsdlFile> -->
+                    </wsdlFiles>
+							<wsdlUrls>
+								<wsdlUrl>http://ws.webxml.com.cn/WebServices/WeatherWS.asmx?wsdl</wsdlUrl>
+								<wsdlUrl>http://ws.webxml.com.cn/WebServices/MobileCodeWS.asmx?wsdl</wsdlUrl>
+							</wsdlUrls>
+							<!-- CHANGE: added bindingFiles tag to bind XJB customization, located
+								at the default binding files directory, MyProject/src/jaxws/xsd.xjb . -->
+							<bindingFiles>
+								<bindingFile>xsd.xjb</bindingFile>
+							</bindingFiles>
+						</configuration>
+						<id>wsimport-generate-egtestreportengine</id>
+						<phase>generate-sources</phase>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>javax.xml</groupId>
+						<artifactId>webservices-api</artifactId>
+						<version>1.4</version>
+					</dependency>
+				</dependencies>
+				<configuration>
+					<sourceDestDir>${project.build.directory}/generated-sources/jaxws-wsimport</sourceDestDir>
+					<xnocompile>true</xnocompile>
+					<verbose>true</verbose>
+					<extension>true</extension>
+					<catalog>${basedir}/src/jax-ws-catalog.xml</catalog>
+					<target>2.0</target>
 				</configuration>
 			</plugin>
 		</plugins>

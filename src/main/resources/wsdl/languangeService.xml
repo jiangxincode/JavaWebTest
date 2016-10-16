@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="languageservice.webservice.jiangxin.edu" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="languageManager" targetNamespace="languageservice.webservice.jiangxin.edu">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="languageservice.webservice.jiangxin.edu" elementFormDefault="unqualified" targetNamespace="languageservice.webservice.jiangxin.edu" version="1.0">
+
+  <xs:element name="getLanguage" type="tns:getLanguage"/>
+
+  <xs:element name="getLanguageResponse" type="tns:getLanguageResponse"/>
+
+  <xs:complexType name="getLanguage">
+    <xs:sequence>
+      <xs:element name="position" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getLanguageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="language" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getLanguageResponse">
+    <wsdl:part element="tns:getLanguageResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLanguage">
+    <wsdl:part element="tns:getLanguage" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="LanguageService">
+    <wsdl:operation name="getLanguage">
+      <wsdl:input message="tns:getLanguage" name="getLanguage">
+    </wsdl:input>
+      <wsdl:output message="tns:getLanguageResponse" name="getLanguageResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="languageManagerSoapBinding" type="tns:LanguageService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getLanguage">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getLanguage">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLanguageResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="languageManager">
+    <wsdl:port binding="tns:languageManagerSoapBinding" name="LanguageServicePort">
+      <soap:address location="http://localhost:30000/ws/cxf/languangeService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
