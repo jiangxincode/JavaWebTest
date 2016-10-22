@@ -22,6 +22,10 @@
 			</repository> -->
 		<!-- <repository> <id>clojars.org</id> <url>http://clojars.org/repo</url>
 			</repository> -->
+	<repository>
+		<id>forgerock.org</id>
+		<url>http://maven.forgerock.org/repo/releases/</url>
+	</repository>
 
 	</repositories>
 
@@ -200,6 +204,23 @@
 			<version>2.2.8.Final</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.antlr/antlr4-runtime -->
+		<dependency>
+			<groupId>org.antlr</groupId>
+			<artifactId>antlr4-runtime</artifactId>
+			<version>4.3</version>
+		</dependency>
+
+        <!-- just for CaseInsensitiveProperties.java -->
+		<!-- https://mvnrepository.com/artifact/org.forgerock.openam/openam-shared -->
+		<dependency>
+			<groupId>org.forgerock.openam</groupId>
+			<artifactId>openam-shared</artifactId>
+			<version>13.0.0</version>
+		</dependency>
+
+
+
 		<!-- local begin -->
 
 		<dependency>
@@ -209,10 +230,10 @@
 		</dependency>
 
 		<dependency>
-            <groupId>com.aspose</groupId>
-            <artifactId>aspose-cells</artifactId>
-            <version>8.3.1</version>
-        </dependency>
+			<groupId>com.aspose</groupId>
+			<artifactId>aspose-cells</artifactId>
+			<version>8.3.1</version>
+		</dependency>
 
 		<dependency>
 			<groupId>jeasy</groupId>
@@ -242,6 +263,19 @@
 					<source>1.7</source>
 					<target>1.7</target>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.antlr</groupId>
+				<artifactId>antlr4-maven-plugin</artifactId>
+				<version>4.3</version>
+				<executions>
+					<execution>
+						<id>antlr</id>
+						<goals>
+							<goal>antlr4</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
