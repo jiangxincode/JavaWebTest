@@ -19,12 +19,12 @@ import com.aspose.words.Section;
 import com.aspose.words.StyleIdentifier;
 import com.aspose.words.WrapType;
 
-public class WordDocument {
+public class CreateWordDocument {
 	private Document doc;
 	private DocumentBuilder builder;
-	private static final String imagePath = WordDocument.class.getResource("japanese-girl.jpg").getPath();
+	private static final String imagePath = CreateWordDocument.class.getResource("japanese-girl.jpg").getPath();
 
-	public WordDocument() throws Exception{
+	public CreateWordDocument() throws Exception{
 		try {
 			doc = new Document();
 		} catch (Exception e) {
@@ -34,7 +34,7 @@ public class WordDocument {
 	}
 
 	public static void main(String[] args) throws Exception {
-		WordDocument wd = new WordDocument();
+		CreateWordDocument wd = new CreateWordDocument();
 		wd.loadLicense();
 		wd.createMainPage();
 		wd.addHeaderFooter();
@@ -46,9 +46,6 @@ public class WordDocument {
 		System.out.println("文档已生成！");
 	}
 
-	 /**
-     * 从Classpath（jar文件中）中读取License
-     */
     public void loadLicense() {
         // 返回读取指定资源的输入流
         License license = new License();
@@ -354,6 +351,6 @@ public class WordDocument {
 	public void saveDocument() throws Exception{
 		doc.updateFields();
 		doc.updateTableLayout();
-		doc.save(WordDocument.class.getResource("/").getPath() + "Test003Finish.doc");
+		doc.save(CreateWordDocument.class.getResource("/").getPath() + "Test003Finish.doc");
 	}
 }
