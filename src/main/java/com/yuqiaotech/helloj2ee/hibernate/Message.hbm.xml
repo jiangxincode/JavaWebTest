@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.yuqiaotech.helloj2ee.hibernate.Message" table="MESSAGES">
+		<id name="id" column="MESSAGE_ID">
+			<generator class="native" />
+		</id>
+		<property name="text" column="MESSAGE_TEXT" />
+		<property name="title" column="MESSAGE_TITLE" />
+		<property name="sentTime" column="sentTime" />
+		<property name="status" column="status" />
+		<!-- <many-to-one name="sender" column="SENDER_ID" class="com.yuqiaotech.simplejee.hibernate.User"/> -->
+		<!-- <many-to-one name="receiver" column="RECEIVER_ID" class="com.yuqiaotech.simplejee.hibernate.User"/> -->
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<handlers>
+
+	<!-- /newGame.mvc这个路径的配置为执行NumGuessHandler的newGame方法。 -->
+	<handler path="/newGame.mvc"
+		class="com.yuqiaotech.helloj2ee.mvc.handler.NumGuessHandler" method="newGame">
+		<view name="newGame">/JSP/GuessNumberMVC/guess.jsp</view>
+	</handler>
+
+	<!-- /guess.mvc这个路径的配置为执行NumGuessHandler的某个方法， 这里没有明确指定是哪个方法，前端控制器将根据请求参数里名称为method:xxx的参数来决定
+		如果请求参数里没有method:xxx，那么将执行handler方法，如上面/hello.mvc所示 。 -->
+	<handler path="/numberGuess.mvc"
+		class="com.yuqiaotech.helloj2ee.mvc.handler.NumGuessHandler">
+		<view name="newGame">/JSP/GuessNumberMVC/guess.jsp</view>
+		<view name="index">/JSP/GuessNumberMVC/index.jsp</view>
+		<view name="success">/JSP/GuessNumberMVC/success.jsp</view>
+		<view name="guessForm">/JSP/GuessNumberMVC/guess.jsp</view>
+	</handler>
+</handlers>
