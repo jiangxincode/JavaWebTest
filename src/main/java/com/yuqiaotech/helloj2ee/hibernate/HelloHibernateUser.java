@@ -8,11 +8,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 /**
- * hibernate的基本使用的演示。 在调试模式下运行，以便查看每一步后数据库里的变化。
  * 和HelloHibernate相比，这里没有关联，不是使用的XML做配置，而是JPA。
- * 
- * @author YUQAIO
- * 
  */
 public class HelloHibernateUser {
 	public static void main(String[] args) {

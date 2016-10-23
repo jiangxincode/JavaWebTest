@@ -21,13 +21,14 @@ import org.hibernate.Session;
 import com.yuqiaotech.helloj2ee.hibernate.HibernateUtil;
 
 public class HibernateStoreDataInXML {
-	static String dataPath = "d:/data.xml";
+
+	static String dataPath = HibernateStoreDataInXML.class.getResource("/").getPath() + "data.xml";
 
 	public static void exportData() {
 		// First unit of work
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Session dom4jSession = session.getSession(EntityMode.DOM4J);
-		List<Element> l = dom4jSession.createQuery("from User").list();
+		List<Element> l = (List<Element>)dom4jSession.createQuery("from User").list();
 		// Element userXML =
 		// (Element) dom4jSession.load(User.class, 1l);
 		try {
@@ -74,5 +75,6 @@ public class HibernateStoreDataInXML {
 
 	public static void main(String[] args) {
 		exportData();
+		importData();
 	}
 }

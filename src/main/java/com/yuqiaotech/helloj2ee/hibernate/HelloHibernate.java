@@ -24,6 +24,7 @@ public class HelloHibernate {
 		session.delete(mx);
 		tx.commit();
 		session.close();
+		
 		// HQL查询
 		Session newSession = HibernateUtil.getSessionFactory().openSession();
 		Transaction newTransaction = newSession.beginTransaction();
