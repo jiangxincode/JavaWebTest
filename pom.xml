@@ -22,17 +22,15 @@
 			</repository> -->
 		<!-- <repository> <id>clojars.org</id> <url>http://clojars.org/repo</url>
 			</repository> -->
-	<repository>
-		<id>forgerock.org</id>
-		<url>http://maven.forgerock.org/repo/releases/</url>
-	</repository>
+		<repository>
+			<id>forgerock.org</id>
+			<url>http://maven.forgerock.org/repo/releases/</url>
+		</repository>
 
 	</repositories>
 
 
 	<dependencies>
-
-
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -41,9 +39,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>commons-lang</groupId>
-			<artifactId>commons-lang</artifactId>
-			<version>2.6</version>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.5</version>
 		</dependency>
 		<dependency>
 			<groupId>net.sf.jacob-project</groupId>
@@ -211,7 +209,7 @@
 			<version>4.3</version>
 		</dependency>
 
-        <!-- just for CaseInsensitiveProperties.java -->
+		<!-- just for CaseInsensitiveProperties.java -->
 		<!-- https://mvnrepository.com/artifact/org.forgerock.openam/openam-shared -->
 		<dependency>
 			<groupId>org.forgerock.openam</groupId>
