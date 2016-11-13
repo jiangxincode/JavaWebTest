@@ -1,16 +1,19 @@
 package edu.jiangxin.db.mongodb;
 
+import java.net.UnknownHostException;
+
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
 import com.mongodb.Mongo;
+import com.mongodb.MongoException;
 
 public class CRUDTest {
 
 	@SuppressWarnings("deprecation")
-	public static void main(String[] args) {
+	public static void main(String[] args) throws UnknownHostException, MongoException {
 
 		Mongo mongo = new Mongo(); // Mongo实例代表了一个数据库连接池
 		// Mongo mg = new Mongo("localhost");
@@ -23,7 +26,7 @@ public class CRUDTest {
 		for (String name : db.getCollectionNames()) { // 查询该库中所有的集合
 			System.out.println("Collection Name: " + name);
 		}
-		
+
 
 		DBCollection dbCollection = db.getCollection("user");
 		DBCursor dbCuror = dbCollection.find(); // 查询集合中所有的数据
