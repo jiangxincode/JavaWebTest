@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE company[
+
+<!ENTITY shengsiyuan "圣思园">
+<!ENTITY address "北京上地">
+
+]>
+
+<company>
+	<name>&shengsiyuan;</name>
+	<address>&address;</address>
+</company>
+
+
+
+
+
+
+
+
