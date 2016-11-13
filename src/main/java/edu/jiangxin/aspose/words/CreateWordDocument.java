@@ -35,7 +35,7 @@ public class CreateWordDocument {
 
 	public static void main(String[] args) throws Exception {
 		CreateWordDocument wd = new CreateWordDocument();
-		wd.loadLicense();
+		/*wd.loadLicense();*/
 		wd.createMainPage();
 		wd.addHeaderFooter();
 		wd.insertTableOfContent();

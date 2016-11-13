@@ -24,7 +24,7 @@ public class RemoveWatermark {
 	public static void main(String[] args) {
 
 		// 返回读取指定资源的输入流
-		License license = new License();
+		/*License license = new License();
 		InputStream is = null;
 		try {
 			is = RemoveWatermark.class.getResourceAsStream("license.xml");
@@ -42,7 +42,7 @@ public class RemoveWatermark {
 				}
 				is = null;
 			}
-		}
+		}*/
 		try {
 			Document doc = new Document(RemoveWatermark.class.getResourceAsStream("Test002.doc"));
 			SectionCollection sectionColl = doc.getSections();

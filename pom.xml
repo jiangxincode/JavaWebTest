@@ -14,8 +14,10 @@
 
 	<repositories>
 
-		<!-- <repository> <id>AsposeJavaAPI</id> <name>Aspose Java API</name> <url>http://maven.aspose.com/artifactory/simple/ext-release-local/</url>
-			</repository> -->
+		<repository>
+			<id>AsposeJavaAPI</id>
+			<url>http://maven.aspose.com/repository/ext-release-local/</url>
+		</repository>
 		<!-- <repository> <id>osc_thirdparty</id> <url>http://maven.oschina.net/content/repositories/thirdparty/</url>
 			</repository> -->
 		<!-- <repository> <id>github-releases</id> <url>http://oss.sonatype.org/content/repositories/github-releases/</url>
@@ -25,6 +27,14 @@
 		<repository>
 			<id>forgerock.org</id>
 			<url>http://maven.forgerock.org/repo/releases/</url>
+		</repository>
+		<repository>
+			<id>Atlassian 3rd-Party Repository</id>
+			<url>https://maven.atlassian.com/3rdparty/</url>
+		</repository>
+		<repository>
+			<id>EBI</id>
+			<url>http://www.ebi.ac.uk/intact/maven/nexus/content/repositories/ebi-repo/</url>
 		</repository>
 
 	</repositories>
@@ -218,32 +228,42 @@
 		</dependency>
 
 
-
-		<!-- local begin -->
-
+		<!-- https://mvnrepository.com/artifact/com.oracle/ojdbc6 -->
 		<dependency>
-			<groupId>com.aspose</groupId>
-			<artifactId>aspose-words</artifactId>
-			<version>15.9.0-jdk16</version>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>12.1.0.1-atlassian-hosted</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/cpdetector/cpdetector -->
+		<dependency>
+			<groupId>cpdetector</groupId>
+			<artifactId>cpdetector</artifactId>
+			<version>1.0.7</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.aspose</groupId>
 			<artifactId>aspose-cells</artifactId>
-			<version>8.3.1</version>
+			<version>9.0.0</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.aspose</groupId>
+			<artifactId>aspose-words</artifactId>
+			<version>15.9.0</version>
+			<classifier>jdk16</classifier>
+		</dependency>
+
+
+		<!-- local begin -->
 		<dependency>
 			<groupId>jeasy</groupId>
 			<artifactId>je-analysis</artifactId>
 			<version>1.5.3</version>
 		</dependency>
 
-		<dependency>
-			<groupId>cpdetector</groupId>
-			<artifactId>cpdetector</artifactId>
-			<version>1.0.7</version>
-		</dependency>
+
 
 		<!-- local end -->
 
