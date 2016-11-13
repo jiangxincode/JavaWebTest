@@ -1,6 +1,7 @@
 # Test
 
-[![Build status](https://ci.appveyor.com/api/projects/status/m5r92mlo6874n877/branch/master?svg=true)](https://ci.appveyor.com/project/jiangxincode/javawebtest/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/lcxa9ka5mltxighw?svg=true)](https://ci.appveyor.com/project/jiangxincode/javawebtest)
+[![Dependency Status](https://www.versioneye.com/user/projects/58286ae9f09d22004f59150d/badge.svg?style=flat)](https://www.versioneye.com/user/projects/58286ae9f09d22004f59150d)
 
 jiangxinnju@163.com
 

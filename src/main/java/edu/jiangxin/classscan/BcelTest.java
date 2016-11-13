@@ -1,13 +1,13 @@
 package edu.jiangxin.classscan;
 
-import org.apache.commons.classscan.MetaClassLoader;
+/*import org.apache.commons.classscan.MetaClassLoader;
 import org.apache.commons.classscan.MetaRegistry;
-import org.apache.commons.classscan.model.MetaClass;
+import org.apache.commons.classscan.model.MetaClass;*/
 
 public class BcelTest {
 
 	public static void main(String[] args) {
-		MetaClassLoader classLoader = MetaRegistry.DEFAULT_REGISTRY
+		/*MetaClassLoader classLoader = MetaRegistry.DEFAULT_REGISTRY
 				.getMetaClassLoader(BcelTest.class.getClass().getClassLoader());
 		MetaClass thisClass = classLoader.findMetaClass(BcelTest.class.getClass().getCanonicalName());
 
@@ -15,7 +15,7 @@ public class BcelTest {
 		System.out.println(classLocation);
 
 		MetaClass pmc = thisClass.getParent();
-		System.out.println(pmc.getParent());
+		System.out.println(pmc.getParent());*/
 	}
 
 }

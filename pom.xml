@@ -193,7 +193,7 @@
 			<version>2.6.12</version>
 		</dependency>
 
-		<dependency>
+<!-- 		<dependency>
 			<groupId>org.apache.commons.classscan</groupId>
 			<artifactId>bcel</artifactId>
 			<version>0.2-SNAPSHOT</version>
@@ -203,7 +203,7 @@
 			<groupId>org.apache.commons.classscan</groupId>
 			<artifactId>api</artifactId>
 			<version>0.2-SNAPSHOT</version>
-		</dependency>
+		</dependency> -->
 
 		<dependency>
 			<groupId>org.ow2.asm</groupId>
