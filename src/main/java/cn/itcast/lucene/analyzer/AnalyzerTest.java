@@ -2,8 +2,6 @@ package cn.itcast.lucene.analyzer;
 
 import java.io.StringReader;
 
-import jeasy.analysis.MMAnalyzer;
-
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.SimpleAnalyzer;
 import org.apache.lucene.analysis.Token;
@@ -23,15 +21,16 @@ public class AnalyzerTest {
 	Analyzer en2 = new SimpleAnalyzer();
 
 	Analyzer zh1 = new CJKAnalyzer(); // 二分法分词
-	Analyzer zh2 = new MMAnalyzer(); // 词库分词
+	// need je-analysis
+	// Analyzer zh2 = new MMAnalyzer(); // 词库分词
 
 	@Test
 	public void test() throws Exception {
 		// analyze(en2, enText);
 		// analyze(en1, zhText);
 
-		// analyze(zh1, zhText);
-		analyze(zh2, zhText);
+		analyze(zh1, zhText);
+		// analyze(zh2, zhText);
 	}
 
 	public void analyze(Analyzer analyzer, String text) throws Exception {

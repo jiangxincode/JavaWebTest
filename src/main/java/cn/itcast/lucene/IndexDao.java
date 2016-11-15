@@ -6,9 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import jeasy.analysis.MMAnalyzer;
-
 import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.NumberTools;
 import org.apache.lucene.index.IndexWriter;
@@ -36,12 +35,12 @@ public class IndexDao {
 
 	String indexPath = "target/test-classes/cn/itcast/lucene/luceneIndex";
 
-	// Analyzer analyzer = new StandardAnalyzer();
-	Analyzer analyzer = new MMAnalyzer();// 词库分词
+	Analyzer analyzer = new StandardAnalyzer();
+	// Analyzer analyzer = new MMAnalyzer();// 词库分词
 
 	/**
 	 * 添加/创建索引
-	 * 
+	 *
 	 * @param doc
 	 */
 	public void save(Document doc) {
@@ -62,13 +61,13 @@ public class IndexDao {
 
 	/**
 	 * Term是搜索的最小单位，代表某个 Field 中的一个关键词，如：<title, lucene>
-	 * 
+	 *
 	 * new Term( "title", "lucene" );
-	 * 
+	 *
 	 * new Term( "id", "5" );
-	 * 
+	 *
 	 * new Term( "id", UUID );
-	 * 
+	 *
 	 * @param term
 	 */
 	public void delete(Term term) {
@@ -89,12 +88,12 @@ public class IndexDao {
 
 	/**
 	 * 更新索引
-	 * 
+	 *
 	 * <pre>
 	 * indexWriter.deleteDocuments(term);
 	 * indexWriter.addDocument(doc);
 	 * </pre>
-	 * 
+	 *
 	 * @param term
 	 * @param doc
 	 */
@@ -120,7 +119,7 @@ public class IndexDao {
 	 * if (recordCount % pageSize &gt; 0)
 	 * 	totalPage++;
 	 * </pre>
-	 * 
+	 *
 	 * @param queryString
 	 * @param firstResult
 	 * @param maxResults

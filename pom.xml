@@ -257,12 +257,9 @@
 		<dependency>
 			<groupId>com.aspose</groupId>
 			<artifactId>aspose-words</artifactId>
-			<version>15.9.0</version>
+			<version>15.11.0</version>
 			<classifier>jdk16</classifier>
 		</dependency>
-
-
-
 
 		<dependency>
 			<groupId>log4j</groupId>
@@ -358,13 +355,6 @@
 			<version>3.0.0-milestone2</version>
 		</dependency>
 
-
-
-
-
-
-
-
 		<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
 		<dependency>
 			<groupId>org.freemarker</groupId>
@@ -398,14 +388,11 @@
 		</dependency>
 
 		<!-- local begin -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>jeasy</groupId>
 			<artifactId>je-analysis</artifactId>
 			<version>1.5.3</version>
-		</dependency>
-
-
-
+		</dependency> -->
 		<!-- local end -->
 
 
