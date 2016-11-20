@@ -17,7 +17,6 @@ public class CollectionUtils {
 			}
 		}
 		return true;
-
 	}
 
 	public static void main(String[] args) {

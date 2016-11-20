@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 import oracle.sql.BLOB;
 
+@SuppressWarnings("deprecation")
 public class OracleUtils {
 
 	/**
@@ -14,7 +15,7 @@ public class OracleUtils {
 	 * @param blob
 	 * @return
 	 */
-	private byte[] getBytes(BLOB blob) {
+	public byte[] getBytes(BLOB blob) {
 		try {
 			InputStream ins = blob.getBinaryStream();
 			byte[] b = new byte[1024];
@@ -38,7 +39,7 @@ public class OracleUtils {
 	 * @param blob
 	 * @return
 	 */
-	private byte[] blobToBytes(BLOB blob) {
+	public byte[] blobToBytes(BLOB blob) {
 		InputStream is = null;
 		byte[] b = null;
 		try {
