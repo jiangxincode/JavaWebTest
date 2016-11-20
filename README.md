@@ -110,3 +110,53 @@ Some tests and exercises in Java.
 
 * 原工程：component
 * 所在包：cn.itcast.storm.component
+
+
+# 设计模式
+
+## 大话设计模式源代码 JAVA 吴强
+
+* 修改了代码格式
+
+publishSubscribe?
+* 第一章 大学毕业了怎么办？——设计模式概述
+
+* 第二章 学校招聘会——接口型模式介绍
+* 第三章 我们班来了位新同学——适配器模式 adapter
+* 第四章 金融危机股票还挣钱？——外观模式 facade
+* 第五章 生日礼物——组合模式 composite
+* 第六章 蜡笔与毛笔——桥接模式 bridge
+
+* 第七章 击鼓传花——责任型模式 chainOfResponsibility
+* 第八章 购物车——单体模式 singleton
+* 第九章 放风者与偷窃者——观察者模式
+* 第十章 中介公司——中介者模式 mediator
+* 第十一章 高老庄的故事——代理模式 proxy
+* 第十二章 包子——享元模式 flyWeight
+
+* 第十三章 可恶的皇帝——构造型模式
+* 第十四章 汽车组装——生成器模式 builder
+* 第十五章 运动协会——工厂方法模式 factoryMethod simpleFactory
+* 第十六章 麦当劳的鸡腿——抽象工厂模式
+* 第十七章 兰州拉面馆——原型模式 prototype
+* 第十八章 月光宝盒——备忘录模式 memento
+
+* 第十九章 儿子的功课——操作型模式
+* 第二十章 订单处理——模板方法模式 templateMethod
+* 第二十一章 金融危机何时休——状态模式 state
+* 第二十二章 还钱——策略模式 strategy
+* 第二十三章 饭店点菜——命令模式 command
+* 第二十四章 苹果汁——解释器模式 interpreter
+
+* 第二十五章 多功能的手机——扩展型模式
+* 第二十六章 三明治——装饰器模式 decorator
+* 第二十七章 老公，有钱不？——迭代器模式
+* 第二十八章 只会工人工作——访问者模式 visitor
+* 第二十九章 大学生毕业3条出路：学、仕、商——设计模式总结
+
+## 自己添加
+
+* 委托模式
+
+
+Java加密与解密的艺术。

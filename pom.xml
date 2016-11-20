@@ -96,10 +96,10 @@
 			<artifactId>dom4j</artifactId>
 			<version>1.6.1</version>
 			<exclusions>
-                <exclusion>
-                	<groupId>xml-apis</groupId>
-                	<artifactId>xml-apis</artifactId>
-                </exclusion>
+				<exclusion>
+					<groupId>xml-apis</groupId>
+					<artifactId>xml-apis</artifactId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 
@@ -193,17 +193,9 @@
 			<version>2.6.12</version>
 		</dependency>
 
-<!-- 		<dependency>
-			<groupId>org.apache.commons.classscan</groupId>
-			<artifactId>bcel</artifactId>
-			<version>0.2-SNAPSHOT</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.commons.classscan</groupId>
-			<artifactId>api</artifactId>
-			<version>0.2-SNAPSHOT</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>org.apache.commons.classscan</groupId> <artifactId>bcel</artifactId>
+			<version>0.2-SNAPSHOT</version> </dependency> <dependency> <groupId>org.apache.commons.classscan</groupId>
+			<artifactId>api</artifactId> <version>0.2-SNAPSHOT</version> </dependency> -->
 
 		<dependency>
 			<groupId>org.ow2.asm</groupId>
@@ -387,13 +379,24 @@
 			<version>3.5.6-Final</version>
 		</dependency>
 
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.10</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcprov-jdk16</artifactId>
+			<version>1.46</version>
+		</dependency>
+
 		<!-- local begin -->
-		<!-- <dependency>
-			<groupId>jeasy</groupId>
-			<artifactId>je-analysis</artifactId>
-			<version>1.5.3</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>jeasy</groupId> <artifactId>je-analysis</artifactId>
+			<version>1.5.3</version> </dependency> -->
 		<!-- local end -->
+
+
 
 
 
@@ -401,29 +404,83 @@
 	</dependencies>
 
 	<build>
+
+		<!-- 默认源代码和资源文件目录配置 -->
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<testSourceDirectory>src/test/java</testSourceDirectory>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+			</testResource>
+		</testResources>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.3</version>
+				<version>3.6.0</version>
 				<configuration>
 					<source>1.7</source>
 					<target>1.7</target>
 				</configuration>
 			</plugin>
+
+
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>2.6</version>
+				<version>3.0.0</version>
 				<configuration>
 					<warSourceDirectory>WebRoot</warSourceDirectory>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
 			</plugin>
 
+			<!-- 扩展源代码和资源文件目录 -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<!-- 我们可以通过在这里添加多个source节点，来添加任意多个源文件夹 -->
+								<source>${basedir}/src/designpattern/java</source>
+								<source>${basedir}/src/encrypt/java</source>
+							</sources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>add-resource</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>add-resource</goal>
+						</goals>
+						<configuration>
+							<resources>
+								<!-- 我们可以通过在这里添加多个resource节点 -->
+								<resource>
+									<directory>${basedir}/src/multimodule/resources</directory>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
 			<plugin>
 				<groupId>org.antlr</groupId>
 				<artifactId>antlr4-maven-plugin</artifactId>
-				<version>4.3</version>
+				<version>4.5.3</version>
 				<executions>
 					<execution>
 						<id>antlr</id>
@@ -437,7 +494,7 @@
 			<plugin>
 				<groupId>org.jvnet.jax-ws-commons</groupId>
 				<artifactId>jaxws-maven-plugin</artifactId>
-				<version>2.2</version>
+				<version>2.3</version>
 				<executions>
 					<execution>
 						<goals>
