@@ -6,6 +6,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.ArrayUtils;
+
+import com.sun.identity.shared.encode.Base64;
 
 public class String2BytesUtils {
 
@@ -64,11 +67,32 @@ public class String2BytesUtils {
 		FileUtils.writeStringToFile(new File(filename), content, "UTF-8");
 	}
 
+	//会有换行问题
+	public static String readBinFile2String3(String filename) throws IOException {
+		StringBuilder sb = new StringBuilder();
+		byte[] buff = new byte[1024];
+
+		FileInputStream fis = new FileInputStream(new File(filename));
+
+		int len;
+		while ((len = fis.read(buff)) != -1) {
+			sb.append(Base64.encode(ArrayUtils.subarray(buff, 0, len)));
+		}
+		fis.close();
+		return sb.toString();
+	}
+
+	public static void writeString2BinFile3(String content, String filename) throws IOException {
+		FileOutputStream fos = new FileOutputStream(new File(filename));
+		fos.write(Base64.decode(content));
+		fos.close();
+	}
+
 	public static void main(String[] args) throws IOException {
 		//只有0可以
-		String result = readBinFile2String2(String2BytesUtils.class.getResource("").getPath() + "gpl3-process.pdf");
+		String result = readBinFile2String3(String2BytesUtils.class.getResource("").getPath() + "gpl3-process.pdf");
 		System.out.println(result);
-		writeString2BinFile2(result, String2BytesUtils.class.getResource("").getPath() + "gpl3-process_new.pdf");
+		writeString2BinFile3(result, String2BytesUtils.class.getResource("").getPath() + "gpl3-process_new.pdf");
 	}
 
 }

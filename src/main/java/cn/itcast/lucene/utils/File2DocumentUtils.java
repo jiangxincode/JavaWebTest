@@ -13,10 +13,8 @@ import org.apache.lucene.document.Field.Store;
 
 public class File2DocumentUtils {
 
-	// 文件：name, content, size, path
 	public static Document file2Document(String path) {
 		File file = new File(path);
-
 		Document doc = new Document();
 		doc.add(new Field("name", file.getName(), Store.YES, Index.ANALYZED));
 		doc.add(new Field("content", readFileContent(file), Store.YES, Index.ANALYZED));
@@ -26,7 +24,7 @@ public class File2DocumentUtils {
 	}
 
 	// public static void document2File(Document doc ){
-	//		
+	//
 	// }
 
 	/**
@@ -54,7 +52,7 @@ public class File2DocumentUtils {
 	 *    f.stringValue();
 	 * 2，doc.get(&quot;name&quot;);
 	 * </pre>
-	 * 
+	 *
 	 * @param doc
 	 */
 	public static void printDocumentInfo(Document doc) {

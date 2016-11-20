@@ -12,7 +12,7 @@ import javax.crypto.spec.SecretKeySpec;
 
 /**
  * AES安全编码组件
- * 
+ *
  * @author 梁栋
  * @version 1.0
  */
@@ -24,15 +24,15 @@ public abstract class AESCoder {
 	public static final String KEY_ALGORITHM = "AES";
 
 	/**
-	 * 加密/解密算法 / 工作模式 / 填充方式 
-	 * Java 6支持PKCS5Padding填充方式 
+	 * 加密/解密算法 / 工作模式 / 填充方式
+	 * Java 6支持PKCS5Padding填充方式
 	 * Bouncy Castle支持PKCS7Padding填充方式
 	 */
 	public static final String CIPHER_ALGORITHM = "AES/ECB/PKCS5Padding";
 
 	/**
 	 * 转换密钥
-	 * 
+	 *
 	 * @param key 二进制密钥
 	 * @return Key 密钥
 	 * @throws Exception
@@ -47,7 +47,7 @@ public abstract class AESCoder {
 
 	/**
 	 * 解密
-	 * 
+	 *
 	 * @param data 待解密数据
 	 * @param key 密钥
 	 * @return byte[] 解密数据
@@ -59,8 +59,8 @@ public abstract class AESCoder {
 		Key k = toKey(key);
 
 		/*
-		 * 实例化 
-		 * 使用PKCS7Padding填充方式，按如下方式实现 
+		 * 实例化
+		 * 使用PKCS7Padding填充方式，按如下方式实现
 		 * Cipher.getInstance(CIPHER_ALGORITHM, "BC");
 		 */
 		Cipher cipher = Cipher.getInstance(CIPHER_ALGORITHM);
@@ -74,7 +74,7 @@ public abstract class AESCoder {
 
 	/**
 	 * 加密
-	 * 
+	 *
 	 * @param data 待加密数据
 	 * @param key 密钥
 	 * @return byte[] 加密数据
@@ -86,7 +86,7 @@ public abstract class AESCoder {
 		Key k = toKey(key);
 
 		/*
-		 * 实例化 
+		 * 实例化
 		 * 使用PKCS7Padding填充方式，按如下方式实现
 		 * Cipher.getInstance(CIPHER_ALGORITHM, "BC");
 		 */
@@ -101,7 +101,7 @@ public abstract class AESCoder {
 
 	/**
 	 * 生成密钥 <br>
-	 * 
+	 *
 	 * @return byte[] 二进制密钥
 	 * @throws Exception
 	 */
@@ -113,7 +113,7 @@ public abstract class AESCoder {
 		/*
 		 * AES 要求密钥长度为 128位、192位或 256位
 		 */
-		kg.init(256);
+		kg.init(128);
 
 		// 生成秘密密钥
 		SecretKey secretKey = kg.generateKey();

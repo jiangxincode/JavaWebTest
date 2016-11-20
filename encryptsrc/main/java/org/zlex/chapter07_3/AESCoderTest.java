@@ -10,7 +10,7 @@ import org.junit.Test;
 
 /**
  * AES安全编码组件校验
- * 
+ *
  * @author 梁栋
  * @version 1.0
  */
@@ -18,7 +18,7 @@ public class AESCoderTest {
 
 	/**
 	 * 测试
-	 * 
+	 *
 	 * @throws Exception
 	 */
 	@Test

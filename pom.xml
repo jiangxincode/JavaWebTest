@@ -395,12 +395,6 @@
 		<!-- <dependency> <groupId>jeasy</groupId> <artifactId>je-analysis</artifactId>
 			<version>1.5.3</version> </dependency> -->
 		<!-- local end -->
-
-
-
-
-
-
 	</dependencies>
 
 	<build>
