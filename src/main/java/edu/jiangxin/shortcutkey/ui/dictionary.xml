@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE config SYSTEM "dictionary.dtd">
+<dictionary>
+
+	<application name="word">
+		<version id="*" description="default">
+			<shortcutkeys>
+				<shortcutkey>
+					<key>Ctrl+C</key>
+					<function>Copy</function>
+					<description>Copy...</description>
+				</shortcutkey>
+				<shortcutkey>
+					<key>Ctrl+V</key>
+					<function>Paste</function>
+					<description>Paste...</description>
+				</shortcutkey>
+				<shortcutkey>
+					<key>Ctrl+X</key>
+					<function>Cut</function>
+					<description>Cut...</description>
+				</shortcutkey>
+			</shortcutkeys>
+		</version>
+
+		<version id="2003">
+			<shortcutkeys>
+				<shortcutkey>
+					<key>Ctrl+2003</key>
+					<function>Word 2003</function>
+					<description>Word 2003...</description>
+				</shortcutkey>
+			</shortcutkeys>
+		</version>
+
+		<version id="2007">
+			<shortcutkeys>
+				<shortcutkey>
+					<key>Ctrl+2007</key>
+					<function>Word 2007</function>
+					<description>Word 2007...</description>
+				</shortcutkey>
+			</shortcutkeys>
+		</version>
+
+	</application>
+
+	<application name="eclipse">
+		<version id="4.5" description="Mars">
+			<shortcutkeys>
+				<shortcutkey>
+					<key>Ctrl+C</key>
+					<function>Copy</function>
+					<description>Copy...</description>
+				</shortcutkey>
+				<shortcutkey>
+					<key>Ctrl+V</key>
+					<function>Paste</function>
+					<description>Paste...</description>
+				</shortcutkey>
+				<shortcutkey>
+					<key>Ctrl+X</key>
+					<function>Cut</function>
+					<description>Cut...</description>
+				</shortcutkey>
+			</shortcutkeys>
+		</version>
+
+	</application>
+
+</dictionary>
