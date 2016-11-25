@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>New Document</title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<script type="text/javascript"
+	src="../jsunit2_2/app/jsUnitCore.js"></script>
+<script type="text/javascript">
+    //测试套件名一定为suite
+    function suite() {
+	var testSuite = new top.jsUnitTestSuite();
+
+	// 增加的测试页面的路径是相对于测试运行器（testRunner.html）的路径
+	// 而不是当前页面
+	testSuite.addTestPage("../js12/test1.html");
+	testSuite.addTestPage("../js12/test1.html");
+	testSuite.addTestPage("../js12/test1.html");
+
+	return testSuite;
+    }
+</script>
+</head>
+<body>
+</body>
+</html>
