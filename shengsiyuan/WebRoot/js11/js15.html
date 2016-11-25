@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+
+<script type="text/javascript">
+
+//使用混合方式实现对象继承(推荐)
+
+function Parent(hello)
+{
+    this.hello = hello;
+}
+
+Parent.prototype.sayHello = function()
+{
+    alert(this.hello);
+}
+
+function Child(hello, world)
+{
+    Parent.call(this, hello);
+
+    this.world = world;
+}
+
+Child.prototype = new Parent();
+
+Child.prototype.sayWorld = function()
+{
+    alert(this.world);
+}
+
+var child = new Child("hello", "world");
+
+child.sayHello();
+child.sayWorld();
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </head>
+
+ <body>
+
+ </body>
+</html>
