@@ -1,75 +1,42 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
- <head>
-  <title> New Document </title>
-  <meta name="Generator" content="EditPlus">
-  <meta name="Author" content="">
-  <meta name="Keywords" content="">
-  <meta name="Description" content="">
-
+<head>
+<title>New Document</title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
 <script type="text/javascript">
+    //使用call方式实现对象的继承
 
-//使用call方式实现对象的继承
+    function Parent(username) {
+	this.username = username;
 
-function Parent(username)
-{
-    this.username = username;
-
-    this.sayHello = function()
-    {
-        alert(this.username);
+	this.sayHello = function() {
+	    alert(this.username);
+	}
     }
-}
 
-function Child(username, password)
-{
-    Parent.call(this, username);
+    function Child(username, password) {
+	Parent.call(this, username);
 
-    this.password = password;
+	this.password = password;
 
-    this.sayWorld = function()
-    {
-        alert(this.password);
+	this.sayWorld = function() {
+	    alert(this.password);
+	}
     }
-}
 
-var parent = new Parent("zhangsan");
+    var parent = new Parent("zhangsan");
 
-var child = new Child("lisi", "123");
+    var child = new Child("lisi", "123");
 
-parent.sayHello();
+    parent.sayHello();
 
-child.sayHello();
-child.sayWorld();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    child.sayHello();
+    child.sayWorld();
 </script>
-
-
-
-
-
-
-
-
-
-
- </head>
-
- <body>
-
- </body>
+</head>
+<body>
+</body>
 </html>
