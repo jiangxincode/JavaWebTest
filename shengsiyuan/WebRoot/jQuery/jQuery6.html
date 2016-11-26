@@ -1,58 +1,41 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
- <head>
-  <title> New Document </title>
-  <meta name="Generator" content="EditPlus">
-  <meta name="Author" content="">
-  <meta name="Keywords" content="">
-  <meta name="Description" content="">
-
-  <script type="text/javascript" src="jquery-1.4.4.js"></script>
-
-  <script type="text/javascript">
-
-  $(document).ready(function()
-  {
+<head>
+<title>New Document</title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="jquery-1.4.4.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
 	var pElement = document.getElementsByTagName("p")[0];
 
-    //½«DOM¶ÔÏó×ª»»ÎªjQuery¶ÔÏó
-	
+	//å°†DOMå¯¹è±¡è½¬æ¢ä¸ºjQueryå¯¹è±¡
+
 	var pElementjQuery = $(pElement);
 
-    //alert("DOM¶ÔÏó½á¹û£º" + pElement.innerHTML);
-    //alert("jQuery¶ÔÏó½á¹û£º" + pElementjQuery.html());
+	//alert("DOMå¯¹è±¡ç»“æœï¼š" + pElement.innerHTML);
+	//alert("jQueryå¯¹è±¡ç»“æœï¼š" + pElementjQuery.html());
 
-    var cm = $("#clickMe"); //»ñµÃµÄÊÇjQuery¶ÔÏó
+	var cm = $("#clickMe"); //è·å¾—çš„æ˜¯jQueryå¯¹è±¡
 
-    // jQuery¶ÔÏó×ª»»ÎªDOM¶ÔÏó(µÚÒ»ÖÖ·½Ê½)
+	// jQueryå¯¹è±¡è½¬æ¢ä¸ºDOMå¯¹è±¡(ç¬¬ä¸€ç§æ–¹å¼)
 
-	var t = cm[0]; // tÊÇDOM¶ÔÏó
+	var t = cm[0]; // tæ˜¯DOMå¯¹è±¡
 	alert(t.innerHTML);
 
-    // jQuery¶ÔÏó×ª»»ÎªDOM¶ÔÏó(µÚ¶şÖÖ·½Ê½)
+	// jQueryå¯¹è±¡è½¬æ¢ä¸ºDOMå¯¹è±¡(ç¬¬äºŒç§æ–¹å¼)
 
-    var s = cm.get(0);
+	var s = cm.get(0);
 
-	alert(s.innerHTML); //sÊÇDOM¶ÔÏó
- 
+	alert(s.innerHTML); //sæ˜¯DOMå¯¹è±¡
 
-  });
-
-
-
-
-
-  </script>
-
-
-
-
-
- </head>
-
- <body>
-  
- <p id="clickMe">µã»÷ÎÒ</p>
-
- </body>
+    });
+</script>
+</head>
+<body>
+	<p id="clickMe">ç‚¹å‡»æˆ‘</p>
+</body>
 </html>
