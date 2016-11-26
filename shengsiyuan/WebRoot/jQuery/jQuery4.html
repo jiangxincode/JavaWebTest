@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+
+  <script type="text/javascript">
+
+  window.onload = function()
+  {
+	var myLinks = document.getElementsByTagName("a");
+
+	for(var i = 0; i < myLinks.length; i++)
+	{
+		myLinks[i].onclick = function()
+		{
+			alert("Hello World"); //给每一个超链接对象附加onclick属性
+		}
+	}
+  }
+
+  </script>
+
+
+ </head>
+
+ <body>
+
+ <a href="#">test1</a><br>
+ <a href="#">test2</a><br>
+ <a href="#">test3</a><br>
+ <a href="#">test4</a><br>
+ <a href="#">test5</a><br>
+ <a href="#">test6</a><br>
+
+
+
+  
+ </body>
+</html>
