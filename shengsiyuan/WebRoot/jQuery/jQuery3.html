@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+
+  <script type="text/javascript" src="jquery-1.4.4.js"></script>
+
+  <script type="text/javascript">
+/*
+  window.onload = function()
+  {
+	var myTable = document.getElementById("table1");
+    var myTBody = myTable.getElementsByTagName("tbody")[0];
+    var myTrs = myTBody.getElementsByTagName("tr");
+
+	for(var i = 0; i < myTrs.length; i++)
+	{
+		if(i % 2 == 0)
+		{
+			myTrs[i].style.backgroundColor = "red";
+		}
+		else
+		{
+			myTrs[i].style.backgroundColor = "blue";
+		}
+	}  
+  }
+*/
+  $(function()
+  {
+	$("#table1 tbody tr:even").css('background', 'red');
+	$("#table1 tbody tr:odd").css('background', 'blue');
+  });
+
+
+
+  </script>
+  
+
+ </head>
+
+ <body>
+  
+<table id="table1" border="1" align="center" width="80%">
+
+<tbody>
+
+  <tr><td>hello</td><td>hello</td><td>hello</td><td>hello</td></tr>
+  <tr><td>world</td><td>world</td><td>world</td><td>world</td></tr>
+  <tr><td>welcome</td><td>welcome</td><td>welcome</td><td>welcome</td></tr>
+  <tr><td>aaaaa</td><td>aaaaa</td><td>aaaaa</td><td>aaaaa</td></tr>
+  <tr><td>bbbbb</td><td>bbbbb</td><td>bbbbb</td><td>bbbbb</td></tr>
+  <tr><td>ccccc</td><td>ccccc</td><td>ccccc</td><td>ccccc</td></tr>
+  <tr><td>ddddd</td><td>ddddd</td><td>ddddd</td><td>ddddd</td></tr>
+  <tr><td>eeeee</td><td>eeeee</td><td>eeeee</td><td>eeeee</td></tr>
+  <tr><td>fffff</td><td>fffff</td><td>fffff</td><td>fffff</td></tr>
+  <tr><td>hello</td><td>hello</td><td>hello</td><td>hello</td></tr>
+  <tr><td>world</td><td>world</td><td>world</td><td>world</td></tr>
+  <tr><td>welcome</td><td>welcome</td><td>welcome</td><td>welcome</td></tr>
+  <tr><td>aaaaa</td><td>aaaaa</td><td>aaaaa</td><td>aaaaa</td></tr>
+  <tr><td>bbbbb</td><td>bbbbb</td><td>bbbbb</td><td>bbbbb</td></tr>
+  <tr><td>ccccc</td><td>ccccc</td><td>ccccc</td><td>ccccc</td></tr>
+  <tr><td>ddddd</td><td>ddddd</td><td>ddddd</td><td>ddddd</td></tr>
+  <tr><td>eeeee</td><td>eeeee</td><td>eeeee</td><td>eeeee</td></tr>
+  <tr><td>fffff</td><td>fffff</td><td>fffff</td><td>fffff</td></tr>
+  <tr><td>hello</td><td>hello</td><td>hello</td><td>hello</td></tr>
+  <tr><td>world</td><td>world</td><td>world</td><td>world</td></tr>
+  <tr><td>welcome</td><td>welcome</td><td>welcome</td><td>welcome</td></tr>
+  <tr><td>aaaaa</td><td>aaaaa</td><td>aaaaa</td><td>aaaaa</td></tr>
+  <tr><td>bbbbb</td><td>bbbbb</td><td>bbbbb</td><td>bbbbb</td></tr>
+  <tr><td>ccccc</td><td>ccccc</td><td>ccccc</td><td>ccccc</td></tr>
+  <tr><td>ddddd</td><td>ddddd</td><td>ddddd</td><td>ddddd</td></tr>
+  <tr><td>eeeee</td><td>eeeee</td><td>eeeee</td><td>eeeee</td></tr>
+  <tr><td>fffff</td><td>fffff</td><td>fffff</td><td>fffff</td></tr>
+
+
+</tbody>
+
+</table>
+
+
+ </body>
+</html>
