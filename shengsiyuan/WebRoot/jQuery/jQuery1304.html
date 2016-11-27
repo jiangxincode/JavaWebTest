@@ -12,33 +12,33 @@
   /*
   window.onload = function()
   {
-	var btn = document.getElementById("myButton");
-	
-	btn.onclick = function()
-	{
-		var count = 0;
+    var btn = document.getElementById("myButton");
 
-		var checkboxs = document.getElementsByName("myCheck");
+    btn.onclick = function()
+    {
+        var count = 0;
 
-		for(var i = 0; i < checkboxs.length; i++)
-		{
-			if(checkboxs[i].checked)
-			{
-				count++;
-			}
-		}
+        var checkboxs = document.getElementsByName("myCheck");
 
-		alert("number: " + count);
-	}
+        for(var i = 0; i < checkboxs.length; i++)
+        {
+            if(checkboxs[i].checked)
+            {
+                count++;
+            }
+        }
+
+        alert("number: " + count);
+    }
   }
 */
 
 $(function()
 {
-	$("#myButton").click(function()
-	{
-		alert("Ñ¡ÖÐ¸öÊý£º " + $('input[name="myCheck"]:checked').length);
-	});
+    $("#myButton").click(function()
+    {
+        alert("é€‰ä¸­ä¸ªæ•°ï¼š " + $('input[name="myCheck"]:checked').length);
+    });
 });
 
   </script>
@@ -48,7 +48,7 @@ $(function()
  </head>
 
  <body>
-  
+
  <input type="checkbox" name="myCheck" checked="checked">
  <input type="checkbox" name="myCheck">
  <input type="checkbox" name="myCheck" checked="checked">
