@@ -204,11 +204,11 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.mvel/mvel2 -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.mvel</groupId>
 			<artifactId>mvel2</artifactId>
 			<version>2.2.8.Final</version>
-		</dependency>
+		</dependency> -->
 
 		<!-- https://mvnrepository.com/artifact/org.antlr/antlr4-runtime -->
 		<dependency>
@@ -307,25 +307,25 @@
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-core</artifactId>
-			<version>1.12</version>
+			<version>1.19.3</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-client</artifactId>
-			<version>1.12</version>
+			<version>1.19.3</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-server</artifactId>
-			<version>1.12</version>
+			<version>1.19.3</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-servlet</artifactId>
-			<version>1.12</version>
+			<version>1.19.3</version>
 		</dependency>
 
 		<!-- http://mvnrepository.com/artifact/commons-httpclient/commons-httpclient -->
