@@ -234,11 +234,12 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/cpdetector/cpdetector -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>cpdetector</groupId>
 			<artifactId>cpdetector</artifactId>
-			<version>1.0.7</version>
-		</dependency>
+			<version>1.04</version>
+		</dependency> -->
+
 
 		<dependency>
 			<groupId>com.aspose</groupId>
