@@ -1,29 +1,22 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
- <head>
-  <title> New Document </title>
-  <meta name="Generator" content="EditPlus">
-  <meta name="Author" content="">
-  <meta name="Keywords" content="">
-  <meta name="Description" content="">
+<head>
+<title>New Document</title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<script type="text/javascript" src="jquery-1.4.4.js"></script>
+</head>
+<body>
+	<a id="hello" style="color: blue">click me</a>
+	<script type="text/javascript">
+	alert($("#hello").css("color"));
+	$("#hello").css("color", "#ff0000");
 
-  <script type="text/javascript" src="jquery-1.4.4.js"></script>
-
- </head>
-
- <body>
-  
-  <a id="hello" style="color:blue">click me</a>
-
-  <script type="text/javascript">
-
-  //alert($("#hello").css("color"));
-
-  alert($("#hello")[0]);
-  alert($("#hello").get(0));
-
-  </script>
-
-
- </body>
+	alert($("#hello").length);
+	alert($("#hello")[0]);
+	alert($("#hello").get(0));
+    </script>
+</body>
 </html>
