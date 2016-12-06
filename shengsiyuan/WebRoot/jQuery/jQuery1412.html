@@ -1,107 +1,74 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
- <head>
-  <title> New Document </title>
-  <meta name="Generator" content="EditPlus">
-  <meta name="Author" content="">
-  <meta name="Keywords" content="">
-  <meta name="Description" content="">
-
+<head>
+<title>New Document</title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
 <style type="text/css">
-
-.high{
-font-weight: bold;
-color:red
+.high {
+	font-weight: bold;
+	color: red
 }
 
-.another{
-font-style:italic;
-color:green
+.another {
+	font-style: italic;
+	color: green
 }
-
-
-
 </style>
-
- <script type="text/javascript" src="jquery-1.4.4.js"></script>
-
+<script type="text/javascript" src="jquery-1.4.4.js"></script>
 <script type="text/javascript">
-
- $(function()
- {
-	$("input:eq(0)").click(function()
-	{
-		alert($('p').attr("class"));
+    $(function() {
+	$("input:eq(0)").click(function() {
+	    alert($('p').attr("class"));
 	});
 
-    $("input:eq(1)").click(function()
-	{
-		$("p").attr("class", "high");
+	$("input:eq(1)").click(function() {
+	    $("p").attr("class", "high");
 	});
 
-	$("input:eq(2)").click(function()
-	{
-		$("p").addClass("high");
+	$("input:eq(2)").click(function() {
+	    $("p").addClass("high");
 	});
 
-	$("input:eq(3)").click(function()
-	{
-		$("p").removeClass("high");
+	$("input:eq(3)").click(function() {
+	    $("p").removeClass("high");
 	});
 
-	$("input:eq(4)").click(function()
-	{
-		$("p").removeClass();
+	$("input:eq(4)").click(function() {
+	    $("p").removeClass();
 	});
 
-	$("input:eq(5)").click(function()
-	{
-		$("p").toggleClass("another");
+	$("input:eq(5)").click(function() {
+	    $("p").toggleClass("another");
 	});
 
-	$("input:eq(6)").click(function()
-	{
-		//alert($('p').hasClass('another'));
+	$("input:eq(6)").click(function() {
+	    //alert($('p').hasClass('another'));
 
-		alert($('p').is('.another'));
+	    alert($('p').is('.another'));
 	});
 
-
-
- });
-
-
+    });
 </script>
-
-
-
- </head>
-
- <body>
-  
-<input type="button" value="button1">
-<input type="button" value="button2">
-<input type="button" value="button3">
-<input type="button" value="button4">
-<input type="button" value="button5">
-<input type="button" value="button6">
-<input type="button" value="button7">
-
-
-<p title="hello world" class="hello">ÄúÈÏÎªÊ¥Ë¼Ô°ÅàÑµºÃ²»ºÃÄØ£¿</p>
-
- <ul>
-
- <li title="1">ºÃ</li>
- <li title="2">ºÜºÃ</li>
- <li title="3">·Ç³£ºÃ</li>
- <li title="4">ÌØ±ğºÃ</li>
- <li title="5">Ì«ºÃÁË</li>
- <li title="6">ºÃµÄÎŞ·¨ÃèÊöÁË</li>
-
-</ul>
-
-
-
- </body>
+</head>
+<body>
+	<input type="button" value="button1">
+	<input type="button" value="button2">
+	<input type="button" value="button3">
+	<input type="button" value="button4">
+	<input type="button" value="button5">
+	<input type="button" value="button6">
+	<input type="button" value="button7">
+	<p title="hello world" class="hello">æ‚¨è®¤ä¸ºåœ£æ€å›­åŸ¹è®­å¥½ä¸å¥½å‘¢ï¼Ÿ</p>
+	<ul>
+		<li title="1">å¥½</li>
+		<li title="2">å¾ˆå¥½</li>
+		<li title="3">éå¸¸å¥½</li>
+		<li title="4">ç‰¹åˆ«å¥½</li>
+		<li title="5">å¤ªå¥½äº†</li>
+		<li title="6">å¥½çš„æ— æ³•æè¿°äº†</li>
+	</ul>
+</body>
 </html>

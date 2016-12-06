@@ -1,18 +1,16 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
- <head>
-  <title> New Document </title>
-  <meta name="Generator" content="EditPlus">
-  <meta name="Author" content="">
-  <meta name="Keywords" content="">
-  <meta name="Description" content="">
-  <script type="text/javascript" src="jquery-1.4.4.js"></script>
-  <script type="text/javascript">
-
-  var addItems = function()
-  {
-  /*
-    document.getElementById("div1").innerHTML = "";
+<head>
+<title>New Document</title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<script type="text/javascript" src="jquery-1.4.4.js"></script>
+<script type="text/javascript">
+    var addItems = function() {
+	/*
+	  document.getElementById("div1").innerHTML = "";
 
 	var value = parseInt(document.getElementById('itemsNumber').value);
 
@@ -25,37 +23,27 @@
 
 		document.getElementById("div1").appendChild(input);
 		document.getElementById("div1").appendChild(br);
-		
-	}
-*/
-    document.getElementById("div1").innerHTML = "";
 
-    var value = parseInt($("#itemsNumber").val());
+	}
+	 */
+	document.getElementById("div1").innerHTML = "";
+
+	var value = parseInt($("#itemsNumber").val());
 
 	var str = "";
 
-	for(var i = 0; i < value; i++)
-	{
-		str += "<input type='text'><br>";
+	for (var i = 0; i < value; i++) {
+	    str += "<input type='text'><br>";
 	}
 
 	$("#div1").append(str);
 
-  }
-
-
-  </script>
-
-
- </head>
-
- <body>
-  
- <input type="text" id="itemsNumber"> 
- <input type="button" id="btn" value="click" onclick="addItems();">
-
-<div id="div1"></div>
-
-
- </body>
+    }
+</script>
+</head>
+<body>
+	<input type="text" id="itemsNumber">
+	<input type="button" id="btn" value="click" onclick="addItems();">
+	<div id="div1"></div>
+</body>
 </html>
