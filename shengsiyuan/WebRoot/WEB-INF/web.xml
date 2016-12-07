@@ -6,6 +6,28 @@
 
 	<display-name>Shengsiyuan Application</display-name>
 
+	  <servlet>
+    <servlet-name>GetImageServlet</servlet-name>
+    <servlet-class>com.shengsiyuan.imagetools.GetImageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SaveImageServlet</servlet-name>
+    <servlet-class>com.shengsiyuan.imagetools.SaveImageServlet</servlet-class>
+  </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>GetImageServlet</servlet-name>
+    <url-pattern>/GetImageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SaveImageServlet</servlet-name>
+    <url-pattern>/SaveImageServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
 	<listener>
 		<listener-class>com.shengsiyuan.listener.MyServletContextListener</listener-class>
 	</listener>
