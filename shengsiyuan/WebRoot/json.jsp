@@ -9,7 +9,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'index.jsp' starting page</title>
+    <title>My JSP 'json.jsp' starting page</title>
+    
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -26,47 +27,48 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	{
 		$("#button1").click(function()
 		{
-			$.ajax({
+			$.get("GsonServlet",{}, function(returnedData, status)
+			{
+				var html = "<table width='60%' border='1' align='center'><tr><th>id</th><th>name</th><th>companyAddress</th><th>homeAddress</th>"
 				
-				type: "POST",
-				url: "MyServlet",
-				dateType: "html",
-				data: {'param1': $("#param1").val(), 'param2': $("#param2").val()},
-				success: function(returnedData){
-					$("#result").val(returnedData);
+				for(var i = 0; i < returnedData.length; i++)
+				{
+					var people = returnedData[i];
+					
+					var id = people.id;
+					var name = people.name;
+					var companyAddress = people.address.companyAddress;
+					var homeAddress = people.address.homeAddress;
+					
+					html += "<tr align='center'><td>" + id + "</td><td>" + name + "</td><td>" + companyAddress + "</td><td>" + homeAddress + "</td></tr>";
 				}
 				
-			});
+				html += "</table>";
+				
+				$("#theBody table:eq(0)").remove();
+				
+				$("#theBody").append(html);
+				
+			});			
 		});
 	});
 	
 	</script>
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
   </head>
   
-  <body>
+  <body id="theBody">
     
-    <input type="text" id="param1">+
-    <input type="text" id="param2">=
     
-    <input type="text" id="result"> <input type="button" value="get content from server" id="button1">
+    <input type="button" value="get json content from server" id="button1">
+    
+    
+    
+    
+    
+    
+    
     
     
     
