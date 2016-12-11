@@ -85,7 +85,7 @@ public class WeatherServlet extends HttpServlet {
 		System.out.println(weatherWSSoap.getSupportCityString("31124").getStrings());
 		List<String> weathers = weatherWSSoap.getWeather("2349","").getStrings();*/
 		WeatherWSHttpGet weatherWSSoap = ws.getWeatherWSHttpGet();
-		System.out.println(weatherWSSoap.getWeather("2349", "").getStrings());
+		System.out.println(weatherWSSoap.getWeather("2349", "").getString());
 
 	}
 

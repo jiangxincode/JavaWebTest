@@ -27,7 +27,7 @@ public class InvokeMobileCodeServiceWithWsimportTool {
 		System.out.println("返回的结果："+result);
 		//2. 复合的数据  List<String> List<Student>
 		ArrayOfString databaseInfo = mobileCodeWSSoap.getDatabaseInfo();
-		List<String> results=databaseInfo.getStrings();
+		List<String> results=databaseInfo.getString();
 		//遍历集合
 		for(String temp:results){
 			System.out.println(temp);
