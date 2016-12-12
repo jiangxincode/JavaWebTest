@@ -375,6 +375,20 @@
 			<version>1.46</version>
 		</dependency>
 
+		<dependency>
+			<groupId>cpdetector</groupId>
+			<artifactId>cpdetector</artifactId>
+			<version>1.0.7</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/cpdetector-1.0.7.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sourceforge.jchardet</groupId>
+			<artifactId>jchardet</artifactId>
+			<version>1.0</version>
+		</dependency>
+
 		<!-- http://mvnrepository.com/artifact/org.jsoup/jsoup -->
 		<dependency>
 			<groupId>org.jsoup</groupId>
@@ -553,6 +567,24 @@
 				implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 				<mainClass>edu.jiangxin.tools.IpAndMacUtils</mainClass> </transformer> </transformers>
 				</configuration> </execution> </executions> </plugin> -->
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<appendAssemblyId>false</appendAssemblyId>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>assembly</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 </project>
