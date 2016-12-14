@@ -13,13 +13,6 @@
 	</properties>
 
 	<repositories>
-
-		<repository>
-			<id>AsposeJavaAPI</id>
-			<url>http://maven.aspose.com/repository/ext-release-local/</url>
-		</repository>
-		<!-- <repository> <id>osc_thirdparty</id> <url>http://maven.oschina.net/content/repositories/thirdparty/</url>
-			</repository> -->
 		<!-- <repository> <id>github-releases</id> <url>http://oss.sonatype.org/content/repositories/github-releases/</url>
 			</repository> -->
 		<!-- <repository> <id>clojars.org</id> <url>http://clojars.org/repo</url>
@@ -202,7 +195,7 @@
 		<dependency>
 			<groupId>org.mvel</groupId>
 			<artifactId>mvel2</artifactId>
-			<version>2.2.8.Final</version>
+			<version>2.0.16</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.antlr/antlr4-runtime -->
@@ -229,18 +222,7 @@
 		</dependency>
 
 
-		<dependency>
-			<groupId>com.aspose</groupId>
-			<artifactId>aspose-cells</artifactId>
-			<version>9.0.0</version>
-		</dependency>
 
-		<dependency>
-			<groupId>com.aspose</groupId>
-			<artifactId>aspose-words</artifactId>
-			<version>15.11.0</version>
-			<classifier>jdk16</classifier>
-		</dependency>
 
 		<dependency>
 			<groupId>log4j</groupId>
@@ -383,6 +365,23 @@
 			<systemPath>${project.basedir}/lib/cpdetector-1.0.7.jar</systemPath>
 		</dependency>
 
+
+		<dependency>
+            <groupId>com.aspose</groupId>
+            <artifactId>aspose-cells</artifactId>
+            <version>9.0.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/aspose-cells-9.0.0.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.aspose</groupId>
+            <artifactId>aspose-words</artifactId>
+            <version>15.11.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/aspose-words-15.11.0-jdk16.jar</systemPath>
+        </dependency>
+
 		<dependency>
 			<groupId>net.sourceforge.jchardet</groupId>
 			<artifactId>jchardet</artifactId>
@@ -400,6 +399,8 @@
 		<!-- <dependency> <groupId>jeasy</groupId> <artifactId>je-analysis</artifactId>
 			<version>1.5.3</version> </dependency> -->
 		<!-- local end -->
+
+
 	</dependencies>
 
 	<build>
@@ -423,21 +424,16 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.6.0</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>1.8</source>
+					<target>1.8</target>
 					<!-- <excludes> <exclude>**/edu/jiangxin/webservice/**</exclude> </excludes> -->
 				</configuration>
 			</plugin>
 
 
-			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>3.0.0</version>
-				<configuration>
-					<warSourceDirectory>WebRoot</warSourceDirectory>
-					<failOnMissingWebXml>false</failOnMissingWebXml>
-				</configuration>
-			</plugin>
+			<!-- <plugin> <artifactId>maven-war-plugin</artifactId> <version>3.0.0</version>
+				<configuration> <warSourceDirectory>WebRoot</warSourceDirectory> <failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration> </plugin> -->
 
 			<!-- 扩展源代码和资源文件目录 -->
 			<plugin>
@@ -567,24 +563,11 @@
 				implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 				<mainClass>edu.jiangxin.tools.IpAndMacUtils</mainClass> </transformer> </transformers>
 				</configuration> </execution> </executions> </plugin> -->
-			<plugin>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<configuration>
-					<appendAssemblyId>false</appendAssemblyId>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
-				</configuration>
-				<executions>
-					<execution>
-						<id>make-assembly</id>
-						<phase>package</phase>
-						<goals>
-							<goal>assembly</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+			<!-- <plugin> <artifactId>maven-assembly-plugin</artifactId> <configuration>
+				<appendAssemblyId>false</appendAssemblyId> <descriptorRefs> <descriptorRef>jar-with-dependencies</descriptorRef>
+				</descriptorRefs> </configuration> <executions> <execution> <id>make-assembly</id>
+				<phase>package</phase> <goals> <goal>assembly</goal> </goals> </execution>
+				</executions> </plugin> -->
 		</plugins>
 	</build>
 </project>
