@@ -1,9 +1,7 @@
-package com.drools.demo.point;
-
+package edu.jiangxin.drools.example;
 
 /**
  * 积分计算对象
- * @author quzishen
  */
 public class PointDomain {
 	// 用户名
@@ -22,14 +20,17 @@ public class PointDomain {
 	private double backMondy;
 	// 当月信用卡还款次数
 	private int billThisMonth;
-	
+
 	/**
 	 * 记录积分发送流水，防止重复发放
-	 * @param userName 用户名
-	 * @param type 积分发放类型
+	 *
+	 * @param userName
+	 *            用户名
+	 * @param type
+	 *            积分发放类型
 	 */
-	public void recordPointLog(String userName, String type){
-		System.out.println("增加对"+userName+"的类型为"+type+"的积分操作记录.");
+	public void recordPointLog(String userName, String type) {
+		System.out.println("增加对" + userName + "的类型为" + type + "的积分操作记录.");
 	}
 
 	public String getUserName() {
