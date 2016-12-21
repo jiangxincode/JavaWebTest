@@ -1,6 +1,5 @@
 package com.shengsiyuan.xml.dom4j;
 
-import java.io.File;
 import java.util.Iterator;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -13,11 +12,10 @@ import org.dom4j.io.SAXReader;
 public class Test2 {
 
 	public static void main(String[] args) throws Exception {
-		
-		String path = "target/test-classes/com/shengsiyuan/xml/";
+
 		SAXReader saxReader = new SAXReader();
 
-		Document doc = saxReader.read(new File(path + "student2.xml"));
+		Document doc = saxReader.read(Test2.class.getResourceAsStream("student2.xml"));
 
 		Element root = doc.getRootElement();
 
@@ -30,8 +28,7 @@ public class Test2 {
 		Element first = root.element("hello");
 		System.out.println(first.attributeValue("age"));
 
-		for (@SuppressWarnings("rawtypes")
-		Iterator iter = root.elementIterator(); iter.hasNext();) {
+		for (Iterator<?> iter = root.elementIterator(); iter.hasNext();) {
 			Element e = (Element) iter.next();
 			System.out.println(e.attributeValue("age"));
 		}
@@ -40,7 +37,7 @@ public class Test2 {
 
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		DocumentBuilder db = dbf.newDocumentBuilder();
-		org.w3c.dom.Document document = db.parse(new File(path + "student2.xml"));
+		org.w3c.dom.Document document = db.parse(Test2.class.getResourceAsStream("student2.xml"));
 
 		DOMReader domReader = new DOMReader();
 

@@ -2,19 +2,17 @@ package com.shengsiyuan.xml.jdom;
 
 import java.io.FileWriter;
 
-import org.jdom.Attribute;
-import org.jdom.Comment;
-import org.jdom.Document;
-import org.jdom.Element;
-import org.jdom.output.Format;
-import org.jdom.output.XMLOutputter;
+import org.jdom2.Attribute;
+import org.jdom2.Comment;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.output.Format;
+import org.jdom2.output.XMLOutputter;
 
 public class JDomTest1 {
 	public static void main(String[] args) throws Exception {
 
-		@SuppressWarnings("unused")
-		String test = null;
-		String path = "target/test-classes/com/shengsiyuan/xml/";
+		String outputPath = JDomTest1.class.getResource("/").getPath() + "jdom.xml";
 
 		Document document = new Document();
 
@@ -46,11 +44,11 @@ public class JDomTest1 {
 		Format format = Format.getPrettyFormat();
 
 		format.setIndent("    ");
-		// format.setEncoding("gbk");
+		format.setEncoding("UTF-8");
 
 		XMLOutputter out = new XMLOutputter(format);
 
-		out.output(document, new FileWriter(path + "jdom.xml"));
+		out.output(document, new FileWriter(outputPath));
 
 	}
 }

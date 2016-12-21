@@ -1,7 +1,5 @@
 package com.shengsiyuan.xml.sax;
 
-import java.io.File;
-
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
@@ -11,14 +9,12 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class SaxTest1 {
 	public static void main(String[] args) throws Exception {
-		
-		String path = "target/test-classes/com/shengsiyuan/xml/student.xml";
 
 		SAXParserFactory factory = SAXParserFactory.newInstance();
 
 		SAXParser parser = factory.newSAXParser();
 
-		parser.parse(new File(path), new MyHandler());
+		parser.parse(SaxTest1.class.getResourceAsStream("student.xml"), new MyHandler());
 
 	}
 }

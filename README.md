@@ -80,7 +80,11 @@ edu.jiangxin.webservice.jobservice
 edu.jiangxin.webservice.weatherservice
 edu.jiangxin.webservice.languageservice (cxf)
 
+## 圣思园
 
+shengsiyuansrc/
+
+目录结构有调整
 
 Some tests and exercises in Java.
 

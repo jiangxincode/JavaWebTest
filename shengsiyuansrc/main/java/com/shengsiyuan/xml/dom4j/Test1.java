@@ -12,8 +12,6 @@ import org.dom4j.io.XMLWriter;
 public class Test1 {
 	public static void main(String[] args) throws Exception {
 
-		String path = "target/test-classes/com/shengsiyuan/xml/";
-		
 		// Document document = DocumentHelper.createDocument();
 		// Element root = DocumentHelper.createElement("student");
 		// document.setRootElement(root);
@@ -35,11 +33,14 @@ public class Test1 {
 		xmlWriter.write(document);
 
 		OutputFormat format = new OutputFormat("    ", true);
+		//format = OutputFormat.createPrettyPrint();
 
-		XMLWriter xmlWriter2 = new XMLWriter(new FileOutputStream(path+"student2.xml"), format);
+		XMLWriter xmlWriter2 = new XMLWriter(
+				new FileOutputStream(Test1.class.getResource("/").getPath() + "student2.xml"), format);
 		xmlWriter2.write(document);
 
-		XMLWriter xmlWriter3 = new XMLWriter(new FileWriter(path+"student3.xml"), format);
+		XMLWriter xmlWriter3 = new XMLWriter(new FileWriter(Test1.class.getResource("/").getPath() + "student3.xml"),
+				format);
 		xmlWriter3.write(document);
 		xmlWriter3.close();
 

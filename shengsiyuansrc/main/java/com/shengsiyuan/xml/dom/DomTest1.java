@@ -1,7 +1,5 @@
 package com.shengsiyuan.xml.dom;
 
-import java.io.File;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
@@ -12,8 +10,6 @@ import org.w3c.dom.NodeList;
 public class DomTest1 {
 	public static void main(String[] args) throws Exception {
 
-		String path = "target/test-classes/com/shengsiyuan/xml/candidate.xml";
-
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
 		System.out.println("class name: " + dbf.getClass().getName());
@@ -22,7 +18,7 @@ public class DomTest1 {
 
 		System.out.println("class name: " + db.getClass().getName());
 
-		Document document = db.parse(new File(path));
+		Document document = db.parse(DomTest1.class.getResourceAsStream("candidate.xml"));
 
 		NodeList list = document.getElementsByTagName("PERSON");
 

@@ -1,7 +1,5 @@
 package com.shengsiyuan.xml.dom;
 
-import java.io.File;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
@@ -14,13 +12,12 @@ import org.w3c.dom.NodeList;
 public class DomTest2 {
 	public static void main(String[] args) throws Exception {
 
-		String path = "target/test-classes/com/shengsiyuan/xml/student.xml";
 
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
 		DocumentBuilder db = dbf.newDocumentBuilder();
 
-		Document doc = db.parse(new File(path));
+		Document doc = db.parse(DomTest2.class.getResourceAsStream("student.xml"));
 
 		System.out.println(doc.getXmlEncoding());
 		System.out.println(doc.getXmlVersion());
