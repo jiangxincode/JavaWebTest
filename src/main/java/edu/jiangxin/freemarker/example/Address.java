@@ -1,4 +1,4 @@
-package com.sxt.test.freemarker;
+package edu.jiangxin.freemarker.example;
 
 public class Address {
 	private String country;
