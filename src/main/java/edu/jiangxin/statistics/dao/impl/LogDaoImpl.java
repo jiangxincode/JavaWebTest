@@ -64,22 +64,20 @@ public class LogDaoImpl implements LogDao {
 		this.jdbcTemplate.update(sql, params);
 	}
 
-	@SuppressWarnings("deprecation")
 	public int getPV(Timestamp startTime, Timestamp endTime) throws Exception {
 		String sql = "select count(*) from log where access_time >= ? and access_time < ? ";
 		logger.info(sql);
 
-		int pv = this.jdbcTemplate.queryForInt(sql, new Object[] { startTime, endTime });
+		int pv = this.jdbcTemplate.queryForObject(sql, new Object[] { startTime, endTime }, Integer.class);
 		return pv;
 	}
 
-	@SuppressWarnings("deprecation")
 	public int getUV(Timestamp startTime, Timestamp endTime) throws Exception {
 		String sql = "select count(ip) from( "
 				+ "select distinct ip from log where access_time >= ? and access_time < ? " + ") log_temp ";
 		logger.info(sql);
 
-		int uv = this.jdbcTemplate.queryForInt(sql, new Object[] { startTime, endTime });
+		int uv = this.jdbcTemplate.queryForObject(sql, new Object[] { startTime, endTime }, Integer.class);
 		return uv;
 	}
 
