@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.shengsiyuan.hibernate.Student" table="student">
+	
+		<id name="id" column="id" type="string">
+			<generator class="uuid"></generator>
+		</id>
+	
+		<property name="name" column="name" type="string"></property>
+		
+		<one-to-one name="idCard" class="com.shengsiyuan.hibernate.IdCard" cascade="all" fetch="select"/>
+		
+	</class>
+
+</hibernate-mapping>
