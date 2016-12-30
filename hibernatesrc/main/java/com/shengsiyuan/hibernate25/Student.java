@@ -1,4 +1,6 @@
-package com.shengsiyuan.hibernate26;
+package com.shengsiyuan.hibernate25;
+
+import java.util.Date;
 
 public class Student {
 	private String id;
@@ -9,7 +11,7 @@ public class Student {
 
 	private String name;
 
-	private Team team;
+	private Date lastDate;
 
 	public Student() {
 
@@ -20,12 +22,12 @@ public class Student {
 		this.name = name;
 	}
 
-	public Team getTeam() {
-		return team;
+	public Date getLastDate() {
+		return lastDate;
 	}
 
-	public void setTeam(Team team) {
-		this.team = team;
+	public void setLastDate(Date lastDate) {
+		this.lastDate = lastDate;
 	}
 
 	public String getId() {

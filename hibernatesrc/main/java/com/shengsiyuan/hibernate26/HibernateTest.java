@@ -20,10 +20,11 @@ public class HibernateTest {
 	}
 
 	public static void main(String[] args) {
-		Session session = sessionFactory.openSession();
+		Session session = null;
 		Transaction tx = null;
 
 		try {
+			session = sessionFactory.openSession();
 			tx = session.beginTransaction();
 
 			Team team = new Team();
@@ -43,32 +44,6 @@ public class HibernateTest {
 			session.save(team);
 			tx.commit();
 
-			Session session1 = sessionFactory.openSession();
-			Transaction tx1 = session1.beginTransaction();
-
-			@SuppressWarnings("unchecked")
-			List<Student> list = session.createQuery("from Student s order by s.name asc").list();
-
-			for (Student student : list) {
-				System.out.println(student.getName());
-			}
-
-			tx1.commit();
-
-			System.out.println("------------------------------");
-
-			Session session2 = sessionFactory.openSession();
-			Transaction tx2 = session2.beginTransaction();
-
-			Student s1 = (Student) session2.get(Student.class, "402881ea2ed79f97012ed79f9a710206");
-			Student s2 = (Student) session2.get(Student.class, "402881ea2ed79f97012ed79f9a8102ab");
-
-			System.out.println(s1.getName());
-			System.out.println(s2.getName());
-
-			tx2.commit();
-
-
 		} catch (Exception ex) {
 			ex.printStackTrace();
 
@@ -78,5 +53,32 @@ public class HibernateTest {
 		} finally {
 			session.close();
 		}
+
+		session = sessionFactory.openSession();
+		tx = session.beginTransaction();
+
+		@SuppressWarnings("unchecked")
+		List<Student> list = session.createQuery("from Student s order by s.name asc").list();
+
+		for (Student student : list) {
+			System.out.println(student.getName());
+		}
+
+		tx.commit();
+		session.close();
+
+		System.out.println("------------------------------");
+
+		/*session = sessionFactory.openSession();
+		tx = session.beginTransaction();
+
+		Student s1 = (Student) session.get(Student.class, "402881ea2ed79f97012ed79f9a710206");
+		Student s2 = (Student) session.get(Student.class, "402881ea2ed79f97012ed79f9a8102ab");
+
+		System.out.println(s1.getName());
+		System.out.println(s2.getName());
+
+		tx.commit();
+		session.close();*/
 	}
 }
