@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate19;
 
 public class Teacher extends Person
 {

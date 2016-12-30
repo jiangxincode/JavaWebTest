@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate07;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,9 +6,9 @@ import java.util.Map;
 public class Team
 {
 	private String id;
-	
+
 	private String teamName;
-	
+
 	private Map students = new HashMap();
 
 	public String getId()

@@ -1,13 +1,13 @@
-﻿package com.shengsiyuan.action.xml;
+﻿package com.shengsiyuan.struts2ajax.action.xml;
 
 public class People
 {
 	private int id;
-	
+
 	private String name;
-	
+
 	private int age;
-	
+
 	private String address;
 
 	public int getId()

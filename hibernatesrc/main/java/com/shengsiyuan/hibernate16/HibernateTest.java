@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate16;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -24,7 +24,7 @@ public class HibernateTest
 			ex.printStackTrace();
 		}
 	}
-	
+
 	/**
 	 * @param args
 	 */
@@ -32,37 +32,37 @@ public class HibernateTest
 	{
 		Session session = sessionFactory.openSession();
 		Transaction tx = null;
-		
+
 		try
 		{
 			tx = session.beginTransaction();
-			
+
 //			StudentPrimaryKey studentPrimaryKey = new StudentPrimaryKey();
 //			studentPrimaryKey.setCardId("123456");
 //			studentPrimaryKey.setName("lisi");
-//			
+//
 //			Student student = new Student();
 //			student.setAge(30);
 //			student.setStudentPrimaryKey(studentPrimaryKey);
-//			
+//
 //			session.save(student);
-			
-			
+
+
 			StudentPrimaryKey studentPrimaryKey = new StudentPrimaryKey();
-			
+
 			studentPrimaryKey.setCardId("123456");
 			studentPrimaryKey.setName("lisi");
-			
+
 			Student student = (Student)session.get(Student.class, studentPrimaryKey);
-			
+
 			System.out.println(student.getAge());
-			
-			tx.commit(); 
+
+			tx.commit();
 		}
 		catch(Exception ex)
 		{
 			ex.printStackTrace();
-			
+
 			if(null != tx)
 			{
 				tx.rollback();
@@ -72,18 +72,18 @@ public class HibernateTest
 		{
 			session.close();
 		}
-		
-	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
+
+
+
+
+
+
+
 	}
 }

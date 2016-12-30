@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate23;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -6,9 +6,9 @@ import java.util.Set;
 public class Team
 {
 	private String id;
-	
+
 	private String teamName;
-	
+
 	private Set students = new HashSet();
 
 	public String getId()

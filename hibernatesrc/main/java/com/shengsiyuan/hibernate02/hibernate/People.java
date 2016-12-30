@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate02.hibernate;
 
 import java.sql.Date;
 import java.sql.Timestamp;
@@ -6,21 +6,21 @@ import java.sql.Timestamp;
 public class People
 {
 	private Long id;
-	
+
 	private String username;
-	
+
 	private String password;
-	
+
 	private int telphone;
-	
+
 	private char gender; //'M', 'F'
-	
+
 	private boolean graduation;
-	
+
 	private Date birthday;
-	
+
 	private Timestamp marryTime;
-	
+
 	private byte[] file;
 
 	public Long getId()

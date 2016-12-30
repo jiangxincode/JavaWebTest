@@ -1,9 +1,9 @@
-﻿package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate20;
 
 public class Person
 {
 	private String id;
-	
+
 	private String name;
 
 	public String getId()

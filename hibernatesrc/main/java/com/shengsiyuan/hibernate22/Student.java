@@ -1,22 +1,22 @@
-﻿package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate22;
 
 import java.util.Set;
 
 public class Student
 {
 	private String id;
-	
+
 	private String cardId;
-	
+
 	private int age;
-	
+
 	private String name;
-	
+
 	private Set<Course> courses;
 
 	public Student()
 	{
-		
+
 	}
 
 	public Student(String name, int age)

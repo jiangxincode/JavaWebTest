@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.action.json;
+﻿package com.shengsiyuan.struts2ajax.action.json;
 
 import org.apache.struts2.json.annotations.JSON;
 
@@ -7,11 +7,11 @@ import com.opensymphony.xwork2.ActionSupport;
 public class GetJsonAction2 extends ActionSupport
 {
 	private String name;
-	
+
 	private int id;
-	
+
 	private int age;
-	
+
 	private String address;
 
 	public String getName()
@@ -54,14 +54,14 @@ public class GetJsonAction2 extends ActionSupport
 	{
 		this.address = address;
 	}
-	
+
 	@Override
 	public String execute() throws Exception
 	{
 		this.id = 1;
 		this.age = 30;
 		this.address = "beijing";
-		
+
 		return SUCCESS;
 	}
 }

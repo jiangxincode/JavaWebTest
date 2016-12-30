@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.event;
+﻿package com.shengsiyuan.hibernate02.event;
 
 import java.io.Serializable;
 
@@ -11,7 +11,7 @@ public class TestSaveListener extends DefaultSaveEventListener
 	protected Serializable performSaveOrUpdate(SaveOrUpdateEvent event)
 	{
 		System.out.println("performSaveOrUpdate invoked!!!");
-		
+
 		return super.performSaveOrUpdate(event);
 	}
 }

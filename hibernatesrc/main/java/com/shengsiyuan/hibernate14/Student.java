@@ -1,17 +1,17 @@
-﻿package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate14;
 
 public class Student
 {
 	private String id;
-	
+
 	private String name;
-	
+
 	private String cardId;
-	
+
 	private int age;
-	
+
 	private Team team;
-	
+
 	public String getCardId()
 	{
 		return cardId;

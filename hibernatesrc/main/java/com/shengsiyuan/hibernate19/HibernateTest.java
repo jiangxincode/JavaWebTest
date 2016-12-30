@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate19;
 
 import java.util.Iterator;
 
@@ -24,48 +24,48 @@ public class HibernateTest
 			ex.printStackTrace();
 		}
 	}
-	
+
 	public static void main(String[] args)
 	{
 		Session session = sessionFactory.openSession();
 		Transaction tx = null;
-		
+
 		try
 		{
 			tx = session.beginTransaction();
-			
+
 //			Student student = new Student();
 //			student.setCardId("123456");
 //			student.setName("zhangsan");
-//			
+//
 //			Teacher teacher = new Teacher();
 //			teacher.setSalary(100);
 //			teacher.setName("lisi");
-//			
+//
 //			session.save(student);
 //			session.save(teacher);
-			
+
 			Query query = session.createQuery("from java.lang.Object"); //多态查询
-			
+
 			Iterator iter = query.iterate();
-			
+
 			while(iter.hasNext())
 			{
 				//Person p = (Person)iter.next();
-			
+
 				//System.out.println(p.getClass().getName());
-				
+
 				//System.out.println(p.getName());
-				
+
 				System.out.println(iter.next().getClass().getName());
 			}
-			
-			tx.commit(); 
+
+			tx.commit();
 		}
 		catch(Exception ex)
 		{
 			ex.printStackTrace();
-			
+
 			if(null != tx)
 			{
 				tx.rollback();
@@ -75,18 +75,18 @@ public class HibernateTest
 		{
 			session.close();
 		}
-		
-	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
+
+
+
+
+
+
+
 	}
 }

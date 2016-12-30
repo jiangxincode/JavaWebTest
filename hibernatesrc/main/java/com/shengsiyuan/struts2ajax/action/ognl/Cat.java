@@ -1,23 +1,23 @@
-﻿package com.shengsiyuan.action.ognl;
+﻿package com.shengsiyuan.struts2ajax.action.ognl;
 
 public class Cat
 {
 	private String name;
-	
+
 	private int age;
-	
+
 	private String color;
-	
+
 	public Cat(String name, int age, String color)
 	{
 		this.name = name;
 		this.age = age;
 		this.color = color;
 	}
-	
+
 	public Cat()
 	{
-		
+
 	}
 
 	public String getName()
@@ -49,6 +49,6 @@ public class Cat
 	{
 		this.color = color;
 	}
-	
-	
+
+
 }

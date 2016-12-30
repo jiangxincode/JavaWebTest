@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate15;
 
 import java.io.Serializable;
 
@@ -9,7 +9,7 @@ public class Student implements Serializable
 	private String name;
 
 	private int age;
-	
+
 	public String getCardId()
 	{
 		return cardId;

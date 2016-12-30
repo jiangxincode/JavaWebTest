@@ -281,11 +281,23 @@
                <artifactId>struts2-core</artifactId>
                <version>2.5.5</version>
           </dependency>
+          <!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-json-plugin -->
+          <dependency>
+               <groupId>org.apache.struts</groupId>
+               <artifactId>struts2-json-plugin</artifactId>
+               <version>2.5.5</version>
+          </dependency>
           <!-- https://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api -->
           <dependency>
                <groupId>javax.servlet.jsp</groupId>
                <artifactId>jsp-api</artifactId>
                <version>2.2.1-b03</version>
+          </dependency>
+          <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+          <dependency>
+               <groupId>com.google.code.gson</groupId>
+               <artifactId>gson</artifactId>
+               <version>2.8.0</version>
           </dependency>
           <dependency>
                <groupId>org.hibernate</groupId>

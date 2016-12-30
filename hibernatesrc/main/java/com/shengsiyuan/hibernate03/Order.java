@@ -1,11 +1,11 @@
-﻿package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate03;
 
 public class Order
 {
 	private Long id;
-	
+
 	private String orderNumber;
-	
+
 	private Customer customer;  //多对一，通过该变量可以引用到关联的Customer对象
 
 	public Long getId()

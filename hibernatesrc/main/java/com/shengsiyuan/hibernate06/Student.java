@@ -1,13 +1,13 @@
-﻿package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate06;
 
 import java.util.Set;
 
 public class Student
 {
 	private String id;
-	
+
 	private String name;
-	
+
 	private Set<Course> courses;
 
 	public String getId()

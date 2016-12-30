@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate09;
 
 import java.util.Map;
 
@@ -23,31 +23,31 @@ public class HibernateTest
 			ex.printStackTrace();
 		}
 	}
-	
+
 	public static void main(String[] args)
 	{
 		Session session = sessionFactory.openSession();
 		Transaction tx = null;
-		
+
 		try
 		{
 			tx = session.beginTransaction();
-			
+
 			Team team = new Team();
 			team.setTeamName("team1");
-			
+
 			team.getStudents().add("zhangsan");
 			team.getStudents().add("lisi");
 			team.getStudents().add("wangwu");
-			
+
 			session.save(team);
-			
-			tx.commit(); 
+
+			tx.commit();
 		}
 		catch(Exception ex)
 		{
 			ex.printStackTrace();
-			
+
 			if(null != tx)
 			{
 				tx.rollback();

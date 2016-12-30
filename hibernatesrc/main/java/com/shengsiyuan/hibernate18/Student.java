@@ -1,11 +1,11 @@
-﻿package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate18;
 
 public class Student
 {
 	private String id;
-	
+
 	private String name;
-	
+
 	private Address address;
 
 	public String getId()

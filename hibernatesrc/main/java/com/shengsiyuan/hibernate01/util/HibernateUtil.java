@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.util;
+﻿package com.shengsiyuan.hibernate01.util;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -20,14 +20,14 @@ public class HibernateUtil
 			ex.printStackTrace();
 		}
 	}
-	
+
 	public static Session openSession()
 	{
 		Session session = sessionFactory.openSession();
-		
+
 		return session;
 	}
-	
+
 	public static void close(Session session)
 	{
 		if(null != session)

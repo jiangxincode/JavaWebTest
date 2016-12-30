@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.action.ognl;
+﻿package com.shengsiyuan.struts2ajax.action.ognl;
 
 import java.util.Map;
 
@@ -29,7 +29,7 @@ public class Person
 
 	public Person()
 	{
-		
+
 	}
 
 	public String getName()

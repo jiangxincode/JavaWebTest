@@ -1,17 +1,17 @@
-﻿package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate03;
 
 import java.util.Set;
 
 public class Category
 {
 	private Long id;
-	
+
 	private String name;
-	
+
 	private Category parentCategory;
-	
+
 	private Set<Category> childCategories;
-	
+
 	public Category(String name, Category parentCategory,
 			Set<Category> childCategories)
 	{
@@ -22,7 +22,7 @@ public class Category
 
 	public Category()
 	{
-		
+
 	}
 
 	public Long getId()
@@ -64,6 +64,6 @@ public class Category
 	{
 		this.childCategories = childCategories;
 	}
-	
-	
+
+
 }

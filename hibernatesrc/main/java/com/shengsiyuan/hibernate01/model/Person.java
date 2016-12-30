@@ -1,17 +1,17 @@
-﻿package com.shengsiyuan.model;
+﻿package com.shengsiyuan.hibernate01.model;
 
 import java.sql.Date;
 
 public class Person
 {
 	private String id;
-	
+
 	private String username;
-	
+
 	private String password;
-	
+
 	private Integer age;
-	
+
 	private Date registerDate;
 
 	public String getId()

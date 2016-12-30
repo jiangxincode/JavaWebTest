@@ -1,9 +1,9 @@
-﻿package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate18;
 
 public class Address
 {
 	private String homeAddress;
-	
+
 	private String schoolAddress;
 
 	public String getHomeAddress()

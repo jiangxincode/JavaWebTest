@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.action;
+﻿package com.shengsiyuan.hibernate01.action;
 
 import java.util.List;
 
@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionSupport;
-import com.shengsiyuan.model.Person;
-import com.shengsiyuan.service.PersonService;
-import com.shengsiyuan.service.impl.PersonServiceImpl;
+import com.shengsiyuan.hibernate01.model.Person;
+import com.shengsiyuan.hibernate01.service.PersonService;
+import com.shengsiyuan.hibernate01.service.impl.PersonServiceImpl;
 
 public class PersonAction extends ActionSupport
 {
@@ -118,20 +118,20 @@ public class PersonAction extends ActionSupport
 	public String updatePerson() throws Exception
 	{
 		PersonService personService = new PersonServiceImpl();
-		
+
 		Person person = personService.getSinglePersonById(id);
-		
+
 		person.setPassword(password);
 		person.setAge(age);
-		
+
 		personService.updatePerson(person);
-		
+
 		List<Person> list = personService.listAllPersons();
-		
+
 		HttpServletRequest request = ServletActionContext.getRequest();
-		
+
 		request.setAttribute("list", list);
-		
+
 		return SUCCESS;
 	}
 

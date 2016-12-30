@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.action.xml;
+﻿package com.shengsiyuan.struts2ajax.action.xml;
 
 import java.io.PrintWriter;
 
@@ -26,38 +26,38 @@ public class GetXMLAction extends ActionSupport
 	{
 		this.name = name;
 	}
-	
+
 	@Override
 	public String execute() throws Exception
 	{
 		//zhang san
 		People people1 = new People();
-		
+
 		people1.setId(1);
 		people1.setName("zhangsan");
 		people1.setAge(30);
 		people1.setAddress("beijing");
-		
+
 		People people2 = new People();
-		
+
 		people2.setId(2);
 		people2.setName("lisi");
 		people2.setAge(50);
 		people2.setAddress("tianjin");
-		
+
 		Document document = DocumentHelper.createDocument();
-		
+
 		Element rootElement = document.addElement("persons");
-		
+
 		rootElement.addComment("This is comment!!");
-		
+
 		Element e = rootElement.addElement("person");
-		
+
 		Element idElement = e.addElement("id");
 		Element nameElement = e.addElement("name");
 		Element ageElement = e.addElement("age");
 		Element addressElement = e.addElement("address");
-		
+
 		if("zhangsan".equals(name))
 		{
 			idElement.setText(people1.getId() + "");
@@ -72,24 +72,24 @@ public class GetXMLAction extends ActionSupport
 			ageElement.setText(people2.getAge() + "");
 			addressElement.setText(people2.getAddress());
 		}
-		
+
 		HttpServletResponse response = ServletActionContext.getResponse();
-		
+
 		response.setContentType("text/xml; charset=utf-8");
-		response.setHeader("cache-control", "no-cache"); 
-		
+		response.setHeader("cache-control", "no-cache");
+
 		PrintWriter out = response.getWriter();
-		
+
 		OutputFormat format = OutputFormat.createPrettyPrint();
 		format.setEncoding("utf-8");
-		
+
 		XMLWriter writer = new XMLWriter(out, format);
-		
+
 		writer.write(document);
-		
+
 		out.flush();
 		out.close();
-		
+
 		return null;
 	}
 }

@@ -1,15 +1,15 @@
-﻿package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate05;
 
 public class Student
 {
 	private String id;
-	
+
 	private String name;
-	
+
 	private IdCard idCard;
-	
+
 	private Team team;
-	
+
 	public Team getTeam()
 	{
 		return team;

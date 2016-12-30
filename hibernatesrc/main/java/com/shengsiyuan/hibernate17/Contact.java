@@ -1,13 +1,13 @@
-﻿package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate17;
 
 public class Contact
 {
 	private String student_id;
-	
+
 	private String method;
-	
+
 	private String address;
-	
+
 	public String getStudent_id()
 	{
 		return student_id;

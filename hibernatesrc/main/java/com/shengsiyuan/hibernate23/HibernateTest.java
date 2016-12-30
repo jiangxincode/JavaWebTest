@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate23;
 
 import java.util.List;
 
@@ -25,37 +25,37 @@ public class HibernateTest
 			ex.printStackTrace();
 		}
 	}
-	
+
 	public static void main(String[] args)
 	{
-		
+
 		Session session = sessionFactory.openSession();
 		Transaction tx = null;
-		
+
 		try
 		{
 			tx = session.beginTransaction();
-			
+
 			Team team = (Team)session.get(Team.class, "ff80808105416d3b0105416d3eca0002");
-			
+
 			//Query query = session.createQuery("from Student s where s.team = :team and s.age > 20");
-			
+
 			//query.setParameter("team", team, Hibernate.entity(Team.class));
-			
+
 			//query.setEntity("team", team);
-			
+
 			Query query = session.createFilter(team.getStudents(), "where age > 20");
-			
+
 			List<Student> list = query.list();
-			
+
 			System.out.println(list.size());
-			
-			tx.commit(); 
+
+			tx.commit();
 		}
 		catch(Exception ex)
 		{
 			ex.printStackTrace();
-			
+
 			if(null != tx)
 			{
 				tx.rollback();
@@ -65,7 +65,7 @@ public class HibernateTest
 		{
 			session.close();
 		}
-		
-		
+
+
 	}
 }

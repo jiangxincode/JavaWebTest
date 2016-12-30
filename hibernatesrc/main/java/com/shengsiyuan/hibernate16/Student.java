@@ -1,9 +1,9 @@
-﻿package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate16;
 
 public class Student
 {
 	private StudentPrimaryKey studentPrimaryKey;
-	
+
 	private int age;
 
 	public StudentPrimaryKey getStudentPrimaryKey()

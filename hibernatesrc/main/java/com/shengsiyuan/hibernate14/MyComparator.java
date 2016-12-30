@@ -1,4 +1,4 @@
-﻿package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate14;
 
 import java.util.Comparator;
 
@@ -11,14 +11,14 @@ public class MyComparator implements Comparator<Student>
 		{
 			return 0;
 		}
-		
+
 		int result = o1.getCardId().compareTo(o2.getCardId());
-		
+
 		if(result != 0)
 		{
 			return -result;
 		}
-		
+
 		return -o1.getName().compareTo(o2.getName());
 	}
 }
