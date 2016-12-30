@@ -1,4 +1,4 @@
-package com.shengsiyuan.hibernate;
+锘縫ackage com.shengsiyuan.hibernate;
 
 public class Order
 {
@@ -6,7 +6,7 @@ public class Order
 	
 	private String orderNumber;
 	
-	private Customer customer;  //多对一，通过该变量可以引用到关联的Customer对象
+	private Customer customer;  //澶氬涓�锛岄�氳繃璇ュ彉閲忓彲浠ュ紩鐢ㄥ埌鍏宠仈鐨凜ustomer瀵硅薄
 
 	public Long getId()
 	{

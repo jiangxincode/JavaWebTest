@@ -1,4 +1,4 @@
-package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate;
 
 import java.util.List;
 

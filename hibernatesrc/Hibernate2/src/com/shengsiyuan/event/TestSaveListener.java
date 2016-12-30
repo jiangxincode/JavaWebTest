@@ -1,4 +1,4 @@
-package com.shengsiyuan.event;
+﻿package com.shengsiyuan.event;
 
 import java.io.Serializable;
 

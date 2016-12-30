@@ -1,4 +1,4 @@
-package com.shengsiyuan.hibernate;
+锘縫ackage com.shengsiyuan.hibernate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ public class Team
 	
 	private String teamName;
 	
-	private List students = new ArrayList(); // Hibernate使用List来模拟Bag
+	private List students = new ArrayList(); // Hibernate浣跨敤List鏉ユā鎷烞ag
 
 	public String getId()
 	{

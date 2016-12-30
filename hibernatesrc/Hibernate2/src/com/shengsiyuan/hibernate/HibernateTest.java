@@ -1,4 +1,4 @@
-package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate;
 
 import java.io.FileInputStream;
 import java.io.InputStream;

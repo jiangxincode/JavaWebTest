@@ -1,4 +1,4 @@
-package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate;
 
 import org.hibernate.cfg.Configuration;
 import org.hibernate.tool.hbm2ddl.SchemaExport;

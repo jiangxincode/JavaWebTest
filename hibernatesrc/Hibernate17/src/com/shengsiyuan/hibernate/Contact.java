@@ -1,4 +1,4 @@
-package com.shengsiyuan.hibernate;
+﻿package com.shengsiyuan.hibernate;
 
 public class Contact
 {

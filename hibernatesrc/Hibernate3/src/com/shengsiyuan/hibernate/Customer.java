@@ -1,4 +1,4 @@
-package com.shengsiyuan.hibernate;
+锘縫ackage com.shengsiyuan.hibernate;
 
 import java.util.Set;
 
@@ -8,7 +8,7 @@ public class Customer
 	
 	private String name;
 	
-	private Set orders; //一对多，通过该变量可以引用到对应的Order集合对象
+	private Set orders; //涓�瀵瑰锛岄�氳繃璇ュ彉閲忓彲浠ュ紩鐢ㄥ埌瀵瑰簲鐨凮rder闆嗗悎瀵硅薄
 
 	public Long getId()
 	{

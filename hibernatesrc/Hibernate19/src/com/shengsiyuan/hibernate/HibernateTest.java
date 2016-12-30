@@ -1,4 +1,4 @@
-package com.shengsiyuan.hibernate;
+ï»¿package com.shengsiyuan.hibernate;
 
 import java.util.Iterator;
 
@@ -45,7 +45,7 @@ public class HibernateTest
 //			session.save(student);
 //			session.save(teacher);
 			
-			Query query = session.createQuery("from java.lang.Object"); //¶àÌ¬²éÑ¯
+			Query query = session.createQuery("from java.lang.Object"); //å¤šæ€æŸ¥è¯¢
 			
 			Iterator iter = query.iterate();
 			
