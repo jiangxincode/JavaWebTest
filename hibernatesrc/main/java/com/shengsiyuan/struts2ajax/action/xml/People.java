@@ -1,4 +1,4 @@
-package com.shengsiyuan.action.xml;
+﻿package com.shengsiyuan.action.xml;
 
 public class People
 {

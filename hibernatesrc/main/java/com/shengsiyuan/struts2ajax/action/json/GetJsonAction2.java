@@ -1,4 +1,4 @@
-package com.shengsiyuan.action.json;
+﻿package com.shengsiyuan.action.json;
 
 import org.apache.struts2.json.annotations.JSON;
 

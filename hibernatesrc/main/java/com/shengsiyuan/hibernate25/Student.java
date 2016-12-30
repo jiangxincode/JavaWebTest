@@ -1,4 +1,4 @@
-package com.shengsiyuan.hibernate25;
+﻿package com.shengsiyuan.hibernate25;
 
 import java.util.Date;
 

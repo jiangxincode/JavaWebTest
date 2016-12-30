@@ -1,4 +1,4 @@
-package com.shengsiyuan.hibernate25;
+﻿package com.shengsiyuan.hibernate25;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

@@ -1,4 +1,4 @@
-package com.shengsiyuan.hibernate26;
+﻿package com.shengsiyuan.hibernate26;
 
 public class Student {
 	private String id;

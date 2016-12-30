@@ -1,4 +1,4 @@
-package com.shengsiyuan.dao.impl;
+锘縫ackage com.shengsiyuan.dao.impl;
 
 import java.util.List;
 
@@ -48,7 +48,7 @@ public class PersonDAOImpl implements PersonDAO
 		
 		try
 		{
-			// Person是类的名字而不是表的名字，既然是类的名字就需要严格区分大小写
+			// Person鏄被鐨勫悕瀛楄�屼笉鏄〃鐨勫悕瀛楋紝鏃㈢劧鏄被鐨勫悕瀛楀氨闇�瑕佷弗鏍煎尯鍒嗗ぇ灏忓啓
 			Query query = session.createQuery("from Person"); 
 			
 			list = (List<Person>)query.list();

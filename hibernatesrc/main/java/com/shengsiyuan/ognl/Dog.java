@@ -1,4 +1,4 @@
-package com.shengsiyuan.ognl;
+﻿package com.shengsiyuan.ognl;
 
 public class Dog {
 	private String name;

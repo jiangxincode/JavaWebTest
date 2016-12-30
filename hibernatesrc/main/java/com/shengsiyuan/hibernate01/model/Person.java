@@ -1,4 +1,4 @@
-package com.shengsiyuan.model;
+﻿package com.shengsiyuan.model;
 
 import java.sql.Date;
 
