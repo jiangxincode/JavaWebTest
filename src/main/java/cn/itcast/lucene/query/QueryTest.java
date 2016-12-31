@@ -16,6 +16,7 @@ import cn.itcast.lucene.IndexDao;
 import cn.itcast.lucene.QueryResult;
 import cn.itcast.lucene.utils.File2DocumentUtils;
 
+@SuppressWarnings("deprecation")
 public class QueryTest {
 
 	IndexDao indexDao = new IndexDao();

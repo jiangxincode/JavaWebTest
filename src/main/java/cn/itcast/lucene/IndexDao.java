@@ -31,9 +31,10 @@ import org.apache.lucene.search.highlight.Scorer;
 import org.apache.lucene.search.highlight.SimpleFragmenter;
 import org.apache.lucene.search.highlight.SimpleHTMLFormatter;
 
+@SuppressWarnings("deprecation")
 public class IndexDao {
 
-	String indexPath = "target/test-classes/cn/itcast/lucene/luceneIndex";
+	String indexPath = IndexDao.class.getResource("").getPath();
 
 	Analyzer analyzer = new StandardAnalyzer();
 	// Analyzer analyzer = new MMAnalyzer();// 词库分词
@@ -130,8 +131,8 @@ public class IndexDao {
 			// 1，把要搜索的文本解析为 Query
 			String[] fields = { "name", "content" };
 			Map<String, Float> boosts = new HashMap<String, Float>();
-			boosts.put("name", 3f);
-			// boosts.put("content", 1.0f); 默认为1.0f
+			// boosts.put("name", 3f);
+			boosts.put("content", 1.0f); //默认为1.0f
 
 			QueryParser queryParser = new MultiFieldQueryParser(fields, analyzer, boosts);
 			Query query = queryParser.parse(queryString);
@@ -148,8 +149,8 @@ public class IndexDao {
 		try {
 			// 2，进行查询
 			indexSearcher = new IndexSearcher(indexPath);
-			Filter filter = new RangeFilter("size", NumberTools.longToString(200)
-					, NumberTools.longToString(1000), true, true);
+			Filter filter = new RangeFilter("size", NumberTools.longToString(0)
+					, NumberTools.longToString(100000), true, true);
 
 			// ========== 排序
 			Sort sort = new Sort();
@@ -179,7 +180,6 @@ public class IndexDao {
 				int docSn = scoreDoc.doc; // 文档内部编号
 				Document doc = indexSearcher.doc(docSn); // 根据编号取出相应的文档
 
-				// =========== 高亮
 				// 返回高亮后的结果，如果当前属性值中没有出现关键字，会返回 null
 				String hc = highlighter.getBestFragment(analyzer, "content", doc.get("content"));
 				if (hc == null) {
@@ -188,12 +188,10 @@ public class IndexDao {
 					hc = content.substring(0, endIndex);// 最多前50个字符
 				}
 				doc.getField("content").setValue(hc);
-				// ===========
 
 				recordList.add(doc);
 			}
 
-			// 返回结果
 			return new QueryResult(recordCount, recordList);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
