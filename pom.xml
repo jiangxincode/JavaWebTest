@@ -333,6 +333,13 @@
                <systemPath>${project.basedir}/lib/cpdetector-1.0.7.jar</systemPath>
           </dependency>
           <dependency>
+               <groupId>jeasy</groupId>
+               <artifactId>je-analysis</artifactId>
+               <version>1.5.3</version>
+               <scope>system</scope>
+               <systemPath>${project.basedir}/lib/je-analysis-1.5.3.jar</systemPath>
+          </dependency>
+          <dependency>
                <groupId>com.aspose</groupId>
                <artifactId>aspose-cells</artifactId>
                <version>9.0.0</version>
@@ -357,8 +364,6 @@
                <artifactId>jsoup</artifactId>
                <version>1.10.1</version>
           </dependency>
-          <!-- <dependency> <groupId>jeasy</groupId> <artifactId>je-analysis</artifactId>
-               <version>1.5.3</version> </dependency> -->
           <!-- <dependency> <groupId>org.apache.commons.classscan</groupId>
                <artifactId>bcel</artifactId> <version>0.2-SNAPSHOT</version> </dependency>
                <dependency> <groupId>org.apache.commons.classscan</groupId> <artifactId>api</artifactId>

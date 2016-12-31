@@ -12,7 +12,6 @@ import com.mongodb.MongoException;
 
 public class CRUDTest {
 
-	@SuppressWarnings("deprecation")
 	public static void main(String[] args) throws UnknownHostException, MongoException {
 
 		Mongo mongo = new Mongo(); // Mongo实例代表了一个数据库连接池

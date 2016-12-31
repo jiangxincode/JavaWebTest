@@ -10,6 +10,8 @@ import org.apache.lucene.analysis.cjk.CJKAnalyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.junit.Test;
 
+import jeasy.analysis.MMAnalyzer;
+
 @SuppressWarnings("deprecation")
 public class AnalyzerTest {
 
@@ -20,8 +22,7 @@ public class AnalyzerTest {
 	Analyzer en2 = new SimpleAnalyzer();
 
 	Analyzer zh1 = new CJKAnalyzer(); // 二分法分词
-	// need je-analysis
-	// Analyzer zh2 = new MMAnalyzer(); // 词库分词
+	Analyzer zh2 = new MMAnalyzer(); // 词库分词
 
 	@Test
 	public void test() throws Exception {
@@ -29,7 +30,7 @@ public class AnalyzerTest {
 		analyze(en2, enText);
 
 		analyze(zh1, zhText);
-		// analyze(zh2, zhText);
+		analyze(zh2, zhText);
 	}
 
 	public void analyze(Analyzer analyzer, String text) throws Exception {

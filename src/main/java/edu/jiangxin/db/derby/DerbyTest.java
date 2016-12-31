@@ -10,8 +10,7 @@ public class DerbyTest {
 	public static void main(String[] args) {
 		Connection conn = null;
 		try {
-			Class.forName("org.apache.derby.jdbc.ClientDriver");// from
-																// derbyclient.jar
+			Class.forName("org.apache.derby.jdbc.ClientDriver");
 			String url = "jdbc:derby://localhost:1527/MyDbTest;create=true";// create=true必须写，MyDbTest任意名称
 			try {
 				conn = DriverManager.getConnection(url, "admin", "admin");// 用户名密码不能是1，1

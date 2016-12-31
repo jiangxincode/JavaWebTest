@@ -22,40 +22,17 @@ public class FindStrInJar {
 
 	private static final Logger LOGGER = Logger.getLogger(FindStrInJar.class);
 
-	public String condition; // 查询的条件
-
-	public ArrayList<String> jarFiles = new ArrayList<String>();
-
-	public FindStrInJar() {
-	}
-
-	public FindStrInJar(String condition) {
-		this.condition = condition;
-	}
-
-	public void setCondition(String condition) {
-		this.condition = condition;
-	}
-
-	public List<String> find(String dir, boolean recurse) {
-		searchDir(dir, recurse);
-		return this.jarFiles;
-	}
-
-	public List<String> getFilenames() {
-		return this.jarFiles;
-	}
-
-	protected void searchDir(String dir, boolean recurse) {
+	public static List<String> find(String dir, boolean recurse, String condition) {
+		ArrayList<String> jarFiles = new ArrayList<String>();
 		try {
 			File d = new File(dir);
 			if (!d.isDirectory()) {
-				return;
+				return null;
 			}
 			File[] files = d.listFiles();
 			for (int i = 0; i < files.length; i++) {
 				if (recurse && files[i].isDirectory()) {
-					searchDir(files[i].getAbsolutePath(), true);
+					find(files[i].getAbsolutePath(), true, condition);
 				} else {
 					String filename = files[i].getAbsolutePath();
 					if (filename.endsWith(".jar") || filename.endsWith(".zip")) {
@@ -72,7 +49,7 @@ public class FindStrInJar {
 								while (r.read() != -1) {
 									String tempStr = r.readLine();
 									if (null != tempStr && tempStr.indexOf(condition) > -1) {
-										this.jarFiles.add(filename + "  --->  " + thisClassName);
+										jarFiles.add(filename + "  --->  " + thisClassName);
 										break;
 									}
 								}
@@ -92,9 +69,11 @@ public class FindStrInJar {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
+		return jarFiles;
 	}
 
-	private int findStrInPlainText(File filename, String findStr) throws IOException {
+	private static int findStrInPlainText(File filename, String findStr) throws IOException {
 
 		int count = 0;
 		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(filename)));
@@ -110,6 +89,19 @@ public class FindStrInJar {
 
 		return count;
 
+	}
+
+	public static void main(String[] args) {
+		String path = FindStrInJar.class.getResource("").getPath();
+
+		List<String> jarFiles = FindStrInJar.find(path, true, "isChinese");
+		if (jarFiles.size() == 0) {
+			System.out.println("Not Found");
+		} else {
+			for (int i = 0; i < jarFiles.size(); i++) {
+				System.out.println(jarFiles.get(i));
+			}
+		}
 	}
 
 }
