@@ -1,6 +1,5 @@
 package edu.jiangxin.scriptengine;
 
-import java.io.File;
 import java.io.FileReader;
 import java.util.List;
 
@@ -9,21 +8,21 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineFactory;
 import javax.script.ScriptEngineManager;
 
-import edu.jiangxin.path.GetPath;
-
 public class InvokingJavaScript {
 	public static void main(String[] args) throws Exception {
 		ScriptEngineManager manager = new ScriptEngineManager();
 
-		List<ScriptEngineFactory> list = manager.getEngineFactories();
+		List<ScriptEngineFactory> factories = manager.getEngineFactories();
 
-		System.out.println(list.get(0).getNames());
-		System.out.println(list.get(0).getMimeTypes());
-		System.out.println(list.get(0).getEngineName());
+		for (ScriptEngineFactory factory : factories) {
+			System.out.println("name: " + factory.getNames());
+			System.out.println("mimeType: " + factory.getMimeTypes());
+			System.out.println("engineName: " + factory.getEngineName());
+			System.out.println("----------------");
+		}
 
 		ScriptEngine engine = manager.getEngineByName("javascript");
-		File file = new File(GetPath.getTestResourcePathWithPackage(new InvokingJavaScript()) + "demo.js");
-		FileReader reader = new FileReader(file.getAbsolutePath().replaceAll("\\\\", "/"));
+		FileReader reader = new FileReader(InvokingJavaScript.class.getResource("demo.js").getPath());
 		engine.eval(reader);
 		if (engine instanceof Invocable) {
 			Invocable invoke = (Invocable) engine;

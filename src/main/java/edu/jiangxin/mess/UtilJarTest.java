@@ -7,10 +7,8 @@ import java.io.IOException;
 import org.junit.Before;
 import org.junit.Test;
 
-import edu.jiangxin.path.GetPath;
-
 public class UtilJarTest {
-	
+
 	UtilJar utilJar = null;
 
 	@Before
@@ -20,8 +18,8 @@ public class UtilJarTest {
 
 	@Test
 	public void testCopyJar() {
-		File src = new File(GetPath.getTestResourcePathWithPackage(new UtilJarTest()) + "hibernate.jar");
-		File des = new File(GetPath.getTestResourcePathWithPackage(new UtilJarTest()) + "hibernateCopy.jar");
+		File src = new File(UtilJarTest.class.getResource("KaboomZhihu.jar").getPath());
+		File des = new File(UtilJarTest.class.getResource("").getPath() + "KaboomZhihuCopy.jar");
 		try {
 			utilJar.copyJar(src, des);
 		} catch (FileNotFoundException e) {
@@ -33,8 +31,8 @@ public class UtilJarTest {
 
 	@Test
 	public void testUnJar() {
-		File src = new File(GetPath.getTestResourcePathWithPackage(new UtilJarTest()) + "hibernate.jar");
-		File desDir = new File(src.getParent() + File.separator + "hibernate");
+		File src = new File(UtilJarTest.class.getResource("KaboomZhihu.jar").getPath());
+		File desDir = new File(UtilJarTest.class.getResource("").getPath() + "KaboomZhihu");
 		try {
 			utilJar.unJar(src, desDir);
 		} catch (FileNotFoundException e) {
@@ -46,8 +44,8 @@ public class UtilJarTest {
 
 	@Test
 	public void testCopyJarByJarFile() {
-		File src = new File(GetPath.getTestResourcePathWithPackage(new UtilJarTest()) + "hibernate.jar");
-		File des = new File(GetPath.getTestResourcePathWithPackage(new UtilJarTest()) + "hibernateCopy.zip");
+		File src = new File(UtilJarTest.class.getResource("KaboomZhihu.jar").getPath());
+		File des = new File(UtilJarTest.class.getResource("").getPath() + "KaboomZhihuCopy.jar");
 		try {
 			utilJar.copyJarByJarFile(src, des);
 		} catch (FileNotFoundException e) {
@@ -59,8 +57,8 @@ public class UtilJarTest {
 
 	@Test
 	public void testUnJarByJarFile() {
-		File src = new File(GetPath.getTestResourcePathWithPackage(new UtilJarTest()) + "hibernate.jar");
-		File desDir = new File(src.getParent() + File.separator + "hibernate");
+		File src = new File(UtilJarTest.class.getResource("KaboomZhihu.jar").getPath());
+		File desDir = new File(UtilJarTest.class.getResource("").getPath() + "KaboomZhihu");
 		try {
 			utilJar.unJarByJarFile(src, desDir);
 		} catch (FileNotFoundException e) {
