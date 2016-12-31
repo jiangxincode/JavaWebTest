@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>New Document</title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<script type="text/javascript">
+    function Person() {
+	this.username = "zhangsan";
+	this.password = "123";
+
+	if (typeof Person.flag == "undefined") {
+	    alert("invoked");
+
+	    Person.prototype.getInfo = function() {
+		alert(this.username + ", " + this.password);
+	    }
+
+	    Person.flag = true;
+	}
+    }
+
+    var p = new Person();
+    var p2 = new Person();
+
+    p.getInfo();
+    p2.getInfo();
+</script>
+</head>
+<body>
+</body>
+</html>

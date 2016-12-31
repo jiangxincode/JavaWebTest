@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>New Document</title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<script type="text/javascript">
+    //继承第一种方式：对象冒充
+
+    function Parent(username) {
+	this.username = username;
+
+	this.sayHello = function() {
+	    alert(this.username);
+	}
+    }
+
+    function Child(username, password) {
+	//下面三行代码是最关键的代码
+	this.method = Parent;
+	this.method(username);
+	delete this.method;
+
+	this.password = password;
+
+	this.sayWorld = function() {
+	    alert(this.password);
+	}
+    }
+
+    var parent = new Parent("zhangsan");
+    var child = new Child("lisi", "1234");
+
+    parent.sayHello();
+
+    child.sayHello();
+    child.sayWorld();
+</script>
+</head>
+<body>
+</body>
+</html>
