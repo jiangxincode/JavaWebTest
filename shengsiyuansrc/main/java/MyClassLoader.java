@@ -6,26 +6,26 @@ import java.lang.reflect.Field;
 
 public class MyClassLoader extends ClassLoader
 {
-	private String name; //Àà¼ÓÔØÆ÷µÄÃû×Ö
-	
-	private String path = "d:\\"; // ¼ÓÔØÀàµÄÂ·¾¶
-	
-	private final String fileType = ".class"; // classÎÄ¼şµÄÀ©Õ¹Ãû
-	
+	private String name; //ç±»åŠ è½½å™¨çš„åå­—
+
+	private String path = "d:\\"; // åŠ è½½ç±»çš„è·¯å¾„
+
+	private final String fileType = ".class"; // classæ–‡ä»¶çš„æ‰©å±•å
+
 	public MyClassLoader(String name)
 	{
-		super(); // ÈÃÏµÍ³Àà¼ÓÔØÆ÷³ÉÎª¸ÃÀà¼ÓÔØÆ÷µÄ¸¸¼ÓÔØÆ÷
-		
+		super(); // è®©ç³»ç»Ÿç±»åŠ è½½å™¨æˆä¸ºè¯¥ç±»åŠ è½½å™¨çš„çˆ¶åŠ è½½å™¨
+
 		this.name = name;
 	}
-	
+
 	public MyClassLoader(ClassLoader parent, String name)
 	{
-		super(parent); // ÏÔÊ½Ö¸¶¨¸ÃÀà¼ÓÔØÆ÷µÄ¸¸¼ÓÔØÆ÷
-		
+		super(parent); // æ˜¾å¼æŒ‡å®šè¯¥ç±»åŠ è½½å™¨çš„çˆ¶åŠ è½½å™¨
+
 		this.name = name;
 	}
-	
+
 	@Override
 	public String toString()
 	{
@@ -41,36 +41,36 @@ public class MyClassLoader extends ClassLoader
 	{
 		this.path = path;
 	}
-	
+
 	@Override
 	public Class<?> findClass(String name) throws ClassNotFoundException
 	{
 		byte[] data = this.loadClassData(name);
-		
+
 		return this.defineClass(name, data, 0, data.length);
 	}
-	
+
 	private byte[] loadClassData(String name)
 	{
 		InputStream is = null;
 		byte[] data = null;
 		ByteArrayOutputStream baos = null;
-		
+
 		try
 		{
 			this.name = this.name.replace(".", "\\");
-			
+
 			is = new FileInputStream(new File(path + name + fileType));
-			
+
 			baos = new ByteArrayOutputStream();
-			
+
 			int ch = 0;
-			
+
 			while(-1 != (ch = is.read()))
 			{
 				baos.write(ch);
 			}
-			
+
 			data = baos.toByteArray();
 		}
 		catch(Exception ex)
@@ -89,89 +89,89 @@ public class MyClassLoader extends ClassLoader
 				ex.printStackTrace();
 			}
 		}
-		
+
 		return data;
 	}
-	
+
 	public static void main(String[] args) throws Exception
 	{
 		MyClassLoader loader1 = new MyClassLoader("loader1");
-		
+
 		loader1.setPath("d:\\myapp\\serverlib\\");
-		
+
 		MyClassLoader loader2 = new MyClassLoader(loader1, "loader2");
-		
+
 		loader2.setPath("d:\\myapp\\clientlib\\");
-//		
+//
 //		MyClassLoader loader3 = new MyClassLoader(null, "loader3");
-//		
+//
 //		loader3.setPath("d:\\myapp\\otherlib\\");
-//		
+//
 //		test(loader2);
-//		
+//
 //		System.out.println("----------");
-//		
+//
 //		test(loader3);
-		
+
 //		Class clazz = loader1.loadClass("Sample");
-//		Object object = clazz.newInstance(); //´´½¨Ò»¸öSampleÀàµÄ¶ÔÏó
+//		Object object = clazz.newInstance(); //åˆ›å»ºä¸€ä¸ªSampleç±»çš„å¯¹è±¡
 //		Sample sample = (Sample)object;
-//		
+//
 //		System.out.println(sample.v1);
-		
+
 //		Class clazz = loader1.loadClass("Sample");
-//		
-//		Object object = clazz.newInstance(); //´´½¨Ò»¸öSampleÀàµÄ¶ÔÏó
-//		
+//
+//		Object object = clazz.newInstance(); //åˆ›å»ºä¸€ä¸ªSampleç±»çš„å¯¹è±¡
+//
 //		Field field = clazz.getField("v1");
-//		
+//
 //		int v1 = field.getInt(object);
-//		
+//
 //		System.out.println("v1: " + v1);
-		
-		
+
+
 		Class clazz = loader1.loadClass("Sample");
-		
+
 		System.out.println(clazz.hashCode());
-		
+
 		Object object = clazz.newInstance();
-		
+
 		loader1 = null;
 		clazz = null;
 		object = null;
-		
+
 		loader1 = new MyClassLoader("loader1");
-		
+
 		loader1.setPath("d:\\myapp\\serverlib\\");
-		
+
 		clazz = loader1.loadClass("Sample");
 		Class clazz2 = loader1.loadClass("Sample");
-		
+
 		System.out.println(clazz == clazz2);
-		
-		System.out.println(clazz.hashCode());		
+
+		System.out.println(clazz.hashCode());
 	}
-	
+
 	public static void test(ClassLoader loader) throws Exception
 	{
 		Class clazz = loader.loadClass("Sample");
-		
+
 		Object object = clazz.newInstance();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

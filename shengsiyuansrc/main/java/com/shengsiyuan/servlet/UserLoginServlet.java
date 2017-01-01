@@ -18,99 +18,99 @@ public class UserLoginServlet extends HttpServlet
 			throws ServletException, IOException
 	{
 		User user = new User();
-		
+
 		HttpSession session = req.getSession();
-		
+
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
 		String authority = req.getParameter("authority");
-		
+
 		if("1".equals(authority))
 		{
-			//µÇÂ¼µÄÊÇÆÕÍ¨ÓÃ»§
+			//ç™»å½•çš„æ˜¯æ™®é€šç”¨æˆ·
 			if("zhangsan".equals(username) && "123".equals(password))
 			{
-				// ½«ÓÃ»§µÄĞÅÏ¢·ÅÖÃµ½sessionµ±ÖĞ
+				// å°†ç”¨æˆ·çš„ä¿¡æ¯æ”¾ç½®åˆ°sessionå½“ä¸­
 				user.setUsername(username);
 				user.setPassword(password);
 				user.setAuthority(authority);
-				
+
 				session.setAttribute("user", user);
-				
+
 				req.getRequestDispatcher("/session/index.jsp").forward(req, resp);
 			}
 			else
 			{
 				resp.sendRedirect("session/login.jsp?username=" + username + "&authority=" + authority);
-				
+
 //				req.setAttribute("username", username);
 //				req.setAttribute("password", password);
 //				req.setAttribute("authority", authority);
-//				
+//
 //				RequestDispatcher rd = req.getRequestDispatcher("session/login.jsp");
-//				
+//
 //				rd.forward(req, resp);
 			}
 		}
-		
+
 		else if("2".equals(authority))
 		{
-			//µÇÂ¼µÄÊÇÏµÍ³¹ÜÀíÔ±
+			//ç™»å½•çš„æ˜¯ç³»ç»Ÿç®¡ç†å‘˜
 			if("lisi".equals(username) && "456".equals(password))
 			{
 				user.setUsername(username);
 				user.setPassword(password);
 				user.setAuthority(authority);
-				
+
 				session.setAttribute("user", user);
-				
+
 				req.getRequestDispatcher("/session/index.jsp").forward(req, resp);
 			}
 			else
 			{
 				resp.sendRedirect("session/login.jsp?username=" + username + "&authority=" + authority);
-				
+
 //				req.setAttribute("username", username);
 //				req.setAttribute("password", password);
 //				req.setAttribute("authority", authority);
-//				
+//
 //				RequestDispatcher rd = req.getRequestDispatcher("session/login.jsp");
-//				
+//
 //				rd.forward(req, resp);
 			}
 		}
-		// µÇÂ¼Ê§°Ü
+		// ç™»å½•å¤±è´¥
 		else
 		{
 			resp.sendRedirect("session/login.jsp?username=" + username + "&authority=" + authority);
-			
+
 //			req.setAttribute("username", username);
 //			req.setAttribute("password", password);
 //			req.setAttribute("authority", authority);
-//			
+//
 //			RequestDispatcher rd = req.getRequestDispatcher("session/login.jsp");
-//			
+//
 //			rd.forward(req, resp);
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

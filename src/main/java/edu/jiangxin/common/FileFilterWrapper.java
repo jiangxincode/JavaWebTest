@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 public class FileFilterWrapper {
 
-	ArrayList<File> arrayList = new ArrayList<>();
+	ArrayList<File> arrayList = new ArrayList<File>();
 
 	/**
 	 * 实现对指定文件或者目录的过滤

@@ -10,46 +10,26 @@ import javax.servlet.http.HttpSession;
 
 import com.shengsiyuan.bean.User;
 
-public class UpdateServlet extends HttpServlet
-{
+public class UpdateServlet extends HttpServlet {
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException
-	{
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession();
 
-		// ÓÃ»§Î´µÇÂ¼
-		if (null == session.getAttribute("user"))
-		{
+		// ç”¨æˆ·æœªç™»å½•
+		if (null == session.getAttribute("user")) {
 			resp.sendRedirect("session/login.jsp");
-			return ;
+			return;
 		}
-		
-		User user = (User)session.getAttribute("user");
-		
-		if("1".equals(user.getAuthority())) //ÆÕÍ¨ÓÃ»§
+
+		User user = (User) session.getAttribute("user");
+
+		if ("1".equals(user.getAuthority())) //æ™®é€šç”¨æˆ·
 		{
-			System.out.println("Ê§°Ü");
-		}
-		else //¹ÜÀíÔ±
+			System.out.println("å¤±è´¥");
+		} else //ç®¡ç†å‘˜
 		{
-			System.out.println("³É¹¦");
+			System.out.println("æˆåŠŸ");
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 	}
 }

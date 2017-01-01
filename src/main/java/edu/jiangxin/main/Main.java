@@ -29,7 +29,7 @@ public class Main {
 	static String suffix = null;
 	static String[] fileName = new String[MAXFILENUM]; //The max num of the files
 
-	static ArrayList<File> files = new ArrayList<>();
+	static ArrayList<File> files = new ArrayList<File>();
 
 	public static void main(String[] args) throws IOException {
 

@@ -11,17 +11,17 @@ import javax.servlet.http.HttpServletResponse;
 public class HelloServlet extends HttpServlet
 {
 //	private String username;
-	
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException
 	{
 		String username = req.getParameter("username");
-		
-		//µÃµ½µ±Ç°Ïß³ÌµÄÃû×Ö
+
+		//å¾—åˆ°å½“å‰çº¿ç¨‹çš„åå­—
 		System.out.println(Thread.currentThread().getName());
-		
-		//½øĞĞÒ»Ğ©ºó¶ËµÄÒµÎñ´¦Àí
+
+		//è¿›è¡Œä¸€äº›åç«¯çš„ä¸šåŠ¡å¤„ç†
 		try
 		{
 			Thread.sleep(10000);
@@ -30,7 +30,7 @@ public class HelloServlet extends HttpServlet
 		{
 			ex.printStackTrace();
 		}
-		
+
 		req.setAttribute("username", username);
 		req.getRequestDispatcher("hello.jsp").forward(req, resp);
 	}

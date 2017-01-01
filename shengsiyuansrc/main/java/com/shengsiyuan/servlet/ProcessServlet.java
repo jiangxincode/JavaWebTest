@@ -29,66 +29,66 @@ public class ProcessServlet extends HttpServlet
 			throws ServletException, IOException
 	{
 		req.setCharacterEncoding("utf-8");
-		
+
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
 		String gender = req.getParameter("gender");
 		String[] interest = req.getParameterValues("interest");
 		String address = req.getParameter("address");
-		
+
 		address = new String(address.getBytes("iso-8859-1"), "utf-8");
-		
+
 		System.out.println(req);
-		
+
 		String comment = req.getParameter("comment");
-		
+
 		List<String> list = new ArrayList<String>();
-		
+
 		if(null == username || "".equals(username))
 		{
-			list.add("ÓÃ»§Ãû²»ÄÜÎª¿Õ£¡");
+			list.add("ç”¨æˆ·åä¸èƒ½ä¸ºç©ºï¼");
 		}
 		else if (username.length() < 4)
 		{
-			list.add("ÓÃ»§Ãû¹ı¶Ì£¡");
+			list.add("ç”¨æˆ·åè¿‡çŸ­ï¼");
 		}
 		else if(username.length() > 10)
 		{
-			list.add("ÓÃ»§Ãû¹ı³¤£¡");
+			list.add("ç”¨æˆ·åè¿‡é•¿ï¼");
 		}
-		
+
 		if(null == password || "".equals(password))
 		{
-			list.add("ÃÜÂë²»ÄÜÎª¿Õ£¡");
+			list.add("å¯†ç ä¸èƒ½ä¸ºç©ºï¼");
 		}
 		else if(password.length() < 4)
 		{
-			list.add("ÃÜÂë¹ı¶Ì£¡");
+			list.add("å¯†ç è¿‡çŸ­ï¼");
 		}
 		else if(password.length() > 10)
 		{
-			list.add("ÃÜÂë¹ı³¤!");
+			list.add("å¯†ç è¿‡é•¿!");
 		}
 		if(null == gender)
 		{
-			list.add("ĞÔ±ğÃ»ÓĞÑ¡Ôñ!");
+			list.add("æ€§åˆ«æ²¡æœ‰é€‰æ‹©!");
 		}
-		
+
 		if(null == interest)
 		{
-			list.add("ĞËÈ¤ÖÁÉÙÑ¡ÔñÒ»¸ö£¡");
+			list.add("å…´è¶£è‡³å°‘é€‰æ‹©ä¸€ä¸ªï¼");
 		}
 		else if(interest.length > 3)
 		{
-			list.add("ĞËÈ¤×î¶àÑ¡ÔñÈı¸ö£¡");
+			list.add("å…´è¶£æœ€å¤šé€‰æ‹©ä¸‰ä¸ªï¼");
 		}
 		if(null == comment || "".equals(comment))
 		{
-			list.add("ËµÃ÷Ã»ÓĞÌîĞ´£¡");
+			list.add("è¯´æ˜æ²¡æœ‰å¡«å†™ï¼");
 		}
-		
+
 		resp.setCharacterEncoding("utf-8");
-		
+
 		if(list.isEmpty())
 		{
 			req.setAttribute("username", username);
@@ -97,13 +97,13 @@ public class ProcessServlet extends HttpServlet
 			req.setAttribute("interest", interest);
 			req.setAttribute("address", address);
 			req.setAttribute("comment", comment);
-			
+
 			req.getRequestDispatcher("loginSuccess.jsp").forward(req, resp);
 		}
 		else
 		{
 			req.setAttribute("error", list);
-			
+
 			req.getRequestDispatcher("loginFailure.jsp").forward(req, resp);
 		}
 	}

@@ -12,7 +12,7 @@ public class MyTag extends TagSupport
 	{
 		try
 		{
-			// ÏòÒ³ÃæÊä³ö×Ö·û´®
+			// å‘é¡µé¢è¾“å‡ºå­—ç¬¦ä¸²
 			this.pageContext.getOut().println("hello world");
 		}
 		catch (IOException e)

@@ -78,7 +78,7 @@ public class MyFrame {
 		jl6 = new JLabel();
 		jl7 = new JLabel();
 		jl8 = new JLabel();
-		jbz1 = new JLabel("提示：直达路径输入格式例如\"D:\\1\\\"");
+		jbz1 = new JLabel("提示：直达路径输入格式");
 		jbz2 = new JLabel("提示：扩展名格式例如\".txt\"");
 		jbz3 = new JLabel("提示：编号请输入数字");
 		jb1 = new JButton("当前文件夹查询   ");

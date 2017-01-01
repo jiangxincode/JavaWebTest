@@ -21,34 +21,34 @@ public class InitServlet2 extends HttpServlet
 
 			InputStream is = context
 					.getResourceAsStream("/WEB-INF/message.properties");
-			
+
 			ps.load(is);
-			
+
 			is.close();
-			
-			// 将properties对象放置到application范围内供其他组件使用
+
+			// 灏唒roperties瀵硅薄鏀剧疆鍒癮pplication鑼冨洿鍐呬緵鍏朵粬缁勪欢浣跨敤
 			context.setAttribute("ps", ps);
-			
+
 		}
 		catch (Exception ex)
 		{
 			ex.printStackTrace();
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	}
 
 }

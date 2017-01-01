@@ -1,6 +1,5 @@
 package com.shengsiyuan.servlet;
 
-
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -9,43 +8,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class QueryServlet extends HttpServlet
-{
+public class QueryServlet extends HttpServlet {
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException
-	{
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession();
-		
-		//ÓÃ»§Î´µÇÂ¼
-		if(null == session.getAttribute("user"))
-		{
+
+		//ç”¨æˆ·æœªç™»å½•
+		if (null == session.getAttribute("user")) {
 			resp.sendRedirect("session/login.jsp");
 			return;
 		}
-		
-		System.out.println("³É¹¦");
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
+		System.out.println("æˆåŠŸ");
+
 	}
 }

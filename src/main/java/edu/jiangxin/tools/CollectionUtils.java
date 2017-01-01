@@ -20,7 +20,7 @@ public class CollectionUtils {
 	}
 
 	public static void main(String[] args) {
-		List<Object> list = new ArrayList<>();
+		List<Object> list = new ArrayList<Object>();
 		list.add(new Integer(3));
 		list.add(new Integer(4));
 		list.add(new Integer(5));
