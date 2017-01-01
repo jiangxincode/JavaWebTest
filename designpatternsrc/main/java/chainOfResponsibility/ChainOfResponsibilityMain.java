@@ -2,9 +2,6 @@ package chainOfResponsibility;
 
 public class ChainOfResponsibilityMain {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		RequestHandler handler1 = new ProjectMannager();
 		RequestHandler handler2 = new Director();

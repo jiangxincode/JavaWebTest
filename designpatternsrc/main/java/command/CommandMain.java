@@ -2,9 +2,6 @@ package command;
 
 public class CommandMain {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		Barbecuer boy = new Barbecuer();
 		Command com1 = new BakeMuttonCommand(boy);

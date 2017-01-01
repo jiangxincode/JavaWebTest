@@ -2,9 +2,6 @@ package visitor;
 
 public class VisitorMain {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		ObjectStructure os = new ObjectStructure();
 		Person man = new Man();

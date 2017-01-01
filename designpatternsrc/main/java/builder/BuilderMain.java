@@ -2,9 +2,6 @@ package builder;
 
 public class BuilderMain {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		PersonBuilder thin = new ThinPersonBuilder();
 		PersonBuilder fat = new FatPersonBuilder();

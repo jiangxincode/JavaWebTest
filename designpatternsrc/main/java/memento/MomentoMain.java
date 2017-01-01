@@ -2,9 +2,6 @@ package memento;
 
 public class MomentoMain {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		GameRole mario = new GameRole("Mario");
 		mario.init();

@@ -2,9 +2,6 @@ package bridge;
 
 public class BridgeMain {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		Mobile nokia = new NokiaMobile("Nokia");
 		MobileSoft game = new MobileGame();

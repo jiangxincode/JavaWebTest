@@ -2,9 +2,6 @@ package mediator;
 
 public class MediatorMain {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		UnionNationsSecurityCouncil unsc = new UnionNationsSecurityCouncil();
 		USA usa = new USA(unsc);

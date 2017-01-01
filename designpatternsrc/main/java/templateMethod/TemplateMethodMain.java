@@ -2,9 +2,6 @@ package templateMethod;
 
 public class TemplateMethodMain {
 
-	/**
-	 * @lincoln liu
-	 */
 	public static void main(String[] args) {
 		TestPaper pa = new TestPaperA();
 		pa.question1();

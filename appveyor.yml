@@ -19,4 +19,4 @@ configuration:
   - Release
 
 build_script:
-  - mvn clean compile package install -B
+  - mvn clean compile package install site -B

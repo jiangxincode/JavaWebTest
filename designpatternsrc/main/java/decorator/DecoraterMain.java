@@ -2,9 +2,6 @@ package decorator;
 
 public class DecoraterMain {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		Person lin = new Person("Lincoln");
 		System.out.println("The first show:");

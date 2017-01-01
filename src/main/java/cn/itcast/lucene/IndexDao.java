@@ -41,8 +41,6 @@ public class IndexDao {
 
 	/**
 	 * 添加/创建索引
-	 *
-	 * @param doc
 	 */
 	public void save(Document doc) {
 		IndexWriter indexWriter = null;
@@ -61,7 +59,7 @@ public class IndexDao {
 	}
 
 	/**
-	 * Term是搜索的最小单位，代表某个 Field 中的一个关键词，如：<title, lucene>
+	 * Term是搜索的最小单位，代表某个 Field 中的一个关键词，如：
 	 *
 	 * new Term( "title", "lucene" );
 	 *
@@ -69,7 +67,6 @@ public class IndexDao {
 	 *
 	 * new Term( "id", UUID );
 	 *
-	 * @param term
 	 */
 	public void delete(Term term) {
 		IndexWriter indexWriter = null;
@@ -94,9 +91,6 @@ public class IndexDao {
 	 * indexWriter.deleteDocuments(term);
 	 * indexWriter.addDocument(doc);
 	 * </pre>
-	 *
-	 * @param term
-	 * @param doc
 	 */
 	public void update(Term term, Document doc) {
 		IndexWriter indexWriter = null;
@@ -121,10 +115,6 @@ public class IndexDao {
 	 * 	totalPage++;
 	 * </pre>
 	 *
-	 * @param queryString
-	 * @param firstResult
-	 * @param maxResults
-	 * @return
 	 */
 	public QueryResult search(String queryString, int firstResult, int maxResults) {
 		try {

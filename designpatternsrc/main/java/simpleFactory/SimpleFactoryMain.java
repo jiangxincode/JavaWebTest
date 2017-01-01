@@ -2,9 +2,6 @@ package simpleFactory;
 
 public class SimpleFactoryMain {
 
-	/**
-	 * @Lincoln Liu
-	 */
 	public static void main(String[] args) {
 		Operation operAdd = OperationFactory.createOperation('+');
 		Operation operSub = OperationFactory.createOperation('-');

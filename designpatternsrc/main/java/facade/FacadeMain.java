@@ -2,9 +2,6 @@ package facade;
 
 public class FacadeMain {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		Fund fund = new Fund();
 

@@ -2,9 +2,6 @@ package state;
 
 public class StateMain {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		Work today = new Work();
 		today.setHour(10);

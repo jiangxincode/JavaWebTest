@@ -2,9 +2,6 @@ package composite;
 
 public class CompositeMain {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		ConcreteCompany root = new ConcreteCompany("The Head Office Of Our Company In Beijing");
 		root.add(new HRDepartment("Head Office HR"));

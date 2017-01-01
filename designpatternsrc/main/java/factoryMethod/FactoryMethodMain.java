@@ -2,9 +2,6 @@ package factoryMethod;
 
 public class FactoryMethodMain {
 
-	/**
-	 * @lincoln liu
-	 */
 	public static void main(String[] args) {
 		IFactory factory = new UndergraduateFactory();
 		Graduate student = (Graduate) factory.createLeiFeng();
