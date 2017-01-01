@@ -6,7 +6,7 @@ import java.util.List;
 
 public class CollectionUtils {
 
-	public static <T> boolean isEleTypeOf(Collection<T> coll, Class obj) {
+	public static <T> boolean isEleTypeOf(Collection<T> coll, Class<?> obj) {
 		if(coll == null || coll.size() == 0) {
 			return true;
 		}

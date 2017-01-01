@@ -8,7 +8,7 @@ REST (Representational State Transfer)
 
 RESTFul Web Service
 
-������ͨ����������ĵ�ַ����ֱ��������ַ�ķ�ʽȥ������ҳ��ʱ����������õľ���GET�������������ȡ��Դ
+当我们通过在浏览器的地址栏中直接输入网址的方式去访问网页的时候，浏览器采用的就是GET方法向服务器获取资源
 
 HEAD /server.html HTTP/1.1
 Host: www.sohu.com
@@ -18,9 +18,9 @@ Host: localhost
 Connection:close
 
 
-Ҫ������Tomcat����Ҫ���ú�������������
-JAVA_HOME��ֵΪJDK�İ�װĿ¼��binĿ¼����һ��Ŀ¼����D:\Program Files\Java\jdk1.6.0
-CATALINA_HOME��ֵΪTomcat�İ�װĿ¼��C:\apache-tomcat-6.0.29
+要想启动Tomcat，需要配置好两个环境变量
+JAVA_HOME：值为JDK的安装目录（bin目录的上一层目录），D:\Program Files\Java\jdk1.6.0
+CATALINA_HOME：值为Tomcat的安装目录，C:\apache-tomcat-6.0.29
 
 http://localhost:8080/test/LoginServlet?username1=hello&password1=world
 
@@ -43,85 +43,85 @@ username=hello&password=word
 
 Lesson 5/comments.txt
 
-1. ��ҹ���ؼ�ô����ѡ����
-2. ���ѧ�ĺ�ô��
-3. ��ҿ��Ĳ���
-4. ��ң�
+1. 大家过年回家么（单选）？
+2. 大家学的好么？
+3. 大家开心不？
+4. 大家？
 
 
-��ҹ���ؼ�ô��
+大家过年回家么？
 
-1. �ؼң�11�Σ�
-2. ���ؼң�1�Σ�
+1. 回家（11次）
+2. 不回家（1次）
 
-�ύ
+提交
 
 
 <questions>
 
-	<question>
-		<name>..</name>
-		....
-	</question>
+    <question>
+        <name>..</name>
+        ....
+    </question>
 
 </questions>
 
-����Ŀ��
+出题目：
 
-1. jsp ����Ŀ���ƣ�ѡ����������Ŀ���ͣ�
-2. servlet ����ȡ�û���д��������Ϣ��Ȼ��ת����һ��jspҳ�棩
-3. jsp ����Ŀ���ƣ�ѡ����������Ŀ���ͣ�����дѡ�����ݡ�
-4. servlet ������xml�� ���ܷ���servlet�У�����Ҫ����һ������������ʵ�֣�
+1. jsp （题目名称，选项数量，题目类型）
+2. servlet （获取用户填写的所有信息，然后转向下一个jsp页面）
+3. jsp （题目名称，选项数量，题目类型），填写选项内容。
+4. servlet （处理xml， 不能放在servlet中，而是要放在一个单独的类中实现）
 
-ͶƱ��
+投票：
 
-1. ��ʾ�����е���Ŀ���⣨���û�һ��Servlet��ַ����servlet���봦��xml���ཻ����
-2. �û����Ե���ĳ���������Ը��������ͶƱ��������֮��Ҳ��Ҫת��һ��servlet���ɸ�servlet������������ص�����ѡ�������ʾ��һ��jspҳ���ϣ���
-3. �û��Ը��������ͶƱ���ύ֮��ת��servlet����servlet���xml�ļ��ĸ��£�
+1. 显示出所有的题目标题（给用户一个Servlet地址，该servlet会与处理xml的类交互）
+2. 用户可以单击某个标题来对该问题进行投票（单击完之后也需要转到一个servlet，由该servlet获得与该问题相关的所有选项，将其显示在一个jsp页面上）。
+3. 用户对该问题进行投票，提交之后转到servlet（该servlet完成xml文件的更新）
 
 
 
 Lesson 7/comments.txt
 
-���ϵͳӦ����һ����ҳ��index.jsp,���ҳ������þ�����ɵ���������
+这个系统应该有一个主页，index.jsp,这个页面的作用就是完成导航的作用
 
-	--ͶƱ��Ŀ�϶�
+    --投票题目认定
 
-	--�鿴���е�ͶƱ����
+    --查看所有的投票标题
 
-�������ͶƱ��Ŀ�趨����ʱ���ύ��ShowQuestionModelPageServlet��servlet������ת��questionModel.jsp
-�����Jspҳ��������Ҫ������������ӣ�ѡ����������ͣ���ѡ���ѡ����ѡ������ѡ���������������ύ��ʱ��
-�ύ��ShowAddQuestionPageServlet�������servlet�У���ȡ�����������ѡ�����Ŀ����Ŀ�����ͣ���������Ϣ�󣬽������õ�
-request�У�Ȼ��ҳ��ת��addQuestion.jsp�У������ҳ���У���ʾ�������Ŀ�������ͣ������������õ���������
-���������������ʾ��Ӧ�������ı������Ҫ���û�����ÿ��ѡ������ݣ���ɺ��ύ��DoAddQuestionServlet��
-�ڴ�servlet��ͬ��ȡ������ı��⡢���͡�����ѡ���ֵ��Ȼ������Ϊ��������һ���أ̴ͣ������
-addNewQuestion()�������������ӵ����Ᵽ����ԭ�еģأͣ��ĵ���
+当点击“投票题目设定”的时候提交给ShowQuestionModelPageServlet此servlet用于跳转到questionModel.jsp
+在这个Jsp页面中用于要输入问题的名子，选择问题的类型（单选或多选），选择问题选项的条数，当点击提交的时候
+提交给ShowAddQuestionPageServlet，在这个servlet中，读取上用于输入和选择的题目的题目和类型，条数等信息后，将其设置到
+request中，然后页面转向到addQuestion.jsp中，在这个页面中，显示问题的题目，和类型，并将他们设置到隐藏域中
+根据问题的条数显示相应个数的文本输入框，要求用户输入每个选项的内容，完成后提交到DoAddQuestionServlet中
+在此servlet中同样取出问题的标题、类型、各个选项，的值，然后将其做为参数调用一个ＸＭＬ处理类的
+addNewQuestion()方法，将新添加的问题保存在原有的ＸＭＬ文档中
 
 
-��������鿴���е�ͶƱ���⡱ʱ��
+当点击“查看所有的投票标题”时，
 
 <questions >
-	<question id="q1" repeat="false">
-		<qName></qName>
-		<qType></qType>
-		<options>
-			<option count="0" id="o1">A</option>
-			<option count="0" id="o2">B</option>
-		</options>
-		<users>
-			<user>192.168.0.100</user>
-			<user>192.168.0.101</user>
-		</users>
-	</question>
+    <question id="q1" repeat="false">
+        <qName></qName>
+        <qType></qType>
+        <options>
+            <option count="0" id="o1">A</option>
+            <option count="0" id="o2">B</option>
+        </options>
+        <users>
+            <user>192.168.0.100</user>
+            <user>192.168.0.101</user>
+        </users>
+    </question>
 
-	<question id="q2">
-		<qName></qName>
-		<qType></qType>
-		<options>
-			<option id="o1">A</option>
-			<option id="o2">B</option>
-		</options>
-	</question>
+    <question id="q2">
+        <qName></qName>
+        <qType></qType>
+        <options>
+            <option id="o1">A</option>
+            <option id="o2">B</option>
+        </options>
+    </question>
 </questions>
 
 

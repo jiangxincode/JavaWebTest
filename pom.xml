@@ -364,10 +364,6 @@
                <artifactId>jsoup</artifactId>
                <version>1.10.1</version>
           </dependency>
-          <!-- <dependency> <groupId>org.apache.commons.classscan</groupId>
-               <artifactId>bcel</artifactId> <version>0.2-SNAPSHOT</version> </dependency>
-               <dependency> <groupId>org.apache.commons.classscan</groupId> <artifactId>api</artifactId>
-               <version>0.2-SNAPSHOT</version> </dependency> -->
      </dependencies>
      <build>
           <!-- 默认源代码和资源文件目录配置 -->

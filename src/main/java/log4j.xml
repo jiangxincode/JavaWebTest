@@ -8,7 +8,7 @@
           <param name="threshold" value="debug" />
           <layout class="org.apache.log4j.SimpleLayout" />
      </appender>
-     <appender name=MyLog class="org.apache.log4j.RollingFileAppender">
+     <appender name="MyLog" class="org.apache.log4j.RollingFileAppender">
           <param name="File" value="../logs/log.log" />
           <param name="Append" value="true" />
           <param name="MaxBackupIndex" value="10" />
