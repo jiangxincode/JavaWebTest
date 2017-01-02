@@ -19,4 +19,5 @@ configuration:
   - Release
 
 build_script:
-  - mvn install site -B
+  - mvn -v
+  - mvn install site scm-publish:publish-scm -B

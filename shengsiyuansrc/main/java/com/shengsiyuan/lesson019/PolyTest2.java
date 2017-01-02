@@ -4,13 +4,13 @@ public class PolyTest2 {
 	public static void main(String[] args) {
 		/*
 		 * Animal animal = new Cat(); Animal animal2 = new Animal();
-		 * 
+		 *
 		 * animal2 = animal; animal2.sing(); //指向谁就是调用谁的方法
 		 */
 
 		/*
 		 * Animal animal = new Cat(); Animal animal2 = new Animal();
-		 * 
+		 *
 		 * animal = animal2; animal.sing(); //指向谁就是调用谁的方法
 		 */
 
