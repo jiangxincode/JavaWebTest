@@ -3,10 +3,10 @@ package cn.itcast.storm.lifeCycle.topology;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import backtype.storm.Config;
-import backtype.storm.StormSubmitter;
-import backtype.storm.topology.TopologyBuilder;
-import backtype.storm.tuple.Fields;
+import org.apache.storm.Config;
+import org.apache.storm.StormSubmitter;
+import org.apache.storm.topology.TopologyBuilder;
+import org.apache.storm.tuple.Fields;
 import cn.itcast.storm.lifeCycle.bolt.TransferBolt;
 import cn.itcast.storm.lifeCycle.bolt.WriterBolt;
 import cn.itcast.storm.lifeCycle.spout.RandomWordSpout;

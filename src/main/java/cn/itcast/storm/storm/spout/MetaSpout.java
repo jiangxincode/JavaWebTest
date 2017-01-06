@@ -1,12 +1,12 @@
 /*
  * (C) 2007-2012 Alibaba Group Holding Limited.
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *      http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -17,6 +17,7 @@
  */
 package cn.itcast.storm.storm.spout;
 
+import java.nio.ByteBuffer;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Executor;
@@ -25,11 +26,11 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import backtype.storm.spout.Scheme;
-import backtype.storm.spout.SpoutOutputCollector;
-import backtype.storm.task.TopologyContext;
-import backtype.storm.topology.OutputFieldsDeclarer;
-import backtype.storm.topology.base.BaseRichSpout;
+import org.apache.storm.spout.Scheme;
+import org.apache.storm.spout.SpoutOutputCollector;
+import org.apache.storm.task.TopologyContext;
+import org.apache.storm.topology.OutputFieldsDeclarer;
+import org.apache.storm.topology.base.BaseRichSpout;
 
 import com.taobao.gecko.core.util.LinkedTransferQueue;
 import com.taobao.metamorphosis.Message;
@@ -43,10 +44,10 @@ import com.taobao.metamorphosis.exception.MetaClientException;
 
 /**
  * 支持metamorphosis消息消费的storm spout
- * 
+ *
  * @author boyan(boyan@taobao.com)
  * @date 2011-11-8
- * 
+ *
  */
 public class MetaSpout extends BaseRichSpout {
 	private static final long serialVersionUID = 4382748324382L;
@@ -55,7 +56,7 @@ public class MetaSpout extends BaseRichSpout {
 	public static final int DEFAULT_MAX_SIZE = 1024 * 1024;
 
 	private String topic;
-	
+
 	private transient MessageConsumer messageConsumer;
 
 	private transient MessageSessionFactory sessionFactory;
@@ -159,7 +160,7 @@ public class MetaSpout extends BaseRichSpout {
 					return;
 				}
 				final Message message = wrapper.message;
-				this.collector.emit(this.scheme.deserialize(message.getData()), message.getId());
+				this.collector.emit(this.scheme.deserialize(ByteBuffer.wrap(message.getData())), message.getId());
 			} catch (final InterruptedException e) {
 				// interrupted while waiting for message, big deal
 			}

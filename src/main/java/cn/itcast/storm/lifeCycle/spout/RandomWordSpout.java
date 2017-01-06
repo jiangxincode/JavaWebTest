@@ -6,13 +6,13 @@ import java.util.Random;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import backtype.storm.spout.SpoutOutputCollector;
-import backtype.storm.task.TopologyContext;
-import backtype.storm.topology.OutputFieldsDeclarer;
-import backtype.storm.topology.base.BaseRichSpout;
-import backtype.storm.tuple.Fields;
-import backtype.storm.tuple.Values;
-import backtype.storm.utils.Utils;
+import org.apache.storm.spout.SpoutOutputCollector;
+import org.apache.storm.task.TopologyContext;
+import org.apache.storm.topology.OutputFieldsDeclarer;
+import org.apache.storm.topology.base.BaseRichSpout;
+import org.apache.storm.tuple.Fields;
+import org.apache.storm.tuple.Values;
+import org.apache.storm.utils.Utils;
 /**
  * 随机从String数组当中读取一个单词发送给下一个bolt
  * @author Administrator
@@ -21,15 +21,15 @@ import backtype.storm.utils.Utils;
 public class RandomWordSpout extends BaseRichSpout {
 
 	private static final long serialVersionUID = -4287209449750623371L;
-	
+
 	private static final Log log = LogFactory.getLog(RandomWordSpout.class);
 
 	private SpoutOutputCollector collector;
-	
+
 	private String[] words = new String[]{"storm", "hadoop", "hive", "flume"};
-	
+
 	private Random random = new Random();
-	
+
 	public RandomWordSpout() {
 		log.warn("&&&&&&&&&&&&&&&&& RandomWordSpout constructor method invoked");
 	}
@@ -64,7 +64,7 @@ public class RandomWordSpout extends BaseRichSpout {
 	public void deactivate() {
 		log.warn("################# RandomWordSpout deactivate() method invoked");
 	}
-	
-	
+
+
 
 }

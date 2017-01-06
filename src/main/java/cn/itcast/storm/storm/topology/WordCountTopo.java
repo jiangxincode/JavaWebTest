@@ -1,8 +1,8 @@
 package cn.itcast.storm.storm.topology;
 
-import backtype.storm.Config;
-import backtype.storm.LocalCluster;
-import backtype.storm.topology.TopologyBuilder;
+import org.apache.storm.Config;
+import org.apache.storm.LocalCluster;
+import org.apache.storm.topology.TopologyBuilder;
 import cn.itcast.storm.storm.bolt.WordCounter;
 import cn.itcast.storm.storm.bolt.WordSpliter;
 import cn.itcast.storm.storm.spout.WordReader;
@@ -11,7 +11,7 @@ public class WordCountTopo {
 
 	/**
 	 * Storm word count demo
-	 * 
+	 *
 	 * @param args
 	 */
 	public static void main(String[] args) {

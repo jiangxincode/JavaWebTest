@@ -5,11 +5,11 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.UUID;
 
-import backtype.storm.task.TopologyContext;
-import backtype.storm.topology.BasicOutputCollector;
-import backtype.storm.topology.OutputFieldsDeclarer;
-import backtype.storm.topology.base.BaseBasicBolt;
-import backtype.storm.tuple.Tuple;
+import org.apache.storm.task.TopologyContext;
+import org.apache.storm.topology.BasicOutputCollector;
+import org.apache.storm.topology.OutputFieldsDeclarer;
+import org.apache.storm.topology.base.BaseBasicBolt;
+import org.apache.storm.tuple.Tuple;
 /**
  * 将接收到的单词写入到一个文件当中
  * @author Administrator
@@ -18,9 +18,9 @@ import backtype.storm.tuple.Tuple;
 public class WriterBolt extends BaseBasicBolt {
 
 	private static final long serialVersionUID = -6586283337287975719L;
-	
+
 	private FileWriter writer = null;
-	
+
 	@Override
 	public void prepare(Map stormConf, TopologyContext context) {
 		try {
@@ -30,12 +30,12 @@ public class WriterBolt extends BaseBasicBolt {
 		}
 	}
 
-	
+
 	@Override
 	public void declareOutputFields(OutputFieldsDeclarer declarer) {
 	}
-	
-	
+
+
 	@Override
 	public void execute(Tuple input, BasicOutputCollector collector) {
 		String s = input.getString(0);
