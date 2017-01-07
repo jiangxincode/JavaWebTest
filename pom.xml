@@ -19,6 +19,30 @@
           </repository>
      </repositories>
      <dependencies>
+          <!-- 所有日志框架先转换到slf4j，然后实际实现用log4j 2.x，更新所有依赖时要注意重新排除相关包，搜索slf4j和log关键字 -->
+          <!-- jcl-over-slf4j是将common-logging转换到slf4j -->
+          <dependency>
+               <groupId>org.slf4j</groupId>
+               <artifactId>jcl-over-slf4j</artifactId>
+               <version>1.7.22</version>
+          </dependency>
+          <!-- log4j-over-slf4j是将log4j 1.x版本转换到slf4j -->
+          <dependency>
+               <groupId>org.slf4j</groupId>
+               <artifactId>log4j-over-slf4j</artifactId>
+               <version>1.7.22</version>
+          </dependency>
+          <!-- log4j-slf4j-impl是将slf4j绑定到log4j 2.x -->
+          <dependency>
+               <groupId>org.apache.logging.log4j</groupId>
+               <artifactId>log4j-slf4j-impl</artifactId>
+               <version>2.7</version>
+          </dependency>
+          <dependency>
+               <groupId>org.apache.logging.log4j</groupId>
+               <artifactId>log4j-core</artifactId>
+               <version>2.7</version>
+          </dependency>
           <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
           <dependency>
                <groupId>javax.servlet</groupId>
@@ -39,6 +63,12 @@
                <groupId>org.apache.httpcomponents</groupId>
                <artifactId>httpclient</artifactId>
                <version>4.5.2</version>
+               <exclusions>
+                    <exclusion>
+                         <groupId>commons-logging</groupId>
+                         <artifactId>commons-logging</artifactId>
+                    </exclusion>
+               </exclusions>
           </dependency>
           <dependency>
                <groupId>com.ibm.icu</groupId>
@@ -126,16 +156,57 @@
                          <artifactId>jdk.tools</artifactId>
                          <groupId>jdk.tools</groupId>
                     </exclusion>
-               </exclusions>
-          </dependency>
-          <dependency>
-               <groupId>org.apache.hive</groupId>
-               <artifactId>hive-exec</artifactId>
-               <version>1.2.1</version>
-               <exclusions>
+                    <exclusion>
+                         <groupId>commons-logging</groupId>
+                         <artifactId>commons-logging</artifactId>
+                    </exclusion>
                     <exclusion>
                          <groupId>log4j</groupId>
                          <artifactId>log4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                         <groupId>org.slf4j</groupId>
+                         <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                    <exclusion>
+                         <groupId>org.slf4j</groupId>
+                         <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+               </exclusions>
+          </dependency>
+          <!-- https://mvnrepository.com/artifact/org.apache.hive/hive-exec -->
+          <dependency>
+               <groupId>org.apache.hive</groupId>
+               <artifactId>hive-exec</artifactId>
+               <version>2.1.1</version>
+               <exclusions>
+                    <exclusion>
+                         <groupId>commons-logging</groupId>
+                         <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                    <exclusion>
+                         <groupId>org.apache.logging.log4j</groupId>
+                         <artifactId>log4j-1.2-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                         <groupId>org.apache.logging.log4j</groupId>
+                         <artifactId>log4j-slf4j-impl</artifactId>
+                    </exclusion>
+                    <exclusion>
+                         <groupId>org.apache.logging.log4j</groupId>
+                         <artifactId>log4j-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                         <groupId>org.apache.logging.log4j</groupId>
+                         <artifactId>log4j-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                         <groupId>log4j</groupId>
+                         <artifactId>log4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                         <groupId>org.slf4j</groupId>
+                         <artifactId>slf4j-api</artifactId>
                     </exclusion>
                </exclusions>
           </dependency>
@@ -152,6 +223,18 @@
                          <groupId>org.apache.logging.log4j</groupId>
                          <artifactId>log4j-core</artifactId>
                     </exclusion>
+                    <exclusion>
+                         <groupId>org.apache.logging.log4j</groupId>
+                         <artifactId>log4j-slf4j-impl</artifactId>
+                    </exclusion>
+                    <exclusion>
+                         <groupId>org.slf4j</groupId>
+                         <artifactId>log4j-over-slf4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                         <groupId>org.slf4j</groupId>
+                         <artifactId>slf4j-api</artifactId>
+                    </exclusion>
                </exclusions>
           </dependency>
           <dependency>
@@ -163,17 +246,33 @@
                          <groupId>log4j</groupId>
                          <artifactId>log4j</artifactId>
                     </exclusion>
+                    <exclusion>
+                         <groupId>commons-logging</groupId>
+                         <artifactId>commons-logging</artifactId>
+                    </exclusion>
                </exclusions>
           </dependency>
           <dependency>
                <groupId>org.drools</groupId>
                <artifactId>drools-core</artifactId>
                <version>5.6.0.Final</version>
+               <exclusions>
+                    <exclusion>
+                         <groupId>org.slf4j</groupId>
+                         <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+               </exclusions>
           </dependency>
           <dependency>
                <groupId>org.drools</groupId>
                <artifactId>drools-compiler</artifactId>
                <version>5.6.0.Final</version>
+               <exclusions>
+                    <exclusion>
+                         <groupId>org.slf4j</groupId>
+                         <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+               </exclusions>
           </dependency>
           <dependency>
                <groupId>net.sourceforge.jexcelapi</groupId>
@@ -209,27 +308,18 @@
                <groupId>org.forgerock.openam</groupId>
                <artifactId>openam-shared</artifactId>
                <version>13.0.0</version>
+               <exclusions>
+                    <exclusion>
+                         <groupId>org.slf4j</groupId>
+                         <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+               </exclusions>
           </dependency>
           <!-- https://mvnrepository.com/artifact/com.oracle/ojdbc6 -->
           <dependency>
                <groupId>com.oracle</groupId>
                <artifactId>ojdbc6</artifactId>
                <version>12.1.0.1-atlassian-hosted</version>
-          </dependency>
-          <dependency>
-               <groupId>log4j</groupId>
-               <artifactId>log4j</artifactId>
-               <version>1.2.17</version>
-          </dependency>
-          <dependency>
-               <groupId>org.apache.logging.log4j</groupId>
-               <artifactId>log4j-core</artifactId>
-               <version>2.7</version>
-          </dependency>
-          <dependency>
-               <groupId>commons-logging</groupId>
-               <artifactId>commons-logging</artifactId>
-               <version>1.2</version>
           </dependency>
           <dependency>
                <groupId>junit</groupId>
@@ -241,6 +331,12 @@
                <groupId>org.springframework</groupId>
                <artifactId>spring-jdbc</artifactId>
                <version>4.3.5.RELEASE</version>
+               <exclusions>
+                    <exclusion>
+                         <groupId>commons-logging</groupId>
+                         <artifactId>commons-logging</artifactId>
+                    </exclusion>
+               </exclusions>
           </dependency>
           <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
           <dependency>
@@ -288,6 +384,12 @@
                <groupId>commons-httpclient</groupId>
                <artifactId>commons-httpclient</artifactId>
                <version>3.1</version>
+               <exclusions>
+                    <exclusion>
+                         <groupId>commons-logging</groupId>
+                         <artifactId>commons-logging</artifactId>
+                    </exclusion>
+               </exclusions>
           </dependency>
           <!-- https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-frontend-jaxws -->
           <dependency>
@@ -341,17 +443,39 @@
                <groupId>org.hibernate</groupId>
                <artifactId>hibernate-core</artifactId>
                <version>3.5.6-Final</version>
+               <exclusions>
+                    <exclusion>
+                         <groupId>org.slf4j</groupId>
+                         <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+               </exclusions>
           </dependency>
           <dependency>
                <groupId>org.hibernate</groupId>
                <artifactId>hibernate-annotations</artifactId>
                <version>3.5.6-Final</version>
+               <exclusions>
+                    <exclusion>
+                         <groupId>org.slf4j</groupId>
+                         <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+               </exclusions>
           </dependency>
           <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-ehcache -->
           <dependency>
                <groupId>org.hibernate</groupId>
                <artifactId>hibernate-ehcache</artifactId>
                <version>3.5.6-Final</version>
+               <exclusions>
+                    <exclusion>
+                         <groupId>commons-logging</groupId>
+                         <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                    <exclusion>
+                         <groupId>org.slf4j</groupId>
+                         <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+               </exclusions>
           </dependency>
           <dependency>
                <groupId>commons-codec</groupId>
