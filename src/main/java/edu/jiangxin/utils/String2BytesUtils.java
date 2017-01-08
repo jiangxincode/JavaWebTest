@@ -4,11 +4,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Base64;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.ArrayUtils;
 
-import com.sun.identity.shared.encode.Base64;
 
 public class String2BytesUtils {
 
@@ -76,7 +76,7 @@ public class String2BytesUtils {
 
 		int len;
 		while ((len = fis.read(buff)) != -1) {
-			sb.append(Base64.encode(ArrayUtils.subarray(buff, 0, len)));
+			sb.append(Base64.getEncoder().encode(ArrayUtils.subarray(buff, 0, len)));
 		}
 		fis.close();
 		return sb.toString();
@@ -84,7 +84,7 @@ public class String2BytesUtils {
 
 	public static void writeString2BinFile3(String content, String filename) throws IOException {
 		FileOutputStream fos = new FileOutputStream(new File(filename));
-		fos.write(Base64.decode(content));
+		fos.write(Base64.getDecoder().decode(content));
 		fos.close();
 	}
 

@@ -17,12 +17,12 @@
 package com.sun.identity.common;
 
 
+import static org.junit.Assert.assertEquals;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 
 import org.junit.Test;
-
-import static org.testng.Assert.*;
 
 public class CaseInsensitivePropertiesTest {
 
