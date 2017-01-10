@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import oracle.sql.BLOB;
 
 @SuppressWarnings("deprecation")
-public class OracleUtils {
+public class BlobUtils {
 
 	/**
 	 * 将blob转化为byte[],只对纯文本的有效
@@ -15,7 +15,7 @@ public class OracleUtils {
 	 * @param blob
 	 * @return
 	 */
-	public byte[] getBytes(BLOB blob) {
+	public static byte[] getBytes(BLOB blob) {
 		try {
 			InputStream ins = blob.getBinaryStream();
 			byte[] b = new byte[1024];
@@ -39,7 +39,7 @@ public class OracleUtils {
 	 * @param blob
 	 * @return
 	 */
-	public byte[] blobToBytes(BLOB blob) {
+	public static byte[] blobToBytes(BLOB blob) {
 		InputStream is = null;
 		byte[] b = null;
 		try {
