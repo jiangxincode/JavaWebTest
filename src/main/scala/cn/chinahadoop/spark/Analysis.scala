@@ -9,7 +9,7 @@ class Analysis {
 }
 
 /**
- * 下载搜狗实验室用户查询日志精简版（63M）：http://download.labs.sogou.com/dl/sogoulabdown/SogouQ/SogouQ.reduced.zip
+ * 下载搜狗实验室用户查询日志迷你版(样例数据, 376KB)：http://download.labs.sogou.com/dl/sogoulabdown/SogouQ/SogouQ.mini.zip
  * 做以下查询：
  * 1、用户在00:00:00到12:00:00之间的查询数？
  * 2、搜索结果排名第一，但是点击次序排在第二的数据有多少？
@@ -26,15 +26,14 @@ object Analysis {
       .set("spark.executor.memory", "25g")
 
     val sc = new SparkContext(conf)
-    val data = sc.textFile("hdfs://Ubuntu-01:9000/spark/test/SogouQ.reduced")
-    
-    
-
-    println(data.count)
+    val data = sc.textFile("hdfs://Ubuntu-01:9000/spark/test/SogouQ.sample")
     data.cache
     println(data.count)
     println(data.map(_.split('\t')(0)).filter(_ > "00:00:00").filter(_ < "12:00:00").count)
     //println(data.map(_.replace(' ', '\t')).filter(_.split('\t')(3).toInt == 1).filter(_.split('\t')(4).toInt == 2).count)
+    data.map(_.replace(' ', '\t')).count
+    data.map(_.replace(' ', '\t')).map(_.split('\t')(3)).count
+    data.map(_.replace(' ', '\t')).filter(_.split('\t')(3).toInt == 1).count
     println(data.map(_.replace(' ', '\t')).filter(_.split('\t')(3).toInt == 1).count)
     println(data.map(_.replace(' ', '\t')).filter(_.split('\t')(4).toInt == 2).count)
   }
