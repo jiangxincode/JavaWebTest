@@ -4,41 +4,39 @@ import org.apache.spark.{ SparkContext, SparkConf }
 import scala.collection.mutable.ListBuffer
 import org.apache.spark.SparkContext._
 
-/**
- * Created by chenchao on 14-3-1.
- */
 class Analysis {
 
 }
 
+/**
+ * 下载搜狗实验室用户查询日志精简版（63M）：http://download.labs.sogou.com/dl/sogoulabdown/SogouQ/SogouQ.reduced.zip
+ * 做以下查询：
+ * 1、用户在00:00:00到12:00:00之间的查询数？
+ * 2、搜索结果排名第一，但是点击次序排在第二的数据有多少？
+ *
+ */
 object Analysis {
 
   def main(args: Array[String]) {
 
-    if (args.length != 3) {
-      println("Usage : java -jar code.jar dependency_jars file_location save_location")
-      System.exit(0)
-    }
-
-    val jars = ListBuffer[String]()
-    args(0).split(',').map(jars += _)
-
     val conf = new SparkConf()
-    conf.setMaster("spark://server1:8888")
-      .setSparkHome("/data/software/spark-0.9.0-incubating-bin-hadoop1")
+    conf.setMaster("spark://Ubuntu-01:7077")
+      .setSparkHome("/usr/local/spark/spark-2.1.0-bin-hadoop2.7")
       .setAppName("analysis")
-      .setJars(jars)
       .set("spark.executor.memory", "25g")
 
     val sc = new SparkContext(conf)
-    val data = sc.textFile(args(1))
-
-    data.cache
+    val data = sc.textFile("hdfs://Ubuntu-01:9000/spark/test/SogouQ.reduced")
+    
+    
 
     println(data.count)
-
-    data.filter(_.split(' ').length == 3).map(_.split(' ')(1)).map((_, 1)).reduceByKey(_ + _)
-      .map(x => (x._2, x._1)).sortByKey(false).map(x => (x._2, x._1)).saveAsTextFile(args(2))
+    data.cache
+    println(data.count)
+    println(data.map(_.split('\t')(0)).filter(_ > "00:00:00").filter(_ < "12:00:00").count)
+    //println(data.map(_.replace(' ', '\t')).filter(_.split('\t')(3).toInt == 1).filter(_.split('\t')(4).toInt == 2).count)
+    println(data.map(_.replace(' ', '\t')).filter(_.split('\t')(3).toInt == 1).count)
+    println(data.map(_.replace(' ', '\t')).filter(_.split('\t')(4).toInt == 2).count)
   }
 
 }
