@@ -1,4 +1,4 @@
-package cn.chinahadoop.spark
+package edu.jiangxin.spark
 
 import org.apache.spark.{ SparkContext, SparkConf }
 import scala.collection.mutable.ListBuffer
