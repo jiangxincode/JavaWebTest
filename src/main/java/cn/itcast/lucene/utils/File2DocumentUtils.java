@@ -4,21 +4,18 @@ import java.io.File;
 import org.apache.commons.io.FileUtils;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
-import org.apache.lucene.document.NumberTools;
-import org.apache.lucene.document.Field.Index;
-import org.apache.lucene.document.Field.Store;
+import org.apache.lucene.document.TextField;
 
-@SuppressWarnings("deprecation")
 public class File2DocumentUtils {
 
 	public static Document file2Document(String path) {
 		File file = new File(path);
 		Document doc = new Document();
 		try {
-			doc.add(new Field("name", file.getName(), Store.YES, Index.ANALYZED));
-			doc.add(new Field("content", FileUtils.readFileToString(file), Store.YES, Index.ANALYZED));
-			doc.add(new Field("size", NumberTools.longToString(file.length()), Store.YES, Index.NOT_ANALYZED));
-			doc.add(new Field("path", file.getAbsolutePath(), Store.YES, Index.NOT_ANALYZED));
+			doc.add(new TextField("name", file.getName(), Field.Store.YES));
+			doc.add(new TextField("content", FileUtils.readFileToString(file), Field.Store.YES));
+			doc.add(new TextField("size", String.valueOf(file.length()), Field.Store.YES));
+			doc.add(new TextField("path", file.getAbsolutePath(), Field.Store.YES));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -27,12 +24,10 @@ public class File2DocumentUtils {
 	}
 
 	public static void printDocumentInfo(Document doc) {
-		// Field f = doc.getField("name");
-		// f.stringValue();
 		System.out.println("------------------------------");
 		System.out.println("name     = " + doc.get("name"));
 		System.out.println("content  = " + doc.get("content"));
-		System.out.println("size     = " + NumberTools.stringToLong(doc.get("size")));
+		System.out.println("size     = " + Long.parseLong(doc.get("size")));
 		System.out.println("path     = " + doc.get("path"));
 	}
 

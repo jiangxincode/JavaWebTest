@@ -1,25 +1,24 @@
 package cn.itcast.lucene.query;
 
 import org.apache.lucene.document.Document;
-import org.apache.lucene.document.NumberTools;
 import org.apache.lucene.index.Term;
+import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.search.BooleanQuery;
+import org.apache.lucene.search.NumericRangeQuery;
 import org.apache.lucene.search.PhraseQuery;
 import org.apache.lucene.search.Query;
-import org.apache.lucene.search.RangeQuery;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.WildcardQuery;
-import org.apache.lucene.search.BooleanClause.Occur;
+import org.junit.Before;
 import org.junit.Test;
 
 import cn.itcast.lucene.IndexDao;
 import cn.itcast.lucene.QueryResult;
 import cn.itcast.lucene.utils.File2DocumentUtils;
 
-@SuppressWarnings("deprecation")
 public class QueryTest {
 
-	IndexDao indexDao = new IndexDao();
+	IndexDao indexDao = null;
 
 	public void queryAndPrintResult(Query query) {
 		System.out.println("对应的查询字符串：" + query);
@@ -30,6 +29,14 @@ public class QueryTest {
 		}
 	}
 
+	@Before
+	public void setUp() throws Exception {
+		indexDao = new IndexDao();
+		String filePath = IndexDao.class.getResource("I_have_a_dream_en.txt").getPath();
+		Document doc = File2DocumentUtils.file2Document(filePath);
+		indexDao.save(doc);
+	}
+
 	/**
 	 * 关键词查询
 	 *
@@ -37,11 +44,8 @@ public class QueryTest {
 	 */
 	@Test
 	public void testTermQuery() {
-		// Term term = new Term("name", "房间");
-		// Term term = new Term("name", "Room"); // 英文关键词全是小写字符
-		Term term = new Term("name", "room");
+		Term term = new Term("content", "dream");
 		Query query = new TermQuery(term);
-
 		queryAndPrintResult(query);
 	}
 
@@ -54,22 +58,9 @@ public class QueryTest {
 	 */
 	@Test
 	public void testRangeQuery() {
-		Term lowerTerm = new Term("size", NumberTools.longToString(50));
-		Term upperTerm = new Term("size", NumberTools.longToString(1000));
-		Query query = new RangeQuery(lowerTerm, upperTerm, false);
-
+		Query query = NumericRangeQuery.newLongRange("size", 50L, 100L, false, false);
 		queryAndPrintResult(query);
 	}
-
-	// public static void main(String[] args) {
-	// System.out.println(Long.MAX_VALUE);
-	// System.out.println(NumberTools.longToString(1000));
-	// System.out.println(NumberTools.stringToLong("000000000000rs"));
-	//
-	// System.out.println(DateTools.dateToString(new Date(), Resolution.DAY));
-	// System.out.println(DateTools.dateToString(new Date(), Resolution.MINUTE));
-	// System.out.println(DateTools.dateToString(new Date(), Resolution.SECOND));
-	// }
 
 	/**
 	 * 通配符查询
@@ -131,9 +122,7 @@ public class QueryTest {
 		query1.setSlop(2);
 
 		// 条件2
-		Term lowerTerm = new Term("size", NumberTools.longToString(500));
-		Term upperTerm = new Term("size", NumberTools.longToString(1000));
-		Query query2 = new RangeQuery(lowerTerm, upperTerm, true);
+		Query query2 = NumericRangeQuery.newLongRange("size", 500L, 1000L, false, false);
 
 		// 组合
 		BooleanQuery boolQuery = new BooleanQuery();
@@ -151,9 +140,9 @@ public class QueryTest {
 		// String queryString = "(content:\"绅士 饭店\"~2 NOT size:[000000000000dw TO 000000000000rs])";
 //		String queryString = "-content:\"绅士 饭店\"~2 AND -size:[000000000000dw TO 000000000000rs]";
 //		String queryString = "-content:\"绅士 饭店\"~2 OR -size:[000000000000dw TO 000000000000rs]";
-		String queryString = "-content:\"绅士 饭店\"~2 NOT -size:[000000000000dw TO 000000000000rs]";
+		//String queryString = "-content:\"绅士 饭店\"~2 NOT -size:[000000000000dw TO 000000000000rs]";
 
-		QueryResult qr = indexDao.search(queryString, 0, 10);
+		QueryResult qr = indexDao.search("dream", 0, 10);
 		System.out.println("总共有【" + qr.getRecordCount() + "】条匹配结果");
 		for (Document doc : qr.getRecordList()) {
 			File2DocumentUtils.printDocumentInfo(doc);

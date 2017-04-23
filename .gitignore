@@ -1,5 +1,6 @@
 target/
 .settings/
+logs/
 *.swp
 *.log
 .springBeans
