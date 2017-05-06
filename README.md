@@ -256,6 +256,10 @@ For example:
 + 随机姓氏输出
 + 去除不必要的文档信息输出，如果必要，该用xml方式输出，便于扩展
 
+## Update Third-Party libraries
+
+* JACOB update the "jacob-${JACOB_VERSION}-x64/x32.dll" in the ${java.library.path} synchronous .
+
 ## License:
 
 + GPLv3 http://www.gnu.org/licenses/gpl-3.0.txt
