@@ -50,10 +50,11 @@
                <artifactId>commons-lang3</artifactId>
                <version>3.5</version>
           </dependency>
+          <!-- https://mvnrepository.com/artifact/com.hynnet/jacob -->
           <dependency>
-               <groupId>net.sf.jacob-project</groupId>
+               <groupId>com.hynnet</groupId>
                <artifactId>jacob</artifactId>
-               <version>1.14.3</version>
+               <version>1.18</version>
           </dependency>
           <dependency>
                <groupId>org.apache.httpcomponents</groupId>
@@ -143,7 +144,6 @@
                <artifactId>mongo-java-driver</artifactId>
                <version>1.4</version>
           </dependency>
-
           <!-- https://mvnrepository.com/artifact/org.apache.hive/hive-exec -->
           <dependency>
                <groupId>org.apache.hive</groupId>
@@ -182,6 +182,10 @@
                          <groupId>jdk.tools</groupId>
                          <artifactId>jdk.tools</artifactId>
                     </exclusion>
+                    <exclusion>
+                         <groupId>asm</groupId>
+                         <artifactId>asm-commons</artifactId>
+                    </exclusion>
                </exclusions>
           </dependency>
           <dependency>
@@ -208,6 +212,10 @@
                     <exclusion>
                          <groupId>org.slf4j</groupId>
                          <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                         <groupId>org.ow2.asm</groupId>
+                         <artifactId>asm</artifactId>
                     </exclusion>
                </exclusions>
           </dependency>
@@ -345,6 +353,12 @@
                <groupId>org.apache.cxf</groupId>
                <artifactId>cxf-rt-frontend-jaxws</artifactId>
                <version>3.1.11</version>
+               <exclusions>
+                    <exclusion>
+                         <groupId>org.ow2.asm</groupId>
+                         <artifactId>asm</artifactId>
+                    </exclusion>
+               </exclusions>
           </dependency>
           <!-- https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-frontend-jaxrs -->
           <dependency>
@@ -658,9 +672,14 @@
                               <target>2.0</target>
                          </configuration>
                     </plugin>
-                    <!-- <plugin> <artifactId>maven-war-plugin</artifactId>
-                         <version>3.0.0</version> <configuration> <warSourceDirectory>WebRoot</warSourceDirectory>
-                         <failOnMissingWebXml>false</failOnMissingWebXml> </configuration> </plugin> -->
+                    <plugin>
+                         <artifactId>maven-war-plugin</artifactId>
+                         <version>3.0.0</version>
+                         <configuration>
+                              <warSourceDirectory>WebRoot</warSourceDirectory>
+                              <failOnMissingWebXml>false</failOnMissingWebXml>
+                         </configuration>
+                    </plugin>
                     <!-- <plugin> <groupId>org.apache.maven.plugins</groupId>
                          <artifactId>maven-shade-plugin</artifactId> <version>1.2.1</version> <executions>
                          <execution> <phase>package</phase> <goals> <goal>shade</goal> </goals> <configuration>

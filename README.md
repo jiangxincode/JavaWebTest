@@ -255,10 +255,12 @@ For example:
 + 随机身份证号码输出
 + 随机姓氏输出
 + 去除不必要的文档信息输出，如果必要，该用xml方式输出，便于扩展
++ Verify log4j related content.
++ Use the properties instead of xml to store password.
 
 ## Update Third-Party libraries
 
-* JACOB update the "jacob-${JACOB_VERSION}-x64/x32.dll" in the ${java.library.path} synchronous .
+* JACOB: update the "jacob-${JACOB_VERSION}-x64/x32.dll" in the ${java.library.path} synchronous .
 
 ## License:
 
