@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="model.Student" table="student" lazy="true"><!--把类和数表关联起来-->
+		
+		<id name="id" unsaved-value="null"><!--id的产生方式是uuid.hex-->
+			<generator class="uuid.hex" />
+		</id>
+		
+		<property name="cardId" type="string" /><!--映射号-->
+		<property name="name" type="string" /><!--映射学生名-->
+		<property name="age" type="int" /><!--映射学生岁数-->
+		
+		<one-to-one name="cer" class="model.Certificate"  fetch="join" cascade="all"  /><!--映射对应的身分证对象-->
+	</class>
+</hibernate-mapping>

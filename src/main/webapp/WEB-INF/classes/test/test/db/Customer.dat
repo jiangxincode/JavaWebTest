@@ -1,0 +1,4 @@
+object_id long not null,name varchar(16) not null,address varchar(50) null,postcode varchar(10) null,country varchar(10) null,email varchar(40) null,tel varchar(20) null,statement varchar(10) null
+1,'wang','jiashan','7890','France','wang@sina.com','13964587','hello'
+2,'liu','shanghai','1234','Germany','hello@126.com','1334343','hi'
+3,'he','zhejiang','4343','Japan','nihao@163.com','43434343','nihaos'
