@@ -4,6 +4,7 @@ RemoteSystemsTempFiles/
 Servers/
 
 *.swp
+*.class
 
 test/.settings/
 test/WebRoot/WEB-INF/classes/
