@@ -5,11 +5,8 @@ import java.io.InputStream;
 
 import org.apache.poi.hwpf.extractor.WordExtractor;
 
-/**
- * POI按行读取word
- * @author jiangxin
- */
-public class ReadWordContent {
+public class POITest {
+	//按行读取word
 	public static void main(String args[]) {
 
 		StringBuffer buffer = new StringBuffer();
@@ -17,7 +14,7 @@ public class ReadWordContent {
 		WordExtractor extractor = null;
 		String[] paragraphs = null;
 		try {
-			extractor = new WordExtractor(ReadWordContent.class.getResourceAsStream("mydoc.doc"));
+			extractor = new WordExtractor(POITest.class.getResourceAsStream("mydoc.doc"));
 			paragraphs = extractor.getParagraphText();
 			for (String paragraph : paragraphs) {
 				// delete the field except the plain text
