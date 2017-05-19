@@ -64,16 +64,6 @@
           <servlet-name>BookAdmin</servlet-name>
           <url-pattern>/BookAdmin</url-pattern>
      </servlet-mapping>
-     <servlet>
-          <description></description>
-          <display-name>Search</display-name>
-          <servlet-name>Search</servlet-name>
-          <servlet-class>com.db.dao.Search</servlet-class>
-     </servlet>
-     <servlet-mapping>
-          <servlet-name>Search</servlet-name>
-          <url-pattern>/Search</url-pattern>
-     </servlet-mapping>
      <!-- for Jersey begin -->
      <servlet>
           <servlet-name>Jersey REST Service</servlet-name>
