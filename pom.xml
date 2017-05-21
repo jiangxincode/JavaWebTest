@@ -502,6 +502,11 @@
                <artifactId>jstl</artifactId>
                <version>1.2</version>
           </dependency>
+          <dependency>
+               <groupId>net.sourceforge.tess4j</groupId>
+               <artifactId>tess4j</artifactId>
+               <version>3.3.1</version>
+          </dependency>
      </dependencies>
      <build>
           <!-- 默认源代码和资源文件目录配置 -->
