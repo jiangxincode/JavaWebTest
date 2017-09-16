@@ -1,7 +1,18 @@
+# Maven project
 target/
+
+# Eclipse project
 .settings/
-logs/
-*.swp
-*.log
 .springBeans
-*.class
+.classpath
+.checkstyle
+
+# IDEA project
+*.idea/
+JavaWebTest.iml
+
+# VIM
+*.swp
+
+# others
+logs/

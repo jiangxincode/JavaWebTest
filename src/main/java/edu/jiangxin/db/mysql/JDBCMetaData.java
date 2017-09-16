@@ -7,9 +7,6 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-/**
- * JDBCMetaData
- */
 public class JDBCMetaData {
 	public static void main(String[] args) {
 
