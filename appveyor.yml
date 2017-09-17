@@ -10,6 +10,8 @@ environment:
 install:
   - cmd: SET PATH=%JAVA_HOME%\bin;%PATH%
   - cmd: java -version
+  - cmd: git config --global user.name "jiangxincode"
+  - cmd: git config --global user.email "jiangxinnju@163.com"
 
 platform:
   # - x86

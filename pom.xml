@@ -553,7 +553,7 @@
                     <plugin>
                          <groupId>org.apache.maven.plugins</groupId>
                          <artifactId>maven-scm-publish-plugin</artifactId>
-                         <version>1.9.5</version>
+                         <version>1.1</version>
                          <extensions>true</extensions>
                          <configuration>
                               <pubScmUrl>scm:git:https://jiangxincode@bitbucket.org/jiangxincode/jiangxincode.bitbucket.org.git</pubScmUrl>
