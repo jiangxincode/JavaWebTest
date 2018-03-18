@@ -1,4 +1,4 @@
-package com.shengsiyuan.xml.jdom;
+package edu.jiangxin.xml.jdom;
 
 import java.io.FileWriter;
 
