@@ -1,8 +1,5 @@
 # Test
 
-[![Build status](https://ci.appveyor.com/api/projects/status/lcxa9ka5mltxighw?svg=true)](https://ci.appveyor.com/project/jiangxincode/javawebtest)
-[![Dependency Status](https://www.versioneye.com/user/projects/58286ae9f09d22004f59150d/badge.svg?style=flat)](https://www.versioneye.com/user/projects/58286ae9f09d22004f59150d)
-
 jiangxinnju@163.com
 
 http://github.com/jiangxincode
@@ -218,7 +215,7 @@ filename1[,filename2...] The file that you want to convert,at most one file.
 For example:
 ```Batchfile
     java -jar TestTools -f GBK -t UTF-8 test.txt
-    java -jar TestTools  -dos2unix test.txt
+    java -jar TestTools -os dos2unix test.txt
     java -jar TestTools -r test.txt
 ```
 

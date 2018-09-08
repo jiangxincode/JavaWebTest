@@ -1,13 +1,11 @@
 package edu.jiangxin.time;
 
-import edu.jiangxin.constant.Constant;
-
 public class TestObject {
 	/**
 	 * 一个用来被测试的方法，进行了一个比较耗时的循环
 	 */
 	public static void testMethod() {
-		for (int i = 0; i < Constant.ONE_HUNDRED_MILLION; i++) {
+		for (int i = 0; i < 100000000; i++) {
 			continue;
 		}
 	}

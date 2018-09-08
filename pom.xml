@@ -439,13 +439,6 @@
                <version>1.46</version>
           </dependency>
           <dependency>
-               <groupId>cpdetector</groupId>
-               <artifactId>cpdetector</artifactId>
-               <version>1.0.7</version>
-               <scope>system</scope>
-               <systemPath>${project.basedir}/lib/cpdetector-1.0.7.jar</systemPath>
-          </dependency>
-          <dependency>
                <groupId>jeasy</groupId>
                <artifactId>je-analysis</artifactId>
                <version>1.5.3</version>
@@ -467,13 +460,6 @@
                <systemPath>${project.basedir}/lib/aspose-words-15.11.0-jdk16.jar</systemPath>
           </dependency>
           <dependency>
-               <groupId>de.dixti</groupId>
-               <artifactId>jarscan</artifactId>
-               <version>2.2</version>
-               <scope>system</scope>
-               <systemPath>${project.basedir}/lib/jarscan.jar</systemPath>
-          </dependency>
-          <dependency>
                <groupId>com.sikulix</groupId>
                <artifactId>sikulixapi</artifactId>
                <version>1.1.1</version>
@@ -484,12 +470,6 @@
                <groupId>net.sourceforge.jchardet</groupId>
                <artifactId>jchardet</artifactId>
                <version>1.0</version>
-          </dependency>
-          <!-- http://mvnrepository.com/artifact/org.jsoup/jsoup -->
-          <dependency>
-               <groupId>org.jsoup</groupId>
-               <artifactId>jsoup</artifactId>
-               <version>1.10.3</version>
           </dependency>
           <dependency>
                <groupId>com.jcraft</groupId>

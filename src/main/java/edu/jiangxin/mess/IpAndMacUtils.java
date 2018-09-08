@@ -1,4 +1,4 @@
-package edu.jiangxin.tools;
+package edu.jiangxin.mess;
 
 import java.io.BufferedReader;
 import java.io.IOException;
