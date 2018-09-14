@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
      <modelVersion>4.0.0</modelVersion>
      <groupId>JavaWebTest</groupId>
@@ -460,6 +461,11 @@
                <systemPath>${project.basedir}/lib/aspose-words-15.11.0-jdk16.jar</systemPath>
           </dependency>
           <dependency>
+               <groupId>org.jsoup</groupId>
+               <artifactId>jsoup</artifactId>
+               <version>1.10.3</version>
+          </dependency>
+          <dependency>
                <groupId>com.sikulix</groupId>
                <artifactId>sikulixapi</artifactId>
                <version>1.1.1</version>
@@ -490,6 +496,13 @@
                <groupId>net.lingala.zip4j</groupId>
                <artifactId>zip4j</artifactId>
                <version>1.3.2</version>
+          </dependency>
+          <dependency>
+               <groupId>de.dixti</groupId>
+               <artifactId>jarscan</artifactId>
+               <version>2.2</version>
+               <scope>system</scope>
+               <systemPath>${project.basedir}/lib/jarscan.jar</systemPath>
           </dependency>
      </dependencies>
      <build>
@@ -528,19 +541,6 @@
                                    <version>2.20</version>
                               </dependency>
                          </dependencies>
-                    </plugin>
-                    <plugin>
-                         <groupId>org.apache.maven.plugins</groupId>
-                         <artifactId>maven-scm-publish-plugin</artifactId>
-                         <version>1.1</version>
-                         <extensions>true</extensions>
-                         <configuration>
-                              <pubScmUrl>scm:git:https://jiangxincode@bitbucket.org/jiangxincode/jiangxincode.bitbucket.org.git</pubScmUrl>
-                              <scmBranch>master</scmBranch>
-                              <content>${project.build.directory}/site</content>
-                              <username>jiangxincode</username>
-                              <password>621224jx</password>
-                         </configuration>
                     </plugin>
                     <plugin>
                          <groupId>org.codehaus.mojo</groupId>
@@ -694,81 +694,6 @@
                               </check>
                          </configuration>
                     </plugin>
-                    <plugin>
-                         <groupId>org.apache.maven.plugins</groupId>
-                         <artifactId>maven-site-plugin</artifactId>
-                         <version>3.6</version>
-                         <configuration>
-                              <locales>en_US</locales>
-                              <outputDirectory>${project.build.directory}/site/${project.artifactId}</outputDirectory>
-                              <reportPlugins>
-                                   <plugin>
-                                        <groupId>org.apache.maven.plugins</groupId>
-                                        <artifactId>maven-project-info-reports-plugin</artifactId>
-                                        <version>2.9</version>
-                                        <configuration>
-                                             <dependencyDetailsEnabled>false</dependencyDetailsEnabled>
-                                             <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
-                                        </configuration>
-                                   </plugin>
-                                   <plugin>
-                                        <groupId>org.codehaus.mojo</groupId>
-                                        <artifactId>findbugs-maven-plugin</artifactId>
-                                        <version>3.0.4</version>
-                                   </plugin>
-                                   <plugin>
-                                        <groupId>org.apache.maven.plugins</groupId>
-                                        <artifactId>maven-pmd-plugin</artifactId>
-                                        <version>3.7</version>
-                                        <configuration>
-                                             <targetJdk>1.7</targetJdk>
-                                        </configuration>
-                                   </plugin>
-                                   <plugin>
-                                        <groupId>org.apache.maven.plugins</groupId>
-                                        <artifactId>maven-checkstyle-plugin</artifactId>
-                                        <version>2.17</version>
-                                   </plugin>
-                                   <plugin>
-                                        <groupId>org.codehaus.mojo</groupId>
-                                        <artifactId>jdepend-maven-plugin</artifactId>
-                                        <version>2.0</version>
-                                   </plugin>
-                                   <plugin>
-                                        <groupId>org.codehaus.mojo</groupId>
-                                        <artifactId>cobertura-maven-plugin</artifactId>
-                                   </plugin>
-                                   <plugin>
-                                        <groupId>org.apache.maven.plugins</groupId>
-                                        <artifactId>maven-javadoc-plugin</artifactId>
-                                        <version>2.10.4</version>
-                                        <configuration>
-                                             <excludePackageNames>com.*:edu.*:org.*:cn.*</excludePackageNames>
-                                        </configuration>
-                                   </plugin>
-                                   <plugin>
-                                        <groupId>org.codehaus.mojo</groupId>
-                                        <artifactId>javancss-maven-plugin</artifactId>
-                                        <version>2.1</version>
-                                   </plugin>
-                                   <plugin>
-                                        <groupId>org.apache.maven.plugins</groupId>
-                                        <artifactId>maven-surefire-report-plugin</artifactId>
-                                        <version>2.19.1</version>
-                                   </plugin>
-                                   <plugin>
-                                        <groupId>org.apache.maven.plugins</groupId>
-                                        <artifactId>maven-jxr-plugin</artifactId>
-                                        <version>2.5</version>
-                                   </plugin>
-                                   <plugin>
-                                        <groupId>org.codehaus.mojo</groupId>
-                                        <artifactId>taglist-maven-plugin</artifactId>
-                                        <version>2.4</version>
-                                   </plugin>
-                              </reportPlugins>
-                         </configuration>
-                    </plugin>
                </plugins>
           </pluginManagement>
           <plugins>
@@ -781,10 +706,6 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                </plugin>
                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-scm-publish-plugin</artifactId>
-               </plugin>
-               <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>build-helper-maven-plugin</artifactId>
                </plugin>
@@ -795,10 +716,6 @@
                <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>jaxws-maven-plugin</artifactId>
-               </plugin>
-               <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-site-plugin</artifactId>
                </plugin>
           </plugins>
      </build>
