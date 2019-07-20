@@ -6,12 +6,16 @@ A simple calculator based on JavaScript, It is similar with the calculator in Wi
 
 ### Standard
 
-![Standard](https://raw.githubusercontent.com/jiangxincode/JSCalculator/master/data/standard.png)
+![Standard](https://raw.githubusercontent.com/wiki/jiangxincode/JSCalculator/standard.png)
 
 ### Science
 
-![Science](https://raw.githubusercontent.com/jiangxincode/JSCalculator/master/data/science.png)
+![Science](https://raw.githubusercontent.com/wiki/jiangxincode/JSCalculator/science.png)
 
 ### Programmer
 
-![Programmer](https://raw.githubusercontent.com/jiangxincode/JSCalculator/master/data/programmer.png)
+![Programmer](https://raw.githubusercontent.com/wiki/jiangxincode/JSCalculator/programmer.png)
+
+## License
+
+The MIT License (MIT)
