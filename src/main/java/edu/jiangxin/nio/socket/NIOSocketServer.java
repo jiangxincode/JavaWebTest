@@ -1,4 +1,4 @@
-package edu.jiangxin.socket;
+package edu.jiangxin.nio.socket;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -12,22 +12,20 @@ import java.nio.channels.spi.SelectorProvider;
 import java.util.Iterator;
 import java.util.Set;
 
-public class SumServer {
-	private ByteBuffer byteBuffer = ByteBuffer.allocate(8);
-	private IntBuffer intBuffer = byteBuffer.asIntBuffer();
-	private SocketChannel socketChannel = null;
-	private ServerSocketChannel serverSocketChannel = null;
+public class NIOSocketServer {
 
-	public void start() {
+	public static void main(String[] args) {
 		try {
-			serverSocketChannel = ServerSocketChannel.open();
+			ByteBuffer byteBuffer = ByteBuffer.allocate(8);
+			IntBuffer intBuffer = byteBuffer.asIntBuffer();
+			ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
 			serverSocketChannel.socket().bind(new InetSocketAddress(10001));
 			serverSocketChannel.configureBlocking(false);
 			System.out.println("服务器通道已经打开");
 			Selector acceptSelector = SelectorProvider.provider().openSelector();
 			/*
 			 * 在服务器套接字上注册selector并设置为接受accept方法的通知。
-			 * 这就告诉Selector，套接字想要在accept操作发生时被放在ready表 上，因此，允许多元非阻塞I/O发生。
+			 * 这就告诉Selector，套接字想要在accept操作发生时被放在ready表上，因此，允许多元非阻塞I/O发生。
 			 */
 			serverSocketChannel.register(acceptSelector, SelectionKey.OP_ACCEPT);
 			/* select方法在任何上面注册了的操作发生时返回 */
@@ -42,7 +40,7 @@ public class SumServer {
 					if (sk.isAcceptable()) {
 						ServerSocketChannel nextReady = (ServerSocketChannel) sk.channel();
 						// 接受加法请求并处理它
-						socketChannel = nextReady.accept();
+						SocketChannel socketChannel = nextReady.accept();
 						byteBuffer.clear();
 						socketChannel.read(byteBuffer);
 						int result = intBuffer.get(0) + intBuffer.get(1);
@@ -56,9 +54,5 @@ public class SumServer {
 		} catch (IOException e) {
 			System.err.println(e.toString());
 		}
-	}
-
-	public static void main(String[] args) {
-		new SumServer().start();
 	}
 }

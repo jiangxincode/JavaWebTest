@@ -1,4 +1,4 @@
-package edu.jiangxin.socket;
+package edu.jiangxin.nio.socket;
 
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
@@ -6,25 +6,21 @@ import java.nio.channels.SocketChannel;
 import java.net.InetSocketAddress;
 import java.io.IOException;
 
-public class SumClient {
-	private ByteBuffer buffer = ByteBuffer.allocate(8);
-	private IntBuffer intBuffer;
-	private SocketChannel channel;
+public class NIOSocketClient {
 
-	public SumClient() {
-		intBuffer = buffer.asIntBuffer();
-	}
-
-	public int getSum(int first, int second) {
+	public static void main(String[] args) {
+		ByteBuffer buffer = ByteBuffer.allocate(8);
+		IntBuffer intBuffer = buffer.asIntBuffer();
+		SocketChannel channel = null;
 		int result = 0;
 		try {
 			InetSocketAddress socketAddress = new InetSocketAddress("localhost", 10001);
 			channel = SocketChannel.open(socketAddress);
 			buffer.clear();
-			intBuffer.put(0, first);
-			intBuffer.put(1, second);
+			intBuffer.put(0, 12);
+			intBuffer.put(1, 23);
 			channel.write(buffer);
-			System.out.println("发送加法请求" + first + "+" + second);
+			System.out.println("发送加法请求");
 
 			buffer.clear();
 			channel.read(buffer);
@@ -39,12 +35,8 @@ public class SumClient {
 				}
 			}
 		}
-		return result;
-	}
 
-	public static void main(String[] args) {
-		SumClient sumClient = new SumClient();
-		System.out.println("加法结果 :" + sumClient.getSum(100, 324));
+		System.out.println("加法结果 :" + result);
 
 	}
 

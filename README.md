@@ -70,7 +70,6 @@ http://github.com/jiangxincode
 
 
 webservice学习顺序:
-edu.jiangxin.webservice.socket
 edu.jiangxin.webservice.mobilecodeservice
 edu.jiangxin.webservice.phoneservice
 edu.jiangxin.webservice.jobservice
