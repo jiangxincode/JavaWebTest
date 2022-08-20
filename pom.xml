@@ -432,21 +432,21 @@
                <artifactId>je-analysis</artifactId>
                <version>1.5.3</version>
                <scope>system</scope>
-               <systemPath>${project.basedir}/lib/je-analysis-1.5.3.jar</systemPath>
+               <systemPath>${pom.basedir}/lib/je-analysis-1.5.3.jar</systemPath>
           </dependency>
           <dependency>
                <groupId>com.aspose</groupId>
                <artifactId>aspose-cells</artifactId>
                <version>9.0.0</version>
                <scope>system</scope>
-               <systemPath>${project.basedir}/lib/aspose-cells-9.0.0.jar</systemPath>
+               <systemPath>${pom.basedir}/lib/aspose-cells-9.0.0.jar</systemPath>
           </dependency>
           <dependency>
                <groupId>com.aspose</groupId>
                <artifactId>aspose-words</artifactId>
                <version>15.11.0</version>
                <scope>system</scope>
-               <systemPath>${project.basedir}/lib/aspose-words-15.11.0-jdk16.jar</systemPath>
+               <systemPath>${pom.basedir}/lib/aspose-words-15.11.0-jdk16.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.apache.pdfbox</groupId>
@@ -463,7 +463,7 @@
                <artifactId>sikulixapi</artifactId>
                <version>1.1.1</version>
                <scope>system</scope>
-               <systemPath>${project.basedir}/lib/sikulixapi.jar</systemPath>
+               <systemPath>${pom.basedir}/lib/sikulixapi.jar</systemPath>
           </dependency>
           <dependency>
                <groupId>net.sourceforge.jchardet</groupId>
@@ -495,7 +495,7 @@
                <artifactId>jarscan</artifactId>
                <version>2.2</version>
                <scope>system</scope>
-               <systemPath>${project.basedir}/lib/jarscan.jar</systemPath>
+               <systemPath>${pom.basedir}/lib/jarscan.jar</systemPath>
           </dependency>
      </dependencies>
      <build>
