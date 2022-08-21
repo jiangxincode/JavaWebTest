@@ -1,9 +1,18 @@
-# Test
+# JavaWebTest
 
-jiangxinnju@163.com
+<https://github.com/jiangxincode/JavaWebTest>
 
-http://github.com/jiangxincode
+## License
 
++ GPLv3 http://www.gnu.org/licenses/gpl-3.0.txt
+
+## Deployment
+
+1. Install and config JDK(Test on jdk-8u321-windows-x64)
+2. Install and config Maven(Test on apache-maven-3.8.1)
+3. Install and config Tomcat(Test on apache-tomcat-8.0.15)
+4. Install and config MySQL(Test on mysql-5.7.19-linux-glibc2.12-x86_64 on Ubuntu 16.04)
+5. Import this project from IDEA by maven format
 
 ## 版本改动
 
@@ -137,7 +146,3 @@ Some tests and exercises in Java.
 ## Update Third-Party libraries
 
 * JACOB: update the "jacob-${JACOB_VERSION}-x64/x32.dll" in the ${java.library.path} synchronous .
-
-## License:
-
-+ GPLv3 http://www.gnu.org/licenses/gpl-3.0.txt
