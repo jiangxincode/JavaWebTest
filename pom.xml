@@ -9,12 +9,6 @@
      <properties>
           <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
      </properties>
-     <repositories>
-          <repository>
-               <id>Atlassian 3rd-Party Repository</id>
-               <url>https://maven.atlassian.com/3rdparty/</url>
-          </repository>
-     </repositories>
      <dependencies>
           <!-- 所有日志框架先转换到slf4j，然后实际实现用log4j 2.x，更新所有依赖时要注意重新排除相关包，搜索slf4j和log关键字 -->
           <!-- jcl-over-slf4j是将common-logging转换到slf4j -->
@@ -266,7 +260,9 @@
           <dependency>
                <groupId>com.oracle</groupId>
                <artifactId>ojdbc6</artifactId>
-               <version>12.1.0.1-atlassian-hosted</version>
+               <version>1.0.0</version>
+               <scope>system</scope>
+               <systemPath>${pom.basedir}/lib/ojdbc6.jar</systemPath>
           </dependency>
           <dependency>
                <groupId>junit</groupId>
