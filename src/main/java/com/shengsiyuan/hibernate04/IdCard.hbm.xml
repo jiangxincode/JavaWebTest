@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.shengsiyuan.hibernate.IdCard" table="idcard" lazy="true">
+	
+		<id name="id" column="id" type="string">
+			<generator class="uuid"></generator>
+		</id>
+	
+		<property name="number" column="number" type="integer"></property>
+		
+		<!-- 
+		<one-to-one name="student" class="com.shengsiyuan.hibernate.Student" fetch="select"/>
+		 -->
+		 
+		 <many-to-one name="student" class="com.shengsiyuan.hibernate.Student" column="student_id" unique="true">
+		 </many-to-one>
+		 
+		 
+	</class>
+
+</hibernate-mapping>

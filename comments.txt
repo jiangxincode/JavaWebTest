@@ -126,6 +126,26 @@ addNewQuestion()方法，将新添加的问题保存在原有的ＸＭＬ文档�
 
 
 
+hibernatesrc(shengsiyuan)
+public class Person
+{
+	private String id;
+	private String name;
+	private Map map;
+}
+
+1. Hibernate + Struts2.
+2. JFreeChart来显示。
+3. 指定完投票的数量后，在同一个页面中显示投票的条目。
+
+public class Item
+{
+	private int id;
+	private int orderNumber
+}
+
+
+
 
 
 

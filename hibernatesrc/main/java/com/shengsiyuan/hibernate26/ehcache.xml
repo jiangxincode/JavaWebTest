@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ehcache>
-     <diskStore path="c:/ehcache" />
-     <defaultCache maxElementsInMemory="200" eternal="false"
-          timeToIdleSeconds="50" timeToLiveSeconds="60" overflowToDisk="true" />
-     <cache name="com.shengsiyuan.hibernate26.Student"
-          maxElementsInMemory="200" eternal="false" timeToIdleSeconds="50"
-          timeToLiveSeconds="60" overflowToDisk="true" />
-</ehcache>
