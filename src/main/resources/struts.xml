@@ -6,8 +6,8 @@
      <constant name="struts.enable.DynamicMethodInvocation"
           value="true" />
      <package name="default" extends="struts-default">
-          <action name="test" class="com.sxt.test.TestAction">
-               <result name="success" type="freemarker">test_success.ftl
+          <action name="freeMarkerAction" class="edu.jiangxin.freemarker.web.FreeMarkerAction">
+               <result name="success" type="freemarker">/ftl/free_marker_test.ftl
                </result>
           </action>
      </package>

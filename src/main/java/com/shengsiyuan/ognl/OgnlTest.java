@@ -3,6 +3,7 @@ package com.shengsiyuan.ognl;
 import java.util.ArrayList;
 import java.util.List;
 
+import ognl.MemberAccess;
 import ognl.Ognl;
 import ognl.OgnlContext;
 
@@ -19,12 +20,10 @@ public class OgnlTest {
 		Dog dog = new Dog();
 		dog.setName("wangcai");
 
-		OgnlContext context = new OgnlContext();
+		OgnlContext context = (OgnlContext) Ognl.createDefaultContext(person);
 
 		context.put("person", person);
 		context.put("dog", dog);
-
-		context.setRoot(person); // 根对象
 
 		Object object = Ognl.parseExpression("#person.dog.name");
 

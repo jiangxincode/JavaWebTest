@@ -117,16 +117,15 @@
      </icon>
      <filter>
           <filter-name>struts2</filter-name>
-          <filter-class>
-               org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter
-          </filter-class>
+          <filter-class>org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter</filter-class>
      </filter>
      <filter-mapping>
           <filter-name>struts2</filter-name>
-          <url-pattern>*.ftl</url-pattern>
+          <url-pattern>/*</url-pattern>
      </filter-mapping>
+     <!-- FreemarkerServlet is unnecessary for this project -->
      <servlet>
-          <servlet-name>freemarker</servlet-name>
+          <servlet-name>FreemarkerServlet</servlet-name>
           <servlet-class>freemarker.ext.servlet.FreemarkerServlet
           </servlet-class>
           <init-param>
@@ -136,9 +135,18 @@
           <load-on-startup>1</load-on-startup>
      </servlet>
      <servlet-mapping>
-          <servlet-name>freemarker</servlet-name>
+          <servlet-name>FreemarkerServlet</servlet-name>
           <url-pattern>*.ftl</url-pattern>
      </servlet-mapping>
+     <!-- Some servlets have only serlvet elements and no servlet-mapping elements, so we cannot access these servlets through url,
+      This kind of servlet usually configures a load-on-startup sub-element in the servlet element, so that the container automatically loads these servlets at startup and calls the init() method.
+      Complete some global initialization work. -->
+     <!-- https://struts.apache.org/tag-developers/freemarker-->
+     <servlet>
+          <servlet-name>JspSupportServlet</servlet-name>
+          <servlet-class>org.apache.struts2.views.JspSupportServlet</servlet-class>
+          <load-on-startup>1</load-on-startup>
+     </servlet>
      <servlet>
           <servlet-name>GetImageServlet</servlet-name>
           <servlet-class>com.shengsiyuan.imagetools.GetImageServlet</servlet-class>
