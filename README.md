@@ -10,7 +10,7 @@
 
 1. Install and config JDK(Test on jdk-8u321-windows-x64)
 2. Install and config Maven(Test on apache-maven-3.8.1)
-3. Install and config Tomcat(Test on apache-tomcat-8.0.15)
+3. Install and config Tomcat(Test on apache-tomcat-8.5.82)
 4. Install and config MySQL(Test on mysql-5.7.19-linux-glibc2.12-x86_64 on Ubuntu 16.04)
 5. Import this project from IDEA by maven format
 
