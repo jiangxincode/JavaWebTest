@@ -457,13 +457,6 @@
                <version>1.10.3</version>
           </dependency>
           <dependency>
-               <groupId>com.sikulix</groupId>
-               <artifactId>sikulixapi</artifactId>
-               <version>1.1.1</version>
-               <scope>system</scope>
-               <systemPath>${pom.basedir}/lib/sikulixapi.jar</systemPath>
-          </dependency>
-          <dependency>
                <groupId>net.sourceforge.jchardet</groupId>
                <artifactId>jchardet</artifactId>
                <version>1.0</version>
