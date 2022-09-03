@@ -2,8 +2,7 @@
 
 <!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN"
     "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd" >
-<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
-     threshold="debug" debug="true">
+<log4j:configuration threshold="debug" debug="true">
      <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
           <param name="threshold" value="debug" />
           <layout class="org.apache.log4j.SimpleLayout" />
@@ -18,11 +17,11 @@
           </layout>
      </appender>
      <logger name="edu.jiangxin.tools" additivity="false">
-          <priority value="info" />
+          <level value="info" />
           <appender-ref ref="MyLog" />
      </logger>
      <root>
-          <level value="debug" />
+          <level value="info" />
           <appender-ref ref="CONSOLE" />
      </root>
 </log4j:configuration>
