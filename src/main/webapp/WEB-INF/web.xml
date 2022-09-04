@@ -119,7 +119,7 @@
      </filter>
      <filter-mapping>
           <filter-name>struts2</filter-name>
-          <url-pattern>/*</url-pattern>
+          <url-pattern>/struts/*</url-pattern>
      </filter-mapping>
      <!-- FreemarkerServlet is unnecessary for this project -->
      <servlet>

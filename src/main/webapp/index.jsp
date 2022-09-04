@@ -22,7 +22,11 @@
 <body>
 <h1>Some Java Web Examples</h1>
 <ol class="rounded-list">
-    <li><a href="aloys.html">Aloys's Blog</a></li>
+    <li><a href="index.jsp">This index page</a></li>
+    <li><a href="aloys.html">Static page demo(HTML+CSS+JS)</a></li>
+    <li><a href="struts/freeMarkerAction">FreeMarker+Struts+JSP demo</a></li>
+    <li><a href="rest/hello">Jersey demo 1</a></li>
+    <li><a href="rest/contacts">Jersey demo 2</a></li>
     <li><a href="JSP/GuessNumberJsp/input.jsp">猜数字，采用JSP实</a></li>
     <li><a href="GuessNumber">猜数字，使用Servlet和JSP实现</a></li>
     <li><a href="JSP/GuessNumberMVC/index.jsp">猜数字，MVC</a></li>
@@ -30,7 +34,6 @@
     <li><a href="BookAdmin">数据库应用</a></li>
     <li><a href="JSP/MongoDB/mongodb.jsp">MongoDB连接池</a></li>
     <li><a href="JSP/WeatherService/index.jsp">WeatherService</a></li>
-    <li><a href="freeMarkerAction">FreeMarker With Struts 2 Demo</a></li>
 </ol>
 </body>
 </html>

@@ -3,15 +3,14 @@
 <struts>
      <constant name="struts.devMode" value="true" />
      <constant name="struts.i18n.encoding" value="gbk" />
-     <constant name="struts.enable.DynamicMethodInvocation"
-          value="true" />
-     <package name="default" extends="struts-default">
+     <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+     <package name="default" extends="struts-default" namespace="/struts">
           <action name="freeMarkerAction" class="edu.jiangxin.freemarker.web.FreeMarkerAction">
                <result name="success" type="freemarker">/ftl/free_marker_test.ftl
                </result>
           </action>
      </package>
-     <package name="struts2_ajax" extends="json-default">
+     <package name="struts2_ajax" extends="json-default" namespace="/struts">
           <action name="getXMLAction" class="com.shengsiyuan.struts2ajax.action.xml.GetXMLAction">
           </action>
           <action name="getJsonAction"
@@ -30,7 +29,7 @@
                <result name="success">/ognl.jsp</result>
           </action>
      </package>
-     <package name="hibernate" extends="struts-default">
+     <package name="hibernate" extends="struts-default" namespace="/struts">
           <action name="savePerson" class="com.shengsiyuan.hibernate01.action.PersonAction"
                method="savePerson">
                <result name="success">/listAll.jsp</result>
