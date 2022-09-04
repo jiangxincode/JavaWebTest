@@ -138,4 +138,7 @@
 	</aop:config>
 	<bean id="loggingAopTest" class="com.yuqiaotech.helloj2ee.spring.LoggingAop"></bean>
 
+	<context:component-scan base-package="edu.jiangxin" />
+	<context:mbean-export />
+
 </beans>

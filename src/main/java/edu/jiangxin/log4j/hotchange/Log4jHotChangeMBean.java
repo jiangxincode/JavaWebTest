@@ -3,15 +3,13 @@ package edu.jiangxin.log4j.hotchange;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.jmx.export.annotation.ManagedAttribute;
-import org.springframework.jmx.export.annotation.ManagedOperation;
-import org.springframework.jmx.export.annotation.ManagedOperationParameter;
-import org.springframework.jmx.export.annotation.ManagedOperationParameters;
-import org.springframework.jmx.export.annotation.ManagedResource;
+import org.springframework.jmx.export.annotation.*;
+import org.springframework.stereotype.Component;
 
 /**
  * 基于JMX动态配置Log4J日志级别，并控制Trace开关的MBean.
  */
+@Component
 @ManagedResource(objectName = Log4jHotChangeMBean.MBEAN_NAME, description = "Log4j Management Bean")
 public class Log4jHotChangeMBean {
 
