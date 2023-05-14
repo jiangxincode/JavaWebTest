@@ -11,7 +11,7 @@
                jdbc:mysql://localhost/hibernate?useUnicode=true&amp;serverTimezone=UTC&amp;characterEncoding=UTF-8
           </property>
           <property name="connection.username">root</property>
-          <property name="connection.password">621224jx</property>
+          <property name="connection.password">xxxxxx</property>
           <property name="connection.driver_class"> com.mysql.jdbc.Driver
           </property>
           <property name="show_sql">true</property>

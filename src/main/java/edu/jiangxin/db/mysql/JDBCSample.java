@@ -20,7 +20,7 @@ public class JDBCSample {
 		String DriverName = "com.mysql.jdbc.Driver";
 		String dbURL = "jdbc:mysql://localhost/test";
 		String dbUser = "root";
-		String dbPassword = "621224jx";
+		String dbPassword = "xxxxxx";
 		Connection conn = null;
 		Statement stmt = null;
 		ResultSet rs = null;

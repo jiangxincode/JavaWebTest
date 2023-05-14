@@ -16,7 +16,7 @@ public class JDBCPreparedStatement {
 		String DriverName = "com.mysql.jdbc.Driver";
 		String dbURL = "jdbc:mysql://localhost/test";
 		String dbuser = "root";
-		String dbpassword = "621224jx";
+		String dbpassword = "xxxxxx";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;

@@ -9,7 +9,7 @@
 			jdbc:mysql://127.0.0.1:3306/helloj2ee
 		</property>
 		<property name="hibernate.connection.username">root</property>
-		<property name="hibernate.connection.password">621224jx</property>
+		<property name="hibernate.connection.password">xxxx</property>
 		<property name="hibernate.hbm2ddl.auto">update</property>
 		<property name="hibernate.dialect">
 			org.hibernate.dialect.MySQLDialect

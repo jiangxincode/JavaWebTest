@@ -12,6 +12,8 @@
 2. Install and config Maven(Test on apache-maven-3.8.1)
 3. Install and config Tomcat(Test on apache-tomcat-8.5.82)
 4. Install and config MySQL(Test on mysql-5.7.19-linux-glibc2.12-x86_64 on Ubuntu 16.04)
+数据初始化脚本 `InitDbData.sql`
+
 5. Import this project from IDEA by maven format
 
 ## 版本改动
