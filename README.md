@@ -1,6 +1,7 @@
 # JavaWebTest
 
-<https://github.com/jiangxincode/JavaWebTest>
+[![Build and Release](https://github.com/jiangxincode/JavaWebTest/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/jiangxincode/JavaWebTest/actions/workflows/build.yml)
+[![Deploy](https://img.shields.io/badge/JavaWebTest-Deploy-blue)](http://124.222.145.48:8080/JavaWebTest/index.jsp)
 
 ## License
 
