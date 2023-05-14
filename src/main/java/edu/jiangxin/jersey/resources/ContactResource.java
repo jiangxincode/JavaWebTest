@@ -3,11 +3,7 @@ package edu.jiangxin.jersey.resources;
 import java.util.ArrayList;
 import java.util.Map;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
-import javax.ws.rs.GET;
-import javax.ws.rs.PUT;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
@@ -15,8 +11,6 @@ import javax.ws.rs.core.Request;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import javax.xml.bind.JAXBElement;
-
-import com.sun.jersey.api.NotFoundException;
 
 import edu.jiangxin.jersey.bean.Address;
 import edu.jiangxin.jersey.bean.Contact;

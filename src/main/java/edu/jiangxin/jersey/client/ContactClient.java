@@ -1,98 +1,99 @@
 package edu.jiangxin.jersey.client;
 
-import java.util.Arrays;
-import java.util.List;
-
-import javax.ws.rs.core.MediaType;
-import javax.xml.bind.JAXBElement;
-
-import com.sun.jersey.api.client.Client;
-import com.sun.jersey.api.client.ClientResponse;
-import com.sun.jersey.api.client.GenericType;
-import com.sun.jersey.api.client.WebResource;
-import com.sun.jersey.api.representation.Form;
-
 import edu.jiangxin.jersey.bean.Address;
 import edu.jiangxin.jersey.bean.Contact;
+
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Entity;
+import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.Form;
+import javax.ws.rs.core.GenericType;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.xml.bind.JAXBElement;
+import java.util.Arrays;
+import java.util.List;
 
 public class ContactClient {
 	
 	public static void main(String[] args) {
-		Client c = Client.create();
-		WebResource r = c.resource("http://localhost:8080/Jersey/rest/contacts");
+		Client client = ClientBuilder.newClient();
+		WebTarget webTarget = client.target("http://localhost:8080/JavaWebTest/rest/contacts");
 		
 		System.out.println("===== Get huangyim =====");
-		getOneContact(r, "huangyim");
+		getOneContact(webTarget, "huangyim");
 		
 		System.out.println("===== Create foo =====");
-		postForm(r, "foo", "bar");
+		postForm(webTarget, "foo", "bar");
 		
-		Address[] addrs = {
+		Address[] addresses = {
 			new Address("Shanghai", "Ke Yuan Street")
 		};
-		Contact cnt = new Contact("guoqing", "Guo Qing", Arrays.asList(addrs));
+		Contact cnt = new Contact("guoqing", "Guo Qing", Arrays.asList(addresses));
 		
 		System.out.println("===== Create guoqing =====");
-		putOneContact(r, cnt);
+		putOneContact(webTarget, cnt);
 		
 		System.out.println("===== All Contacts =====");
-		getContacts(r);
+		getContacts(webTarget);
 		
 		System.out.println("===== Delete foo =====");
-		deleteOneContact(r, "foo");
+		deleteOneContact(webTarget, "foo");
 		
 		System.out.println("===== All Contacts =====");
-		getContacts(r);
+		getContacts(webTarget);
 	}
 	
-	public static void getContacts(WebResource r) {
+	public static void getContacts(WebTarget webTarget) {
 		
 		// 1, get response as plain text
-		String jsonRes = r.accept(MediaType.APPLICATION_JSON).get(String.class);
+		String jsonRes = webTarget.request(MediaType.APPLICATION_JSON).get(String.class);
 		System.out.println(jsonRes);
 		
-		String xmlRes = r.accept(MediaType.APPLICATION_XML).get(String.class);
+		String xmlRes = webTarget.request(MediaType.APPLICATION_XML).get(String.class);
 		System.out.println(xmlRes);
 		
 		// 2, get response and headers etc, wrapped in ClientResponse
-		ClientResponse response = r.get(ClientResponse.class);
+		Response response = webTarget.request().get(Response.class);
 		System.out.println( response.getStatus() );
-		System.out.println( response.getHeaders().get("Content-Type") );
-		String entity = response.getEntity(String.class);
+		System.out.println( response.getMetadata().get("Content-Type") );
+		Object entity = response.getEntity();
 		System.out.println(entity);
-		
+
 		// 3, get JAXB response
 		GenericType<List<Contact>> genericType = new GenericType<List<Contact>>() {};
-		List<Contact> contacts = r.accept(MediaType.APPLICATION_XML).get(genericType);
+		List<Contact> contacts = webTarget.request(MediaType.APPLICATION_XML).get(genericType);
 		System.out.println("No. of Contacts: " + contacts.size());
 		Contact contact = contacts.get(0);
 		System.out.println(contact.getId() + ": " + contact.getName());
 	}
 	
-	public static void getOneContact(WebResource r, String id) {
+	public static void getOneContact(WebTarget webTarget, String id) {
 		GenericType<JAXBElement<Contact>> generic = new GenericType<JAXBElement<Contact>>() {};
-		JAXBElement<Contact> jaxbContact = r.path(id).accept(MediaType.APPLICATION_XML).get(generic);
+		JAXBElement<Contact> jaxbContact = webTarget.path(id).request(MediaType.APPLICATION_XML).get(generic);
 		Contact contact = jaxbContact.getValue();
 		System.out.println(contact.getId() + ": " + contact.getName());
 	}
 	
-	public static void postForm(WebResource r, String id, String name) {
+	public static void postForm(WebTarget r, String id, String name) {
 		Form form = new Form();
-		form.add("id", id);
-		form.add("name", name);
-		ClientResponse response = r.type(MediaType.APPLICATION_FORM_URLENCODED)
-								   .post(ClientResponse.class, form);
-		System.out.println(response.getEntity(String.class));
+		form.param("id", id);
+		form.param("name", name);
+		Response response = r.request(MediaType.APPLICATION_FORM_URLENCODED)
+								   .post(Entity.form(form), Response.class);
+		Object entity = response.getEntity();
+		System.out.println(entity);
 	}
 	
-	public static void putOneContact(WebResource r, Contact c) {
-		ClientResponse response = r.path(c.getId()).accept(MediaType.APPLICATION_XML)
-								   .put(ClientResponse.class, c);
+	public static void putOneContact(WebTarget r, Contact c) {
+		Response response = r.path(c.getId()).request(MediaType.APPLICATION_XML)
+								   .put(Entity.text(c), Response.class);
 		System.out.println(response.getStatus());
 	}
 	
-	public static void deleteOneContact(WebResource r, String id) {
-		ClientResponse response = r.path(id).delete(ClientResponse.class);
+	public static void deleteOneContact(WebTarget r, String id) {
+		Response response = r.path(id).request().delete(Response.class);
 		System.out.println(response.getStatus());
 	}
 }
