@@ -1,5 +1,7 @@
 package edu.jiangxin.bookadmin;
 
+import edu.jiangxin.utils.DatabasePropertyUtils;
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -355,13 +357,13 @@ public class BookAdmin extends HttpServlet {
 	}
 	
 	Connection getConnection() throws ClassNotFoundException, SQLException {
-		String driveClass = "com.mysql.jdbc.Driver";
-		String url = "jdbc:mysql://localhost:3306/javawebtest?useUnicode=true&characterEncoding=utf8";
-		String user = "root";
-		String password = "";
+		String driver = DatabasePropertyUtils.getProperty("jdbc.driver");
+		String url = DatabasePropertyUtils.getProperty("jdbc.url");
+		String username = DatabasePropertyUtils.getProperty("jdbc.username");
+		String password = DatabasePropertyUtils.getProperty("jdbc.password");
 		
 		try {
-			Class.forName(driveClass).newInstance();
+			Class.forName(driver).newInstance();
 		} catch (InstantiationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -369,7 +371,7 @@ public class BookAdmin extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		Connection conn = DriverManager.getConnection(url,user,password);
+		Connection conn = DriverManager.getConnection(url,username,password);
 		return conn;
 		
 	}

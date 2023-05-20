@@ -1,5 +1,7 @@
 package edu.jiangxin.servlet;
 
+import edu.jiangxin.utils.DatabasePropertyUtils;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -68,12 +70,12 @@ public class XianLin extends TagSupport {
 
 	Connection getConnection() {
 		try {
-			String driveClass = "com.mysql.jdbc.Driver";
-			String url = "jdbc:mysql://localhost:3306/JavaWebTest?useUnicode=true&characterEncoding=GBK";
-			String user = "root";
-			String password = "";
-			Class.forName(driveClass).newInstance();
-			Connection conn = DriverManager.getConnection(url, user, password);
+			String driver = DatabasePropertyUtils.getProperty("jdbc.driver");
+			String url = DatabasePropertyUtils.getProperty("jdbc.url");
+			String username = DatabasePropertyUtils.getProperty("jdbc.username");
+			String password = DatabasePropertyUtils.getProperty("jdbc.password");
+			Class.forName(driver).newInstance();
+			Connection conn = DriverManager.getConnection(url, username, password);
 			return conn;
 		} catch (Exception e) {
 			throw new RuntimeException(e.getMessage(), e);
