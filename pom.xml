@@ -10,34 +10,20 @@
           <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
      </properties>
      <dependencies>
-          <!-- 所有日志框架先转换到slf4j，然后实际实现用log4j 2.x，更新所有依赖时要注意重新排除相关包，搜索slf4j和log关键字 -->
-          <!-- jcl-over-slf4j是将common-logging转换到slf4j -->
-          <dependency>
-               <groupId>org.slf4j</groupId>
-               <artifactId>jcl-over-slf4j</artifactId>
-               <version>1.7.25</version>
-          </dependency>
-          <!-- log4j-over-slf4j是将log4j 1.x版本转换到slf4j -->
-          <dependency>
-               <groupId>org.slf4j</groupId>
-               <artifactId>log4j-over-slf4j</artifactId>
-               <version>1.7.25</version>
-          </dependency>
-          <!-- log4j-slf4j-impl是将slf4j绑定到log4j 2.x -->
           <dependency>
                <groupId>org.apache.logging.log4j</groupId>
-               <artifactId>log4j-slf4j-impl</artifactId>
-               <version>2.9.0</version>
+               <artifactId>log4j-api</artifactId>
+               <version>2.20.0</version>
           </dependency>
           <dependency>
                <groupId>org.apache.logging.log4j</groupId>
                <artifactId>log4j-core</artifactId>
-               <version>2.9.0</version>
+               <version>2.20.0</version>
           </dependency>
           <dependency>
-               <groupId>log4j</groupId>
-               <artifactId>log4j</artifactId>
-               <version>1.2.17</version>
+               <groupId>org.apache.logging.log4j</groupId>
+               <artifactId>log4j-web</artifactId>
+               <version>2.20.0</version>
           </dependency>
           <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
           <dependency>
@@ -60,12 +46,6 @@
                <groupId>org.apache.httpcomponents</groupId>
                <artifactId>httpclient</artifactId>
                <version>4.5.13</version>
-               <exclusions>
-                    <exclusion>
-                         <groupId>commons-logging</groupId>
-                         <artifactId>commons-logging</artifactId>
-                    </exclusion>
-               </exclusions>
           </dependency>
           <dependency>
                <groupId>com.ibm.icu</groupId>
@@ -150,34 +130,6 @@
                <version>2.3.0</version>
                <exclusions>
                     <exclusion>
-                         <groupId>commons-logging</groupId>
-                         <artifactId>commons-logging</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>org.apache.logging.log4j</groupId>
-                         <artifactId>log4j-1.2-api</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>org.apache.logging.log4j</groupId>
-                         <artifactId>log4j-slf4j-impl</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>org.apache.logging.log4j</groupId>
-                         <artifactId>log4j-core</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>org.apache.logging.log4j</groupId>
-                         <artifactId>log4j-api</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>log4j</groupId>
-                         <artifactId>log4j</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>org.slf4j</groupId>
-                         <artifactId>slf4j-api</artifactId>
-                    </exclusion>
-                    <exclusion>
                          <groupId>jdk.tools</groupId>
                          <artifactId>jdk.tools</artifactId>
                     </exclusion>
@@ -222,38 +174,16 @@
                <groupId>com.taobao.metamorphosis</groupId>
                <artifactId>metamorphosis-client</artifactId>
                <version>1.4.6.2</version>
-               <exclusions>
-                    <exclusion>
-                         <groupId>log4j</groupId>
-                         <artifactId>log4j</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>commons-logging</groupId>
-                         <artifactId>commons-logging</artifactId>
-                    </exclusion>
-               </exclusions>
           </dependency>
           <dependency>
                <groupId>org.drools</groupId>
                <artifactId>drools-core</artifactId>
                <version>5.6.0.Final</version>
-               <exclusions>
-                    <exclusion>
-                         <groupId>org.slf4j</groupId>
-                         <artifactId>slf4j-api</artifactId>
-                    </exclusion>
-               </exclusions>
           </dependency>
           <dependency>
                <groupId>org.drools</groupId>
                <artifactId>drools-compiler</artifactId>
                <version>5.6.0.Final</version>
-               <exclusions>
-                    <exclusion>
-                         <groupId>org.slf4j</groupId>
-                         <artifactId>slf4j-api</artifactId>
-                    </exclusion>
-               </exclusions>
           </dependency>
           <dependency>
                <groupId>org.ow2.asm</groupId>
@@ -290,12 +220,6 @@
                <groupId>org.springframework</groupId>
                <artifactId>spring-jdbc</artifactId>
                <version>4.3.10.RELEASE</version>
-               <exclusions>
-                    <exclusion>
-                         <groupId>commons-logging</groupId>
-                         <artifactId>commons-logging</artifactId>
-                    </exclusion>
-               </exclusions>
           </dependency>
           <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
           <dependency>
@@ -349,12 +273,6 @@
                <groupId>org.apache.struts</groupId>
                <artifactId>struts2-core</artifactId>
                <version>6.0.0</version>
-               <exclusions>
-                    <exclusion>
-                         <groupId>org.apache.logging.log4j</groupId>
-                         <artifactId>log4j-api</artifactId>
-                    </exclusion>
-               </exclusions>
           </dependency>
           <dependency>
                <groupId>org.apache.struts</groupId>
@@ -377,39 +295,17 @@
                <groupId>org.hibernate</groupId>
                <artifactId>hibernate-core</artifactId>
                <version>3.5.6-Final</version>
-               <exclusions>
-                    <exclusion>
-                         <groupId>org.slf4j</groupId>
-                         <artifactId>slf4j-api</artifactId>
-                    </exclusion>
-               </exclusions>
           </dependency>
           <dependency>
                <groupId>org.hibernate</groupId>
                <artifactId>hibernate-annotations</artifactId>
                <version>3.5.6-Final</version>
-               <exclusions>
-                    <exclusion>
-                         <groupId>org.slf4j</groupId>
-                         <artifactId>slf4j-api</artifactId>
-                    </exclusion>
-               </exclusions>
           </dependency>
           <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-ehcache -->
           <dependency>
                <groupId>org.hibernate</groupId>
                <artifactId>hibernate-ehcache</artifactId>
                <version>3.5.6-Final</version>
-               <exclusions>
-                    <exclusion>
-                         <groupId>commons-logging</groupId>
-                         <artifactId>commons-logging</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>org.slf4j</groupId>
-                         <artifactId>slf4j-api</artifactId>
-                    </exclusion>
-               </exclusions>
           </dependency>
           <dependency>
                <groupId>commons-codec</groupId>
