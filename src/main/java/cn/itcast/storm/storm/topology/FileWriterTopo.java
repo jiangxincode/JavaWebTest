@@ -1,5 +1,6 @@
 package cn.itcast.storm.storm.topology;
 
+import edu.jiangxin.utils.PropertyUtils;
 import org.apache.storm.Config;
 import org.apache.storm.StormSubmitter;
 import org.apache.storm.topology.TopologyBuilder;
@@ -9,7 +10,6 @@ import cn.itcast.storm.storm.bolt.WordCounter;
 import cn.itcast.storm.storm.bolt.WriterBolt;
 import cn.itcast.storm.storm.spout.MetaSpout;
 import cn.itcast.storm.storm.spout.StringScheme;
-import cn.itcast.storm.storm.utils.PropertyUtil;
 
 import com.taobao.metamorphosis.client.MetaClientConfig;
 import com.taobao.metamorphosis.client.consumer.ConsumerConfig;
@@ -42,10 +42,10 @@ public class FileWriterTopo {
 
 		// 设置ZK配置信息
 		final ZKConfig zkConfig = new ZKConfig();
-		zkConfig.zkConnect = PropertyUtil.getProperty("zkConnect");
-		zkConfig.zkSessionTimeoutMs = Integer.parseInt(PropertyUtil.getProperty("zkSessionTimeoutMs"));
-		zkConfig.zkConnectionTimeoutMs = Integer.parseInt(PropertyUtil.getProperty("zkConnectionTimeoutMs"));
-		zkConfig.zkSyncTimeMs = Integer.parseInt(PropertyUtil.getProperty("zkSyncTimeMs"));
+		zkConfig.zkConnect = PropertyUtils.getProperty("zkConnect");
+		zkConfig.zkSessionTimeoutMs = Integer.parseInt(PropertyUtils.getProperty("zkSessionTimeoutMs"));
+		zkConfig.zkConnectionTimeoutMs = Integer.parseInt(PropertyUtils.getProperty("zkConnectionTimeoutMs"));
+		zkConfig.zkSyncTimeMs = Integer.parseInt(PropertyUtils.getProperty("zkSyncTimeMs"));
 
 		// 设置MetaQ
 		final MetaClientConfig metaClientConfig = new MetaClientConfig();

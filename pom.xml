@@ -106,12 +106,12 @@
           <dependency>
                <groupId>com.fasterxml.jackson.core</groupId>
                <artifactId>jackson-core</artifactId>
-               <version>2.9.1</version>
+               <version>2.14.1</version>
           </dependency>
           <dependency>
                <groupId>com.fasterxml.jackson.core</groupId>
                <artifactId>jackson-databind</artifactId>
-               <version>2.12.7.1</version>
+               <version>2.14.1</version>
           </dependency>
           <dependency>
                <groupId>com.mysql</groupId>
@@ -244,15 +244,25 @@
           </dependency>
           <dependency>
                <groupId>org.glassfish.jersey.core</groupId>
-               <artifactId>jersey-server</artifactId>
-               <version>2.36</version>
+               <artifactId>jersey-client</artifactId>
+               <version>2.39.1</version>
           </dependency>
           <dependency>
-               <groupId>org.glassfish.jersey.core</groupId>
-               <artifactId>jersey-client</artifactId>
-               <version>3.1.2</version>
+               <groupId>org.glassfish.jersey.containers</groupId>
+               <artifactId>jersey-container-servlet</artifactId>
+               <version>2.39.1</version>
           </dependency>
-
+          <dependency>
+               <groupId>org.glassfish.jersey.inject</groupId>
+               <artifactId>jersey-hk2</artifactId>
+               <version>2.39.1</version>
+          </dependency>
+          <!-- https://eclipse-ee4j.github.io/jersey.github.io/documentation/latest/media.html#d0e9059 -->
+          <dependency>
+               <groupId>org.glassfish.jersey.media</groupId>
+               <artifactId>jersey-media-jaxb</artifactId>
+               <version>2.39.1</version>
+          </dependency>
           <dependency>
                <groupId>org.apache.cxf</groupId>
                <artifactId>cxf-rt-frontend-jaxws</artifactId>

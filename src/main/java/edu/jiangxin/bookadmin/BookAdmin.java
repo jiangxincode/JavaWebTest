@@ -1,6 +1,6 @@
 package edu.jiangxin.bookadmin;
 
-import edu.jiangxin.utils.DatabasePropertyUtils;
+import edu.jiangxin.utils.PropertyUtils;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -357,10 +357,10 @@ public class BookAdmin extends HttpServlet {
 	}
 	
 	Connection getConnection() throws ClassNotFoundException, SQLException {
-		String driver = DatabasePropertyUtils.getProperty("jdbc.driver");
-		String url = DatabasePropertyUtils.getProperty("jdbc.url");
-		String username = DatabasePropertyUtils.getProperty("jdbc.username");
-		String password = DatabasePropertyUtils.getProperty("jdbc.password");
+		String driver = PropertyUtils.getProperty("jdbc.driver");
+		String url = PropertyUtils.getProperty("jdbc.url");
+		String username = PropertyUtils.getProperty("jdbc.username");
+		String password = PropertyUtils.getProperty("jdbc.password");
 		
 		try {
 			Class.forName(driver).newInstance();

@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+import edu.jiangxin.utils.PropertyUtils;
 import org.apache.storm.task.TopologyContext;
 import org.apache.storm.topology.BasicOutputCollector;
 import org.apache.storm.topology.OutputFieldsDeclarer;
@@ -11,7 +12,6 @@ import org.apache.storm.topology.base.BaseBasicBolt;
 import org.apache.storm.tuple.Fields;
 import org.apache.storm.tuple.Tuple;
 import org.apache.storm.tuple.Values;
-import cn.itcast.storm.storm.utils.PropertyUtil;
 
 public class FieldsGroupingBolt extends BaseBasicBolt {
 
@@ -24,9 +24,9 @@ public class FieldsGroupingBolt extends BaseBasicBolt {
 	@Override
 	@SuppressWarnings("rawtypes")
 	public void prepare(Map stormConf, TopologyContext context) {
-		String scheme = PropertyUtil.getProperty("scheme");
-		separator = PropertyUtil.getProperty("separator");
-		target = PropertyUtil.getProperty("target");
+		String scheme = PropertyUtils.getProperty("scheme");
+		separator = PropertyUtils.getProperty("separator");
+		target = PropertyUtils.getProperty("target");
 		fieldsList = Arrays.asList(scheme.split(","));
 
 	}

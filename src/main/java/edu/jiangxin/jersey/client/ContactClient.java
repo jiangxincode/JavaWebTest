@@ -2,6 +2,7 @@ package edu.jiangxin.jersey.client;
 
 import edu.jiangxin.jersey.bean.Address;
 import edu.jiangxin.jersey.bean.Contact;
+import edu.jiangxin.utils.PropertyUtils;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
@@ -19,7 +20,7 @@ public class ContactClient {
 	
 	public static void main(String[] args) {
 		Client client = ClientBuilder.newClient();
-		WebTarget webTarget = client.target("http://localhost:8080/JavaWebTest/rest/contacts");
+		WebTarget webTarget = client.target(PropertyUtils.getProperty("http.url") + "/rest/contacts");
 		
 		System.out.println("===== Get huangyim =====");
 		getOneContact(webTarget, "huangyim");
@@ -88,7 +89,7 @@ public class ContactClient {
 	
 	public static void putOneContact(WebTarget r, Contact c) {
 		Response response = r.path(c.getId()).request(MediaType.APPLICATION_XML)
-								   .put(Entity.text(c), Response.class);
+								   .put(Entity.entity(c, MediaType.APPLICATION_XML), Response.class);
 		System.out.println(response.getStatus());
 	}
 	

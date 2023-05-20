@@ -6,14 +6,14 @@ import org.apache.commons.logging.LogFactory;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class DatabasePropertyUtils {
+public class PropertyUtils {
 
-    private static final Log log = LogFactory.getLog(DatabasePropertyUtils.class);
+    private static final Log log = LogFactory.getLog(PropertyUtils.class);
     private static Properties pros = new Properties();
 
     static {
         try {
-            InputStream in = DatabasePropertyUtils.class.getClassLoader().getResourceAsStream("database.properties");
+            InputStream in = PropertyUtils.class.getClassLoader().getResourceAsStream("javawebtest.properties");
             pros.load(in);
         } catch (Exception e) {
             log.error("load configuration error");
