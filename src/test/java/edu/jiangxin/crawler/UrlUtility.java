@@ -12,7 +12,7 @@ public class UrlUtility {
 	private static String m_urlPatternString = "(?i)(?s)<\\s*?a.*?href=\"(.*?)\".*?>";
 	private static Pattern m_urlPattern = Pattern.compile(m_urlPatternString);
 
-	private static Logger m_debug = LogManager.getLogger("Debuglogger");
+	private static Logger m_debug = LogManager.getLogger(UrlUtility.class);
 
 	public static void ExtractURL(String baseUrl, String content) {
 		Matcher matcher = m_urlPattern.matcher(content);

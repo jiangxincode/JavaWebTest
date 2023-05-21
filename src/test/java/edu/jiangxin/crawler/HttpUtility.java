@@ -24,7 +24,7 @@ public class HttpUtility {
 			"Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.2)",
 			"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)", };
 
-	private static final Logger m_debug = LogManager.getLogger("Debuglogger");
+	private static final Logger m_debug = LogManager.getLogger(HttpUtility.class);
 
 	// 取得"url"指定的entity
 	public static HttpEntity GetEntity(String url) {

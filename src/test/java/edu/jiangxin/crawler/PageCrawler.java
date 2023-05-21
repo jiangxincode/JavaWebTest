@@ -10,9 +10,8 @@ import org.apache.log4j.Logger;
 
 public class PageCrawler implements Runnable  {
 	
-	private static Logger m_trace = LogManager.getLogger("Tracelogger");
-    private static Logger m_debug = LogManager.getLogger("Debuglogger");
-    
+    private static Logger m_debug = LogManager.getLogger(PageCrawler.class);
+
     private String url;
     private String savePath;
     private AtomicInteger numberOfThreads;
@@ -41,9 +40,9 @@ public class PageCrawler implements Runnable  {
 				if( content == null || content.isEmpty() ) {
 					m_debug.debug(url + " :No content");
 					return;
-				} 
-			
-				m_trace.trace("get content successfully from " + url );
+				}
+
+				m_debug.trace("get content successfully from " + url );
 				if( !Utility.SavePage(bytes, content, savePath) ) {
 					m_debug.debug("can't save page whose url is " + url);
 				}		
@@ -51,7 +50,7 @@ public class PageCrawler implements Runnable  {
 				UrlUtility.ExtractURL(url, content);
 			}
 			else {
-				m_trace.trace("could not get entity from " + url);
+				m_debug.trace("could not get entity from " + url);
 			}
 		}
 		finally {

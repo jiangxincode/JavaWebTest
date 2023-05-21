@@ -1,22 +1,24 @@
 package edu.jiangxin.crawler;
+
+import edu.jiangxin.utils.PropertyUtils;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-
-public class Zerocrawler {
-	private static Logger m_debug = LogManager.getLogger("Debuglogger");
+public class Crawler {
+	private static Logger m_debug = LogManager.getLogger(Crawler.class);
 
 	private static int m_maxThreads = 4;
 
 	public static void main(String[] args) {
 		BasicConfigurator.configure();
-		String testUrl = "http://www.cnblogs.com/";
-		Crawl(testUrl,"temp/");
+		String testUrl = PropertyUtils.getProperty("http.url");
+		Crawl(testUrl, Crawler.class.getResource("/").getPath() + "Crawler/");
 		System.out.println(HttpUtility.GetContent(HttpUtility.GetEntity(testUrl)));
 	}
 
@@ -38,7 +40,7 @@ public class Zerocrawler {
 					sleep();
 				}
 
-				if (cnt++ > 1000)
+				if (cnt++ > 10)
 					break;
 				// if( Queue.Size() == 0 && numberOfThreads.get() == 0 ) break;
 			}

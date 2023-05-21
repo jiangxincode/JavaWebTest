@@ -14,5 +14,4 @@ JavaWebTest.iml
 # VIM
 *.swp
 
-# others
-logs/
+*.log

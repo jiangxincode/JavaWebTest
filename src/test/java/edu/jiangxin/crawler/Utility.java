@@ -4,12 +4,13 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class Utility {
 
-	private static Logger m_debug = LogManager.getLogger("Debuglogger");
+	private static Logger m_debug = LogManager.getLogger(Utility.class);
 
 	/**
 	 * 从content提取begin之后，end之前的字符串 注意，如果begin没出现，会返回null, 如果end没出现则一直读字符串末尾
@@ -57,16 +58,18 @@ public class Utility {
 			return false;
 
 		name = FixFileName(name);
+		File tmpFile = new File(savePath, name);
 		try {
-			FileOutputStream fos = new FileOutputStream(
-					new File(savePath, name));
+			FileUtils.createParentDirectories(tmpFile);
+			tmpFile.createNewFile();
+			FileOutputStream fos = new FileOutputStream(tmpFile);
 			fos.write(bytes);
 			fos.close();
 		} catch (FileNotFoundException e) {
 			m_debug.debug("无法建立文件名为\"" + name + "\"的文件");
 			return false;
 		} catch (IOException e) {
-			m_debug.debug(e.getMessage());
+			m_debug.debug("IOException: " + tmpFile.getAbsolutePath(), e);
 			return false;
 		}
 
