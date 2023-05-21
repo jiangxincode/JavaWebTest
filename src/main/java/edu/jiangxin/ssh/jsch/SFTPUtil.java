@@ -13,8 +13,6 @@ import java.util.Properties;
 import java.util.Vector;
 
 import org.apache.commons.io.IOUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.ChannelSftp;
@@ -22,13 +20,15 @@ import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
 import com.jcraft.jsch.SftpException;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 /**
  * sftp工具。注意：构造方法有两个：分别是基于密码认证、基于秘钥认证。
  *
  */
 public class SFTPUtil {
-    private transient Logger log = LoggerFactory.getLogger(this.getClass());
+    private transient Logger log = LogManager.getLogger(this.getClass());
 
     private ChannelSftp sftp;
 
@@ -85,9 +85,9 @@ public class SFTPUtil {
             JSch jsch = new JSch();
             if (keyFilePath != null) {
                 jsch.addIdentity(keyFilePath);// 设置私钥
-                log.info("sftp connect,path of private key file：{}" , keyFilePath);
+                log.info("sftp connect,path of private key file：" + keyFilePath);
             }
-            log.info("sftp connect by host:{} username:{}",host,username);
+            log.info("sftp connect by host:" + host + " username:" + username);
 
             session = jsch.getSession(username, host, port);
             log.info("Session is build");
@@ -108,7 +108,7 @@ public class SFTPUtil {
             sftp = (ChannelSftp) channel;
             log.info(String.format("sftp server host:[%s] port:[%s] is connect successfull", host, port));
         } catch (JSchException e) {
-            log.error("Cannot connect to specified sftp server : {}:{} \n Exception message is: {}", new Object[]{host, port, e.getMessage()});
+            log.error("Cannot connect to specified sftp server : " + host + ":" + port);
             throw new RuntimeException(e.getMessage(),e);
         }
     }
@@ -152,7 +152,7 @@ public class SFTPUtil {
             sftp.cd(directory);
         }
         sftp.put(input, sftpFileName);
-        log.info("file:{} is upload successful" , sftpFileName);
+        log.info("file:" + sftpFileName + " is upload successful");
     }
 
     /**
@@ -226,7 +226,7 @@ public class SFTPUtil {
         }
         File file = new File(saveFile);
         sftp.get(downloadFile, new FileOutputStream(file));
-        log.info("file:{} is download successful" , downloadFile);
+        log.info("file:" + downloadFile + " is download successful");
     }
     /**
      * 下载文件
@@ -245,7 +245,7 @@ public class SFTPUtil {
 
         byte[] fileData = IOUtils.toByteArray(is);
 
-        log.info("file:{} is download successful" , downloadFile);
+        log.info("file:" + downloadFile + " is download successful");
         return fileData;
     }
 

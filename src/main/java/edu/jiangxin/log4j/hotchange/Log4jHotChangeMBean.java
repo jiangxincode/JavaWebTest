@@ -1,8 +1,8 @@
 package edu.jiangxin.log4j.hotchange;
 
 import org.apache.log4j.Level;
+import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.jmx.export.annotation.*;
 import org.springframework.stereotype.Component;
 
@@ -18,7 +18,7 @@ public class Log4jHotChangeMBean {
 	 */
 	public static final String MBEAN_NAME = "log4j:name=Log4j";
 
-	private static org.slf4j.Logger managerLogger = LoggerFactory.getLogger(Log4jHotChangeMBean.class);
+	private static Logger managerLogger = LogManager.getLogger(Log4jHotChangeMBean.class);
 
 	private String projectLoggerName;
 
@@ -34,7 +34,7 @@ public class Log4jHotChangeMBean {
 		Logger logger = Logger.getRootLogger();
 		Level level = Level.toLevel(newLevel);
 		logger.setLevel(level);
-		managerLogger.info("设置Root Logger 级别为{}", newLevel);
+		managerLogger.info("设置Root Logger 级别为" + newLevel);
 	}
 
 	/**
@@ -82,7 +82,7 @@ public class Log4jHotChangeMBean {
 		Logger logger = Logger.getLogger(loggerName);
 		Level level = Level.toLevel(newLevel);
 		logger.setLevel(level);
-		managerLogger.info("设置{}级别为{}", loggerName, newLevel);
+		managerLogger.info("设置" + loggerName + "级别为" + newLevel);
 	}
 
 	/**
