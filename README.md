@@ -145,7 +145,3 @@ Some tests and exercises in Java.
 + 去除不必要的文档信息输出，如果必要，该用xml方式输出，便于扩展
 + Verify log4j related content.
 + Use the properties instead of xml to store password.
-
-## Update Third-Party libraries
-
-* JACOB: update the "jacob-${JACOB_VERSION}-x64/x32.dll" in the ${java.library.path} synchronous .
