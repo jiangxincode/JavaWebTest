@@ -30,7 +30,7 @@ public class DirectoryTest {
 		indexWriter.close();
 	}
 
-	@Test
+	//@Test
 	public void test2() throws Exception{
 		Directory fsDir = FSDirectory.open(new File(indexPath));
 

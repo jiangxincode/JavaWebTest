@@ -19,7 +19,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
@@ -29,7 +30,7 @@ import edu.jiangxin.statistics.service.LogService;
 
 public class LogFilter implements Filter {
 
-	Logger logger = Logger.getLogger(LogFilter.class);
+	Logger logger = LogManager.getLogger(LogFilter.class);
 
 	@Autowired
 	private LogService logService;

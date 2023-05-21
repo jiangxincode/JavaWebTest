@@ -5,7 +5,8 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -14,7 +15,7 @@ import edu.jiangxin.statistics.dao.LogDao;
 
 public class LogDaoImpl implements LogDao {
 
-	private Logger logger = Logger.getLogger(LogDaoImpl.class);
+	private Logger logger = LogManager.getLogger(LogDaoImpl.class);
 
 	private JdbcTemplate jdbcTemplate;
 

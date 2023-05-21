@@ -1,8 +1,8 @@
 package edu.jiangxin.log4j.hotchange;
 
-import org.apache.log4j.Level;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.jmx.export.annotation.*;
 import org.springframework.stereotype.Component;
 
@@ -24,16 +24,16 @@ public class Log4jHotChangeMBean {
 
 	@ManagedAttribute(description = "Level of the root logger")
 	public String getRootLoggerLevel() {
-		Logger logger = Logger.getRootLogger();
+		Logger logger = LogManager.getRootLogger();
 		//      MBeanServer server = MBeanServerFactory.createMBeanServer();
-		return logger.getEffectiveLevel().toString();
+		return logger.getLevel().toString();
 	}
 
 	@ManagedAttribute
 	public void setRootLoggerLevel(String newLevel) {
-		Logger logger = Logger.getRootLogger();
+		Logger logger = LogManager.getRootLogger();
 		Level level = Level.toLevel(newLevel);
-		logger.setLevel(level);
+		logger.atLevel(level);
 		managerLogger.info("设置Root Logger 级别为" + newLevel);
 	}
 
@@ -67,8 +67,8 @@ public class Log4jHotChangeMBean {
 	@ManagedOperation(description = "Get logging level of the logger")
 	@ManagedOperationParameters({ @ManagedOperationParameter(name = "loggerName", description = "Logger name") })
 	public String getLoggerLevel(String loggerName) {
-		Logger logger = Logger.getLogger(loggerName);
-		return logger.getEffectiveLevel().toString();
+		Logger logger = LogManager.getLogger(loggerName);
+		return logger.getLevel().toString();
 	}
 
 	/**
@@ -79,9 +79,9 @@ public class Log4jHotChangeMBean {
 	@ManagedOperationParameters({ @ManagedOperationParameter(name = "loggerName", description = "Logger name"),
 			@ManagedOperationParameter(name = "newlevel", description = "New level") })
 	public void setLoggerLevel(String loggerName, String newLevel) {
-		Logger logger = Logger.getLogger(loggerName);
+		Logger logger = LogManager.getLogger(loggerName);
 		Level level = Level.toLevel(newLevel);
-		logger.setLevel(level);
+		logger.atLevel(level);
 		managerLogger.info("设置" + loggerName + "级别为" + newLevel);
 	}
 
@@ -97,7 +97,7 @@ public class Log4jHotChangeMBean {
 		Log4jHotChangeMBean mbean = new Log4jHotChangeMBean();
 		String orgLevel = mbean.getLoggerLevel(loggerName);
 
-		Logger.getLogger(loggerName).setLevel(Level.FATAL);
+		LogManager.getLogger(loggerName).atLevel(Level.FATAL);
 		System.out.println(mbean.getLoggerLevel(loggerName));
 
 		mbean.setLoggerLevel(loggerName, "TRACE");

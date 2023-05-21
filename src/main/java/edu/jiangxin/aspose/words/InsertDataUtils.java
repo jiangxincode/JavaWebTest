@@ -12,15 +12,15 @@ import java.util.Set;
 
 import javax.swing.ImageIcon;
 
-import org.apache.log4j.Logger;
-
 import com.aspose.words.Document;
 import com.aspose.words.DocumentBuilder;
 import com.aspose.words.FormField;
 import com.aspose.words.FormFieldCollection;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class InsertDataUtils {
-	public final Logger log = Logger.getLogger(InsertDataUtils.class);
+	public final Logger log = LogManager.getLogger(InsertDataUtils.class);
 
 	private Document doc;
 	private DocumentBuilder builder;
