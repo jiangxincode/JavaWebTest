@@ -373,7 +373,8 @@
           <dependency>
                <groupId>net.sourceforge.tess4j</groupId>
                <artifactId>tess4j</artifactId>
-               <version>3.4.0</version>
+               <version>3.4.8</version>
+               <scope>test</scope>
           </dependency>
           <dependency>
                <groupId>net.lingala.zip4j</groupId>
