@@ -1,30 +1,20 @@
 package edu.jiangxin.mess;
 
+import edu.jiangxin.utils.PropertyUtils;
+
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.Authenticator;
-import java.net.HttpURLConnection;
-import java.net.InetSocketAddress;
-import java.net.Proxy;
-import java.net.URL;
+import java.net.*;
 import java.util.Properties;
 
 public class ProxySettingUtils {
 
 	public static void global() throws IOException {
-		Properties fileProperties = new Properties();
-
-		FileInputStream fis = new FileInputStream(new File("proxy.properties"));
-		fileProperties.load(fis);
-		fis.close();
-
 		Properties sysProperties = System.getProperties();
 
 		// 设置http访问要使用的代理服务器的地址
-		sysProperties.setProperty("http.proxyHost", fileProperties.getProperty("http.proxyHost"));
+		sysProperties.setProperty("http.proxyHost", PropertyUtils.getProperty("http.proxyHost"));
 		// 设置http访问要使用的代理服务器的端口
 		sysProperties.setProperty("http.proxyPort", "8080");
 		// 设置不需要通过代理服务器访问的主机，可以使用*通配符，多个地址用|分隔
