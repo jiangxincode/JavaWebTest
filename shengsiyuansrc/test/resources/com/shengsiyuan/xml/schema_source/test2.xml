@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<person xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="test2.xsd">
-
-<name>tom</name>
-<birthday>2010-10-10</birthday>
-<age>10</age>
-
-</person>

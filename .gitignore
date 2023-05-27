@@ -15,3 +15,5 @@ JavaWebTest.iml
 *.swp
 
 *.log
+
+*vsdx
