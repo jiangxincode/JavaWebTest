@@ -1,4 +1,4 @@
-package edu.jiangxin.mess;
+package edu.jiangxin.jarscan;
 
 import de.dixti.jarscan.JarScan;
 import de.dixti.jarscan.Options;

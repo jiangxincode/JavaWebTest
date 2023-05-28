@@ -51,11 +51,6 @@
                <version>3.1</version>
           </dependency>
           <dependency>
-               <groupId>org.jdom</groupId>
-               <artifactId>jdom2</artifactId>
-               <version>2.0.6</version>
-          </dependency>
-          <dependency>
                <groupId>dom4j</groupId>
                <artifactId>dom4j</artifactId>
                <version>1.6.1</version>
@@ -91,32 +86,11 @@
                <artifactId>mongo-java-driver</artifactId>
                <version>3.5.0</version>
           </dependency>
-          <dependency>
-               <groupId>org.drools</groupId>
-               <artifactId>drools-core</artifactId>
-               <version>5.6.0.Final</version>
-          </dependency>
-          <dependency>
-               <groupId>org.drools</groupId>
-               <artifactId>drools-compiler</artifactId>
-               <version>5.6.0.Final</version>
-          </dependency>
-          <dependency>
-               <groupId>org.ow2.asm</groupId>
-               <artifactId>asm</artifactId>
-               <version>6.0</version>
-          </dependency>
           <!-- https://mvnrepository.com/artifact/org.mvel/mvel2 -->
           <dependency>
                <groupId>org.mvel</groupId>
                <artifactId>mvel2</artifactId>
                <version>2.3.1.Final</version>
-          </dependency>
-          <!-- https://mvnrepository.com/artifact/org.antlr/antlr4-runtime -->
-          <dependency>
-               <groupId>org.antlr</groupId>
-               <artifactId>antlr4-runtime</artifactId>
-               <version>4.7</version>
           </dependency>
           <!-- https://mvnrepository.com/artifact/com.oracle/ojdbc6 -->
           <dependency>
@@ -224,13 +198,6 @@
                <version>${hibernate.version}</version>
           </dependency>
           <dependency>
-               <groupId>jeasy</groupId>
-               <artifactId>je-analysis</artifactId>
-               <version>1.5.3</version>
-               <scope>system</scope>
-               <systemPath>${pom.basedir}/lib/je-analysis-1.5.3.jar</systemPath>
-          </dependency>
-          <dependency>
                <groupId>org.jsoup</groupId>
                <artifactId>jsoup</artifactId>
                <version>1.15.3</version>
@@ -239,13 +206,6 @@
                <groupId>net.sourceforge.jchardet</groupId>
                <artifactId>jchardet</artifactId>
                <version>1.0</version>
-          </dependency>
-          <dependency>
-               <groupId>de.dixti</groupId>
-               <artifactId>jarscan</artifactId>
-               <version>2.2</version>
-               <scope>system</scope>
-               <systemPath>${pom.basedir}/lib/jarscan.jar</systemPath>
           </dependency>
 
           <!-- https://stackoverflow.com/questions/48204141/replacements-for-deprecated-jpms-modules-with-java-ee-apis -->
@@ -334,19 +294,6 @@
                                              </resource>
                                         </resources>
                                    </configuration>
-                              </execution>
-                         </executions>
-                    </plugin>
-                    <plugin>
-                         <groupId>org.antlr</groupId>
-                         <artifactId>antlr4-maven-plugin</artifactId>
-                         <version>4.13.0</version>
-                         <executions>
-                              <execution>
-                                   <id>antlr</id>
-                                   <goals>
-                                        <goal>antlr4</goal>
-                                   </goals>
                               </execution>
                          </executions>
                     </plugin>
@@ -440,10 +387,6 @@
                <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>build-helper-maven-plugin</artifactId>
-               </plugin>
-               <plugin>
-                    <groupId>org.antlr</groupId>
-                    <artifactId>antlr4-maven-plugin</artifactId>
                </plugin>
                <plugin>
                     <groupId>org.codehaus.mojo</groupId>
