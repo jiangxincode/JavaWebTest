@@ -1,4 +1,4 @@
-package edu.jiangxin.freemarker.web;
+package edu.jiangxin.struts.freemarker;
 
 import com.opensymphony.xwork2.ActionSupport;
 

@@ -1,54 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
-     <constant name="struts.devMode" value="true" />
-     <constant name="struts.i18n.encoding" value="gbk" />
-     <constant name="struts.enable.DynamicMethodInvocation" value="true" />
-     <package name="default" extends="struts-default" namespace="/struts">
-          <action name="freeMarkerAction" class="edu.jiangxin.freemarker.web.FreeMarkerAction">
-               <result name="success" type="freemarker">/ftl/free_marker_test.ftl
-               </result>
-          </action>
-     </package>
-     <package name="struts2_ajax" extends="json-default" namespace="/struts">
-          <action name="getXMLAction" class="com.shengsiyuan.struts2ajax.action.xml.GetXMLAction">
-          </action>
-          <action name="getJsonAction"
-               class="com.shengsiyuan.struts2ajax.action.json.GetJsonAction">
-          </action>
-          <action name="getJsonAction2"
-               class="com.shengsiyuan.struts2ajax.action.json.GetJsonAction2">
-               <result name="success" type="json">
-                    <param name="excludeProperties">address</param>
-               </result>
-          </action>
-          <action name="ognlAction" class="com.shengsiyuan.struts2ajax.action.ognl.OgnlAction">
-               <interceptor-ref name="defaultStack"></interceptor-ref>
-               <interceptor-ref name="execAndWait"></interceptor-ref>
-               <result name="wait">/wait.jsp</result>
-               <result name="success">/ognl.jsp</result>
-          </action>
-     </package>
-     <package name="hibernate" extends="struts-default" namespace="/struts">
-          <action name="savePerson" class="com.shengsiyuan.hibernate01.action.PersonAction"
-               method="savePerson">
-               <result name="success">/listAll.jsp</result>
-          </action>
-          <action name="deletePerson" class="com.shengsiyuan.hibernate01.action.PersonAction"
-               method="deletePerson">
-               <result name="success">/listAll.jsp</result>
-          </action>
-          <action name="getSinglePerson" class="com.shengsiyuan.hibernate01.action.PersonAction"
-               method="getSinglePerson">
-               <result>/getSinglePerson.jsp</result>
-          </action>
-          <action name="updatePPerson" class="com.shengsiyuan.hibernate01.action.PersonAction"
-               method="getSinglePerson">
-               <result>/updatePerson.jsp</result>
-          </action>
-          <action name="updatePerson" class="com.shengsiyuan.hibernate01.action.PersonAction"
-               method="updatePerson">
-               <result name="success">/listAll.jsp</result>
-          </action>
-     </package>
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.i18n.encoding" value="gbk"/>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+    <package name="struts_freemarker" extends="struts-default" namespace="/struts">
+        <action name="freeMarkerAction" class="edu.jiangxin.struts.freemarker.FreeMarkerAction">
+            <result name="success" type="freemarker">/ftl/free_marker_test.ftl
+            </result>
+        </action>
+    </package>
+    <package name="struts2_ajax" extends="json-default" namespace="/struts">
+        <action name="getXMLAction" class="com.shengsiyuan.struts2ajax.action.xml.GetXMLAction">
+        </action>
+        <action name="getJsonAction"
+                class="com.shengsiyuan.struts2ajax.action.json.GetJsonAction">
+        </action>
+        <action name="getJsonAction2"
+                class="com.shengsiyuan.struts2ajax.action.json.GetJsonAction2">
+            <result name="success" type="json">
+                <param name="excludeProperties">address</param>
+            </result>
+        </action>
+        <action name="ognlAction" class="com.shengsiyuan.struts2ajax.action.ognl.OgnlAction">
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+            <interceptor-ref name="execAndWait"></interceptor-ref>
+            <result name="wait">/wait.jsp</result>
+            <result name="success">/ognl.jsp</result>
+        </action>
+    </package>
+    <package name="hibernate" extends="struts-default" namespace="/struts">
+        <action name="savePerson" class="com.shengsiyuan.hibernate01.action.PersonAction"
+                method="savePerson">
+            <result name="success">/listAll.jsp</result>
+        </action>
+        <action name="deletePerson" class="com.shengsiyuan.hibernate01.action.PersonAction"
+                method="deletePerson">
+            <result name="success">/listAll.jsp</result>
+        </action>
+        <action name="getSinglePerson" class="com.shengsiyuan.hibernate01.action.PersonAction"
+                method="getSinglePerson">
+            <result>/getSinglePerson.jsp</result>
+        </action>
+        <action name="updatePPerson" class="com.shengsiyuan.hibernate01.action.PersonAction"
+                method="getSinglePerson">
+            <result>/updatePerson.jsp</result>
+        </action>
+        <action name="updatePerson" class="com.shengsiyuan.hibernate01.action.PersonAction"
+                method="updatePerson">
+            <result name="success">/listAll.jsp</result>
+        </action>
+    </package>
 </struts>

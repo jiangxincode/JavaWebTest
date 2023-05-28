@@ -1,4 +1,4 @@
-package edu.jiangxin.freemarker.local;
+package edu.jiangxin.freemarker;
 
 public class User {
 	private String uname;

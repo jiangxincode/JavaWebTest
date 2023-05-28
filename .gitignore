@@ -9,7 +9,7 @@ target/
 
 # IDEA project
 *.idea/
-JavaWebTest.iml
+*.iml
 
 # VIM
 *.swp

@@ -1,7 +1,7 @@
 ol {
-	counter-reset: li; /* ´´½¨Ò»¸ö¼ÆÊıÆ÷ */
-	list-style: none; /* Çå³ıÁĞ±íÄ¬ÈÏµÄ±àÂë*/
-	*list-style: decimal; /* ÈÃIE6/7¾ßÓĞÄ¬ÈÏµÄ±àÂë */
+	counter-reset: li; /* åˆ›å»ºä¸€ä¸ªè®¡æ•°å™¨ */
+	list-style: none; /* æ¸…é™¤åˆ—è¡¨é»˜è®¤çš„ç¼–ç */
+	*list-style: decimal; /* è®©IE6/7å…·æœ‰é»˜è®¤çš„ç¼–ç  */
 	font: 15px 'trebuchet MS', 'lucida sans';
 	padding: 0;
 	margin-bottom: 4em;
@@ -9,7 +9,7 @@ ol {
 }
 
 ol ol {
-	margin: 0 0 0 2em; /* ¸ø¶ş¼¶ÁĞ±íÔö¼ÓÒ»¶¨µÄ×ó±ß¾à*/
+	margin: 0 0 0 2em; /* ç»™äºŒçº§åˆ—è¡¨å¢åŠ ä¸€å®šçš„å·¦è¾¹è·*/
 }
 
 /*rounded shaped numbers*/
@@ -22,9 +22,9 @@ ol ol {
 	background: #ddd;
 	color: #444;
 	text-decoration: none;
-	/*CSS3ÊôĞÔ*/
-	border-radius: 0.3em; /*ÖÆ×÷Ô²½Ç*/
-	/* transition¶¯»­Ğ§¹û*/
+	/*CSS3å±æ€§*/
+	border-radius: 0.3em; /*åˆ¶ä½œåœ†è§’*/
+	/* transitionåŠ¨ç”»æ•ˆæœ*/
 	-moz-transition: all 0.3s ease-out;
 	-webkit-transition: all 0.3s ease-out;
 	-o-transition: all 0.3s ease-out;
@@ -37,7 +37,7 @@ ol ol {
 }
 
 .rounded-list a:hover::before {
-	/*ĞüÍ£Ê±Ğı×ª±àÂë*/
+	/*æ‚¬åœæ—¶æ—‹è½¬ç¼–ç */
 	-moz-transform: rotate(360deg);
 	-webkit-transform: rotate(360deg);
 	-o-transform: rotate(360deg);
