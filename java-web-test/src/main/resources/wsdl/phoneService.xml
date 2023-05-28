@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://phoneservice.webservice.jiangxin.edu" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="phoneService" targetNamespace="http://phoneservice.webservice.jiangxin.edu">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://phoneservice.webservice.jiangxin.edu" elementFormDefault="unqualified" targetNamespace="http://phoneservice.webservice.jiangxin.edu" version="1.0">
+
+  <xs:element name="getMobileInfo" type="tns:getMobileInfo"/>
+
+  <xs:element name="getMobileInfoResponse" type="tns:getMobileInfoResponse"/>
+
+  <xs:complexType name="getMobileInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="osName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMobileInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="phone" type="tns:phone"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="phone">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="owner" type="xs:string"/>
+      <xs:element name="total" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getMobileInfo">
+    <wsdl:part element="tns:getMobileInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMobileInfoResponse">
+    <wsdl:part element="tns:getMobileInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="PhoneService">
+    <wsdl:operation name="getMobileInfo">
+      <wsdl:input message="tns:getMobileInfo" name="getMobileInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:getMobileInfoResponse" name="getMobileInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="phoneServiceSoapBinding" type="tns:PhoneService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getMobileInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getMobileInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getMobileInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="phoneService">
+    <wsdl:port binding="tns:phoneServiceSoapBinding" name="PhoneServicePort">
+      <soap:address location="http://localhost:30000/ws/phoneService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

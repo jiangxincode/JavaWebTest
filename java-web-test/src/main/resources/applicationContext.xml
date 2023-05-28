@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/tx
+  	http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+  	http://www.springframework.org/schema/aop
+  	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+  	http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:javawebtest.properties"/>
+	</bean>
+
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="${jdbc.driver}" />
+		<property name="jdbcUrl" value="${jdbc.url}"/>
+		<property name="user" value="${jdbc.username}"/>
+		<property name="password" value="${jdbc.password}"/>
+		<property name="initialPoolSize" value="10"/>
+		<property name="minPoolSize" value="10"/>
+		<property name="maxPoolSize" value="100"/>
+		<property name="acquireIncrement" value="1"/>
+		<property name="idleConnectionTestPeriod" value="10"/>
+		<!-- <property name="maxIdleTime" value="3000" /> -->
+	</bean>
+
+	<bean id="txManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<tx:method name="get*" />
+			<tx:method name="query*" />
+			<tx:method name="search*" />
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="delete*" propagation="REQUIRED" />
+			<tx:method name="*" read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+
+	<aop:config>
+		<aop:pointcut id="servicePointcut"
+			expression="execution(* edu.jiangxin.statistics.service..*.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="servicePointcut" />
+	</aop:config>
+
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+
+	<bean id="logDao" class="edu.jiangxin.statistics.dao.impl.LogDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+
+	<bean id="logService" class="edu.jiangxin.statistics.service.impl.LogServiceImpl">
+		<property name="logDao" ref="logDao" />
+	</bean>
+
+
+	<bean id="employeeManagerImpl"
+		class="edu.jiangxin.webservice.employeemanager.EmployeeManagerImpl"></bean>
+	<!-- 配置cxf 地址： http://192.168.114.10:8080/CXF_Server/ws/employeeManager
+		组成 ： http://192.168.114.10:8080 +CXF_Server（ 项目名）+ws（过滤的路径）+/employeeManager(自定义部分)
+		服务类 ： 服务的实现类： 拦截器 -->
+	<jaxws:server address="/employeeManager"
+		serviceClass="edu.jiangxin.webservice.employeemanager.EmployeeManager">
+		<jaxws:serviceBean>
+			<ref bean="employeeManagerImpl" />
+		</jaxws:serviceBean>
+		<!-- 配置输入显示日志信息的拦截器 -->
+		<jaxws:inInterceptors>
+			<bean class="org.apache.cxf.interceptor.LoggingInInterceptor"></bean>
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<bean class="org.apache.cxf.interceptor.LoggingOutInterceptor"></bean>
+		</jaxws:outInterceptors>
+	</jaxws:server>
+
+
+	<!-- 一个简单的演示spring最基本用法的例子。 -->
+	<!-- 构造函数注入 -->
+	<bean id="greetingService" class="com.yuqiaotech.helloj2ee.spring.GreetingServiceImpl">
+		<constructor-arg value="hello Tom" />
+	</bean>
+	<bean id="greetingService2" class="com.yuqiaotech.helloj2ee.spring.GreetingServiceImpl2">
+		<property name="greetingTo" value="Jack" />
+	</bean>
+	<!-- setter注入 -->
+	<!-- <bean id="greetingService" -->
+	<!-- class="com.yuqiaotech.helloj2ee.spring.GreetingServiceImpl2"> -->
+	<!-- <property name="greetingTo" value="Jack" /> -->
+	<!-- </bean> -->
+	<!-- p空间注入 如果是引用的话，p:proName-ref="refId" -->
+	<!-- <bean id="greetingService" -->
+	<!-- class="com.yuqiaotech.helloj2ee.spring.GreetingServiceImpl2" -->
+	<!-- p:greetingTo="Jack" -->
+	<!-- > -->
+	<!-- </bean> -->
+
+	<!-- <property name="fred.bob.sammy" value="123" /> -->
+	<!-- In order for this to work, the fred property of foo, and the bob property
+		of fred must not be null be non-null after the bean is constructed, or a
+		NullPointerException will be thrown. -->
+
+	<!-- AOP的一种使用方式 -->
+	<aop:config>
+		<aop:aspect ref="loggingAopTest">
+			<aop:pointcut id="questPointcut"
+				expression="execution(* *.sayGreeting(..)) and target(bean)" />
+
+			<aop:before method="loggingBefore" pointcut-ref="questPointcut"
+				arg-names="bean" />
+
+			<aop:after-returning method="loggingAfter"
+				pointcut-ref="questPointcut" arg-names="bean" />
+
+			<aop:around pointcut="execution(* *.sayGreeting(..))"
+				method="invoke" />
+
+			<aop:after-throwing
+				pointcut="execution(* com.yuqiaotech.helloj2ee.spring.GreetingService.sayGreeting(..))"
+				throwing="throwable" method="afterThrowing" />
+		</aop:aspect>
+	</aop:config>
+	<bean id="loggingAopTest" class="com.yuqiaotech.helloj2ee.spring.LoggingAop"></bean>
+
+	<context:component-scan base-package="edu.jiangxin" />
+	<context:mbean-export />
+
+</beans>

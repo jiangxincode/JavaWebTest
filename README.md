@@ -147,3 +147,10 @@ Java加密与解密的艺术
 + 去除不必要的文档信息输出，如果必要，该用xml方式输出，便于扩展
 + Verify log4j related content.
 + Use the properties instead of xml to store password.
+
+## Maven Command
+
+```shell
+mvn help:effective-pom -rf java-bigdata > a.log
+mvn dependency:tree -rf java-bigdata > b.log
+```

@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>New Document</title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<script type="text/javascript">
+    //继承的第二种实现方式，call方法方式,Function对象中的方法
+
+    function test(str, str2) {
+	alert(this.name + ", " + str + ", " + str2);
+    }
+
+    var object = new Object();
+    object.name = "zhangsan";
+
+    //test.call相当于调用了test函数
+    test.call(object, "shengsiyuan", "hello"); //将object赋给了this
+</script>
+</head>
+<body>
+</body>
+</html>
