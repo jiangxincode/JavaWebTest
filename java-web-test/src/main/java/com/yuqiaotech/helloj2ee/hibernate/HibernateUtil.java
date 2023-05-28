@@ -8,7 +8,7 @@ public class HibernateUtil {
 
 	static {
 		try {
-			sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
+			sessionFactory = new Configuration().configure().buildSessionFactory();
 		} catch (Throwable ex) {
 			throw new ExceptionInInitializerError(ex);
 		}

@@ -2,7 +2,7 @@
 <Configuration status="INFO">
     <Appenders>
         <RollingFile name="File"
-                     fileName="JavaWebTest.log"
+                     fileName="${sys:catalina.home}/logs/JavaWebTest.log"
                      filePattern="JavaWebTest-%d{yyyy-MM-dd}-%i.log">
             <PatternLayout
                     pattern="%d{yyyy-MM-dd HH:mm:ss} %5p %c{1}:%L - %m%n"/>

@@ -8,7 +8,7 @@ import junit.framework.TestCase;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.cfg.Configuration;
 
 /**
  * 本例用来演示一对多关系。
@@ -20,7 +20,7 @@ public class PersonAddressTest extends TestCase {
 	 * 准备session对象。
 	 */
 	public void setUp() {
-		this.session = new AnnotationConfiguration().configure().buildSessionFactory().openSession();
+		this.session = new Configuration().configure().buildSessionFactory().openSession();
 	}
 
 	/**

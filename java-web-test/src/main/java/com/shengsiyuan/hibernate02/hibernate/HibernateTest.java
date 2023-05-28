@@ -51,7 +51,7 @@ public class HibernateTest
 
 		people.setFile(buffer);
 
-		Session session = sessionFactory.openSession(new TestInterceptor());
+		Session session = sessionFactory.withOptions().interceptor(new TestInterceptor()).openSession();
 		Transaction tx = null;
 
 		try
