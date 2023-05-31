@@ -151,6 +151,8 @@ Java加密与解密的艺术
 ## Maven Command
 
 ```shell
-mvn help:effective-pom -rf java-bigdata > a.log
-mvn dependency:tree -rf java-bigdata > b.log
+mvn help:effective-pom -rf java-bigdata
+mvn dependency:tree -rf java-bigdata
+mvn clean package -DskipTests #不执行测试用例，但编译测试用例类生成相应的class文件至target/test-classes下
+mvn clean package -D"maven.test.skip=true" #不执行测试用例，也不编译测试用例类
 ```

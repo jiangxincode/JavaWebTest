@@ -60,7 +60,7 @@ create
     primary key (MESSAGE_ID)
 );
 
-drop
+/*drop
     table
     if exists user;
 
@@ -101,7 +101,7 @@ create
     address varchar(20),
     person  varchar(20) references person (pid),
     primary key (aid)
-);
+);*/
 
 commit;
 	

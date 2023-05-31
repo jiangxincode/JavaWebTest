@@ -2,12 +2,6 @@
 "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 	<session-factory>
-<!--		<property name="hibernate.connection.driver_class">
-			com.mysql.jdbc.Driver
-		</property>
-		<property name="hibernate.connection.url">
-			jdbc:mysql://127.0.0.1:3306/helloj2ee
-		</property>-->
 
 		<property name="hibernate.connection.url">jdbc:mysql://124.222.145.48:3306/JavaWebTest?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false</property>
 		<property name="hibernate.connection.username">root</property>
@@ -15,12 +9,6 @@
 		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
 
-<!--		<property name="hibernate.connection.username">root</property>
-		<property name="hibernate.connection.password">xxxx</property>
-		<property name="hibernate.hbm2ddl.auto">update</property>
-		<property name="hibernate.dialect">
-			org.hibernate.dialect.MySQLDialect
-		</property>-->
 		<!-- Use the C3P0 connection pool provider -->
 		<property name="hibernate.c3p0.min_size">5</property>
 		<property name="hibernate.c3p0.max_size">20</property>
@@ -30,12 +18,14 @@
 		<!-- Show and print nice SQL on stdout -->
 		<property name="show_sql">true</property>
 		<property name="format_sql">true</property>
-		<property name="hbm2ddl.auto">true</property>
+		<property name="hbm2ddl.auto">create</property>
 
 		<!-- List of XML mapping files -->
-		<mapping resource="com/yuqiaotech/helloj2ee/hibernate/sample1/Address.hbm.xml" />
+<!--		<mapping resource="com/yuqiaotech/helloj2ee/hibernate/sample1/Address.hbm.xml" />
 		<mapping resource="com/yuqiaotech/helloj2ee/hibernate/sample1/Person.hbm.xml" />
 		<mapping resource="com/yuqiaotech/helloj2ee/hibernate/Message.hbm.xml" />
-		<mapping class="com.yuqiaotech.helloj2ee.hibernate.User"/>
+		<mapping class="com.yuqiaotech.helloj2ee.hibernate.User"/>-->
+
+		<mapping resource="com/shengsiyuan/hibernate01/Person.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>

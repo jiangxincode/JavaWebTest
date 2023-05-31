@@ -65,9 +65,9 @@ public class PersonAction extends ActionSupport
 	{
 		Person person = new Person();
 
-		person.setUsername(username);
-		person.setPassword(password);
-		person.setAge(age);
+		person.setUsername("zhangsan");
+		person.setPassword("123456");
+		person.setAge(11);
 
 		java.sql.Date registerDate = new java.sql.Date(new java.util.Date()
 				.getTime());

@@ -4,7 +4,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 	<class name="com.yuqiaotech.helloj2ee.hibernate.sample1.Person"
-		table="person">
+		table="person1">
 		<id name="pid" column="pid">
 			<generator class="uuid.hex" />
 		</id>

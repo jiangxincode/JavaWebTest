@@ -4,7 +4,7 @@
 
 <hibernate-mapping>
 
-	<class name="com.shengsiyuan.model.Person" table="person">
+	<class name="com.shengsiyuan.hibernate01.model.Person" table="person">
 	
 		<id name="id" column="id" type="string">
 			<generator class="uuid"></generator>
