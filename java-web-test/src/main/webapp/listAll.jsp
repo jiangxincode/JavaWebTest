@@ -53,7 +53,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
     </tr>
     
-    <s:iterator value="#request.list" id="person" status="st">
+    <s:iterator value="#request.list" var="person" status="st">
     
     <tr>
     
