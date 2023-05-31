@@ -91,7 +91,7 @@
         <dependency>
             <groupId>com.ibm.icu</groupId>
             <artifactId>icu4j</artifactId>
-            <version>59.1</version>
+            <version>73.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -102,7 +102,7 @@
         <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm</artifactId>
-            <version>6.0</version>
+            <version>9.5</version>
         </dependency>
         <dependency>
             <groupId>org.drools</groupId>
