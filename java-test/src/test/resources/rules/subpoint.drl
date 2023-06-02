@@ -1,6 +1,6 @@
-package com.drools.demo.point
+package rules
 
-import com.drools.demo.point.PointDomain;
+import edu.jiangxin.drools.PointDomain;
 
 rule subBackNumsPoint
 	// 发生退货，扣减10分
@@ -9,17 +9,19 @@ rule subBackNumsPoint
 	when
 		$pointDomain : PointDomain(backNums >= 1)
 	then
+	    System.out.println ( "执行规则: "+drools.getRule().getName());
 		$pointDomain.setPoint($pointDomain.getPoint()-10);
 		$pointDomain.recordPointLog($pointDomain.getUserName(),"subBackNumsPoint");
 end
 
 rule subBackMondyPoint
-	// 退货金额大于100，扣减100分
+	// 退货金额大于等于100，扣减100分
 	salience 9
 	lock-on-active true
 	when
 		$pointDomain : PointDomain(backMondy >= 100)
 	then
+	    System.out.println ( "执行规则: "+drools.getRule().getName());
 		$pointDomain.setPoint($pointDomain.getPoint()-10);
 		$pointDomain.recordPointLog($pointDomain.getUserName(),"subBackMondyPoint");
 end

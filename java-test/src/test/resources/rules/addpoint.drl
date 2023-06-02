@@ -1,6 +1,6 @@
-package com.drools.demo.point
+package rules
 
-import com.drools.demo.point.PointDomain;
+import edu.jiangxin.drools.PointDomain;
 
 rule birthdayPoint
 	// 过生日，则加10分，并且将当月交易比数翻倍后再计算积分
@@ -9,23 +9,25 @@ rule birthdayPoint
 	when
 		$pointDomain : PointDomain(birthDay == true)
 	then
-		$pointDomain.setPoint($pointDomain.getPoint()+10);
+	    System.out.println ( "执行规则: "+drools.getRule().getName());
+		$pointDomain.setPoint($pointDomain.getPoint()+100);
 		$pointDomain.setBuyNums($pointDomain.getBuyNums()*2);
 		$pointDomain.setBuyMoney($pointDomain.getBuyMoney()*2);
 		$pointDomain.setBillThisMonth($pointDomain.getBillThisMonth()*2);
-		
+
 		$pointDomain.recordPointLog($pointDomain.getUserName(),"birthdayPoint");
 end
 
 rule billThisMonthPoint
-	// 2011-01-08 - 2011-08-08每月信用卡还款3次以上，每满3笔赠送30分
+	// 2016-01-01 - 2016-06-30每月分期还款3次以上，每满3笔赠送30分
 	salience 99
 	lock-on-active true
-	date-effective "2011-01-08 23:59:59"
-	date-expires "2011-08-08 23:59:59"
+	date-effective "31-dec-2015 23:59:59"
+	date-expires "30-jun-2016 23:59:59"
 	when
 		$pointDomain : PointDomain(billThisMonth >= 3)
 	then
+	    System.out.println ( "执行规则: "+drools.getRule().getName());
 		$pointDomain.setPoint($pointDomain.getPoint()+$pointDomain.getBillThisMonth()/3*30);
 		$pointDomain.recordPointLog($pointDomain.getUserName(),"billThisMonthPoint");
 end
@@ -37,6 +39,7 @@ rule buyMoneyPoint
 	when
 		$pointDomain : PointDomain(buyMoney >= 100)
 	then
+	    System.out.println ( "执行规则: "+drools.getRule().getName());
 		$pointDomain.setPoint($pointDomain.getPoint()+ (int)$pointDomain.getBuyMoney()/100 * 10);
 		$pointDomain.recordPointLog($pointDomain.getUserName(),"buyMoneyPoint");
 end
@@ -48,6 +51,7 @@ rule buyNumsPoint
 	when
 		$pointDomain : PointDomain(buyNums >= 5)
 	then
+	    System.out.println ( "执行规则: "+drools.getRule().getName());
 		$pointDomain.setPoint($pointDomain.getPoint()+$pointDomain.getBuyNums()/5 * 50);
 		$pointDomain.recordPointLog($pointDomain.getUserName(),"buyNumsPoint");
 end
@@ -59,6 +63,7 @@ rule allFitPoint
 	when
 		$pointDomain:PointDomain(buyNums >= 5 && billThisMonth >= 3 && buyMoney >= 100)
 	then
+	    System.out.println ( "执行规则: "+drools.getRule().getName());
 		$pointDomain.setPoint($pointDomain.getPoint()+ 100);
 		$pointDomain.recordPointLog($pointDomain.getUserName(),"allFitPoint");
 end

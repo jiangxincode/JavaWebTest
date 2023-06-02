@@ -1,4 +1,4 @@
-package edu.jiangxin.drools.example;
+package edu.jiangxin.drools;
 
 /**
  * 积分计算对象
