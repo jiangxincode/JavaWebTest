@@ -15,6 +15,7 @@
           <module>java-encrypt-decrypt</module>
           <module>java-test</module>
           <module>java-bigdata</module>
+          <module>java-path-demo</module>
      </modules>
 
      <properties>
