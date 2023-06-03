@@ -2,10 +2,7 @@
 
 [![Build and Release](https://github.com/jiangxincode/JavaWebTest/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/jiangxincode/JavaWebTest/actions/workflows/build.yml)
 [![Deploy](https://img.shields.io/badge/JavaWebTest-Deploy-blue)](http://124.222.145.48:8080/java-web-test/index.jsp)
-
-## License
-
-+ GPLv3 http://www.gnu.org/licenses/gpl-3.0.txt
+[![Apache License V2.0](https://img.shields.io/badge/license-Apache%202-green)](http://www.apache.org/licenses/LICENSE-2.0)
 
 ## Deployment
 
@@ -137,6 +134,13 @@ Java加密与解密的艺术
 
 ## TODO
 
+* 解决编译告警
+* 解决运行告警
+* 将main方法改为单元测试
+* 升级到Jakarta EE最新版本，现在最大的问题是Struts2当前不支持Jakarta EE最新版本，现在有两个策略，一是等待Struts2升级，二是将Struts2替换为Spring MVC
+  * Struts2未来计划在7.X版本支持Jakarta EE: <https://issues.apache.org/jira/browse/WW-5141>
+* 统一使用UTF-8编码
+
 + 批量文件重命名，批量文件备份和恢复；
 + 批量源代码文件注释删除；
 + 批量代码文件行数统计等等。
@@ -148,11 +152,11 @@ Java加密与解密的艺术
 + Verify log4j related content.
 + Use the properties instead of xml to store password.
 
-## Maven Command
+## 常用maven命令备忘
 
 ```shell
-mvn help:effective-pom -rf java-bigdata
-mvn dependency:tree -rf java-bigdata
+mvn help:effective-pom -rf java-bigdata #打印生效的pom文件
+mvn dependency:tree -rf java-bigdata #打印依赖树
 mvn clean package -DskipTests #不执行测试用例，但编译测试用例类生成相应的class文件至target/test-classes下
 mvn clean package -D"maven.test.skip=true" #不执行测试用例，也不编译测试用例类
 ```
