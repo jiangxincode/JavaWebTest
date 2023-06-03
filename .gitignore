@@ -17,3 +17,5 @@ target/
 *.log
 
 *vsdx
+
+dependency-reduced-pom.xml
