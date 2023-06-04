@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<filter>
+		<filter-name>myFilter</filter-name>
+		<filter-class>com.test.filter.NoteFilter</filter-class>
+		<init-param>
+			<param-name>blacklist</param-name>
+			<param-value>hello</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>usersFilter</filter-name>
+		<filter-class>com.test.filter.UsersFilter</filter-class>
+	</filter>
+
+
+	<filter-mapping>
+		<filter-name>usersFilter</filter-name>
+		<url-pattern>/ProcessUsersServlet</url-pattern>
+	</filter-mapping>
+
+
+	<filter-mapping>
+		<filter-name>myFilter</filter-name>
+		<url-pattern>/NoteServlet</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>MyServlet</servlet-name>
+		<servlet-class>com.test.servlet.MyServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SecondServlet</servlet-name>
+		<servlet-class>com.test.servlet.SecondServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ThirdServlet</servlet-name>
+		<servlet-class>com.test.servlet.ThirdServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>HelloServlet</servlet-name>
+		<servlet-class>com.test.servlet.HelloServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CounterServlet</servlet-name>
+		<servlet-class>com.test.servlet.CounterServlet</servlet-class>
+		<load-on-startup>10</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>HelloServlet2</servlet-name>
+		<servlet-class>com.test.servlet.HelloServlet2</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CookieServlet</servlet-name>
+		<servlet-class>com.test.servlet.CookieServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>LifeServlet</servlet-name>
+		<servlet-class>com.test.servlet.LifeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>TestServlet</servlet-name>
+		<servlet-class>com.test.servlet.TestServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>NoteServlet</servlet-name>
+		<servlet-class>com.test.servlet.NoteServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DispatcherServlet</servlet-name>
+		<servlet-class>com.test.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>DBServlet</servlet-name>
+		<servlet-class>com.test.db.DBServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ProcessUsersServlet</servlet-name>
+		<servlet-class>com.test.servlet.ProcessUsersServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MyServlet</servlet-name>
+		<url-pattern>/MyServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SecondServlet</servlet-name>
+		<url-pattern>/SecondServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ThirdServlet</servlet-name>
+		<url-pattern>/ThirdServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HelloServlet</servlet-name>
+		<url-pattern>/HelloServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CounterServlet</servlet-name>
+		<url-pattern>/CounterServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HelloServlet2</servlet-name>
+		<url-pattern>/HelloServlet2</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CookieServlet</servlet-name>
+		<url-pattern>/CookieServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LifeServlet</servlet-name>
+		<url-pattern>/LifeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TestServlet</servlet-name>
+		<url-pattern>/TestServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>NoteServlet</servlet-name>
+		<url-pattern>/NoteServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DispatcherServlet</servlet-name>
+		<url-pattern>/DispatcherServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DBServlet</servlet-name>
+		<url-pattern>/DBServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ProcessUsersServlet</servlet-name>
+		<url-pattern>/ProcessUsersServlet</url-pattern>
+	</servlet-mapping>
+
+	<listener>
+		<listener-class>com.test.listener.OnLineCountListener</listener-class>
+	</listener>
+
+</web-app>

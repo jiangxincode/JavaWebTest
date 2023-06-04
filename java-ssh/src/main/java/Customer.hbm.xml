@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.test.Customer" table="customers">
+
+		<id name="id" column="id" type="long">
+			<generator class="increment"> <!-- 主键id的生成方式为自增 -->
+			</generator>
+		</id>
+
+		<property name="name" type="string">
+			<column name="name" length="15"></column>
+		</property>
+
+		<set name="orders" cascade="save-update" inverse="true">
+			<key column="customer_id"></key> <!-- key元素设定与所关联的持久化类对应的表的外键 -->
+			<one-to-many class="com.test.Order" />
+		</set>
+
+	</class>
+
+</hibernate-mapping>
+

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.test.bean.Customer" table="customers">
+		
+		<id name="id" column="id" type="long">
+			<generator class="increment"> <!-- 主键id的生成方式为自增 -->
+			</generator>
+		</id>
+		
+		<property name="name" column="name" type="string" not-null="true"></property>
+		<property name="email" column="email" type="string" not-null="true"></property>
+		<property name="password" column="password" type="string" not-null="true"></property>
+		<property name="phone" column="phone" type="int"></property>
+		<property name="address" column="address" type="string"></property>
+		<property name="sex" column="sex" type="character"></property>	
+		<property name="married" column="is_married" type="boolean"></property>
+		<property name="description" column="description" type="text"></property>
+		<property name="image" column="image" type="binary"></property>
+		<property name="birthday" column="birthday" type="date"></property>
+		<property name="registeredTime" column="registered_time" type="timestamp"></property>	
+
+	</class>
+
+</hibernate-mapping>
+

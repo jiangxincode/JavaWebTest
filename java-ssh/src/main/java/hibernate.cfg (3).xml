@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration
+	PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="show_sql">true</property>
+		<property name="connection.driver_class"><!--指定连接MySQL的驱动-->
+			com.mysql.jdbc.Driver
+		</property>
+		<property name="connection.url">
+			jdbc:mysql://localhost:3306/schoolProject?useUnicode=true&amp;characterEncoding=GBK<!--连接数据库的URL，库名是schoolProject，”useUnicode=true&amp;characterEncoding=GBK”意思是采用中文编码-->
+		</property>
+		<property name="connection.username"><!--连接的登录名-->
+			root
+		</property>
+		<property name="connection.password"><!--登录密码-->
+			root
+		</property>
+		<property name="dialect"><!--指定连接的语言-->
+			org.hibernate.dialect.MySQLDialect
+		</property>
+		<mapping resource="Student.hbm.xml" /><!--映射Student这个资源-->
+		<mapping resource="Certificate.hbm.xml" /><!--映射Teacher这个资源-->
+		<mapping resource="Team.hbm.xml" /><!--映射Teacher这个资源-->
+
+
+	</session-factory>
+
+</hibernate-configuration>

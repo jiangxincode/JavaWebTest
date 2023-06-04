@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean id="personTarget" class="lee.PersonImpl">
+		<property name="name">
+			<value>WaWa</value>
+		</property>
+		<property name="age">
+			<value>51</value>
+		</property>
+	</bean>
+	
+	<bean id="myAdvisor" class="lee.MyBeforeAdvisor" />
+	<bean id="myAroundInterceptor" class="lee.MyAroundInterceptor" />
+	
+	<bean id="runAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+		<!-- advice属性确定处理bean -->
+		<property name="advice">
+			<!-- 此处的处理bean定义采用嵌套bean，也可饮用容器的另一个bean -->
+			<bean class="lee.MyAfterAdvisor" />
+		</property>
+		<!-- patterns确定正则表达式模式 -->
+		<property name="patterns">
+			<list>
+				<!-- 确定正则表达式列表 -->
+				<value>.*run.*</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="person" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces">
+			<value>lee.Person</value>
+		</property>
+		<property name="target">
+			<ref local="personTarget" />
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>runAdvisor</value>
+				<value>myAdvisor</value>
+				<value>myAroundInterceptor</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>

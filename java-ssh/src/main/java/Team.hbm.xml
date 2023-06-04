@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="model.Team" table="team" lazy="true">
+		<id name="id" unsaved-value="null"><!--id的产生方式是uuid.hex-->
+			<generator class="uuid.hex" />
+		</id>
+		<property name="teamName" type="string" />
+		<set name="students"  cascade="save-update"
+			lazy="false">
+			<key column="team_id" />
+			<one-to-many class="model.Student" />
+		</set>
+	</class>
+</hibernate-mapping>

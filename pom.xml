@@ -16,6 +16,7 @@
           <module>java-test</module>
           <module>java-bigdata</module>
           <module>java-path-demo</module>
+          <module>java-ssh</module>
      </modules>
 
      <properties>
