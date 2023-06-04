@@ -1,6 +1,6 @@
 package proxy.proxy;
 
-//客户端调用
+//驴脥禄搂露脣碌梅脫脙
 
 public class Client {
 	public static void main(String[] args) {

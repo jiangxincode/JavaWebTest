@@ -2,15 +2,15 @@
 <!DOCTYPE HTML PUBLIC "-//w3c//dtd html 4.0 transitional//en">
 <html>
 <body>
-<%-- ÒýÓÃ×Ô¼º±àÐ´µÄjavaBeanÉú³ÉµÄbean×é¼þ --%>
+<%-- å¼•ç”¨è‡ªå·±ç¼–å†™çš„javaBeanç”Ÿæˆçš„beanç»„ä»¶ --%>
 <jsp:useBean id="student" scope="session" class="com.test.bean.Student" />
 
-<%-- È¡ÊôÐÔÖµ --%>
+<%-- å–å±žæ€§å€¼ --%>
 <%=student.getClassNo() %> <br>
 <%=student.getName() %> <br>
 <%=student.getAge() %> <br>
 <%=student.isSexy() %> <br>
-<!--ÓÃJSPÀàÊôÐÔÉè¶¨bean×é¼þµÄÊôÐÔÖµ-->
+<!--ç”¨JSPç±»å±žæ€§è®¾å®šbeanç»„ä»¶çš„å±žæ€§å€¼-->
 <%student.setClassNo(000002); %>
 <%student.setName("John"); %>
 <%student.setAge(26); %>

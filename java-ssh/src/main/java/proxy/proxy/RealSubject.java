@@ -1,6 +1,6 @@
 package proxy.proxy;
 
-//真实角色：实现了Subject的request()方法
+//鐪熷疄瑙掕壊锛氬疄鐜颁簡Subject鐨剅equest()鏂规硶
 
 public class RealSubject extends Subject {
 	public RealSubject() {

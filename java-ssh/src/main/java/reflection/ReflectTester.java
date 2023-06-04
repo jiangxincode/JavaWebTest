@@ -5,14 +5,14 @@ import java.lang.reflect.Method;
 
 public class ReflectTester {
 	public Object copy(Object object) throws Exception {
-		// »ñµÃ¶ÔÏóµÄÀàĞÍ
+		// è·å¾—å¯¹è±¡çš„ç±»å‹
 		Class<?> classType = object.getClass();
 		System.out.println("Class:" + classType.getName());
 
-		// Í¨¹ıÄ¬ÈÏ¹¹Ôì·½·¨´´½¨Ò»¸öĞÂµÄ¶ÔÏó
+		// é€šè¿‡é»˜è®¤æ„é€ æ–¹æ³•åˆ›å»ºä¸€ä¸ªæ–°çš„å¯¹è±¡
 		Object objectCopy = classType.getConstructor(new Class[] {}).newInstance(new Object[] {});
 
-		// »ñµÃ¶ÔÏóµÄËùÓĞÊôĞÔ
+		// è·å¾—å¯¹è±¡çš„æ‰€æœ‰å±æ€§
 		Field fields[] = classType.getDeclaredFields();
 
 		for (int i = 0; i < fields.length; i++) {
@@ -20,20 +20,20 @@ public class ReflectTester {
 
 			String fieldName = field.getName();
 			String firstLetter = fieldName.substring(0, 1).toUpperCase();
-			// »ñµÃºÍÊôĞÔ¶ÔÓ¦µÄgetXXX()·½·¨µÄÃû×Ö
+			// è·å¾—å’Œå±æ€§å¯¹åº”çš„getXXX()æ–¹æ³•çš„åå­—
 			String getMethodName = "get" + firstLetter + fieldName.substring(1);
-			// »ñµÃºÍÊôĞÔ¶ÔÓ¦µÄsetXXX()·½·¨µÄÃû×Ö
+			// è·å¾—å’Œå±æ€§å¯¹åº”çš„setXXX()æ–¹æ³•çš„åå­—
 			String setMethodName = "set" + firstLetter + fieldName.substring(1);
 
-			// »ñµÃºÍÊôĞÔ¶ÔÓ¦µÄgetXXX()·½·¨
+			// è·å¾—å’Œå±æ€§å¯¹åº”çš„getXXX()æ–¹æ³•
 			Method getMethod = classType.getMethod(getMethodName, new Class[] {});
-			// »ñµÃºÍÊôĞÔ¶ÔÓ¦µÄsetXXX()·½·¨
+			// è·å¾—å’Œå±æ€§å¯¹åº”çš„setXXX()æ–¹æ³•
 			Method setMethod = classType.getMethod(setMethodName, new Class[] { field.getType() });
 
-			// µ÷ÓÃÔ­¶ÔÏóµÄgetXXX()·½·¨
+			// è°ƒç”¨åŸå¯¹è±¡çš„getXXX()æ–¹æ³•
 			Object value = getMethod.invoke(object, new Object[] {});
 			System.out.println(fieldName + ":" + value);
-			// µ÷ÓÃ¿½±´¶ÔÏóµÄsetXXX()·½·¨
+			// è°ƒç”¨æ‹·è´å¯¹è±¡çš„setXXX()æ–¹æ³•
 			setMethod.invoke(objectCopy, new Object[] { value });
 		}
 		return objectCopy;

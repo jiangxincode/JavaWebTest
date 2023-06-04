@@ -10,7 +10,7 @@ public class Course {
 	private Set Students = new HashSet();
 
 	/**
-	 * @return ·µ»Ø id¡£
+	 * @return è¿”å› idã€‚
 	 */
 	public String getId() {
 		return id;
@@ -18,14 +18,14 @@ public class Course {
 
 	/**
 	 * @param id
-	 *            ÒªÉèÖÃµÄ id¡£
+	 *            è¦è®¾ç½®çš„ idã€‚
 	 */
 	public void setId(String id) {
 		this.id = id;
 	}
 
 	/**
-	 * @return ·µ»Ø name¡£
+	 * @return è¿”å› nameã€‚
 	 */
 	public String getName() {
 		return name;
@@ -33,14 +33,14 @@ public class Course {
 
 	/**
 	 * @param name
-	 *            ÒªÉèÖÃµÄ name¡£
+	 *            è¦è®¾ç½®çš„ nameã€‚
 	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
 	/**
-	 * @return ·µ»Ø students¡£
+	 * @return è¿”å› studentsã€‚
 	 */
 	public Set getStudents() {
 		return Students;
@@ -48,7 +48,7 @@ public class Course {
 
 	/**
 	 * @param students
-	 *            ÒªÉèÖÃµÄ students¡£
+	 *            è¦è®¾ç½®çš„ studentsã€‚
 	 */
 	public void setStudents(Set students) {
 		Students = students;

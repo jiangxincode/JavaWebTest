@@ -3,13 +3,13 @@ package hibernate3.model;
 import java.util.Set;
 
 public class Student {
-	private String id; // ±êÊ¶id
+	private String id; // æ ‡è¯†id
 
-	private String cardId; // Ñ§ºÅ
-	private String name; // Ñ§ÉúĞÕÃû
-	private int age; // ËêÊı
+	private String cardId; // å­¦å·
+	private String name; // å­¦ç”Ÿå§“å
+	private int age; // å²æ•°
 
-	private Set Courses;// ¿Î³Ì
+	private Set Courses;// è¯¾ç¨‹
 
 	public int getAge() {
 		return age;
@@ -43,11 +43,11 @@ public class Student {
 		return id;
 	}
 
-	public Student() { // ÎŞ²ÎµÄ¹¹Ôìº¯Êı
+	public Student() { // æ— å‚çš„æ„é€ å‡½æ•°
 	}
 
 	/**
-	 * @return ·µ»Ø courses¡£
+	 * @return è¿”å› coursesã€‚
 	 */
 	public Set getCourses() {
 		return Courses;
@@ -55,7 +55,7 @@ public class Student {
 
 	/**
 	 * @param courses
-	 *            ÒªÉèÖÃµÄ courses¡£
+	 *            è¦è®¾ç½®çš„ coursesã€‚
 	 */
 	public void setCourses(Set courses) {
 		Courses = courses;

@@ -3,12 +3,12 @@
 <head><title>test</title></head>
 <body>
 <%
-	out.println("ÓÃ»§Ãû£º"+request.getParameter("User")+"<br>");
-	out.println("ÃÜÂë£º"+request.getParameter("pwd")+"<br>");
-	out.println("ä¯ÀÀÆ÷£º"+request.getParameter("radio")+"<br>");	
-	out.println("±êÌâ£º"+request.getParameter("check1")+"<br>");
-	out.println("ÏêÏ¸£º"+request.getParameter("check2")+"<br>");
-	out.println("Òşº¬£º"+request.getParameter("hidden")+"<br>");
+	out.println("Ã“ÃƒÂ»Â§ÃƒÃ»Â£Âº"+request.getParameter("User")+"<br>");
+	out.println("ÃƒÃœÃ‚Ã«Â£Âº"+request.getParameter("pwd")+"<br>");
+	out.println("Ã¤Â¯Ã€Ã€Ã†Ã·Â£Âº"+request.getParameter("radio")+"<br>");	
+	out.println("Â±ÃªÃŒÃ¢Â£Âº"+request.getParameter("check1")+"<br>");
+	out.println("ÃÃªÃÂ¸Â£Âº"+request.getParameter("check2")+"<br>");
+	out.println("Ã’Ã¾ÂºÂ¬Â£Âº"+request.getParameter("hidden")+"<br>");
 	out.println("getContentLength()="+request.getContentLength()+"<br>");	
 	out.println("getContentType()="+request.getContentType()+"<br>");
 	out.println("getRequestURI()="+request.getRequestURI()+"<br>");

@@ -3,11 +3,11 @@
                   charset=gb2312" %>
 <HTML>
   <BODY>
-    ÄãºÃ,½ñÌìÊÇ
+    ä½ å¥½,ä»Šå¤©æ˜¯
   <%
   Date today=new Date();
   %>
-    <%=today.getDate()%>ºÅ£¬
-    ÐÇÆÚ<%=today.getDay()%>
+    <%=today.getDate()%>å·ï¼Œ
+    æ˜ŸæœŸ<%=today.getDay()%>
   </BODY>
 </HTML>

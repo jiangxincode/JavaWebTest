@@ -2,7 +2,7 @@ package ssh2.dao.impl;
 
 import java.util.List;
 
-import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 
 import ssh2.bean.User;
 import ssh2.dao.UserDAO;

@@ -8,7 +8,7 @@
 	amuse=request.getParameter("amuse");
 	String user=(String)session.getAttribute("username");
 %>
-您的姓名是： <%=user%>
-您喜欢的娱乐是： <%=amuse%>
+鎮ㄧ殑濮撳悕鏄細 <%=user%>
+鎮ㄥ枩娆㈢殑濞变箰鏄細 <%=amuse%>
 </body>
 </html> 

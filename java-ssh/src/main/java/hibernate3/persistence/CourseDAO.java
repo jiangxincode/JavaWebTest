@@ -1,15 +1,15 @@
 /*
- * ´´½¨ÈÕÆÚ 2005-8-19
+ * åˆ›å»ºæ—¥æœŸ 2005-8-19
  *
- * TODO Òª¸ü¸Ä´ËÉú³ÉµÄÎÄ¼þµÄÄ£°å£¬Çë×ªÖÁ
- * ´°¿Ú £­ Ê×Ñ¡Ïî £­ Java £­ ´úÂëÑùÊ½ £­ ´úÂëÄ£°å
+ * TODO è¦æ›´æ”¹æ­¤ç”Ÿæˆçš„æ–‡ä»¶çš„æ¨¡æ¿ï¼Œè¯·è½¬è‡³
+ * çª—å£ ï¼ é¦–é€‰é¡¹ ï¼ Java ï¼ ä»£ç æ ·å¼ ï¼ ä»£ç æ¨¡æ¿
  */
 package hibernate3.persistence;
 
 /**
  * @author Administrator
  * 
- *         TODO Òª¸ü¸Ä´ËÉú³ÉµÄÀàÐÍ×¢ÊÍµÄÄ£°å£¬Çë×ªÖÁ ´°¿Ú £­ Ê×Ñ¡Ïî £­ Java £­ ´úÂëÑùÊ½ £­ ´úÂëÄ£°å
+ *         TODO è¦æ›´æ”¹æ­¤ç”Ÿæˆçš„ç±»åž‹æ³¨é‡Šçš„æ¨¡æ¿ï¼Œè¯·è½¬è‡³ çª—å£ ï¼ é¦–é€‰é¡¹ ï¼ Java ï¼ ä»£ç æ ·å¼ ï¼ ä»£ç æ¨¡æ¿
  */
 public class CourseDAO extends BaseDAO {
 

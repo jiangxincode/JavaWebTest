@@ -7,7 +7,7 @@ public class Certificate {
 	private Student stu;
 
 	/**
-	 * @return ·µ»Ø stu¡£
+	 * @return è¿”å› stuã€‚
 	 */
 	public Student getStu() {
 		return stu;
@@ -15,14 +15,14 @@ public class Certificate {
 
 	/**
 	 * @param stu
-	 *            ÒªÉèÖÃµÄ stu¡£
+	 *            è¦è®¾ç½®çš„ stuã€‚
 	 */
 	public void setStu(Student stu) {
 		this.stu = stu;
 	}
 
 	/**
-	 * @return ·µ»Ø describe¡£
+	 * @return è¿”å› describeã€‚
 	 */
 	public String getDescribe() {
 		return describe;
@@ -30,14 +30,14 @@ public class Certificate {
 
 	/**
 	 * @param describe
-	 *            ÒªÉèÖÃµÄ describe¡£
+	 *            è¦è®¾ç½®çš„ describeã€‚
 	 */
 	public void setDescribe(String describe) {
 		this.describe = describe;
 	}
 
 	/**
-	 * @return ·µ»Ø id¡£
+	 * @return è¿”å› idã€‚
 	 */
 	public String getId() {
 		return id;
@@ -45,7 +45,7 @@ public class Certificate {
 
 	/**
 	 * @param id
-	 *            ÒªÉèÖÃµÄ id¡£
+	 *            è¦è®¾ç½®çš„ idã€‚
 	 */
 	private void setId(String id) {
 		this.id = id;

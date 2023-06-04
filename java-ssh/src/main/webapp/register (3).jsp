@@ -2,7 +2,7 @@
 <!DOCTYPE HTML PUBLIC "-//w3c//dtd html 4.0 transitional//en">
 <html>
 <head>
-<title>ÓÃ»§×¢²á</title>
+<title>ç”¨æˆ·æ³¨å†Œ</title>
 <script language="javascript">
 
 function validate()
@@ -11,60 +11,60 @@ function validate()
 	{
 		if(username.value.length < 1)
 		{
-			alert("ÓÃ»§Ãû²»ÄÜÎª¿Õ");
+			alert("ç”¨æˆ·åä¸èƒ½ä¸ºç©º");
 			return false;
 		}
 		if(password.value.length < 1)
 		{
-			alert("ÃÜÂë²»ÄÜÎª¿Õ");
+			alert("å¯†ç ä¸èƒ½ä¸ºç©º");
 			return false;
 		}
 		if(password_again.value.length < 1)
 		{
-			alert("ÖØ¸´ÃÜÂë²»ÄÜÎª¿Õ");
+			alert("é‡å¤å¯†ç ä¸èƒ½ä¸ºç©º");
 			return false;
 		}
 		
 		if(username.value.length < 4)
 		{
-			alert("ÓÃ»§Ãû³¤¶È¹ı¶Ì");
+			alert("ç”¨æˆ·åé•¿åº¦è¿‡çŸ­");
 			return false;
 		}
 		if(username.value.length > 10)
 		{
-			alert("ÓÃ»§Ãû³¤¶È¹ı³¤");
+			alert("ç”¨æˆ·åé•¿åº¦è¿‡é•¿");
 			return false;
 		}
 		if(password.value.length < 4)
 		{
-			alert("ÃÜÂë³¤¶È¹ı¶Ì");
+			alert("å¯†ç é•¿åº¦è¿‡çŸ­");
 			return false;
 		}
 		if(password.value.length> 10 )
 		{
-			alert("ÃÜÂë³¤¶È¹ı³¤");
+			alert("å¯†ç é•¿åº¦è¿‡é•¿");
 			return false;
 		}
 		
 		if(password.value != password_again.value)
 		{
-			alert("ÃÜÂëÊäÈë²»Ò»ÖÂ");
+			alert("å¯†ç è¾“å…¥ä¸ä¸€è‡´");
 			return false;
 		}
 		if(truename.value.length < 1)
 		{
-			alert("ÕæÊµĞÕÃû²»ÄÜÎª¿Õ");
+			alert("çœŸå®å§“åä¸èƒ½ä¸ºç©º");
 			return false;
 		}
 		if(birthday.value.length < 1)
 		{
-			alert("ÉúÈÕ²»ÄÜÎª¿Õ");
+			alert("ç”Ÿæ—¥ä¸èƒ½ä¸ºç©º");
 			return false;
 		}
 		
 		if(!sex[0].checked && !sex[1].checked)
 		{
-			alert("ĞÔ±ğ±ØĞëÑ¡Ôñ");
+			alert("æ€§åˆ«å¿…é¡»é€‰æ‹©");
 			return false;			
 		}
 		
@@ -79,12 +79,12 @@ function validate()
 		}
 		if(n < 1)
 		{
-			alert("ĞËÈ¤ÖÁÉÙĞèÒªÑ¡ÔñÒ»¸ö");
+			alert("å…´è¶£è‡³å°‘éœ€è¦é€‰æ‹©ä¸€ä¸ª");
 			return false;
 		}
 		if(n > 3)
 		{
-			alert("ĞËÈ¤×î¶àÑ¡ÔñÈı¸ö");
+			alert("å…´è¶£æœ€å¤šé€‰æ‹©ä¸‰ä¸ª");
 			return false;
 		}
 		
@@ -92,7 +92,7 @@ function validate()
 		
 		if(remark.value.length < 1)
 		{
-			alert("ËµÃ÷±ØĞëÌîĞ´");
+			alert("è¯´æ˜å¿…é¡»å¡«å†™");
 			return false;
 		}
 	}
@@ -107,20 +107,20 @@ function validate()
 
 <form action="/test/ProcessUsersServlet" method="post" name="form1" onSubmit="return validate();">
 
-ÓÃ»§Ãû£º<input type="text" name="username" size="20"><br>
-ÃÜ  Âë£º<input type="password" name="password" size="20"><br> 
-ÖØ¸´ÊäÈëÃÜÂë£º<input type="password" name="password_again" size="20"><br>
-ÕæÊµĞÕÃû£º<input type="text" name="truename" size="20"><br> 
-³öÉúÈÕÆÚ£º<input type="text" name="birthday" size="20"><br>
-ĞÔ±ğ£ºÄĞ<input type="radio" name="sex" value="0">&nbsp;&nbsp;
-Å®<input type="radio" name="sex" value="1"><br>
-ĞËÈ¤: ×ãÇò<input type="checkbox" name="interest" value="0">&nbsp;&nbsp;
-ÀºÇò<input type="checkbox" name="interest" value="1">&nbsp;&nbsp;
-ÅÅÇò<input type="checkbox" name="interest" value="2">&nbsp;&nbsp;
-ÓğÃ«Çò<input type="checkbox" name="interest" value="3">&nbsp;&nbsp;<br>
+ç”¨æˆ·åï¼š<input type="text" name="username" size="20"><br>
+å¯†  ç ï¼š<input type="password" name="password" size="20"><br> 
+é‡å¤è¾“å…¥å¯†ç ï¼š<input type="password" name="password_again" size="20"><br>
+çœŸå®å§“åï¼š<input type="text" name="truename" size="20"><br> 
+å‡ºç”Ÿæ—¥æœŸï¼š<input type="text" name="birthday" size="20"><br>
+æ€§åˆ«ï¼šç”·<input type="radio" name="sex" value="0">&nbsp;&nbsp;
+å¥³<input type="radio" name="sex" value="1"><br>
+å…´è¶£: è¶³çƒ<input type="checkbox" name="interest" value="0">&nbsp;&nbsp;
+ç¯®çƒ<input type="checkbox" name="interest" value="1">&nbsp;&nbsp;
+æ’çƒ<input type="checkbox" name="interest" value="2">&nbsp;&nbsp;
+ç¾½æ¯›çƒ<input type="checkbox" name="interest" value="3">&nbsp;&nbsp;<br>
 
-ËµÃ÷£º<textarea name="remark" rows="15" cols="20"></textarea><br>
-<input type="submit" value="µã»÷È·ÈÏ">&nbsp;&nbsp;&nbsp;<input type="reset" value="ÖØ  ÖÃ">
+è¯´æ˜ï¼š<textarea name="remark" rows="15" cols="20"></textarea><br>
+<input type="submit" value="ç‚¹å‡»ç¡®è®¤">&nbsp;&nbsp;&nbsp;<input type="reset" value="é‡  ç½®">
 <input type="hidden" name="type" value="save">
 </form>
 

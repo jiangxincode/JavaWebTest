@@ -8,12 +8,12 @@
 
 <%  
 	name = request.getParameter("username"); 
-	//½«username´æÈësession 
+	//å°†usernameå­˜å…¥session 
 	session.setAttribute("username", name);  
 %> 
-ÄúµÄÐÕÃûÊÇ£º<%=name%>  
+æ‚¨çš„å§“åæ˜¯ï¼š<%=name%>  
 <br><form method="post" action="post11.jsp"> 
-Äú×îÏ²»¶µÄÓéÀÖÊÇ£º  
+æ‚¨æœ€å–œæ¬¢çš„å¨±ä¹æ˜¯ï¼š  
 <input type="text" name="amuse"> 
 <input type="submit" value="submit">
 </form> 

@@ -5,19 +5,19 @@
 </head>
 <body>
 <form method="POST" action="post.jsp">
- <p align="center">ÓÃ»§µÇÂ¼ 
+ <p align="center">ç”¨æˆ·ç™»å½• 
 <p align="center">
-ÓÃ»§Ãû£º<input type="text" name="User" size="20">&nbsp;&nbsp;&nbsp;&nbsp;   
-ÃÜÂë£º<input type="password" name="pwd" size="20"><br> <br>   
-ä¯ÀÀÆ÷ÀàĞÍ: <input type="radio" name="radio" value="ie" checked >IE &nbsp;&nbsp;  
+ç”¨æˆ·åï¼š<input type="text" name="User" size="20">&nbsp;&nbsp;&nbsp;&nbsp;   
+å¯†ç ï¼š<input type="password" name="pwd" size="20"><br> <br>   
+æµè§ˆå™¨ç±»å‹: <input type="radio" name="radio" value="ie" checked >IE &nbsp;&nbsp;  
  	    <input type="radio" name="radio" value="ns">Netscape <br> 
- ×ÊÁÏÑ¡Ïî£º
-  <input type="checkbox" name="check1" value="ON" checked>±êÌâ
-  <input type="checkbox" name="check2" value="ON">ÏêÏ¸ 
+ èµ„æ–™é€‰é¡¹ï¼š
+  <input type="checkbox" name="check1" value="ON" checked>æ ‡é¢˜
+  <input type="checkbox" name="check2" value="ON">è¯¦ç»† 
   <input type="hidden" name="hidden" value="transPara">  
   </p><p align="center">
-  <input type="submit" value=" Ìá½»">   
-  <input type="reset" value="È«²¿ÖØĞ´"></p>   
+  <input type="submit" value=" æäº¤">   
+  <input type="reset" value="å…¨éƒ¨é‡å†™"></p>   
 </form>
 </body>      
 </html>

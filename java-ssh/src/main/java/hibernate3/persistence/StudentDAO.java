@@ -21,9 +21,9 @@ public class StudentDAO extends BaseDAO {
 		Course course = null;
 
 		try {
-			session = HibernateUtil.currentSession(); // ¿ªÆôÁ¬½Ó
+			session = HibernateUtil.currentSession(); // å¼€å¯è¿æ¥
 
-			tx = session.beginTransaction(); // ¿ªÆôÊÂÎñ
+			tx = session.beginTransaction(); // å¼€å¯äº‹åŠ¡
 
 			stu = (Student) session.createQuery("from Student s where s.name ='tomclus'").uniqueResult();
 
@@ -33,7 +33,7 @@ public class StudentDAO extends BaseDAO {
 			course.getStudents().add(stu);
 
 			tx.commit();
-		} catch (HibernateException e) { // ²¶×½ÀıÍâ
+		} catch (HibernateException e) { // æ•æ‰ä¾‹å¤–
 			e.printStackTrace();
 			tx.rollback();
 		} finally {

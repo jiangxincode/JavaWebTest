@@ -5,22 +5,22 @@ import java.lang.reflect.Method;
 
 public class CommonInvocationHandler implements InvocationHandler {
 
-	// ¶¯Ì¬Ö´ĞĞ¶ÔÏó£¬ĞèÒª»Øµ÷µÄ¶ÔÏó
+	// åŠ¨æ€æ‰§è¡Œå¯¹è±¡ï¼Œéœ€è¦å›è°ƒçš„å¯¹è±¡
 	private Object target;
 
-	// Ö§³Ö¹¹Ôì·½·¨×¢Éä
+	// æ”¯æŒæ„é€ æ–¹æ³•æ³¨å°„
 	public CommonInvocationHandler() {
 
 	}
 
-	// Ö§³Ö¹¹Ôì·½·¨×¢Éä
+	// æ”¯æŒæ„é€ æ–¹æ³•æ³¨å°„
 	public CommonInvocationHandler(Object target) {
 		setTarget(target);
 	}
 
 	/**
 	 * 
-	 * ²ÉÓÃsetter·½·¨×¢Éä
+	 * é‡‡ç”¨setteræ–¹æ³•æ³¨å°„
 	 * 
 	 * @param target
 	 * 
@@ -31,16 +31,16 @@ public class CommonInvocationHandler implements InvocationHandler {
 
 	/**
 	 * 
-	 * µ÷ÓÃproxyÖĞÖ¸¶¨µÄ·½·¨method£¬²¢´«Èë²ÎÊıÁĞ±íargs
+	 * è°ƒç”¨proxyä¸­æŒ‡å®šçš„æ–¹æ³•methodï¼Œå¹¶ä¼ å…¥å‚æ•°åˆ—è¡¨args
 	 * 
 	 * @param proxy
-	 *            ´úÀíÀàµÄÀàĞÍ£¬ÀıÈç¶¨Òå¶ÔÓ¦methodµÄ´úÀí½Ó¿Ú
+	 *            ä»£ç†ç±»çš„ç±»å‹ï¼Œä¾‹å¦‚å®šä¹‰å¯¹åº”methodçš„ä»£ç†æ¥å£
 	 * 
 	 * @param method
-	 *            ±»´úÀíµÄ·½·¨
+	 *            è¢«ä»£ç†çš„æ–¹æ³•
 	 * 
 	 * @param args
-	 *            µ÷ÓÃ±»´úÀí·½·¨µÄ²ÎÊı
+	 *            è°ƒç”¨è¢«ä»£ç†æ–¹æ³•çš„å‚æ•°
 	 * 
 	 * @return
 	 * 

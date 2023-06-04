@@ -8,7 +8,7 @@ public class Customer {
 	private String name;
 
 	@SuppressWarnings("rawtypes")
-	private Set orders; // 一对多，通过该变量可以引用到对应的Order集合对象
+	private Set orders; // 涓�瀵瑰锛岄�氳繃璇ュ彉閲忓彲浠ュ紩鐢ㄥ埌瀵瑰簲鐨凮rder闆嗗悎瀵硅薄
 
 	@SuppressWarnings("rawtypes")
 	public Customer(String name, Set orders) {

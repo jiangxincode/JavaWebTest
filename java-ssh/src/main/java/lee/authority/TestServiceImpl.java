@@ -4,13 +4,13 @@ public class TestServiceImpl implements TestService {
 
 	@Override
 	public void view() {
-		System.out.println("用户查看数据");
+		System.out.println("鐢ㄦ埛鏌ョ湅鏁版嵁");
 
 	}
 
 	@Override
 	public void modify() {
-		System.out.println("用户修改数据");
+		System.out.println("鐢ㄦ埛淇敼鏁版嵁");
 
 	}
 

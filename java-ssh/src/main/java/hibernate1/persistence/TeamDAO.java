@@ -1,8 +1,8 @@
 /*
- * ´´½¨ÈÕÆÚ 2005-7-2
+ * åˆ›å»ºæ—¥æœŸ 2005-7-2
  *
- * TODO Òª¸ü¸Ä´ËÉú³ÉµÄÎÄ¼şµÄÄ£°å£¬Çë×ªÖÁ
- * ´°¿Ú £­ Ê×Ñ¡Ïî £­ Java £­ ´úÂëÑùÊ½ £­ ´úÂëÄ£°å
+ * TODO è¦æ›´æ”¹æ­¤ç”Ÿæˆçš„æ–‡ä»¶çš„æ¨¡æ¿ï¼Œè¯·è½¬è‡³
+ * çª—å£ ï¼ é¦–é€‰é¡¹ ï¼ Java ï¼ ä»£ç æ ·å¼ ï¼ ä»£ç æ¨¡æ¿
  */
 package hibernate1.persistence;
 
@@ -16,7 +16,7 @@ import hibernate1.model.Team;
 /**
  * @author Administrator
  * 
- *         TODO Òª¸ü¸Ä´ËÉú³ÉµÄÀàĞÍ×¢ÊÍµÄÄ£°å£¬Çë×ªÖÁ ´°¿Ú £­ Ê×Ñ¡Ïî £­ Java £­ ´úÂëÑùÊ½ £­ ´úÂëÄ£°å
+ *         TODO è¦æ›´æ”¹æ­¤ç”Ÿæˆçš„ç±»å‹æ³¨é‡Šçš„æ¨¡æ¿ï¼Œè¯·è½¬è‡³ çª—å£ ï¼ é¦–é€‰é¡¹ ï¼ Java ï¼ ä»£ç æ ·å¼ ï¼ ä»£ç æ¨¡æ¿
  */
 public class TeamDAO extends BaseDAO {
 	static Session session = null;
@@ -25,16 +25,16 @@ public class TeamDAO extends BaseDAO {
 	public static void cascadeDelete_orphan() {
 		Team team = null;
 		try {
-			session = HibernateUtil.currentSession(); // ¿ªÆôÁ¬½Ó
+			session = HibernateUtil.currentSession(); // å¼€å¯è¿æ¥
 			tx = session.beginTransaction();
 			team = (Team) session.get(Team.class, "ff80808105416d3b0105416d3eca0002");
 			Student removeStu = (Student) session.get(Student.class, "ff80808105416d3b0105416d3eca0001");
-			team.getStudents().remove(removeStu); // ´ÓÑ§Éú¼¯ºÏÖĞÒÆÈ¥removeStu
-			removeStu.setName("remove name");// Îª±»ÒÆ³ıµÄ¶ÔÏó¸ü¸ÄÃû×Ö
+			team.getStudents().remove(removeStu); // ä»å­¦ç”Ÿé›†åˆä¸­ç§»å»removeStu
+			removeStu.setName("remove name");// ä¸ºè¢«ç§»é™¤çš„å¯¹è±¡æ›´æ”¹åå­—
 
 			tx.commit();
 
-		} catch (HibernateException e) { // ²¶×½ÀıÍâ
+		} catch (HibernateException e) { // æ•æ‰ä¾‹å¤–
 			e.printStackTrace();
 			tx.rollback();
 		} finally {

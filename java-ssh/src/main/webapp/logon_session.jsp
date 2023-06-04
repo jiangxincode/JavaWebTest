@@ -6,7 +6,7 @@
     String Name=request.getParameter("userName");
     session.setAttribute("LogName", Name);
   %>
-  你的名字"<%=Name%>"已经写入session 
+  浣犵殑鍚嶅瓧"<%=Name%>"宸茬粡鍐欏叆session 
   <br>
   <a href='check_session.jsp'>check</a>
   </BODY>

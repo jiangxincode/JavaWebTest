@@ -47,27 +47,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    	<tr>
    	
    	<td>
-   		序号
+   		脨貌潞脜
    	</td>
    	
    	<td>
-   		姓
+   		脨脮
    	</td>
    	
    	<td>
-   		名
+   		脙没
    	</td>
    	
    	<td>
-   		年龄
+   		脛锚脕盲
    	</td>
    	
    	<td>
-   		删除
+   		脡戮鲁媒
    	</td>
    	
    	<td>
-   		更新
+   		赂眉脨脗
    	</td>
    	
    	</tr>

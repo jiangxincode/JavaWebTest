@@ -6,11 +6,11 @@ public class Chinese implements Person, InitializingBean {
 	private Axe axe;
 
 	public Chinese() {
-		System.out.println("SpringÊµÀı»¯Ö÷µ÷bean£ºChineseÊµÀı...");
+		System.out.println("Springå®ä¾‹åŒ–ä¸»è°ƒbeanï¼šChineseå®ä¾‹...");
 	}
 
 	public void setAxe(Axe axe) {
-		System.out.println("SpringÖ´ĞĞÒÀÀµ¹ØÏµ×¢Èë...");
+		System.out.println("Springæ‰§è¡Œä¾èµ–å…³ç³»æ³¨å…¥...");
 		this.axe = axe;
 	}
 
@@ -19,12 +19,12 @@ public class Chinese implements Person, InitializingBean {
 	}
 
 	public void init() {
-		System.out.println("ÕıÔÚÖ´ĞĞ³õÊ¼»¯·½·¨    init...");
+		System.out.println("æ­£åœ¨æ‰§è¡Œåˆå§‹åŒ–æ–¹æ³•    init...");
 	}
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		System.out.println("ÕıÔÚÖ´ĞĞ³õÊ¼»¯·½·¨    afterPropertiesSet...");
+		System.out.println("æ­£åœ¨æ‰§è¡Œåˆå§‹åŒ–æ–¹æ³•    afterPropertiesSet...");
 
 	}
 

@@ -11,18 +11,18 @@ import hibernate.util.HibernateUtil;
 
 public class DBPerson {
 	/**
-	 * ´´½¨ĞÂµÄÓÃ»§
+	 * åˆ›å»ºæ–°çš„ç”¨æˆ·
 	 */
 
 	public static void save(Person person) {
 		Session session = HibernateUtil.currentSession();
-		Transaction tx = session.beginTransaction(); // ¿ªÆôÊÂÎñ
+		Transaction tx = session.beginTransaction(); // å¼€å¯äº‹åŠ¡
 
 		try {
 			session.save(person);
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("Ôö¼ÓÓÃ»§Òì³£·¢Éú£¡");
+			System.out.println("å¢åŠ ç”¨æˆ·å¼‚å¸¸å‘ç”Ÿï¼");
 			if (null != tx) {
 				tx.rollback();
 			}
@@ -33,24 +33,24 @@ public class DBPerson {
 	}
 
 	/**
-	 * ²éÑ¯³öËùÓĞÓÃ»§
+	 * æŸ¥è¯¢å‡ºæ‰€æœ‰ç”¨æˆ·
 	 */
 
 	@SuppressWarnings("unchecked")
 	public static List<Person> listAll() {
 		Session session = HibernateUtil.currentSession();
-		Transaction tx = session.beginTransaction(); // ¿ªÆôÊÂÎñ
+		Transaction tx = session.beginTransaction(); // å¼€å¯äº‹åŠ¡
 
 		List<Person> list = null;
 
 		try {
-			Query query = session.createQuery("from Person"); // hqlÓï¾ä£¬Hibernate²éÑ¯Óï¾ä
+			Query query = session.createQuery("from Person"); // hqlè¯­å¥ï¼ŒHibernateæŸ¥è¯¢è¯­å¥
 
 			list = (List<Person>) query.list();
 
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("Ôö¼ÓÓÃ»§Òì³£·¢Éú£¡");
+			System.out.println("å¢åŠ ç”¨æˆ·å¼‚å¸¸å‘ç”Ÿï¼");
 			if (null != tx) {
 				tx.rollback();
 			}
@@ -63,7 +63,7 @@ public class DBPerson {
 
 	public static Person getPersonById(Integer id) {
 		Session session = HibernateUtil.currentSession();
-		Transaction tx = session.beginTransaction(); // ¿ªÆôÊÂÎñ
+		Transaction tx = session.beginTransaction(); // å¼€å¯äº‹åŠ¡
 
 		Person person = null;
 
@@ -73,7 +73,7 @@ public class DBPerson {
 
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("Ôö¼ÓÓÃ»§Òì³£·¢Éú£¡");
+			System.out.println("å¢åŠ ç”¨æˆ·å¼‚å¸¸å‘ç”Ÿï¼");
 			if (null != tx) {
 				tx.rollback();
 			}
@@ -86,7 +86,7 @@ public class DBPerson {
 
 	public static void removePerson(Integer id) {
 		Session session = HibernateUtil.currentSession();
-		Transaction tx = session.beginTransaction(); // ¿ªÆôÊÂÎñ
+		Transaction tx = session.beginTransaction(); // å¼€å¯äº‹åŠ¡
 
 		try {
 			Person person = (Person) session.get(Person.class, id);
@@ -94,7 +94,7 @@ public class DBPerson {
 
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("Ôö¼ÓÓÃ»§Òì³£·¢Éú£¡");
+			System.out.println("å¢åŠ ç”¨æˆ·å¼‚å¸¸å‘ç”Ÿï¼");
 			if (null != tx) {
 				tx.rollback();
 			}
@@ -105,14 +105,14 @@ public class DBPerson {
 
 	public static void updatePerson(Person person) {
 		Session session = HibernateUtil.currentSession();
-		Transaction tx = session.beginTransaction(); // ¿ªÆôÊÂÎñ
+		Transaction tx = session.beginTransaction(); // å¼€å¯äº‹åŠ¡
 
 		try {
 			session.update(person);
 
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("Ôö¼ÓÓÃ»§Òì³£·¢Éú£¡");
+			System.out.println("å¢åŠ ç”¨æˆ·å¼‚å¸¸å‘ç”Ÿï¼");
 			if (null != tx) {
 				tx.rollback();
 			}

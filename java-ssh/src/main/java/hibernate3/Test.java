@@ -93,22 +93,22 @@ public class Test {
 		try {
 			tx = session.beginTransaction();
 
-			// Ê³Æ·Àà±ğ
+			// é£Ÿå“ç±»åˆ«
 			Category foodCategory = new Category("food", null, new HashSet());
 
-			// Ë®¹ûÀà±ğ
+			// æ°´æœç±»åˆ«
 			Category fruitCategory = new Category("fruit", null, new HashSet());
 
-			// Êß²ËÀà±ğ
+			// è”¬èœç±»åˆ«
 			Category vegetableCategory = new Category("vegetable", null, new HashSet());
 
-			// Æ»¹ûÀà±ğ
+			// è‹¹æœç±»åˆ«
 			Category appleCategory = new Category("apple", null, new HashSet());
 
-			// ½Û×ÓÀà±ğ
+			// æ¡”å­ç±»åˆ«
 			Category orangeCategory = new Category("orange", null, new HashSet());
 
-			// Î÷ºìÊÁÀà±ğ
+			// è¥¿çº¢æŸ¿ç±»åˆ«
 			Category tomatoCategory = new Category("tomato", null, new HashSet());
 
 			foodCategory.getChildCategories().add(fruitCategory);
@@ -126,7 +126,7 @@ public class Test {
 			vegetableCategory.getChildCategories().add(tomatoCategory);
 			tomatoCategory.setParentCategory(vegetableCategory);
 
-			session.save(foodCategory); // ¼¶Áª±£´æËùÓĞµÄ¹ØÁª¶ÔÏó
+			session.save(foodCategory); // çº§è”ä¿å­˜æ‰€æœ‰çš„å…³è”å¯¹è±¡
 			tx.commit();
 		} catch (Exception ex) {
 			if (null != tx) {

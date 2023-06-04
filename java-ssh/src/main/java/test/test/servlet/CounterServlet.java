@@ -28,12 +28,12 @@ public class CounterServlet extends HttpServlet {
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		// »ñµÃServletContextµÄÒıÓÃ
+		// è·å¾—ServletContextçš„å¼•ç”¨
 		ServletContext context = getServletContext();
-		// ´ÓServletContext¶ÁÈ¡countÊôĞÔ
+		// ä»ServletContextè¯»å–countå±æ€§
 		Integer count = (Integer) context.getAttribute("count");
 
-		// Èç¹ûcountÊôĞÔ»¹Ã»ÓĞÉèÖÃ, ÄÇÃ´´´½¨countÊôĞÔ£¬³õÊ¼ÖµÎª0
+		// å¦‚æœcountå±æ€§è¿˜æ²¡æœ‰è®¾ç½®, é‚£ä¹ˆåˆ›å»ºcountå±æ€§ï¼Œåˆå§‹å€¼ä¸º0
 		// one and add it to the ServletContext
 		if (count == null) {
 			count = new Integer(0);
@@ -45,13 +45,13 @@ public class CounterServlet extends HttpServlet {
 		out.println("<html>");
 		out.println("<head><title>WebCounter</title></head>");
 		out.println("<body>");
-		// Êä³öµ±Ç°µÄcountÊôĞÔÖµ
+		// è¾“å‡ºå½“å‰çš„countå±æ€§å€¼
 		out.println("<p><h1>The current COUNT is : " + count + ".</h1></p>");
 		out.println("</body></html>");
 
-		// ´´½¨ĞÂµÄcount¶ÔÏó£¬ÆäÖµÔö1
+		// åˆ›å»ºæ–°çš„countå¯¹è±¡ï¼Œå…¶å€¼å¢1
 		count = new Integer(count.intValue() + 1);
-		// ½«ĞÂµÄcountÊôĞÔ´æ´¢µ½ServletContextÖĞ
+		// å°†æ–°çš„countå±æ€§å­˜å‚¨åˆ°ServletContextä¸­
 		context.setAttribute("count", count);
 	}
 

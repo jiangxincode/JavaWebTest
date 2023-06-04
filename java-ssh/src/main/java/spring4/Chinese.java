@@ -12,7 +12,7 @@ public class Chinese implements Person{
 	}
 
 	public void test() {
-		System.out.println("ÎÒÊÇÒ»¸öÖĞ¹úÈË£¬ÎÒµÄ¹·Ëµ " + getDog().run());
+		System.out.println("æˆ‘æ˜¯ä¸€ä¸ªä¸­å›½äººï¼Œæˆ‘çš„ç‹—è¯´ " + getDog().run());
 	}
 
 }

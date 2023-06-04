@@ -57,7 +57,7 @@ public class PersonAction extends ActionSupport {
 		this.age = age;
 	}
 
-	// Íê³ÉÓÃ»§Ôö¼ÓµÄ²Ù×÷
+	// å®Œæˆç”¨æˆ·å¢åŠ çš„æ“ä½œ
 	public String save() throws Exception {
 		Person person = new Person();
 
@@ -69,7 +69,7 @@ public class PersonAction extends ActionSupport {
 
 		person.setRegisterdate(registerDate);
 
-		DBPerson.save(person); // ½«person¶ÔÏó´æµ½Êı¾İ¿âÖĞ
+		DBPerson.save(person); // å°†personå¯¹è±¡å­˜åˆ°æ•°æ®åº“ä¸­
 
 		List<Person> list = DBPerson.listAll();
 

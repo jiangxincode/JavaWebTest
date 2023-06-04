@@ -9,7 +9,7 @@ import hibernate2.persistence.StudentDAO;
 /**
  * @author Administrator
  * 
- *         TODO Òª¸ü¸Ä´ËÉú³ÉµÄÀàĞÍ×¢ÊÍµÄÄ£°å£¬Çë×ªÖÁ ´°¿Ú £­ Ê×Ñ¡Ïî £­ Java £­ ´úÂëÑùÊ½ £­ ´úÂëÄ£°å
+ *         TODO è¦æ›´æ”¹æ­¤ç”Ÿæˆçš„ç±»å‹æ³¨é‡Šçš„æ¨¡æ¿ï¼Œè¯·è½¬è‡³ çª—å£ ï¼ é¦–é€‰é¡¹ ï¼ Java ï¼ ä»£ç æ ·å¼ ï¼ ä»£ç æ¨¡æ¿
  */
 public class BM {
 	public static void main(String[] args) throws HibernateException {

@@ -149,7 +149,7 @@ class WatchDBFrame extends JFrame implements ActionListener {
 	}
 
 	public WatchDBFrame() {
-		this.setTitle("Êı¾İ¿â±à³Ì");
+		this.setTitle("ÃŠÃ½Â¾ÃÂ¿Ã¢Â±Ã Â³ÃŒ");
 		this.setSize(300, 200);
 		this.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {

@@ -6,11 +6,11 @@ public class Chinese implements Person {
 	private int age;
 
 	public Chinese() {
-		System.out.println("SpringÊµÀı»¯Ö÷µ÷bean£ºChineseÊµÀı...");
+		System.out.println("Springå®ä¾‹åŒ–ä¸»è°ƒbeanï¼šChineseå®ä¾‹...");
 	}
 
 	public void setAxe(Axe axe) {
-		System.out.println("SpringÖ´ĞĞÒÀÀµ¹ØÏµ×¢Èë...");
+		System.out.println("Springæ‰§è¡Œä¾èµ–å…³ç³»æ³¨å…¥...");
 		this.axe = axe;
 	}
 
@@ -19,6 +19,6 @@ public class Chinese implements Person {
 	}
 
 	public void useAxe() {
-		System.out.println(axe.chop() + " ´ËÈËµÄÄêÁäÎª£º" + age);
+		System.out.println(axe.chop() + " æ­¤äººçš„å¹´é¾„ä¸ºï¼š" + age);
 	}
 }

@@ -16,13 +16,13 @@ UserBean bean = null;
 
 <table border="1" width="80%" align="center">
 <tr>
-<td align="center">用户名</td>
-<td align="center">密码</td>
-<td align="center">邮箱</td>
-<td align="center">主页</td>
-<td align="center">电话</td>
-<td align="center">地址</td>
-<td align="center">邮编</td>
+<td align="center">脫脙禄搂脙没</td>
+<td align="center">脙脺脗毛</td>
+<td align="center">脫脢脧盲</td>
+<td align="center">脰梅脪鲁</td>
+<td align="center">碌莽禄掳</td>
+<td align="center">碌脴脰路</td>
+<td align="center">脫脢卤脿</td>
 </tr>
 <%for(int i = 0 ; i < list.size();i++)
 {

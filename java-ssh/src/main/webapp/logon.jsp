@@ -3,9 +3,9 @@
 <html>
 	<body>
 		<form action="logon_session.jsp">
-			姓名
+			邪械校褯
 			<input type="text" name="userName">
-			<input type="submit" value="提交">
+			<input type="submit" value="鞋褋袧袥">
 		</form>
 	</body>
 </html>

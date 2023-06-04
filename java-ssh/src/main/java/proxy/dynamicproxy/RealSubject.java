@@ -1,6 +1,6 @@
 package proxy.dynamicproxy;
 
-//¾ßÌå½ÇÉ«
+//Â¾ÃŸÃŒÃ¥Â½Ã‡Ã‰Â«
 
 public class RealSubject implements Subject {
 

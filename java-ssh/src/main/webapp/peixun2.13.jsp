@@ -1,4 +1,4 @@
-<%--application¶ÔÏóÊ¾Àý£¬peixun2.13.jspÎÄ¼þ´úÂë--%>
+<%--applicationå¯¹è±¡ç¤ºä¾‹ï¼Œpeixun2.13.jspæ–‡ä»¶ä»£ç --%>
 <%@ page contentType="text/html;charset=gb2312"%>
 <html>
 	<head>

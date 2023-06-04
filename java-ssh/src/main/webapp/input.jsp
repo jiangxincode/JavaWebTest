@@ -24,23 +24,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     
-    <h1>ÇëÊäÈëÒ»¸öµãµÄ×ø±ê(Ê¹ÓÃ¶ººÅ·Ö¸ô¿ª)</h1>
+    <h1>è¯·è¾“å…¥ä¸€ä¸ªç‚¹çš„åæ ‡(ä½¿ç”¨é€—å·åˆ†éš”å¼€)</h1>
     
     <form action="converterAction.action" method="post">
     
     <!-- 
       
-    ×ø±ê:<input type="text" name="point" size="20"><br>
-    ×ø±ê2:<input type="text" name="point" size="20"><br>
-    ×ø±ê3:<input type="text" name="point" size="20"><br>
+    åæ ‡:<input type="text" name="point" size="20"><br>
+    åæ ‡2:<input type="text" name="point" size="20"><br>
+    åæ ‡3:<input type="text" name="point" size="20"><br>
      -->
      
      
    x:<input type="text" name="point.x" size="20"><br>
    y:<input type="text" name="point.y" size="20"><br>  
-   ÓÃ»§Ãû:<input type="text" name="username" size="20"><br>
-   ÄêÁä:<input type="text" name="age" size="20"><br>
-   ³öÉúÈÕÆÚ:<input type="text" name="birthday" size="20"><br>
+   ç”¨æˆ·å:<input type="text" name="username" size="20"><br>
+   å¹´é¾„:<input type="text" name="age" size="20"><br>
+   å‡ºç”Ÿæ—¥æœŸ:<input type="text" name="birthday" size="20"><br>
    
    <input type="submit" value="submit">
     

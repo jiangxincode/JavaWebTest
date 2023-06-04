@@ -3,7 +3,7 @@ package test.test.observer;
 public class ConcreteObserver extends Observer {
 	@Override
 	public void update(Object object) {
-		System.out.println("¹Û²ìÕß¸üÐÂ×Ô¼º");
+		System.out.println("è§‚å¯Ÿè€…æ›´æ–°è‡ªå·±");
 		System.out.println(object);
 	}
 }

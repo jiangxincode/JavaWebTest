@@ -13,15 +13,15 @@ Users bean = null;
 <body bgcolor="#FFFFFF">
 <table width="50%" align="center" border="1">
 <tr>
-<td>ÓÃ»§Ãû</td>
-<td>É¾³ı</td>
+<td>ç”¨æˆ·å</td>
+<td>åˆ é™¤</td>
 </tr>
 <%for(int i = 0;i < arrayList.size(); i++)
 { bean = (Users)arrayList.get(i);
 %>
 <tr> 
 <td><a href="listSingleUser.jsp?id=<%= bean.getId()%>"><%= bean.getUsername()%></a></td>
-<td><a href="/test/ProcessUsersServlet?type=remove&id=<%= bean.getId()%>" onClick="javascript:return confirm('ÄúÈ·ÊµÒªÉ¾³ı¸Ã¼ÇÂ¼Ã´£¿')">É¾³ı</a></td>
+<td><a href="/test/ProcessUsersServlet?type=remove&id=<%= bean.getId()%>" onClick="javascript:return confirm('æ‚¨ç¡®å®è¦åˆ é™¤è¯¥è®°å½•ä¹ˆï¼Ÿ')">åˆ é™¤</a></td>
 </tr>
 <%}%>
 </table>

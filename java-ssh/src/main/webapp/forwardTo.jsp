@@ -3,7 +3,7 @@
 
 <%
 	String useName=request.getParameter("userName");
-	String outStr= "лл���٣�";
+	String outStr= "谢谢光临！";
 	outStr += useName;
 	out.println(outStr);	
 %>

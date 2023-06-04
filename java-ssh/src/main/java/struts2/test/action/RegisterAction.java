@@ -87,7 +87,7 @@ public class RegisterAction extends ActionSupport {
 		System.out.println("validateTest~~~~~~~~~~~~~~~~~~~~~~~");
 
 		if (null == username || username.length() < 6 || username.length() > 10) {
-			// ½øĞĞ´íÎóĞÅÏ¢µÄÊä³ö
+			// è¿›è¡Œé”™è¯¯ä¿¡æ¯çš„è¾“å‡º
 			this.addActionError("username invalid");
 			// this.addFieldError("username","field error: username invalid");
 		}
@@ -131,7 +131,7 @@ public class RegisterAction extends ActionSupport {
 		System.out.println("validate~~~~~~~~~~~~~~~~~~~~~~~");
 
 		if (null == username || username.length() < 6 || username.length() > 10) {
-			// ½øĞĞ´íÎóĞÅÏ¢µÄÊä³ö
+			// è¿›è¡Œé”™è¯¯ä¿¡æ¯çš„è¾“å‡º
 			// this.addActionError("username invalid");
 			// this.addFieldError("username","field error: username invalid");
 

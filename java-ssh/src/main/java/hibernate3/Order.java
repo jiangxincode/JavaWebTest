@@ -5,7 +5,7 @@ public class Order {
 
 	private String orderNumber;
 
-	private Customer customer; // 多对一，通过该变量可以引用到对应的Customer
+	private Customer customer; // 澶氬涓�锛岄�氳繃璇ュ彉閲忓彲浠ュ紩鐢ㄥ埌瀵瑰簲鐨凜ustomer
 
 	public Order(String orderNumber, Customer customer) {
 		this.orderNumber = orderNumber;

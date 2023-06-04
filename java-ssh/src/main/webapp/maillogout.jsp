@@ -14,9 +14,9 @@ session.invalidate();
 String name=(String)session.getAttribute("username");
  %>
 
-<%=name%>,�ټ���
+<%=name%>,再见！
 <p>
 <p>
-<a href="maillogin.jsp">���µ�¼�ʼ�ϵͳ</a>&nbsp;&nbsp;&nbsp;
+<a href="maillogin.jsp">重新登录邮件系统</a>&nbsp;&nbsp;&nbsp;
 </body>
 </html>

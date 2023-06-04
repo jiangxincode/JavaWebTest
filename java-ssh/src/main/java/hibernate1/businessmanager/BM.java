@@ -17,7 +17,7 @@ public class BM {
 		Certificate cer = new Certificate();
 		cer.setDescribe("spark");
 
-		// Éè¶¨Ñ§ÉúÓëÉí·İÖ¤Ö®¼äµÄ¹ØÁª¹ØÏµ
+		// è®¾å®šå­¦ç”Ÿä¸èº«ä»½è¯ä¹‹é—´çš„å…³è”å…³ç³»
 		stu.setCer(cer);
 		cer.setStu(stu);
 

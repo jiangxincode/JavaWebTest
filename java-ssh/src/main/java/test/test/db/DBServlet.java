@@ -47,7 +47,7 @@ public class DBServlet extends HttpServlet {
 
 			String drivers = props.getProperty("jdbc.drivers");
 			if (null != drivers) {
-				Class.forName(drivers);// ¼ÓÔØÊı¾İ¿âÇı¶¯³ÌĞò
+				Class.forName(drivers);// åŠ è½½æ•°æ®åº“é©±åŠ¨ç¨‹åº
 			}
 			String url = props.getProperty("jdbc.url");
 
@@ -55,7 +55,7 @@ public class DBServlet extends HttpServlet {
 
 			Statement stmt = con.createStatement();
 
-			String sql = "select * from user";// ´Óuser±íÖĞÈ¡µÃËùÓĞÊı¾İ
+			String sql = "select * from user";// ä»userè¡¨ä¸­å–å¾—æ‰€æœ‰æ•°æ®
 
 			ResultSet rs = stmt.executeQuery(sql);
 
@@ -78,7 +78,7 @@ public class DBServlet extends HttpServlet {
 
 			}
 			rs.close();
-			con.close();// ²»ÒªÍü¼Ç¹Ø±ÕÊı¾İ¿âÁ¬½Ó
+			con.close();// ä¸è¦å¿˜è®°å…³é—­æ•°æ®åº“è¿æ¥
 
 			request.setAttribute("list", list);
 

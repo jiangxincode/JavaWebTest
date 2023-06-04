@@ -8,11 +8,11 @@ public class MyBeforeAdvisor implements MethodBeforeAdvice {
 
 	@Override
 	public void before(Method arg0, Object[] arg1, Object arg2) throws Throwable {
-		System.out.println("·½·¨µ÷ÓÃÖ®Ç°...");
-		System.out.println("ÏÂÃæÊÇ·½·¨µ÷ÓÃµÄĞÅÏ¢£º");
-		System.out.println("ËùÖ´ĞĞµÄ·½·¨ÊÇ£º" + arg0);
-		System.out.println("µ÷ÓÃ·½·¨µÄ²ÎÊıÊÇ£º" + arg1);
-		System.out.println("Ä¿±ê¶ÔÏóÊÇ£º " + arg2);
+		System.out.println("æ–¹æ³•è°ƒç”¨ä¹‹å‰...");
+		System.out.println("ä¸‹é¢æ˜¯æ–¹æ³•è°ƒç”¨çš„ä¿¡æ¯ï¼š");
+		System.out.println("æ‰€æ‰§è¡Œçš„æ–¹æ³•æ˜¯ï¼š" + arg0);
+		System.out.println("è°ƒç”¨æ–¹æ³•çš„å‚æ•°æ˜¯ï¼š" + arg1);
+		System.out.println("ç›®æ ‡å¯¹è±¡æ˜¯ï¼š " + arg2);
 		
 	}
 

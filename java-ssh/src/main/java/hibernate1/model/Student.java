@@ -1,15 +1,15 @@
 package hibernate1.model;
 
 public class Student {
-	private String id; // ±êÊ¶id
+	private String id; // æ ‡è¯†id
 
-	private String cardId; // Ñ§ºÅ
-	private String name; // Ñ§ÉúĞÕÃû
-	private int age; // ËêÊı
+	private String cardId; // å­¦å·
+	private String name; // å­¦ç”Ÿå§“å
+	private int age; // å²æ•°
 
-	private Certificate cer;// Éí·ÖÖ¤
+	private Certificate cer;// èº«åˆ†è¯
 
-	private Team team;// °à¼¶
+	private Team team;// ç­çº§
 
 	public int getAge() {
 		return age;
@@ -43,7 +43,7 @@ public class Student {
 		return id;
 	}
 
-	public Student() { // ÎŞ²ÎµÄ¹¹Ôìº¯Êı
+	public Student() { // æ— å‚çš„æ„é€ å‡½æ•°
 	}
 
 	public Certificate getCer() {
@@ -55,7 +55,7 @@ public class Student {
 	}
 
 	/**
-	 * @return ·µ»Ø team¡£
+	 * @return è¿”å› teamã€‚
 	 */
 	public Team getTeam() {
 		return team;
@@ -63,7 +63,7 @@ public class Student {
 
 	/**
 	 * @param team
-	 *            ÒªÉèÖÃµÄ team¡£
+	 *            è¦è®¾ç½®çš„ teamã€‚
 	 */
 	public void setTeam(Team team) {
 		this.team = team;

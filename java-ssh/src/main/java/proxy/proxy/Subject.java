@@ -1,6 +1,6 @@
 package proxy.proxy;
 
-// ³éÏó½ÇÉ«
+// Â³Ã©ÃÃ³Â½Ã‡Ã‰Â«
 
 public abstract class Subject {
 	abstract public void request();

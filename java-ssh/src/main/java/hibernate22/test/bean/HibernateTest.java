@@ -142,19 +142,19 @@ public class HibernateTest {
 		fout.write(buffer);
 		fout.close();
 
-		out.println("------ÒÔÏÂÊÇ" + customer.getName() + "µÄ¸öÈËĞÅÏ¢------");
+		out.println("------ä»¥ä¸‹æ˜¯" + customer.getName() + "çš„ä¸ªäººä¿¡æ¯------");
 		out.println("ID: " + customer.getId());
-		out.println("¿ÚÁî: " + customer.getPassword());
+		out.println("å£ä»¤: " + customer.getPassword());
 		out.println("E-Mail: " + customer.getEmail());
-		out.println("µç»°: " + customer.getPhone());
-		out.println("µØÖ·: " + customer.getAddress());
-		String sex = customer.getSex() == 'M' ? "ÄĞ" : "Å®";
-		out.println("ĞÔ±ğ: " + sex);
-		String marriedStatus = customer.isMarried() ? "ÒÑ»é" : "Î´»é";
-		out.println("»éÒö×´¿ö: " + marriedStatus);
-		out.println("ÉúÈÕ: " + customer.getBirthday());
-		out.println("×¢²áÊ±¼ä: " + customer.getRegisteredTime());
-		out.println("×ÔÎÒ½éÉÜ: " + customer.getDescription());
+		out.println("ç”µè¯: " + customer.getPhone());
+		out.println("åœ°å€: " + customer.getAddress());
+		String sex = customer.getSex() == 'M' ? "ç”·" : "å¥³";
+		out.println("æ€§åˆ«: " + sex);
+		String marriedStatus = customer.isMarried() ? "å·²å©š" : "æœªå©š";
+		out.println("å©šå§»çŠ¶å†µ: " + marriedStatus);
+		out.println("ç”Ÿæ—¥: " + customer.getBirthday());
+		out.println("æ³¨å†Œæ—¶é—´: " + customer.getRegisteredTime());
+		out.println("è‡ªæˆ‘ä»‹ç»: " + customer.getDescription());
 
 	}
 

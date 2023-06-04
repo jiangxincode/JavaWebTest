@@ -11,8 +11,8 @@ public class Client {
 		
 		Person chinese = (Person)factory.getBean("chinese");
 		
-		System.out.println(chinese.sayHello("张三"));
-		System.out.println(chinese.sayGoodBye("张三"));
+		System.out.println(chinese.sayHello("褍械褏些"));
+		System.out.println(chinese.sayGoodBye("褍械褏些"));
 
 	}
 }

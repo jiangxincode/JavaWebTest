@@ -29,45 +29,45 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		{
 			if(username.value.length < 1)
 			{
-				alert("ÓÃ»§Ãû±ØÌî");
+				alert("ç”¨æˆ·åå¿…å¡«");
 				username.focus();
 				return false;
 			}
 			if(username.value.length < 4)
 			{
-				alert("ÓÃ»§Ãû³¤¶È¹ı¶Ì");
+				alert("ç”¨æˆ·åé•¿åº¦è¿‡çŸ­");
 				username.focus();
 				return false;
 			}
 			if(username.value.length > 10)
 			{
-				alert("ÓÃ»§Ãû³¤¶È¹ı³¤");
+				alert("ç”¨æˆ·åé•¿åº¦è¿‡é•¿");
 				username.focus();
 				return false;
 			}
 			
 			if(password.value.length < 1)
 			{
-				alert("ÃÜÂë±ØÌî");
+				alert("å¯†ç å¿…å¡«");
 				password.focus();
 				return false;
 			}
 			if(password.value.length < 4)
 			{
-				alert("ÃÜÂë³¤¶È¹ı¶Ì");
+				alert("å¯†ç é•¿åº¦è¿‡çŸ­");
 				password.focus();
 				return false;
 			}
 			if(password.value.length > 10)
 			{
-				alert("ÃÜÂë³¤¶È¹ı³¤");
+				alert("å¯†ç é•¿åº¦è¿‡é•¿");
 				password.focus();
 				return false;
 			}
 			
 			if(!sex[0].checked && !sex[1].checked)
 			{
-				alert("ĞÔ±ğ±ØĞëÑ¡Ôñ");
+				alert("æ€§åˆ«å¿…é¡»é€‰æ‹©");
 				return false;
 			}
 			
@@ -83,18 +83,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			
 			if(count < 1)
 			{
-				alert("ĞËÈ¤±ØĞëÑ¡Ôñ");
+				alert("å…´è¶£å¿…é¡»é€‰æ‹©");
 				return false;
 			}
 			if(count > 3)
 			{
-				alert("ĞËÈ¤×î¶àÑ¡Ôñ3Ïî");
+				alert("å…´è¶£æœ€å¤šé€‰æ‹©3é¡¹");
 				return false;
 			}
 			
 			if(remark.value.length < 1)
 			{
-				alert("ËµÃ÷±ØĞëÌîĞ´");
+				alert("è¯´æ˜å¿…é¡»å¡«å†™");
 				return false;
 			}	
 		}
@@ -110,25 +110,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
     <form name="form1" onsubmit="return validate();">
 		
-		ÓÃ»§Ãû£º<input type="text" name="username" size="20"><br>
-		ÃÜÂë:  <input type="password" name="password" size="20"><br>
-		ĞÔ±ğ£ºÄĞ<input type="radio" name="sex" value="ÄĞ">&nbsp;&nbsp;&nbsp;
-			 Å®<input type="radio" name="sex" value="Å®"><br>
-		ĞËÈ¤£º×ãÇò<input type="checkbox" name="interest" value="×ãÇò">&nbsp;&nbsp;
-			 ÀºÇò<input type="checkbox" name="interest" value="ÀºÇò">&nbsp;&nbsp;
-			 ÅÅÇò<input type="checkbox" name="interest" value="ÅÅÇò">&nbsp;&nbsp;
-			 ÓğÃ«Çò<input type="checkbox" name="interest" value="ÓğÃ«Çò">&nbsp;&nbsp;<br>
-		µØÖ·£º<select name="city">
-				<option value="shanghai">ÉÏº£</option>
-				<option value="beijing">±±¾©</option>
-				<option value="qingdao">Çàµº</option>
-				<option value="rizhao">ÈÕÕÕ</option>
+		ç”¨æˆ·åï¼š<input type="text" name="username" size="20"><br>
+		å¯†ç :  <input type="password" name="password" size="20"><br>
+		æ€§åˆ«ï¼šç”·<input type="radio" name="sex" value="ç”·">&nbsp;&nbsp;&nbsp;
+			 å¥³<input type="radio" name="sex" value="å¥³"><br>
+		å…´è¶£ï¼šè¶³çƒ<input type="checkbox" name="interest" value="è¶³çƒ">&nbsp;&nbsp;
+			 ç¯®çƒ<input type="checkbox" name="interest" value="ç¯®çƒ">&nbsp;&nbsp;
+			 æ’çƒ<input type="checkbox" name="interest" value="æ’çƒ">&nbsp;&nbsp;
+			 ç¾½æ¯›çƒ<input type="checkbox" name="interest" value="ç¾½æ¯›çƒ">&nbsp;&nbsp;<br>
+		åœ°å€ï¼š<select name="city">
+				<option value="shanghai">ä¸Šæµ·</option>
+				<option value="beijing">åŒ—äº¬</option>
+				<option value="qingdao">é’å²›</option>
+				<option value="rizhao">æ—¥ç…§</option>
 			 </select>	 <br>
-	    ËµÃ÷£º<textarea rows="15" cols="15" name="remark"></textarea>
+	    è¯´æ˜ï¼š<textarea rows="15" cols="15" name="remark"></textarea>
 		<br>
 		
-		<input type="submit" value="µã»÷Ìá½»">&nbsp;&nbsp;&nbsp;
-		<input type="reset" value="ÖØÖÃ">
+		<input type="submit" value="ç‚¹å‡»æäº¤">&nbsp;&nbsp;&nbsp;
+		<input type="reset" value="é‡ç½®">
 
 
 	</form>

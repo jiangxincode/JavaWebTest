@@ -36,7 +36,7 @@ public class MyServlet extends HttpServlet {
 		out.println("<br>" + new java.util.Date().toLocaleString());
 		out.println("</BODY></HTML>");
 
-		System.out.println("当前系统时间为：" + new java.util.Date().toLocaleString());
+		System.out.println("褰撳墠绯荤粺鏃堕棿涓猴細" + new java.util.Date().toLocaleString());
 	}
 
 }

@@ -5,6 +5,6 @@ public class StoneAxe implements Axe {
 	}
 
 	public String chop() {
-		return "Ê¯¸«¿³²ñºÃÂý";
+		return "ÃŠÂ¯Â¸Â«Â¿Â³Â²Ã±ÂºÃƒÃ‚Ã½";
 	}
 }

@@ -14,14 +14,14 @@ public class TestServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// ÇëÇó×ª·¢
+		// è¯·æ±‚è½¬å‘
 
 		request.setAttribute("test", "hello");
 
 		// request.getRequestDispatcher("/test4.jsp").forward(request,
 		// response);
 
-		// ÖØ¶¨Ïò
+		// é‡å®šå‘
 		response.sendRedirect("test4.jsp");
 
 	}

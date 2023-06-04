@@ -3,7 +3,7 @@ package strutsspring.service.impl;
 import strutsspring.service.LoginService;
 
 /**
- * ¸ÃÀàÍê³ÉÕæÕıµÄÒµÎñ´¦Àí
+ * è¯¥ç±»å®ŒæˆçœŸæ­£çš„ä¸šåŠ¡å¤„ç†
  * 
  * @author zhanglong
  *

@@ -2,7 +2,7 @@
 <%@ page session="true" %>
 <html>
 <head>
-  <title>session练习</title>
+  <title>session缁冧範</title>
 </head>
 
 <body bgcolor="#FFFFFF" onLoad="document.loginForm.username.focus()">
@@ -14,7 +14,7 @@ if(!session.isNew()){
     if(name==null)name="";
 }
 %>
-<p>欢迎光临邮件系统</p>
+<p>娆㈣繋鍏変复閭欢绯荤粺</p>
 <p>Session ID:<%=session.getId()%></p>
 
 <form name="loginForm" method="post" action="mailcheck.jsp">
@@ -34,7 +34,7 @@ if(!session.isNew()){
           </tr>
           <tr>
             <td width="401">&nbsp;</td>
-            <td width="399"><br><input type="Submit" name="Submit"  value="提交"></td>
+            <td width="399"><br><input type="Submit" name="Submit"  value="鎻愪氦"></td>
           </tr>
           
         </table> 

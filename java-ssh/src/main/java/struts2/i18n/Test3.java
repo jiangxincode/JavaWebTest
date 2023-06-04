@@ -12,7 +12,7 @@ public class Test3 {
 
 		String value = bundle.getString("hello");
 
-		String message = MessageFormat.format(value, new Object[] { "�й�" });
+		String message = MessageFormat.format(value, new Object[] { "ол╣Щ" });
 
 		System.out.println(message);
 	}

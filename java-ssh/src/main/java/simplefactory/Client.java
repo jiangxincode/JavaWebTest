@@ -8,8 +8,8 @@ public class Client {
 		Person p = null;
 
 		p = pf.getPerson("chinese");
-		System.out.println(p.sayHello("张三"));
-		System.out.println(p.sayGoodBye("张三"));
+		System.out.println(p.sayHello("寮犱笁"));
+		System.out.println(p.sayGoodBye("寮犱笁"));
 
 		p = pf.getPerson("american");
 		System.out.println(p.sayHello("Tom"));
@@ -19,8 +19,8 @@ public class Client {
 /*
 		Person chinese = new Chinese();
 
-		System.out.println(chinese.sayHello("张三"));
-		System.out.println(chinese.sayGoodBye("张三"));
+		System.out.println(chinese.sayHello("寮犱笁"));
+		System.out.println(chinese.sayGoodBye("寮犱笁"));
 
 		Person american = new American();
 

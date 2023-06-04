@@ -2,23 +2,23 @@
 <!DOCTYPE HTML PUBLIC "-//w3c//dtd html 4.0 transitional//en">
 <html>
 <body>  
-<%-- ÒýÓÃ×Ô¼º±àÐ´µÄjavaBeanÉú³ÉµÄbean×é¼þ --%>
+<%-- å¼•ç”¨è‡ªå·±ç¼–å†™çš„javaBeanç”Ÿæˆçš„beanç»„ä»¶ --%>
 <jsp:useBean id="student" scope="application" class="com.test.bean.Student"/> 
 <%=student.getName()%><br>
 <% student.setName("cong"); %> 
 
-<%-- ÓÃgetProperty¶¯×÷À´·µ»Øbean×é¼þµÄÊôÐÔÖµ --%> 
+<%-- ç”¨getPropertyåŠ¨ä½œæ¥è¿”å›žbeanç»„ä»¶çš„å±žæ€§å€¼ --%> 
 <jsp:getProperty name="student" property="classNo" /> <br>
 <jsp:getProperty name="student" property="name" /> <br>
 <jsp:getProperty name="student" property="age" /> <br>
 <jsp:getProperty name="student" property="sexy" /> <br>
-<%-- È¡ÊôÐÔÖµ --%>
+<%-- å–å±žæ€§å€¼ --%>
 <%=student.getClassNo() %> <br>
 <%=student.getName() %> <br>
 <%=student.getAge() %> <br>
 <%=student.isSexy() %> <br>
 
-<%--ÒýÓÃJavaÀà¿âÖÐÉú³ÉµÄbean×é¼þ --%>
+<%--å¼•ç”¨Javaç±»åº“ä¸­ç”Ÿæˆçš„beanç»„ä»¶ --%>
 <jsp:useBean id="date" scope="page" class="java.util.Date" />
 <%= date.toLocaleString()%><br>
 

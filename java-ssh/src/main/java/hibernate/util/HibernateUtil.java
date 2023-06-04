@@ -11,7 +11,7 @@ public class HibernateUtil {
 		try {
 			sessionFactory = new Configuration().configure().buildSessionFactory();
 		} catch (Exception ex) {
-			System.err.println("¹¹ÔìSessionFactoryÒì³£·¢Éú£º " + ex.getMessage());
+			System.err.println("æ„é€ SessionFactoryå¼‚å¸¸å‘ç”Ÿï¼š " + ex.getMessage());
 		}
 
 	}

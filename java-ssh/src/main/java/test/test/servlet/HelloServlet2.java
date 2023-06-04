@@ -8,11 +8,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class HelloServlet2 extends HttpServlet // µÚÒ»²½£º À©Õ¹ HttpServlet ³éÏóÀà¡£
+public class HelloServlet2 extends HttpServlet // ç¬¬ä¸€æ­¥ï¼š æ‰©å±• HttpServlet æŠ½è±¡ç±»ã€‚
 {
 	// String clientName = null;
 
-	// µÚ¶ş²½£º¸²¸ÇdoGet()·½·¨
+	// ç¬¬äºŒæ­¥ï¼šè¦†ç›–doGet()æ–¹æ³•
 
 	/**
 	 * 
@@ -20,12 +20,12 @@ public class HelloServlet2 extends HttpServlet // µÚÒ»²½£º À©Õ¹ HttpServlet ³éÏó
 	private static final long serialVersionUID = 1L;
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		// µÚÈı²½£º»ñÈ¡HTTP ÇëÇóÖĞµÄ²ÎÊıĞÅÏ¢
+		// ç¬¬ä¸‰æ­¥ï¼šè·å–HTTP è¯·æ±‚ä¸­çš„å‚æ•°ä¿¡æ¯
 		String clientName = request.getParameter("clientName");
 		if (clientName != null) {
 			clientName = new String(clientName.getBytes("ISO-8859-1"), "GB2312");
 		} else {
-			clientName = "ÎÒµÄÅóÓÑ";
+			clientName = "æˆ‘çš„æœ‹å‹";
 		}
 
 		System.out.println(Thread.currentThread().getName());
@@ -35,7 +35,7 @@ public class HelloServlet2 extends HttpServlet // µÚÒ»²½£º À©Õ¹ HttpServlet ³éÏó
 		} catch (Exception e) {
 		}
 
-		// µÚËÄ²½£ºÉú³É HTTP ÏìÓ¦½á¹û¡£
+		// ç¬¬å››æ­¥ï¼šç”Ÿæˆ HTTP å“åº”ç»“æœã€‚
 		PrintWriter out;
 		String title = "HelloServlet";
 		String heading1 = "This is output from HelloServlet by doGet:";
@@ -46,7 +46,7 @@ public class HelloServlet2 extends HttpServlet // µÚÒ»²½£º À©Õ¹ HttpServlet ³éÏó
 		out.print("<HTML><HEAD><TITLE>" + title + "</TITLE>");
 		out.print("</HEAD><BODY>");
 		out.print(heading1);
-		out.println("<h1><P> " + clientName + " : ÄúºÃ</h1>");
+		out.println("<h1><P> " + clientName + " : æ‚¨å¥½</h1>");
 		out.print("</BODY></HTML>");
 		// close out.
 		out.close();

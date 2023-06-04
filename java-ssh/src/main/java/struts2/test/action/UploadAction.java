@@ -14,9 +14,9 @@ public class UploadAction extends ActionSupport {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	private File file; // ¶ÔÓ¦ÕæÕıÉÏ´«µÄÎÄ¼ş
+	private File file; // å¯¹åº”çœŸæ­£ä¸Šä¼ çš„æ–‡ä»¶
 
-	private String fileFileName; // ¶ÔÓ¦ÉÏ´«µÄÎÄ¼şÃû
+	private String fileFileName; // å¯¹åº”ä¸Šä¼ çš„æ–‡ä»¶å
 
 	public File getFile() {
 		return file;

@@ -2,10 +2,10 @@ package simplefactory;
 
 public class Chinese implements Person {
 	public String sayHello(String name) {
-		return name + "£¬ÄúºÃ";
+		return name + "ï¼Œæ‚¨å¥½";
 	}
 
 	public String sayGoodBye(String name) {
-		return name + "£¬ÏÂ´ÎÔÙ¼û";
+		return name + "ï¼Œä¸‹æ¬¡å†è§";
 	}
 }

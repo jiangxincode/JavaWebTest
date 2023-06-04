@@ -4,12 +4,12 @@
     String yourName=(String)session.getAttribute("LogName");
     if (yourName == null)
     {
-    %>����δ��¼
+    %>Äú»¹Î´µÇÂ¼
     <%
     }else
     {
     %>
-    "<%=yourName%>"�Ѿ���¼
+    "<%=yourName%>"ÒÑ¾­µÇÂ¼
     <%
     }
   %>

@@ -5,6 +5,6 @@ public class SteelAxe implements Axe {
 	}
 
 	public String chop() {
-		return "¸Ö¸«¿³²ñÕæ¿ì";
+		return "Â¸Ã–Â¸Â«Â¿Â³Â²Ã±Ã•Ã¦Â¿Ã¬";
 	}
 }

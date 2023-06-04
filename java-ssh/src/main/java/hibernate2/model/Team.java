@@ -6,7 +6,7 @@ import java.util.Set;
 /**
  * @author Administrator
  * 
- *         TODO Òª¸ü¸Ä´ËÉú³ÉµÄÀàĞÍ×¢ÊÍµÄÄ£°å£¬Çë×ªÖÁ ´°¿Ú £­ Ê×Ñ¡Ïî £­ Java £­ ´úÂëÑùÊ½ £­ ´úÂëÄ£°å
+ *         TODO è¦æ›´æ”¹æ­¤ç”Ÿæˆçš„ç±»å‹æ³¨é‡Šçš„æ¨¡æ¿ï¼Œè¯·è½¬è‡³ çª—å£ ï¼ é¦–é€‰é¡¹ ï¼ Java ï¼ ä»£ç æ ·å¼ ï¼ ä»£ç æ¨¡æ¿
  */
 public class Team {
 	private String id;
@@ -14,11 +14,11 @@ public class Team {
 	private String teamName;
 
 	/**
-	 * @return ·µ»Ø tests¡£
+	 * @return è¿”å› testsã€‚
 	 */
 
 	/**
-	 * @return ·µ»Ø id¡£
+	 * @return è¿”å› idã€‚
 	 */
 	public String getId() {
 		return id;
@@ -26,14 +26,14 @@ public class Team {
 
 	/**
 	 * @param id
-	 *            ÒªÉèÖÃµÄ id¡£
+	 *            è¦è®¾ç½®çš„ idã€‚
 	 */
 	private void setId(String id) {
 		this.id = id;
 	}
 
 	/**
-	 * @return ·µ»Ø groupName¡£
+	 * @return è¿”å› groupNameã€‚
 	 */
 	public String getTeamName() {
 		return teamName;
@@ -41,14 +41,14 @@ public class Team {
 
 	/**
 	 * @param groupName
-	 *            ÒªÉèÖÃµÄ groupName¡£
+	 *            è¦è®¾ç½®çš„ groupNameã€‚
 	 */
 	public void setTeamName(String name) {
 		this.teamName = name;
 	}
 
 	/**
-	 * @return ·µ»Ø students¡£
+	 * @return è¿”å› studentsã€‚
 	 */
 	public Set getStudents() {
 		return students;
@@ -56,7 +56,7 @@ public class Team {
 
 	/**
 	 * @param students
-	 *            ÒªÉèÖÃµÄ students¡£
+	 *            è¦è®¾ç½®çš„ studentsã€‚
 	 */
 	public void setStudents(Set students) {
 		this.students = students;

@@ -5,21 +5,21 @@ import java.lang.reflect.Proxy;
 public class Demo {
 	public static void main(String[] args) {
 
-		// 1.Í¨ÓÃµÄ¶¯Ì¬´úÀíÊµÏÖ
+		// 1.é€šç”¨çš„åŠ¨æ€ä»£ç†å®žçŽ°
 
 		CommonInvocationHandler handler = new CommonInvocationHandler();
 
 		Foo f;
 
-		// 2.½Ó¿ÚÊµÏÖ1
+		// 2.æŽ¥å£å®žçŽ°1
 
 		handler.setTarget(new FooImpl());
 
-		// ·½·¨²ÎÊýËµÃ÷£º´úÀíÀà¡¢´úÀíÀàÊµÏÖµÄ½Ó¿ÚÁÐ±í¡¢´úÀíÀàµÄ´¦ÀíÆ÷
+		// æ–¹æ³•å‚æ•°è¯´æ˜Žï¼šä»£ç†ç±»ã€ä»£ç†ç±»å®žçŽ°çš„æŽ¥å£åˆ—è¡¨ã€ä»£ç†ç±»çš„å¤„ç†å™¨
 
-		// ¹ØÁª´úÀíÀà¡¢´úÀíÀàÖÐ½Ó¿Ú·½·¨¡¢´¦ÀíÆ÷£¬µ«´úÀíÀàÖÐ½Ó¿Ú·½·¨±»µ÷ÓÃÊ±£¬»á×Ô¶¯·Ö·¢µ½´¦ÀíÆ÷µÄinvoke·½·¨
+		// å…³è”ä»£ç†ç±»ã€ä»£ç†ç±»ä¸­æŽ¥å£æ–¹æ³•ã€å¤„ç†å™¨ï¼Œä½†ä»£ç†ç±»ä¸­æŽ¥å£æ–¹æ³•è¢«è°ƒç”¨æ—¶ï¼Œä¼šè‡ªåŠ¨åˆ†å‘åˆ°å¤„ç†å™¨çš„invokeæ–¹æ³•
 
-		// Èç¹û´úÀíÀàÃ»ÓÐÊµÏÖÖ¸¶¨½Ó¿ÚÁÐ±í£¬»áÅ×³ö·Ç·¨²ÎÊýÒì³£
+		// å¦‚æžœä»£ç†ç±»æ²¡æœ‰å®žçŽ°æŒ‡å®šæŽ¥å£åˆ—è¡¨ï¼Œä¼šæŠ›å‡ºéžæ³•å‚æ•°å¼‚å¸¸
 
 		f = (Foo) Proxy.newProxyInstance(Foo.class.getClassLoader(),
 
@@ -29,7 +29,7 @@ public class Demo {
 
 		f.doAction();
 
-		// 3.½Ó¿ÚÊµÏÖ2
+		// 3.æŽ¥å£å®žçŽ°2
 
 		handler.setTarget(new FooImpl2());
 

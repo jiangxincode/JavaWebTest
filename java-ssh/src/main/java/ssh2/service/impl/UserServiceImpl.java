@@ -18,7 +18,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	public void save(User user) {
-		this.userDao.saveUser(user); // 完成真正的业务逻辑
+		this.userDao.saveUser(user); // 瀹屾垚鐪熸鐨勪笟鍔￠�昏緫
 	}
 
 	public List<User> findAll() {

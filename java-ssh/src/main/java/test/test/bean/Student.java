@@ -9,7 +9,7 @@ public class Student {
 
 	private boolean sexy;
 
-	public Student() // ¹¹Ôìº¯Êı
+	public Student() // æ„é€ å‡½æ•°
 	{
 		classNo = 970431;
 		name = "ZZZl";
@@ -18,7 +18,7 @@ public class Student {
 	}
 
 	/**
-	 * @return ·µ»Ø age¡£
+	 * @return è¿”å› ageã€‚
 	 */
 	public int getAge() {
 		return age;
@@ -26,14 +26,14 @@ public class Student {
 
 	/**
 	 * @param age
-	 *            ÒªÉèÖÃµÄ age¡£
+	 *            è¦è®¾ç½®çš„ ageã€‚
 	 */
 	public void setAge(int age) {
 		this.age = age;
 	}
 
 	/**
-	 * @return ·µ»Ø classNo¡£
+	 * @return è¿”å› classNoã€‚
 	 */
 	public long getClassNo() {
 		return classNo;
@@ -41,14 +41,14 @@ public class Student {
 
 	/**
 	 * @param classNo
-	 *            ÒªÉèÖÃµÄ classNo¡£
+	 *            è¦è®¾ç½®çš„ classNoã€‚
 	 */
 	public void setClassNo(long classNo) {
 		this.classNo = classNo;
 	}
 
 	/**
-	 * @return ·µ»Ø name¡£
+	 * @return è¿”å› nameã€‚
 	 */
 	public String getName() {
 		return name;
@@ -56,14 +56,14 @@ public class Student {
 
 	/**
 	 * @param name
-	 *            ÒªÉèÖÃµÄ name¡£
+	 *            è¦è®¾ç½®çš„ nameã€‚
 	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
 	/**
-	 * @return ·µ»Ø sexy¡£
+	 * @return è¿”å› sexyã€‚
 	 */
 	public boolean isSexy() {
 		return sexy;
@@ -71,7 +71,7 @@ public class Student {
 
 	/**
 	 * @param sexy
-	 *            ÒªÉèÖÃµÄ sexy¡£
+	 *            è¦è®¾ç½®çš„ sexyã€‚
 	 */
 	public void setSexy(boolean sexy) {
 		this.sexy = sexy;

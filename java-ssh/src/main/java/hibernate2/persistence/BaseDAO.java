@@ -7,22 +7,22 @@ import org.hibernate.Transaction;
 /**
  * @author Administrator
  * 
- *         TODO Òª¸ü¸Ä´ËÉú³ÉµÄÀàĞÍ×¢ÊÍµÄÄ£°å£¬Çë×ªÖÁ ´°¿Ú £­ Ê×Ñ¡Ïî £­ Java £­ ´úÂëÑùÊ½ £­ ´úÂëÄ£°å
+ *         TODO è¦æ›´æ”¹æ­¤ç”Ÿæˆçš„ç±»å‹æ³¨é‡Šçš„æ¨¡æ¿ï¼Œè¯·è½¬è‡³ çª—å£ ï¼ é¦–é€‰é¡¹ ï¼ Java ï¼ ä»£ç æ ·å¼ ï¼ ä»£ç æ¨¡æ¿
  */
 public class BaseDAO {
 	static Session session = null;
 	static Transaction tx = null;
 
-	/*------------´´½¨ĞÂ¶ÔÏó-----------------*/
+	/*------------åˆ›å»ºæ–°å¯¹è±¡-----------------*/
 	public static void saveObj(Object o) {
 		try {
-			session = HibernateUtil.currentSession(); // ¿ªÆôÁ¬½Ó
-			tx = session.beginTransaction(); // ¿ªÆôÊÂÎñ
+			session = HibernateUtil.currentSession(); // å¼€å¯è¿æ¥
+			tx = session.beginTransaction(); // å¼€å¯äº‹åŠ¡
 			session.save(o);
 
 			tx.commit();
 
-		} catch (HibernateException e) { // ²¶×½ÀıÍâ
+		} catch (HibernateException e) { // æ•æ‰ä¾‹å¤–
 			e.printStackTrace();
 			tx.rollback();
 		} finally {
@@ -31,15 +31,15 @@ public class BaseDAO {
 		}
 	}
 
-	/*------------É¾³ı¶ÔÏó-----------------*/
+	/*------------åˆ é™¤å¯¹è±¡-----------------*/
 	public static void delObject(Object o) {
 		try {
-			session = HibernateUtil.currentSession(); // ¿ªÆôÁ¬½Ó
-			Transaction tx = session.beginTransaction(); // ¿ªÆôÊÂÎñ
+			session = HibernateUtil.currentSession(); // å¼€å¯è¿æ¥
+			Transaction tx = session.beginTransaction(); // å¼€å¯äº‹åŠ¡
 			session.delete(o);
 			tx.commit();
 
-		} catch (HibernateException e) { // ²¶×½ÀıÍâ
+		} catch (HibernateException e) { // æ•æ‰ä¾‹å¤–
 			e.printStackTrace();
 			tx.rollback();
 		} finally {
@@ -47,15 +47,15 @@ public class BaseDAO {
 		}
 	}
 
-	/*------------ĞŞ¸Ä¶ÔÏó-----------------*/
+	/*------------ä¿®æ”¹å¯¹è±¡-----------------*/
 	public static void updateObj(Object o) {
 		try {
-			session = HibernateUtil.currentSession(); // ¿ªÆôÁ¬½Ó
-			Transaction tx = session.beginTransaction(); // ¿ªÆôÊÂÎñ
+			session = HibernateUtil.currentSession(); // å¼€å¯è¿æ¥
+			Transaction tx = session.beginTransaction(); // å¼€å¯äº‹åŠ¡
 			session.update(o);
 			tx.commit();
 
-		} catch (HibernateException e) { // ²¶×½ÀıÍâ
+		} catch (HibernateException e) { // æ•æ‰ä¾‹å¤–
 			e.printStackTrace();
 			tx.rollback();
 		} finally {

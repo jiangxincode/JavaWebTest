@@ -25,10 +25,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
    
-   ×ø±ê:<s:property value="point"/><br>
-   ÓÃ»§Ãû:<s:property value="username"/><br>
-   ÄêÁä:<s:property value="age"/><br>
-   ³öÉúÈÕÆÚ:<s:property value="birthday"/>   
+   åæ ‡:<s:property value="point"/><br>
+   ç”¨æˆ·å:<s:property value="username"/><br>
+   å¹´é¾„:<s:property value="age"/><br>
+   å‡ºç”Ÿæ—¥æœŸ:<s:property value="birthday"/>   
    
    
   </body>

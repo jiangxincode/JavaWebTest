@@ -14,10 +14,10 @@ name=request.getParameter("username");
 if(name!=null)session.setAttribute("username",name);
 %>
 
-<a href="maillogin.jsp">µÇÂ¼</a>&nbsp;&nbsp;&nbsp;
-<a href="maillogout.jsp">×¢Ïú</a>&nbsp;&nbsp;&nbsp;
-<p>µ±Ç°ÓÃ»§Îª£º<%=name%> </P>
-<P>ÄãµÄĞÅÏäÖĞÓĞ52·âÓÊ¼ş</P>
+<a href="maillogin.jsp">ç™»å½•</a>&nbsp;&nbsp;&nbsp;
+<a href="maillogout.jsp">æ³¨é”€</a>&nbsp;&nbsp;&nbsp;
+<p>å½“å‰ç”¨æˆ·ä¸ºï¼š<%=name%> </P>
+<P>ä½ çš„ä¿¡ç®±ä¸­æœ‰52å°é‚®ä»¶</P>
 
 </body>
 </html>

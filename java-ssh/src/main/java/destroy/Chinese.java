@@ -6,11 +6,11 @@ public class Chinese implements Person, DisposableBean {
 	private Axe axe;
 
 	public Chinese() {
-		System.out.println("SpringÊµÀı»¯Ö÷µ÷bean£ºChineseÊµÀı...");
+		System.out.println("Springå®ä¾‹åŒ–ä¸»è°ƒbeanï¼šChineseå®ä¾‹...");
 	}
 
 	public void setAxe(Axe axe) {
-		System.out.println("SpringÖ´ĞĞÒÀÀµ¹ØÏµ×¢Èë...");
+		System.out.println("Springæ‰§è¡Œä¾èµ–å…³ç³»æ³¨å…¥...");
 		this.axe = axe;
 	}
 
@@ -19,12 +19,12 @@ public class Chinese implements Person, DisposableBean {
 	}
 
 	public void close() {
-		System.out.println("ÕıÔÚÖ´ĞĞ³õÊ¼»¯·½·¨   close...");
+		System.out.println("æ­£åœ¨æ‰§è¡Œåˆå§‹åŒ–æ–¹æ³•   close...");
 	}
 
 	@Override
 	public void destroy() throws Exception {
-		System.out.println("ÕıÔÚÖ´ĞĞ³õÊ¼»¯·½·¨    destroy...");
+		System.out.println("æ­£åœ¨æ‰§è¡Œåˆå§‹åŒ–æ–¹æ³•    destroy...");
 		
 	}
 

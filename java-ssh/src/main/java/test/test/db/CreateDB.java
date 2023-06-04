@@ -23,12 +23,12 @@ public class CreateDB {
 		String drivers = props.getProperty("jdbc.drivers");
 
 		if (null != drivers) {
-			Class.forName(drivers);// ¼ÓÔØÊı¾İ¿âÇı¶¯³ÌĞò
+			Class.forName(drivers);// åŠ è½½æ•°æ®åº“é©±åŠ¨ç¨‹åº
 		}
 
 		String url = props.getProperty("jdbc.url");
 
-		return DriverManager.getConnection(url); // ´ËĞĞ´úÂë»ñÈ¡µ½ÁËÊı¾İ¿âµÄÁ¬½Ó
+		return DriverManager.getConnection(url); // æ­¤è¡Œä»£ç è·å–åˆ°äº†æ•°æ®åº“çš„è¿æ¥
 
 	}
 
@@ -40,19 +40,19 @@ public class CreateDB {
 
 		System.out.println("DDL: " + command);
 
-		stmt.execute(command); // ÕæÕıÍê³É±íµÄ´´½¨
+		stmt.execute(command); // çœŸæ­£å®Œæˆè¡¨çš„åˆ›å»º
 
 		while ((line = in.readLine()) != null) {
 			command = "insert into " + tableName + " values(" + line + ")";
 
-			stmt.executeUpdate(command); // ÕæÕıÍê³ÉÊı¾İµÄ²åÈë
+			stmt.executeUpdate(command); // çœŸæ­£å®Œæˆæ•°æ®çš„æ’å…¥
 		}
 	}
 
 	public static void showTable(String tableName, Statement stmt) throws SQLException {
 		String query = "select * from " + tableName;
 
-		ResultSet rs = stmt.executeQuery(query); // ÕæÕıÖ´ĞĞ²éÑ¯£¬·µ»ØÒ»¸öResultSet
+		ResultSet rs = stmt.executeQuery(query); // çœŸæ­£æ‰§è¡ŒæŸ¥è¯¢ï¼Œè¿”å›ä¸€ä¸ªResultSet
 
 		ResultSetMetaData rsmd = rs.getMetaData();
 		int columnCount = rsmd.getColumnCount();
@@ -81,16 +81,16 @@ public class CreateDB {
 			if (args.length > 0) {
 				tableName = args[0];
 			} else {
-				System.out.println("ÇëÊäÈëÊı¾İ¿â±íÃû");
+				System.out.println("è¯·è¾“å…¥æ•°æ®åº“è¡¨å");
 				System.exit(0);
 			}
 
 			BufferedReader in = new BufferedReader(new FileReader("C:\\" + tableName + ".dat"));
 
-			// ´´½¨±í¼°²åÈëÊı¾İ
+			// åˆ›å»ºè¡¨åŠæ’å…¥æ•°æ®
 			createTable(tableName, in, stmt);
 
-			// ²éÑ¯±í
+			// æŸ¥è¯¢è¡¨
 			showTable(tableName, stmt);
 
 			in.close();

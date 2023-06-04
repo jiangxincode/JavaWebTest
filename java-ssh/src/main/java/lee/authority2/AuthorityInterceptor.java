@@ -19,10 +19,10 @@ public class AuthorityInterceptor implements MethodInterceptor {
 		String methodName = invocation.getMethod().getName();
 		
 		if(!user.equals("admin") && !user.equals("registedUser")) {
-			System.out.println("ÄúÎŞÈ¨Ö´ĞĞ¸Ã·½·¨");
+			System.out.println("æ‚¨æ— æƒæ‰§è¡Œè¯¥æ–¹æ³•");
 			return null;
 		} else if(user.equals("registedUser") && methodName.equals("modify")) {
-			System.out.println("Äú²»ÊÇ¹ÜÀíÔ±£¬ÎŞ·¨ĞŞ¸ÄÊı¾İ");
+			System.out.println("æ‚¨ä¸æ˜¯ç®¡ç†å‘˜ï¼Œæ— æ³•ä¿®æ”¹æ•°æ®");
 			return null;
 		} else {
 			return invocation.proceed();

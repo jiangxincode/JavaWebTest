@@ -16,7 +16,7 @@ public class ConcreteSubject implements Subject {
 
 	public void notifyObservers() {
 		for (Observer observer : list) {
-			observer.update("通知观察者");
+			observer.update("脥篓脰陋鹿脹虏矛脮脽");
 		}
 	}
 

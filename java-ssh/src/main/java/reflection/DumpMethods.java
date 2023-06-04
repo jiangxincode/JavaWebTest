@@ -4,9 +4,9 @@ import java.lang.reflect.Method;
 
 public class DumpMethods {
 	public static void main(String args[]) throws Exception {
-		// ¼ÓÔØ²¢³õÊ¼»¯ÃüÁîĞĞ²ÎÊıÖ¸¶¨µÄÀà
+		// åŠ è½½å¹¶åˆå§‹åŒ–å‘½ä»¤è¡Œå‚æ•°æŒ‡å®šçš„ç±»
 		Class classType = Class.forName(args[0]);
-		// »ñµÃÀàµÄËùÓĞ·½·¨
+		// è·å¾—ç±»çš„æ‰€æœ‰æ–¹æ³•
 		Method methods[] = classType.getDeclaredMethods();
 		for (int i = 0; i < methods.length; i++) {
 			System.out.println(methods[i].toString());

@@ -9,25 +9,25 @@ import hibernate2.model.Certificate;
 /**
  * @author Administrator
  * 
- *         TODO Òª¸ü¸Ä´ËÉú³ÉµÄÀàĞÍ×¢ÊÍµÄÄ£°å£¬Çë×ªÖÁ ´°¿Ú £­ Ê×Ñ¡Ïî £­ Java £­ ´úÂëÑùÊ½ £­ ´úÂëÄ£°å
+ *         TODO è¦æ›´æ”¹æ­¤ç”Ÿæˆçš„ç±»å‹æ³¨é‡Šçš„æ¨¡æ¿ï¼Œè¯·è½¬è‡³ çª—å£ ï¼ é¦–é€‰é¡¹ ï¼ Java ï¼ ä»£ç æ ·å¼ ï¼ ä»£ç æ¨¡æ¿
  */
 public class CertificateDAO extends BaseDAO {
 	static Session session = null;
 	static Transaction tx = null;
 
-	/*------------È¡µÃËùÓĞµÄÑ§ÉúÁĞ±í-----------------*/
+	/*------------å–å¾—æ‰€æœ‰çš„å­¦ç”Ÿåˆ—è¡¨-----------------*/
 	// public static List getAllStu() {
 	// List list=null;
 	// try {
-	// session = HibernateUtil.currentSession(); //¿ªÆôÁ¬½Ó
-	// tx = session.beginTransaction(); //¿ªÆôÊÂÎñ
+	// session = HibernateUtil.currentSession(); //å¼€å¯è¿æ¥
+	// tx = session.beginTransaction(); //å¼€å¯äº‹åŠ¡
 	// Query q=session.createQuery("from Student");
 	// list=q.list();
 	// Student stu=(Student) list.get(0);
 	// System.out.println(Hibernate.isInitialized(stu));
 	// tx.commit();
 	//
-	// } catch (HibernateException e) { //²¶×½ÀıÍâ
+	// } catch (HibernateException e) { //æ•æ‰ä¾‹å¤–
 	// e.printStackTrace();
 	// tx.rollback();
 	// }finally
@@ -37,16 +37,16 @@ public class CertificateDAO extends BaseDAO {
 	// return list;
 	//
 	// }
-	/*------------È¡µÃÒ»¸öÑ§Éú-----------------*/
+	/*------------å–å¾—ä¸€ä¸ªå­¦ç”Ÿ-----------------*/
 	public static Certificate getOneCer() {
 		Certificate cer = null;
 		try {
-			session = HibernateUtil.currentSession(); // ¿ªÆôÁ¬½Ó
-			tx = session.beginTransaction(); // ¿ªÆôÊÂÎñ
+			session = HibernateUtil.currentSession(); // å¼€å¯è¿æ¥
+			tx = session.beginTransaction(); // å¼€å¯äº‹åŠ¡
 			cer = (Certificate) session.get(Certificate.class, "ff80808105384a980105384a9ba60001");
 			tx.commit();
 
-		} catch (HibernateException e) { // ²¶×½ÀıÍâ
+		} catch (HibernateException e) { // æ•æ‰ä¾‹å¤–
 			e.printStackTrace();
 			tx.rollback();
 		} finally {

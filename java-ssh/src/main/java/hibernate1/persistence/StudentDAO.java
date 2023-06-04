@@ -1,8 +1,8 @@
 /*
- * ´´½¨ÈÕÆÚ 2005-7-2
+ * åˆ›å»ºæ—¥æœŸ 2005-7-2
  *
- * TODO Òª¸ü¸Ä´ËÉú³ÉµÄÎÄ¼şµÄÄ£°å£¬Çë×ªÖÁ
- * ´°¿Ú £­ Ê×Ñ¡Ïî £­ Java £­ ´úÂëÑùÊ½ £­ ´úÂëÄ£°å
+ * TODO è¦æ›´æ”¹æ­¤ç”Ÿæˆçš„æ–‡ä»¶çš„æ¨¡æ¿ï¼Œè¯·è½¬è‡³
+ * çª—å£ ï¼ é¦–é€‰é¡¹ ï¼ Java ï¼ ä»£ç æ ·å¼ ï¼ ä»£ç æ¨¡æ¿
  */
 package hibernate1.persistence;
 
@@ -23,12 +23,12 @@ public class StudentDAO extends BaseDAO {
 	public static void update() {
 		Student stu = null;
 		try {
-			session = HibernateUtil.currentSession(); // ¿ªÆôÁ¬½Ó
-			tx = session.beginTransaction(); // ¿ªÆôÊÂÎñ
+			session = HibernateUtil.currentSession(); // å¼€å¯è¿æ¥
+			tx = session.beginTransaction(); // å¼€å¯äº‹åŠ¡
 			Query query = session.getNamedQuery("queryStudent_byAgeAdnName");
 
-			query.setInteger("minAge", 25); // ÉèÖÃ¡°:¡±ºÅºóµÄminAge±äÁ¿Öµ
-			query.setString("likeName", "%clus%");// ÉèÖÃ¡°:¡±ºÅºóµÄlikeName±äÁ¿Öµ
+			query.setInteger("minAge", 25); // è®¾ç½®â€œ:â€å·åçš„minAgeå˜é‡å€¼
+			query.setString("likeName", "%clus%");// è®¾ç½®â€œ:â€å·åçš„likeNameå˜é‡å€¼
 
 			List list = query.list();
 			for (int i = 0; i < list.size(); i++) {
@@ -38,7 +38,7 @@ public class StudentDAO extends BaseDAO {
 
 			tx.commit();
 
-		} catch (HibernateException e) { // ²¶×½ÀıÍâ
+		} catch (HibernateException e) { // æ•æ‰ä¾‹å¤–
 			e.printStackTrace();
 			tx.rollback();
 		} finally {

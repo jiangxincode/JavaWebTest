@@ -9,7 +9,7 @@
 			com.mysql.jdbc.Driver
 		</property>
 		<property name="connection.url">
-			jdbc:mysql://localhost:3306/schoolProject?useUnicode=true&amp;characterEncoding=GBK<!--连接数据库的URL，库名是schoolProject，”useUnicode=true&amp;characterEncoding=GBK”意思是采用中文编码-->
+			jdbc:mysql://localhost:3306/schoolProject?useUnicode=true&amp;characterEncoding=utf8<!--连接数据库的URL，库名是schoolProject，”useUnicode=true&amp;characterEncoding=GBK”意思是采用中文编码-->
 		</property>
 		<property name="connection.username"><!--连接的登录名-->
 			root

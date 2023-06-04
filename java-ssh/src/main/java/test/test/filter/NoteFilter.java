@@ -35,7 +35,7 @@ public class NoteFilter implements Filter {
 			response.setContentType("text/html;charset=GB2312");
 			PrintWriter out = response.getWriter();
 			out.println("<html><head></head><body>");
-			out.println("<h1>¶Ô²»Æğ," + username + ",ÄãÃ»ÓĞÈ¨ÏŞÁôÑÔ </h1>");
+			out.println("<h1>å¯¹ä¸èµ·," + username + ",ä½ æ²¡æœ‰æƒé™ç•™è¨€ </h1>");
 			out.println("</body></html>");
 			out.flush();
 			return;

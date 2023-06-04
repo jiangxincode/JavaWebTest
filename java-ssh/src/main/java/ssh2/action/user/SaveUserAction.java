@@ -28,7 +28,7 @@ public class SaveUserAction extends ActionSupport {
 
 	@Override
 	public String execute() throws Exception {
-		// µ÷ÓÃserviceÏà¹ØµÄ·½·¨£¬Íê³ÉÊµ¼ÊµÄÒµÎñ´¦Àí
+		// è°ƒç”¨serviceç›¸å…³çš„æ–¹æ³•ï¼Œå®Œæˆå®é™…çš„ä¸šåŠ¡å¤„ç†
 		this.service.save(this.user);
 
 		return SUCCESS;

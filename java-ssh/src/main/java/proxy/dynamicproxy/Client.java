@@ -3,17 +3,17 @@ package proxy.dynamicproxy;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
 
-//¿Í»§¶Ë
+//å®¢æˆ·ç«¯
 
 public class Client {
 	public static void main(String[] args) throws Throwable {
-		RealSubject rs = new RealSubject(); // ÔÚÕâÀïÖ¸¶¨±»´úÀíÀà
+		RealSubject rs = new RealSubject(); // åœ¨è¿™é‡ŒæŒ‡å®šè¢«ä»£ç†ç±»
 
 		InvocationHandler ds = new DynamicSubject(rs);
 
 		Class<?> cls = rs.getClass();
 
-		// ÒÔÏÂÊÇÒ»´ÎĞÔÉú³É´úÀí
+		// ä»¥ä¸‹æ˜¯ä¸€æ¬¡æ€§ç”Ÿæˆä»£ç†
 
 		Subject subject = (Subject) Proxy.newProxyInstance(cls.getClassLoader(), cls.getInterfaces(), ds);
 

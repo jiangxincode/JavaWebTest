@@ -13,14 +13,14 @@ import test.test.bean.Users;
 /**
  * @author user
  * 
- *         TODO ¸ÃÀàÍê³ÉÓëusers±íÏà¹ØµÄÊı¾İ¿â²Ù×÷µÄËùÓĞ·½·¨
+ *         TODO è¯¥ç±»å®Œæˆä¸usersè¡¨ç›¸å…³çš„æ•°æ®åº“æ“ä½œçš„æ‰€æœ‰æ–¹æ³•
  */
 public class UsersDB {
 	private String resource = "users.properties";
 
 	private Properties props = null;
 
-	// µÃµ½Êı¾İ¿âÁ¬½Ó
+	// å¾—åˆ°æ•°æ®åº“è¿æ¥
 	private Connection getConnection() {
 		try {
 			props = new Properties();
@@ -34,18 +34,18 @@ public class UsersDB {
 			String username = props.getProperty("jdbc.username");
 			String password = props.getProperty("jdbc.password");
 
-			Class.forName(drivers);// ¼ÓÔØÊı¾İ¿âÇı¶¯
+			Class.forName(drivers);// åŠ è½½æ•°æ®åº“é©±åŠ¨
 
 			return DriverManager.getConnection(url, username, password);
 		} catch (Exception ex) {
 			ex.printStackTrace();
-			System.out.println("Á¬½ÓÊı¾İ¿âÒì³£·¢Éú : " + ex.getMessage());
+			System.out.println("è¿æ¥æ•°æ®åº“å¼‚å¸¸å‘ç”Ÿ : " + ex.getMessage());
 		}
 		return null;
 
 	}
 
-	// ²åÈëÒ»±Ê¼ÇÂ¼
+	// æ’å…¥ä¸€ç¬”è®°å½•
 	public void save(Users bean) {
 		try {
 			Connection con = this.getConnection();
@@ -63,17 +63,17 @@ public class UsersDB {
 			ps.setString(7, bean.getInterest());
 			ps.setString(8, bean.getRemark());
 
-			ps.executeUpdate(); // Íê³ÉÕæÕıµÄÊı¾İ¿â²åÈë
+			ps.executeUpdate(); // å®ŒæˆçœŸæ­£çš„æ•°æ®åº“æ’å…¥
 
 			con.close();
 
 		} catch (Exception ex) {
-			System.out.println("Ôö¼Ó¼ÇÂ¼Òì³£·¢Éú£º" + ex.getMessage());
+			System.out.println("å¢åŠ è®°å½•å¼‚å¸¸å‘ç”Ÿï¼š" + ex.getMessage());
 
 		}
 	}
 
-	// ¸üĞÂÒ»±Ê¼ÇÂ¼
+	// æ›´æ–°ä¸€ç¬”è®°å½•
 	public void update(Users bean) {
 		try {
 			Connection con = this.getConnection();
@@ -90,15 +90,15 @@ public class UsersDB {
 			ps.setString(6, bean.getRemark());
 			ps.setInt(7, bean.getId());
 
-			ps.executeUpdate();// ÕæÕıÍê³ÉÊı¾İµÄ¸üĞÂ
+			ps.executeUpdate();// çœŸæ­£å®Œæˆæ•°æ®çš„æ›´æ–°
 
 			con.close();
 		} catch (Exception ex) {
-			System.out.println("ĞŞ¸Ä¼ÇÂ¼Òì³£·¢Éú£º" + ex.getMessage());
+			System.out.println("ä¿®æ”¹è®°å½•å¼‚å¸¸å‘ç”Ÿï¼š" + ex.getMessage());
 		}
 	}
 
-	// É¾³ıÒ»±Ê¼ÇÂ¼
+	// åˆ é™¤ä¸€ç¬”è®°å½•
 	public void remove(int id) {
 		try {
 			Connection con = this.getConnection();
@@ -109,15 +109,15 @@ public class UsersDB {
 
 			ps.setInt(1, id);
 
-			ps.executeUpdate(); // Íê³ÉÕæÕıµÄÉ¾³ı
+			ps.executeUpdate(); // å®ŒæˆçœŸæ­£çš„åˆ é™¤
 
 			con.close();
 		} catch (Exception ex) {
-			System.out.println("É¾³ı¼ÇÂ¼Òì³£·¢Éú£º" + ex.getMessage());
+			System.out.println("åˆ é™¤è®°å½•å¼‚å¸¸å‘ç”Ÿï¼š" + ex.getMessage());
 		}
 	}
 
-	// ²éÑ¯Ò»±Ê¼ÇÂ¼
+	// æŸ¥è¯¢ä¸€ç¬”è®°å½•
 	public Users restore(int id) {
 		Users bean = null;
 		try {
@@ -143,12 +143,12 @@ public class UsersDB {
 
 			con.close();
 		} catch (Exception ex) {
-			System.out.println("²éÑ¯¼ÇÂ¼Òì³£·¢Éú£º" + ex.getMessage());
+			System.out.println("æŸ¥è¯¢è®°å½•å¼‚å¸¸å‘ç”Ÿï¼š" + ex.getMessage());
 		}
 		return bean;
 	}
 
-	// ²éÑ¯ËùÓĞ¼ÇÂ¼
+	// æŸ¥è¯¢æ‰€æœ‰è®°å½•
 	public ArrayList<Object> getAllUsers() {
 		ArrayList<Object> arrayList = new ArrayList<Object>();
 
@@ -179,7 +179,7 @@ public class UsersDB {
 
 			con.close();
 		} catch (Exception ex) {
-			System.out.println("²éÑ¯ËùÓĞ¼ÇÂ¼Òì³£·¢Éú£º" + ex.getMessage());
+			System.out.println("æŸ¥è¯¢æ‰€æœ‰è®°å½•å¼‚å¸¸å‘ç”Ÿï¼š" + ex.getMessage());
 		}
 		return arrayList;
 	}

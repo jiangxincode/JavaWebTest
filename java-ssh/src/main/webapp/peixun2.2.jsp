@@ -4,11 +4,11 @@
 
 <html>
 <head>
-<title>Ҫ�����ϰ</title>
+<title>要多加练习</title>
 </head>
 <body>
  <!--This page was loaded on <%= (new java.util.Date()).toLocaleString() %>  --> 
-��Դ�ļ��а�����ǰʱ�䡣
+在源文件中包括当前时间。
 
 <%-- This comment will not be visible in the page source --%> 
 

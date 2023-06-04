@@ -17,16 +17,16 @@ public class PersonImpl implements Person {
 
 	@Override
 	public void info() {
-		System.out.println("ÎÒµÄÃû×ÖÊÇ£º " + name + " , ½ñÄêÄêÁäÎª£º " + age);
+		System.out.println("æˆ‘çš„åå­—æ˜¯ï¼š " + name + " , ä»Šå¹´å¹´é¾„ä¸ºï¼š " + age);
 
 	}
 
 	@Override
 	public void run() {
 		if (age > 45) {
-			System.out.println("ÎÒ»¹ÄêÇá£¬±¼ÅÜÑ¸ËÙ...");
+			System.out.println("æˆ‘è¿˜å¹´è½»ï¼Œå¥”è·‘è¿…é€Ÿ...");
 		} else {
-			System.out.println("ÎÒÄêÀÏÌåÈõ£¬Ö»ÄÜÂıÅÜ...");
+			System.out.println("æˆ‘å¹´è€ä½“å¼±ï¼Œåªèƒ½æ…¢è·‘...");
 		}
 
 	}

@@ -7,11 +7,11 @@ public class BeanTest {
 	public static void main(String[] args) throws Exception {
 		XmlBeanFactory factory = new XmlBeanFactory(new ClassPathResource("applicationContext.xml"));
 
-		System.out.println("程序已经实例化BeanFactory...");
+		System.out.println("绋嬪簭宸茬粡瀹炰緥鍖朆eanFactory...");
 
 		Person p = (Person) factory.getBean("chinese");
 
-		System.out.println("程序中已经完成了chinese bean的实例化...");
+		System.out.println("绋嬪簭涓凡缁忓畬鎴愪簡chinese bean鐨勫疄渚嬪寲...");
 
 		p.test();
 	}

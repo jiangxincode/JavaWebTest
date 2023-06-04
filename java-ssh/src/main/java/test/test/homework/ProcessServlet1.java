@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * @author zl
  * 
- *         TODO Òª¸ü¸Ä´ËÉú³ÉµÄÀàĞÍ×¢ÊÍµÄÄ£°å£¬Çë×ªÖÁ ´°¿Ú £­ Ê×Ñ¡Ïî £­ Java £­ ´úÂëÑùÊ½ £­ ´úÂëÄ£°å
+ *         TODO è¦æ›´æ”¹æ­¤ç”Ÿæˆçš„ç±»å‹æ³¨é‡Šçš„æ¨¡æ¿ï¼Œè¯·è½¬è‡³ çª—å£ ï¼ é¦–é€‰é¡¹ ï¼ Java ï¼ ä»£ç æ ·å¼ ï¼ ä»£ç æ¨¡æ¿
  */
 public class ProcessServlet1 extends HttpServlet {
 
@@ -47,32 +47,32 @@ public class ProcessServlet1 extends HttpServlet {
 		String remark = request.getParameter("remark");
 
 		if ("".equals(username)) {
-			list.add("ÓÃ»§ÃûÎª¿Õ");
+			list.add("ç”¨æˆ·åä¸ºç©º");
 		} else if (username.length() < 4) {
-			list.add("ÓÃ»§Ãû³¤¶È¹ı¶Ì");
+			list.add("ç”¨æˆ·åé•¿åº¦è¿‡çŸ­");
 		} else if (username.length() > 10) {
-			list.add("ÓÃ»§Ãû³¤¶È¹ı³¤");
+			list.add("ç”¨æˆ·åé•¿åº¦è¿‡é•¿");
 		}
 
 		if ("".equals(password)) {
-			list.add("ÃÜÂëÎª¿Õ");
+			list.add("å¯†ç ä¸ºç©º");
 		} else if (password.length() < 4) {
-			list.add("ÃÜÂë³¤¶È¹ı¶Ì");
+			list.add("å¯†ç é•¿åº¦è¿‡çŸ­");
 		} else if (password.length() > 10) {
-			list.add("ÃÜÂë³¤¶È¹ı³¤");
+			list.add("å¯†ç é•¿åº¦è¿‡é•¿");
 		}
 		if (null == sex) {
-			list.add("ĞÔ±ğÃ»ÓĞÑ¡Ôñ");
+			list.add("æ€§åˆ«æ²¡æœ‰é€‰æ‹©");
 		}
 
 		if (null == interest) {
-			list.add("ĞËÈ¤ÖÁÉÙÑ¡ÔñÒ»¸ö");
+			list.add("å…´è¶£è‡³å°‘é€‰æ‹©ä¸€ä¸ª");
 		} else if (interest.length > 3) {
-			list.add("ĞËÈ¤×î¶àÑ¡ÔñÈı¸ö");
+			list.add("å…´è¶£æœ€å¤šé€‰æ‹©ä¸‰ä¸ª");
 		}
 
 		if ("".equals(remark)) {
-			list.add("ËµÃ÷Ã»ÓĞÌîĞ´");
+			list.add("è¯´æ˜æ²¡æœ‰å¡«å†™");
 		}
 
 		if (list.isEmpty()) {

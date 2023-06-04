@@ -19,7 +19,7 @@ public class NoteServlet extends HttpServlet {
 		response.setContentType(CONTENT_TYPE);
 		PrintWriter out = response.getWriter();
 		out.println("<html>");
-		out.println("<head><title>ÁôÑÔ±¡</title></head>");
+		out.println("<head><title>ÃÃ´Ã‘Ã”Â±Â¡</title></head>");
 		out.println("<body>");
 
 		String username = request.getParameter("username");
@@ -30,16 +30,16 @@ public class NoteServlet extends HttpServlet {
 			content = new String(content.getBytes("ISO-8859-1"), "GB2312");
 
 		if (content != null && !content.equals(""))
-			out.println("<p>" + username + "µÄÁôÑÔÎª£º" + content + "</P>");
+			out.println("<p>" + username + "ÂµÃ„ÃÃ´Ã‘Ã”ÃÂªÂ£Âº" + content + "</P>");
 
 		out.println(" <FORM  action=" + request.getContextPath() + "/NoteServlet method=POST>");
 
-		out.println("<b>ĞÕÃû:</b>");
+		out.println("<b>ÃÃ•ÃƒÃ»:</b>");
 		out.println("<input type=text size=10 name=username ><br>");
-		out.println("<b>ÁôÑÔ:</b><br>");
+		out.println("<b>ÃÃ´Ã‘Ã”:</b><br>");
 		out.println("<textarea name=content rows=5 cols=20  wrap></textarea><br>");
 		out.println("<BR>");
-		out.println("<input type=submit  value=Ìá½»>");
+		out.println("<input type=submit  value=ÃŒÃ¡Â½Â»>");
 		out.println("</form>");
 		out.println("</body></html>");
 	}

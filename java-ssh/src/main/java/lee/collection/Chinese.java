@@ -18,7 +18,7 @@ public class Chinese implements Person {
 	private Set axes = new HashSet<>();
 
 	public Chinese() {
-		System.out.println("Spring实例化主调bean：Chinese实例...");
+		System.out.println("Spring瀹炰緥鍖栦富璋僢ean锛欳hinese瀹炰緥...");
 	}
 
 	public void setSchools(List l) {

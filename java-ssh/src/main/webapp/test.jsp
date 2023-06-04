@@ -26,9 +26,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
     <form action="result.jsp" method="get">
 <!--     <form action="test/SecondServlet" method="get"> -->
-	ÓÃ»§£º<input type="text" name="username" size="20"><br>
-	ÃÜÂë£º<input type="password" name="password" size="20"><br>
-	<input type="submit" value="Ìá½»">&nbsp;&nbsp;&nbsp;<input type="reset" value="ÖØÖÃ">
+	ç”¨æˆ·ï¼š<input type="text" name="username" size="20"><br>
+	å¯†ç ï¼š<input type="password" name="password" size="20"><br>
+	<input type="submit" value="æäº¤">&nbsp;&nbsp;&nbsp;<input type="reset" value="é‡ç½®">
 	</form>
     
   </body>

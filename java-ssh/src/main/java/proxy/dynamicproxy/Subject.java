@@ -1,6 +1,6 @@
 package proxy.dynamicproxy;
 
-//³éÏó½ÇÉ«(Ö®Ç°ÊÇ³éÏóÀà£¬´Ë´¦Ó¦¸ÄÎª½Ó¿Ú)£º 
+//æŠ½è±¡è§’è‰²(ä¹‹å‰æ˜¯æŠ½è±¡ç±»ï¼Œæ­¤å¤„åº”æ”¹ä¸ºæ¥å£)ï¼š 
 
 public interface Subject {
 	public void request();

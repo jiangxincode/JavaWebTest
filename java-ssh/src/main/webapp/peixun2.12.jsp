@@ -1,11 +1,11 @@
-<%--session对象示例，peixun2.12.jsp文件代码--%>
+<%--session瀵硅薄绀轰緥锛宲eixun2.12.jsp鏂囦欢浠ｇ爜--%>
 
 <%@ page contentType="text/html;charset=gb2312" pageEncoding="gbk"%>
 <html>
 <head><title>session</title></head>
 <body>
 <form method="post" action="post1.jsp">
-请输入您的姓名： 
+璇疯緭鍏ユ偍鐨勫鍚嶏細 
 <input type="text" name="username">
 <input type="submit" value="submit">
 </form >

@@ -12,14 +12,14 @@ Users bean = usersDB.restore(Integer.parseInt(id));
 <body bgcolor="#FFFFFF">
 <table width="100%" align="center" align="center">
 <tr bgcolor="gray">
-<td>ÓÃ»§Ãû</td>
-<td>ÃÜÂë</td>
-<td>ÕæÊµĞÕÃû</td>
-<td>ÉúÈÕ</td>
-<td>×¢²áÊ±¼ä</td>
-<td>ĞÔ±ğ</td>
-<td>°®ºÃ</td>
-<td>ËµÃ÷</td>
+<td>ç”¨æˆ·å</td>
+<td>å¯†ç </td>
+<td>çœŸå®å§“å</td>
+<td>ç”Ÿæ—¥</td>
+<td>æ³¨å†Œæ—¶é—´</td>
+<td>æ€§åˆ«</td>
+<td>çˆ±å¥½</td>
+<td>è¯´æ˜</td>
 </tr>
 <tr>
 <td><%= bean.getUsername()%></td>
@@ -27,13 +27,13 @@ Users bean = usersDB.restore(Integer.parseInt(id));
 <td><%= bean.getTruename()%></td>
 <td><%= bean.getBirthday()%></td>
 <td><%= bean.getRegisterdate()%></td>
-<td><%= "0".equals(bean.getSex()) ? "ÄĞ" : "Å®"%></td>
+<td><%= "0".equals(bean.getSex()) ? "ç”·" : "å¥³"%></td>
 <td>
 <%String interest = bean.getInterest();%>
-<%= interest.indexOf("0") != -1 ? "×ãÇò" : ""%>&nbsp;
-<%= interest.indexOf("1") != -1 ? "ÀºÇò" : ""%>&nbsp;
-<%= interest.indexOf("2") != -1 ? "ÅÅÇò" : ""%>&nbsp;
-<%= interest.indexOf("3") != -1 ? "ÓğÃ«Çò" : ""%>&nbsp;
+<%= interest.indexOf("0") != -1 ? "è¶³çƒ" : ""%>&nbsp;
+<%= interest.indexOf("1") != -1 ? "ç¯®çƒ" : ""%>&nbsp;
+<%= interest.indexOf("2") != -1 ? "æ’çƒ" : ""%>&nbsp;
+<%= interest.indexOf("3") != -1 ? "ç¾½æ¯›çƒ" : ""%>&nbsp;
 
 
 

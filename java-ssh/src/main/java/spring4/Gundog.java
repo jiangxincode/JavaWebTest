@@ -17,7 +17,7 @@ public class Gundog implements Dog {
 
 	@Override
 	public String run() {
-		return "我是一只叫" + getName() + "的猎犬，奔跑速度...";
+		return "鎴戞槸涓�鍙彨" + getName() + "鐨勭寧鐘紝濂旇窇閫熷害...";
 	}
 
 }

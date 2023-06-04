@@ -2,10 +2,10 @@ package lee.collection;
 
 public class SteelAxe implements Axe {
 	public SteelAxe() {
-		System.out.println("SpringÊµÀı»¯ÒÀÀµbean£ºSteelAxeÊµÀı...");
+		System.out.println("SpringèŒ„ì ˆëºå¼©ìœ³beanï¼šSteelAxeèŒ„ì ˆ...");
 	}
 
 	public String chop() {
-		return "¸Ö¸«¿³²ñÕæ¿ì";
+		return "ë©€ë¦Šì—¿ë€œå»¬ìš°";
 	}
 }

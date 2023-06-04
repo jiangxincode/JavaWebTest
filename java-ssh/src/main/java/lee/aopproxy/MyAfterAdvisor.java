@@ -8,11 +8,11 @@ public class MyAfterAdvisor implements AfterReturningAdvice {
 
 	@Override
 	public void afterReturning(Object arg0, Method arg1, Object[] arg2, Object arg3) throws Throwable {
-		System.out.println("·½·¨µ÷ÓÃ½áÊø...");
-		System.out.println("Ä¿±ê·½·¨µÄ·µ»ØÖµÊÇ£º" + arg0);
-		System.out.println("Ä¿±ê·½·¨ÊÇ£º" + arg1);
-		System.out.println("Ä¿±ê·½·¨µÄ²ÎÊıÊÇ£º" + arg2);
-		System.out.println("Ä¿±ê¶ÔÏóÊÇ£º " + arg3);
+		System.out.println("æ–¹æ³•è°ƒç”¨ç»“æŸ...");
+		System.out.println("ç›®æ ‡æ–¹æ³•çš„è¿”å›å€¼æ˜¯ï¼š" + arg0);
+		System.out.println("ç›®æ ‡æ–¹æ³•æ˜¯ï¼š" + arg1);
+		System.out.println("ç›®æ ‡æ–¹æ³•çš„å‚æ•°æ˜¯ï¼š" + arg2);
+		System.out.println("ç›®æ ‡å¯¹è±¡æ˜¯ï¼š " + arg3);
 		
 	}
 

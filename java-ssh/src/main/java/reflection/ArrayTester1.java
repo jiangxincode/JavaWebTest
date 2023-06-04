@@ -5,11 +5,11 @@ import java.lang.reflect.Array;
 public class ArrayTester1 {
 	public static void main(String args[]) throws Exception {
 		Class classType = Class.forName("java.lang.String");
-		// ´´½¨Ò»¸ö³¤¶ÈÎª10µÄ×Ö·û´®Êı×é
+		// åˆ›å»ºä¸€ä¸ªé•¿åº¦ä¸º10çš„å­—ç¬¦ä¸²æ•°ç»„
 		Object array = Array.newInstance(classType, 10);
-		// °ÑË÷ÒıÎ»ÖÃÎª5µÄÔªËØÉèÎª"hello"
+		// æŠŠç´¢å¼•ä½ç½®ä¸º5çš„å…ƒç´ è®¾ä¸º"hello"
 		Array.set(array, 5, "hello");
-		// »ñµÃË÷ÒıÎ»ÖÃÎª5µÄÔªËØµÄÖµ
+		// è·å¾—ç´¢å¼•ä½ç½®ä¸º5çš„å…ƒç´ çš„å€¼
 		String s = (String) Array.get(array, 5);
 		System.out.println(s);
 	}
