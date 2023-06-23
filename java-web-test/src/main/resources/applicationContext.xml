@@ -3,7 +3,6 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:jaxws="http://cxf.apache.org/jaxws"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
 	http://www.springframework.org/schema/tx
@@ -11,8 +10,7 @@
   	http://www.springframework.org/schema/aop
   	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
   	http://www.springframework.org/schema/context
-    http://www.springframework.org/schema/context/spring-context.xsd
-    http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+    http://www.springframework.org/schema/context/spring-context.xsd>
 
 	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="location" value="classpath:javawebtest.properties"/>
@@ -66,26 +64,6 @@
 	<bean id="logService" class="edu.jiangxin.statistics.service.impl.LogServiceImpl">
 		<property name="logDao" ref="logDao" />
 	</bean>
-
-
-	<bean id="employeeManagerImpl"
-		class="edu.jiangxin.webservice.employeemanager.EmployeeManagerImpl"></bean>
-	<!-- 配置cxf 地址： http://192.168.114.10:8080/CXF_Server/ws/employeeManager
-		组成 ： http://192.168.114.10:8080 +CXF_Server（ 项目名）+ws（过滤的路径）+/employeeManager(自定义部分)
-		服务类 ： 服务的实现类： 拦截器 -->
-	<jaxws:server address="/employeeManager"
-		serviceClass="edu.jiangxin.webservice.employeemanager.EmployeeManager">
-		<jaxws:serviceBean>
-			<ref bean="employeeManagerImpl" />
-		</jaxws:serviceBean>
-		<!-- 配置输入显示日志信息的拦截器 -->
-		<jaxws:inInterceptors>
-			<bean class="org.apache.cxf.interceptor.LoggingInInterceptor"></bean>
-		</jaxws:inInterceptors>
-		<jaxws:outInterceptors>
-			<bean class="org.apache.cxf.interceptor.LoggingOutInterceptor"></bean>
-		</jaxws:outInterceptors>
-	</jaxws:server>
 
 
 	<!-- 一个简单的演示spring最基本用法的例子。 -->

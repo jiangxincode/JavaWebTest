@@ -17,7 +17,6 @@
 
      <properties>
           <jersey.version>2.39.1</jersey.version>
-          <cxf.version>3.4.1</cxf.version>
      </properties>
      <dependencies>
           <dependency>
@@ -147,16 +146,6 @@
                <version>${jersey.version}</version>
           </dependency>
           <dependency>
-               <groupId>org.apache.cxf</groupId>
-               <artifactId>cxf-rt-frontend-jaxws</artifactId>
-               <version>${cxf.version}</version>
-          </dependency>
-          <dependency>
-               <groupId>org.apache.cxf</groupId>
-               <artifactId>cxf-rt-frontend-jaxrs</artifactId>
-               <version>${cxf.version}</version>
-          </dependency>
-          <dependency>
                <groupId>org.freemarker</groupId>
                <artifactId>freemarker</artifactId>
                <version>2.3.32</version>
@@ -196,21 +185,6 @@
                <groupId>net.sourceforge.jchardet</groupId>
                <artifactId>jchardet</artifactId>
                <version>1.0</version>
-          </dependency>
-
-          <!-- https://stackoverflow.com/questions/48204141/replacements-for-deprecated-jpms-modules-with-java-ee-apis -->
-          <!-- API -->
-          <dependency>
-               <groupId>jakarta.xml.ws</groupId>
-               <artifactId>jakarta.xml.ws-api</artifactId>
-               <version>2.3.3</version>
-          </dependency>
-
-          <!-- Runtime -->
-          <dependency>
-               <groupId>com.sun.xml.ws</groupId>
-               <artifactId>jaxws-rt</artifactId>
-               <version>2.3.3</version>
           </dependency>
      </dependencies>
      <build>
@@ -274,48 +248,6 @@
                                    </configuration>
                               </execution>
                          </executions>
-                    </plugin>
-                    <plugin>
-                         <groupId>org.codehaus.mojo</groupId>
-                         <artifactId>jaxws-maven-plugin</artifactId>
-                         <version>2.6</version>
-                         <executions>
-                              <execution>
-                                   <goals>
-                                        <goal>wsimport</goal>
-                                   </goals>
-                                   <configuration>
-                                        <args>
-                                             <arg>-encoding</arg>
-                                             <arg>UTF-8</arg>
-                                        </args>
-                                        <wsdlFiles>
-                                             <wsdlFile>${basedir}/src/main/resources/wsdl/jobservice.xml</wsdlFile>
-                                             <wsdlFile>${basedir}/src/main/resources/wsdl/phoneService.xml</wsdlFile>
-                                             <wsdlFile>${basedir}/src/main/resources/wsdl/languangeService.xml</wsdlFile>
-                                             <wsdlFile>${basedir}/src/main/resources/wsdl/WeatherWS.xml</wsdlFile>
-                                             <wsdlFile>${basedir}/src/main/resources/wsdl/MobileCodeWS.xml</wsdlFile>
-                                        </wsdlFiles>
-                                   </configuration>
-                                   <id>wsimport-generate-egtestreportengine</id>
-                                   <phase>generate-sources</phase>
-                              </execution>
-                         </executions>
-                         <dependencies>
-                              <dependency>
-                                   <groupId>javax.xml</groupId>
-                                   <artifactId>webservices-api</artifactId>
-                                   <version>2.0.1</version>
-                              </dependency>
-                         </dependencies>
-                         <configuration>
-                              <sourceDestDir>${project.build.directory}/generated-sources/jaxws-wsimport</sourceDestDir>
-                              <xnocompile>true</xnocompile>
-                              <verbose>true</verbose>
-                              <extension>true</extension>
-                              <catalog>${basedir}/src/jax-ws-catalog.xml</catalog>
-                              <target>2.0</target>
-                         </configuration>
                     </plugin>
                     <plugin>
                          <groupId>org.apache.maven.plugins</groupId>

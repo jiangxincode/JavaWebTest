@@ -77,14 +77,6 @@
 * 控制层在filter，显示层配置在*.xml，逻辑层还是需要servlet来完成
 * eclipse快捷键
 
-
-webservice学习顺序:
-edu.jiangxin.webservice.mobilecodeservice
-edu.jiangxin.webservice.phoneservice
-edu.jiangxin.webservice.jobservice
-edu.jiangxin.webservice.weatherservice
-edu.jiangxin.webservice.languageservice (cxf)
-
 ## 圣思园
 
 shengsiyuansrc/

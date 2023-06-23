@@ -77,14 +77,6 @@
           <url-pattern>/rest/*</url-pattern>
      </servlet-mapping>
      <!-- for Jersey end -->
-     <servlet>
-          <servlet-name>WeatherServlet</servlet-name>
-          <servlet-class>edu.jiangxin.webservice.weatherservice.WeatherServlet</servlet-class>
-     </servlet>
-     <servlet-mapping>
-          <servlet-name>WeatherServlet</servlet-name>
-          <url-pattern>/JSP/WeatherService/weatherServlet</url-pattern>
-     </servlet-mapping>
      <filter>
           <filter-name>ClickFilter</filter-name>
           <filter-class>edu.jiangxin.filter.ClickFilter</filter-class>
@@ -93,16 +85,6 @@
           <filter-name>ClickFilter</filter-name>
           <url-pattern>/*</url-pattern>
      </filter-mapping>
-     <!-- 添加 CXF 的Servlet ，处理 webservice的请求 -->
-     <servlet>
-          <servlet-name>cxf</servlet-name>
-          <servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
-          <load-on-startup>0</load-on-startup>
-     </servlet>
-     <servlet-mapping>
-          <servlet-name>cxf</servlet-name>
-          <url-pattern>/ws/*</url-pattern>
-     </servlet-mapping>
      <jsp-config>
           <taglib>
                <taglib-uri>http://javaxp.net/xl</taglib-uri>
