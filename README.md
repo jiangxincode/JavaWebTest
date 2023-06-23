@@ -120,14 +120,6 @@ Some tests and exercises in Java.
 * 原工程：component
 * 所在包：cn.itcast.storm.component
 
-# java-design-patterns
-
-大话设计模式 程杰 原书使用C#作为样例语言，本项目翻译成Java语言
-
-## 自己添加
-
-* 委托模式
-
 # java-encrypt-decrypt
 
 Java加密与解密的艺术
