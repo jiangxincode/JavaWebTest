@@ -26,7 +26,6 @@
     <li><a href="aloys.html">Static page demo(HTML+CSS+JS)</a></li>
     <li><a href="">Struts</a>
         <ol>
-            <li><a href="struts/freeMarkerAction">FreeMarker</a></li>
             <li><a href="struts/getXMLAction">XML</a></li>
             <li><a href="struts/getJsonAction">JSON</a></li>
             <li><a href="struts/getJsonAction2">JSON2</a></li>
