@@ -1,10 +1,10 @@
 package cn.itcast.lucene.query;
 
 import org.apache.lucene.document.Document;
+import org.apache.lucene.document.LongPoint;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.search.BooleanQuery;
-import org.apache.lucene.search.NumericRangeQuery;
 import org.apache.lucene.search.PhraseQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.TermQuery;
@@ -58,7 +58,8 @@ public class QueryTest {
 	 */
 	@Test
 	public void testRangeQuery() {
-		Query query = NumericRangeQuery.newLongRange("size", 50L, 100L, false, false);
+		//Query query = NumericRangeQuery.newLongRange("size", 50L, 100L, false, false);
+		Query query = LongPoint.newRangeQuery("size", 500L, 100L);
 		queryAndPrintResult(query);
 	}
 
@@ -93,13 +94,12 @@ public class QueryTest {
 	 */
 	@Test
 	public void testPhraseQuery() {
-		PhraseQuery phraseQuery = new PhraseQuery();
+		PhraseQuery phraseQuery = new PhraseQuery.Builder()
+				.add(new Term("content", "绅士"))
+				.add(new Term("content", "饭店"))
+				.setSlop(2).build();
 		// phraseQuery.add(new Term("content", "绅士"), 1);
 		// phraseQuery.add(new Term("content", "饭店"), 4);
-
-		phraseQuery.add(new Term("content", "绅士"));
-		phraseQuery.add(new Term("content", "饭店"));
-		phraseQuery.setSlop(2);
 
 		queryAndPrintResult(phraseQuery);
 	}
@@ -116,19 +116,17 @@ public class QueryTest {
 	@Test
 	public void testBooleanQuery() {
 		// 条件1
-		PhraseQuery query1 = new PhraseQuery();
-		query1.add(new Term("content", "绅士"));
-		query1.add(new Term("content", "饭店"));
-		query1.setSlop(2);
+		PhraseQuery query1 = new PhraseQuery.Builder()
+				.add(new Term("content", "绅士"))
+				.add(new Term("content", "饭店"))
+				.setSlop(2).build();
 
 		// 条件2
-		Query query2 = NumericRangeQuery.newLongRange("size", 500L, 1000L, false, false);
+		Query query2 = LongPoint.newRangeQuery("size", 500L, 1000L);
 
 		// 组合
-		BooleanQuery boolQuery = new BooleanQuery();
-		boolQuery.add(query1, Occur.MUST);
-		boolQuery.add(query2, Occur.SHOULD);
-
+		BooleanQuery boolQuery = new BooleanQuery.Builder().add(query1, Occur.MUST).add(query2, Occur.MUST_NOT)
+				.build();
 		queryAndPrintResult(boolQuery);
 	}
 

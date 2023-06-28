@@ -18,27 +18,27 @@ import cn.itcast.lucene.utils.File2DocumentUtils;
 public class DirectoryTest {
 	String filePath = DirectoryTest.class.getResource("/cn/itcast/lucene/I_have_a_dream_en.txt").getPath();
 	String indexPath = DirectoryTest.class.getResource("").getPath();
-	Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_47);
+	Analyzer analyzer = new StandardAnalyzer();
 
 	@Test
 	public void test1()throws Exception {
 		Directory dir = new RAMDirectory();
 		Document doc = File2DocumentUtils.file2Document(filePath);
-		IndexWriterConfig conf = new IndexWriterConfig(Version.LUCENE_47, analyzer);
+		IndexWriterConfig conf = new IndexWriterConfig(analyzer);
 		IndexWriter indexWriter = new IndexWriter(dir, conf);
 		indexWriter.addDocument(doc);
 		indexWriter.close();
 	}
 
-	//@Test
+	@Test
 	public void test2() throws Exception{
-		Directory fsDir = FSDirectory.open(new File(indexPath));
+		FSDirectory fsDir = FSDirectory.open(new File(indexPath).toPath());
 
 		// 1，启动时读取
 		Directory ramDir = new RAMDirectory(fsDir, null);
 
 		// 运行程序时操作 ramDir
-		IndexWriterConfig conf = new IndexWriterConfig(Version.LUCENE_47, analyzer);
+		IndexWriterConfig conf = new IndexWriterConfig(analyzer);
 		IndexWriter ramIndexWriter = new IndexWriter(ramDir, conf);
 		// 添加 Document
 		Document doc = File2DocumentUtils.file2Document(filePath);
@@ -46,7 +46,7 @@ public class DirectoryTest {
 		ramIndexWriter.close();
 
 		// 2，退出时保存
-		IndexWriterConfig conf1 = new IndexWriterConfig(Version.LUCENE_47, analyzer);
+		IndexWriterConfig conf1 = new IndexWriterConfig(analyzer);
 		IndexWriter fsIndexWriter = new IndexWriter(fsDir, conf1);
 		fsIndexWriter.addIndexes(new Directory[]{ramDir});
 		fsIndexWriter.close();
@@ -55,8 +55,8 @@ public class DirectoryTest {
 
 	@Test
 	public void test3() throws Exception{
-		Directory fsDir = FSDirectory.open(new File(indexPath));
-		IndexWriterConfig conf = new IndexWriterConfig(Version.LUCENE_47, analyzer);
+		Directory fsDir = FSDirectory.open(new File(indexPath).toPath());
+		IndexWriterConfig conf = new IndexWriterConfig(analyzer);
 		IndexWriter fsIndexWriter = new IndexWriter(fsDir, conf);
 		fsIndexWriter.close();
 	}

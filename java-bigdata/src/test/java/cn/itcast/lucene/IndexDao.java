@@ -17,8 +17,6 @@ import org.apache.lucene.index.Term;
 import org.apache.lucene.queryparser.classic.MultiFieldQueryParser;
 import org.apache.lucene.queryparser.classic.QueryParser;
 import org.apache.lucene.index.IndexWriterConfig;
-import org.apache.lucene.search.FieldCacheRangeFilter;
-import org.apache.lucene.search.Filter;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
@@ -33,13 +31,12 @@ import org.apache.lucene.search.highlight.Scorer;
 import org.apache.lucene.search.highlight.SimpleFragmenter;
 import org.apache.lucene.search.highlight.SimpleHTMLFormatter;
 import org.apache.lucene.store.RAMDirectory;
-import org.apache.lucene.util.Version;
 
 import cn.itcast.lucene.utils.File2DocumentUtils;
 
 public class IndexDao {
 
-	Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_47);
+	Analyzer analyzer = new StandardAnalyzer();
 	//Analyzer analyzer = new MMAnalyzer();// 词库分词
 
 	RAMDirectory dir = new RAMDirectory();
@@ -49,7 +46,7 @@ public class IndexDao {
 	 */
 	public void save(Document doc) {
 
-		IndexWriterConfig conf = new IndexWriterConfig(Version.LUCENE_47, analyzer);
+		IndexWriterConfig conf = new IndexWriterConfig(analyzer);
 		IndexWriter indexWriter = null;
 		try {
 			indexWriter = new IndexWriter(dir, conf);
@@ -76,7 +73,7 @@ public class IndexDao {
 	 *
 	 */
 	public void delete(Term term) {
-		IndexWriterConfig conf = new IndexWriterConfig(Version.LUCENE_47, analyzer);
+		IndexWriterConfig conf = new IndexWriterConfig(analyzer);
 		IndexWriter indexWriter = null;
 		try {
 			indexWriter = new IndexWriter(dir, conf);
@@ -101,7 +98,7 @@ public class IndexDao {
 	 * </pre>
 	 */
 	public void update(Term term, Document doc) {
-		IndexWriterConfig conf = new IndexWriterConfig(Version.LUCENE_47, analyzer);
+		IndexWriterConfig conf = new IndexWriterConfig(analyzer);
 		IndexWriter indexWriter = null;
 		try {
 			indexWriter = new IndexWriter(dir, conf);
@@ -133,7 +130,7 @@ public class IndexDao {
 			// boosts.put("name", 3f);
 			boosts.put("content", 1.0f); //默认为1.0f
 
-			QueryParser queryParser = new MultiFieldQueryParser(Version.LUCENE_47, fields, analyzer, boosts);
+			QueryParser queryParser = new MultiFieldQueryParser(fields, analyzer, boosts);
 			Query query = queryParser.parse(queryString);
 
 			return search(query, firstResult, maxResults);
@@ -148,16 +145,16 @@ public class IndexDao {
 		try {
 			IndexReader reader = DirectoryReader.open(dir);
 			indexSearcher = new IndexSearcher(reader);
-			Filter filter = FieldCacheRangeFilter.newLongRange("size", 0L, 100000L, true, true);
+			//Filter filter = FieldCacheRangeFilter.newLongRange("size", 0L, 100000L, true, true);
 
 			// 排序
 			Sort sort = new Sort();
 			sort.setSort(new SortField("size", SortField.Type.LONG)); // 默认为升序
 			// sort.setSort(new SortField("size", true));
+			TopDocs topDocs = indexSearcher.search(query, 10000, sort);
+			//TopDocs topDocs = indexSearcher.search(query, filter, 10000, sort);
 
-			TopDocs topDocs = indexSearcher.search(query, filter, 10000, sort);
-
-			int recordCount = topDocs.totalHits;
+			int recordCount = (int)topDocs.totalHits.value;
 			List<Document> recordList = new ArrayList<Document>();
 
 			// 准备高亮器
@@ -170,7 +167,7 @@ public class IndexDao {
 			// ==============
 
 			// 取出当前页的数据
-			int end = Math.min(firstResult + maxResults, topDocs.totalHits);
+			int end = Math.min(firstResult + maxResults, (int)topDocs.totalHits.value);
 			for (int i = firstResult; i < end; i++) {
 				ScoreDoc scoreDoc = topDocs.scoreDocs[i];
 
