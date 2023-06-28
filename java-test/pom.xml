@@ -16,7 +16,7 @@
 
     <properties>
         <poi.version>5.2.3</poi.version>
-        <drools.version>8.39.0.Final</drools.version>
+        <drools.version>8.40.0.Final</drools.version>
     </properties>
 
     <dependencies>
@@ -71,7 +71,7 @@
         <dependency>
             <groupId>com.jcraft</groupId>
             <artifactId>jsch</artifactId>
-            <version>0.1.54</version>
+            <version>0.1.55</version>
         </dependency>
         <dependency>
             <groupId>net.sourceforge.tess4j</groupId>
@@ -92,7 +92,7 @@
         <dependency>
             <groupId>com.ibm.icu</groupId>
             <artifactId>icu4j</artifactId>
-            <version>73.1</version>
+            <version>73.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
