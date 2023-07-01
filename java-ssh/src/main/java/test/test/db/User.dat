@@ -1,4 +1,0 @@
-name varchar(16) not null,password varchar(8) not null,email varchar(40) null,www varchar(50) null,tel varchar(20) null,address varchar(50) null,postcode varchar(10) null
-'zhangsan','123','zhang@hotmail.com','www.hotmail.com','123456','China','568974'
-'fdsfds','3333','rerere@hotmail.com','www.sohu.com','343434','fsdfsdaf','568974'
-'fsdfsd','3343','fsdfsdfsd@yahoo.com','www.google.com','566565','usa','434343'
