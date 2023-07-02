@@ -1,4 +1,4 @@
-package com.yuqiaotech.helloj2ee.xml;
+package edu.jiangxin.xml;
 
 import java.io.File;
 import java.io.IOException;
@@ -23,7 +23,7 @@ public class XSLTSample {
 	 * 使用Transformer和xslt
 	 *
 	 */
-	public static void main(String arge[])
+	public static void main(String[] arge)
 			throws ParserConfigurationException, SAXException, IOException, TransformerException {
 
 		String resultPath = XSLTSample.class.getResource("/").getPath() + "saveByTransformer.html";

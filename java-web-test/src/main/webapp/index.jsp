@@ -39,9 +39,6 @@
     </li>
     <li><a href="rest/hello">Jersey demo 1</a></li>
     <li><a href="rest/contacts">Jersey demo 2</a></li>
-    <li><a href="JSP/GuessNumberJsp/input.jsp">猜数字，采用JSP实</a></li>
-    <li><a href="GuessNumber">猜数字，使用Servlet和JSP实现</a></li>
-    <li><a href="JSP/GuessNumberMVC/index.jsp">猜数字，MVC</a></li>
     <li><a href="Click">历史访问量统计</a></li>
     <li><a href="BookAdmin">数据库应用</a></li>
     <li><a href="JSP/MongoDB/mongodb.jsp">MongoDB连接池</a></li>

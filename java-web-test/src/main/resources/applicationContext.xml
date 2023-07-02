@@ -65,54 +65,6 @@
 		<property name="logDao" ref="logDao" />
 	</bean>
 
-
-	<!-- 一个简单的演示spring最基本用法的例子。 -->
-	<!-- 构造函数注入 -->
-	<bean id="greetingService" class="com.yuqiaotech.helloj2ee.spring.GreetingServiceImpl">
-		<constructor-arg value="hello Tom" />
-	</bean>
-	<bean id="greetingService2" class="com.yuqiaotech.helloj2ee.spring.GreetingServiceImpl2">
-		<property name="greetingTo" value="Jack" />
-	</bean>
-	<!-- setter注入 -->
-	<!-- <bean id="greetingService" -->
-	<!-- class="com.yuqiaotech.helloj2ee.spring.GreetingServiceImpl2"> -->
-	<!-- <property name="greetingTo" value="Jack" /> -->
-	<!-- </bean> -->
-	<!-- p空间注入 如果是引用的话，p:proName-ref="refId" -->
-	<!-- <bean id="greetingService" -->
-	<!-- class="com.yuqiaotech.helloj2ee.spring.GreetingServiceImpl2" -->
-	<!-- p:greetingTo="Jack" -->
-	<!-- > -->
-	<!-- </bean> -->
-
-	<!-- <property name="fred.bob.sammy" value="123" /> -->
-	<!-- In order for this to work, the fred property of foo, and the bob property
-		of fred must not be null be non-null after the bean is constructed, or a
-		NullPointerException will be thrown. -->
-
-	<!-- AOP的一种使用方式 -->
-	<aop:config>
-		<aop:aspect ref="loggingAopTest">
-			<aop:pointcut id="questPointcut"
-				expression="execution(* *.sayGreeting(..)) and target(bean)" />
-
-			<aop:before method="loggingBefore" pointcut-ref="questPointcut"
-				arg-names="bean" />
-
-			<aop:after-returning method="loggingAfter"
-				pointcut-ref="questPointcut" arg-names="bean" />
-
-			<aop:around pointcut="execution(* *.sayGreeting(..))"
-				method="invoke" />
-
-			<aop:after-throwing
-				pointcut="execution(* com.yuqiaotech.helloj2ee.spring.GreetingService.sayGreeting(..))"
-				throwing="throwable" method="afterThrowing" />
-		</aop:aspect>
-	</aop:config>
-	<bean id="loggingAopTest" class="com.yuqiaotech.helloj2ee.spring.LoggingAop"></bean>
-
 	<context:component-scan base-package="edu.jiangxin" />
 	<context:mbean-export />
 

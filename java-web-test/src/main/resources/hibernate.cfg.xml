@@ -20,12 +20,6 @@
 		<property name="format_sql">true</property>
 		<property name="hbm2ddl.auto">create</property>
 
-		<!-- List of XML mapping files -->
-<!--		<mapping resource="com/yuqiaotech/helloj2ee/hibernate/sample1/Address.hbm.xml" />
-		<mapping resource="com/yuqiaotech/helloj2ee/hibernate/sample1/Person.hbm.xml" />
-		<mapping resource="com/yuqiaotech/helloj2ee/hibernate/Message.hbm.xml" />
-		<mapping class="com.yuqiaotech.helloj2ee.hibernate.User"/>-->
-
 		<mapping resource="com/shengsiyuan/hibernate01/Person.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>

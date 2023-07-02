@@ -67,7 +67,6 @@
 * tomcat修改缓存的目的
 * 权限，规则 filter /*
 * listerner
-* $(param.guess)与request.getParameter("guess")区别（null）
 * forward和include
 * service和doGet等的关系
 * EL表达式变量的作用范围
