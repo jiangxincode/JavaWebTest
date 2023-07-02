@@ -9,7 +9,7 @@ import cn.itcast.storm.reliability.spout.MessageSpout;
 
 public class TopoMain {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		TopologyBuilder builder = new TopologyBuilder();
 		builder.setSpout("spout", new MessageSpout());
 		builder.setBolt("bolt-1", new SpliterBolt()).shuffleGrouping("spout");

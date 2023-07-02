@@ -2,6 +2,7 @@ package cn.itcast.storm.storm.topology;
 
 import org.apache.storm.Config;
 import org.apache.storm.LocalCluster;
+import org.apache.storm.thrift.TException;
 import org.apache.storm.topology.TopologyBuilder;
 import cn.itcast.storm.storm.bolt.WordCounter;
 import cn.itcast.storm.storm.bolt.WordSpliter;
@@ -14,7 +15,7 @@ public class WordCountTopo {
 	 *
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		if (args.length != 2) {
 			System.err.println("Usage: inputPaht timeOffset");
 			System.err.println("such as : java -jar  WordCount.jar D://input/ 2");
