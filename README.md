@@ -111,10 +111,6 @@ Some tests and exercises in Java.
 * 原工程：component
 * 所在包：cn.itcast.storm.component
 
-# java-encrypt-decrypt
-
-Java加密与解密的艺术
-
 ## TODO
 
 * 解决编译告警
