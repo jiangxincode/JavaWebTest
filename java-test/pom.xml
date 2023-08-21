@@ -16,7 +16,7 @@
 
     <properties>
         <poi.version>5.2.3</poi.version>
-        <drools.version>8.42.0.Final</drools.version>
+        <drools.version>8.43.0.Final</drools.version>
     </properties>
 
     <dependencies>
