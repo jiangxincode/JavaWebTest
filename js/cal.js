@@ -1,3 +1,5 @@
+"use strict"
+
 window.onload = function() {
     Calculator.initCache();
     Calculator.initListeners();
@@ -306,7 +308,7 @@ var Calculator = (function() {
             cal.addEvent(document.getElementById(prefix + "show-bar"), "click", cal.listeners.toggleTypeBarListener);
             //为侧边栏下的li绑定切换类型事件
             var bar = document.getElementById(prefix + "type-bar");
-            lis = bar.getElementsByTagName("li");
+            var lis = bar.getElementsByTagName("li");
             var li;
             for (var i = 0, l = lis.length;i < l;++ i) {
                 li = lis[i];
