@@ -1,6 +1,6 @@
 package edu.jiangxin.pdfbox;
 
-import org.apache.pdfbox.io.RandomAccessBuffer;
+import org.apache.pdfbox.io.RandomAccessReadBuffer;
 import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.interactive.action.PDAction;
@@ -76,9 +76,9 @@ public class PdfBookmarksTest {
             return;
         }
         try (FileInputStream fis = new FileInputStream(file)) {
-            PDFParser parser = new PDFParser(new RandomAccessBuffer(fis));
+            PDFParser parser = new PDFParser(new RandomAccessReadBuffer(fis));
             parser.parse();
-            try (PDDocument document = parser.getPDDocument()) {
+            try (PDDocument document = parser.parse()) {
                 PdfBookmarksTest pdfBookmarksTest = new PdfBookmarksTest();
                 PDDocumentOutline pdDocumentOutline = document.getDocumentCatalog().getDocumentOutline();
                 if (pdDocumentOutline != null) {
@@ -99,9 +99,9 @@ public class PdfBookmarksTest {
             return;
         }
         try (FileInputStream fis = new FileInputStream(file)) {
-            PDFParser parser = new PDFParser(new RandomAccessBuffer(fis));
+            PDFParser parser = new PDFParser(new RandomAccessReadBuffer(fis));
             parser.parse();
-            try (PDDocument document = parser.getPDDocument()) {
+            try (PDDocument document = parser.parse()) {
                 PdfBookmarksTest pdfBookmarksTest = new PdfBookmarksTest();
                 PDDocumentOutline pdDocumentOutline = document.getDocumentCatalog().getDocumentOutline();
                 if (pdDocumentOutline != null) {

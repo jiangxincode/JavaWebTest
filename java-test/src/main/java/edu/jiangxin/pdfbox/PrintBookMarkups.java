@@ -1,9 +1,11 @@
 package edu.jiangxin.pdfbox;
 
+import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.cos.COSArray;
 import org.apache.pdfbox.cos.COSDictionary;
 import org.apache.pdfbox.cos.COSFloat;
 import org.apache.pdfbox.cos.COSName;
+import org.apache.pdfbox.io.RandomAccessReadBufferedFile;
 import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import org.apache.pdfbox.pdmodel.interactive.documentnavigation.destination.PDDestination;
 import org.apache.pdfbox.pdmodel.PDDocument;
@@ -22,7 +24,8 @@ import java.util.List;
 
 public class PrintBookMarkups {
     public static void main(String[] args) throws IOException {
-        PDDocument doc = PDDocument.load(new File("D:\\CS\\J2EE\\深入理解Java虚拟机 JVM高级特性与最佳实践 第三版-周志明.pdf"));
+        File file = new File("D:\\CS\\J2EE\\深入理解Java虚拟机 JVM高级特性与最佳实践 第三版-周志明.pdf");
+        PDDocument doc = Loader.loadPDF(new RandomAccessReadBufferedFile(file));
         PDPageTree pdPageTree = doc.getDocumentCatalog().getPages();
         for (PDPage page : pdPageTree) {
             List<PDAnnotation> pdAnnotations = page.getAnnotations();
