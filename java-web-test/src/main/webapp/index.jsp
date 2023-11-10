@@ -24,19 +24,6 @@
 <ol class="rounded-list">
     <li><a href="index.jsp">This index page</a></li>
     <li><a href="aloys.html">Static page demo(HTML+CSS+JS)</a></li>
-    <li><a href="">Struts</a>
-        <ol>
-            <li><a href="struts/getXMLAction">XML</a></li>
-            <li><a href="struts/getJsonAction">JSON</a></li>
-            <li><a href="struts/getJsonAction2">JSON2</a></li>
-            <li><a href="struts/ognlAction">OGNL</a></li>
-        </ol>
-    </li>
-    <li><a href="">Hibernate</a>
-        <ol>
-            <li><a href="struts/savePerson">Hibernate01</a></li>
-        </ol>
-    </li>
     <li><a href="rest/hello">Jersey demo 1</a></li>
     <li><a href="rest/contacts">Jersey demo 2</a></li>
     <li><a href="Click">历史访问量统计</a></li>

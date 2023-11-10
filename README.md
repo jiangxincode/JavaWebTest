@@ -116,8 +116,7 @@ Some tests and exercises in Java.
 * 解决编译告警
 * 解决运行告警
 * 将main方法改为单元测试
-* 升级到Jakarta EE最新版本，现在最大的问题是Struts2当前不支持Jakarta EE最新版本，现在有两个策略，一是等待Struts2升级，二是将Struts2替换为Spring MVC
-  * Struts2未来计划在7.X版本支持Jakarta EE: <https://issues.apache.org/jira/browse/WW-5141>
+* 升级到Jakarta EE最新版本
 * 统一使用UTF-8编码
 
 + 批量文件重命名，批量文件备份和恢复；

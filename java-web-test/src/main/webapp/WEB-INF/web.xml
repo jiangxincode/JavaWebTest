@@ -67,22 +67,6 @@
           <small-icon>images/smallicon.jpg</small-icon>
           <large-icon>images/largeicon.jpg</large-icon>
      </icon>
-     <filter>
-          <filter-name>struts2</filter-name>
-          <filter-class>org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter</filter-class>
-     </filter>
-     <filter-mapping>
-          <filter-name>struts2</filter-name>
-          <url-pattern>/struts/*</url-pattern>
-     </filter-mapping>
-     <!-- Some servlets have only serlvet elements and no servlet-mapping elements, so we cannot access these servlets through url,
-      This kind of servlet usually configures a load-on-startup sub-element in the servlet element, so that the container automatically loads these servlets at startup and calls the init() method.
-      Complete some global initialization work. -->
-     <servlet>
-          <servlet-name>JspSupportServlet</servlet-name>
-          <servlet-class>org.apache.struts2.views.JspSupportServlet</servlet-class>
-          <load-on-startup>1</load-on-startup>
-     </servlet>
      <servlet>
           <servlet-name>GetImageServlet</servlet-name>
           <servlet-class>com.shengsiyuan.imagetools.GetImageServlet</servlet-class>
