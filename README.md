@@ -116,7 +116,6 @@ Some tests and exercises in Java.
 * 解决编译告警
 * 解决运行告警
 * 将main方法改为单元测试
-* 升级到Jakarta EE最新版本
 * 统一使用UTF-8编码
 
 + 批量文件重命名，批量文件备份和恢复；

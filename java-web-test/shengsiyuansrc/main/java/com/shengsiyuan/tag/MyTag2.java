@@ -2,9 +2,9 @@ package com.shengsiyuan.tag;
 
 import java.util.Properties;
 
-import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.PageContext;
-import javax.servlet.jsp.tagext.TagSupport;
+import jakarta.servlet.jsp.JspException;
+import jakarta.servlet.jsp.PageContext;
+import jakarta.servlet.jsp.tagext.TagSupport;
 
 public class MyTag2 extends TagSupport
 {
