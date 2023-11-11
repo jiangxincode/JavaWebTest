@@ -18,6 +18,7 @@
         <poi.version>5.2.3</poi.version>
         <drools.version>8.44.0.Final</drools.version>
         <pdf.version>3.0.0</pdf.version>
+        <antlr.version>4.13.0</antlr.version>
     </properties>
 
     <dependencies>
@@ -98,12 +99,12 @@
         <dependency>
             <groupId>org.antlr</groupId>
             <artifactId>antlr4-runtime</artifactId>
-            <version>4.13.0</version>
+            <version>${antlr.version}</version>
         </dependency>
         <dependency>
             <groupId>org.antlr</groupId>
             <artifactId>antlr4</artifactId>
-            <version>4.13.0</version>
+            <version>${antlr.version}</version>
         </dependency>
         <dependency>
             <groupId>org.ow2.asm</groupId>
@@ -145,7 +146,7 @@
                 <plugin>
                     <groupId>org.antlr</groupId>
                     <artifactId>antlr4-maven-plugin</artifactId>
-                    <version>4.13.1</version>
+                    <version>${antlr.version}</version>
                     <executions>
                         <execution>
                             <id>antlr</id>

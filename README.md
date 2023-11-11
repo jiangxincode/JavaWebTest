@@ -6,13 +6,12 @@
 
 ## Deployment
 
-1. Install and config JDK(Test on jdk-8u321-windows-x64)
-2. Install and config Maven(Test on apache-maven-3.8.1)
-3. Install and config Tomcat(Test on apache-tomcat-8.5.82)
-4. Install and config MySQL(Test on mysql-5.7.19-linux-glibc2.12-x86_64 on Ubuntu 16.04)
-数据初始化脚本 `InitDbData.sql`
-
-5. Import this project from IDEA by maven format
+* Ubuntu 22.04 LTS
+* JDK: jdk-17_linux-x64_bin
+* Maven: apache-maven-3.8.1
+* Tomcat: apache-tomcat-10.1.9
+* MySQL: mysql-5.7.19-linux-glibc2.12-x86_64
+* 数据初始化脚本 `InitDbData.sql`
 
 ## 版本改动
 
