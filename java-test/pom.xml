@@ -17,7 +17,7 @@
     <properties>
         <poi.version>5.2.5</poi.version>
         <drools.version>9.44.0.Final</drools.version>
-        <pdf.version>3.0.0</pdf.version>
+        <pdf.version>3.0.1</pdf.version>
         <antlr.version>4.13.1</antlr.version>
     </properties>
 
