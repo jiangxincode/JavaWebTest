@@ -17,7 +17,6 @@
     <properties>
         <poi.version>5.2.5</poi.version>
         <drools.version>9.44.0.Final</drools.version>
-        <pdf.version>3.0.2</pdf.version>
         <antlr.version>4.13.1</antlr.version>
     </properties>
 
@@ -40,16 +39,6 @@
             <version>15.11.0</version>
             <scope>system</scope>
             <systemPath>${pom.basedir}/lib/aspose-words-15.11.0-jdk16.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.pdfbox</groupId>
-            <artifactId>pdfbox</artifactId>
-            <version>${pdf.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.pdfbox</groupId>
-            <artifactId>pdfbox-io</artifactId>
-            <version>${pdf.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
