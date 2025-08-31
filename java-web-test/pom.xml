@@ -16,7 +16,7 @@
      <packaging>war</packaging>
 
      <properties>
-          <jersey.version>3.1.7</jersey.version>
+          <jersey.version>3.1.11</jersey.version>
           <spring.version>6.1.20</spring.version>
           <hibernate.version>5.6.15.Final</hibernate.version>
      </properties>
