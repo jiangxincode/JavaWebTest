@@ -17,6 +17,8 @@ public class EncodingTest {
         System.out.println("System.getProperty(\"sun.stdout.encoding\") = " + System.getProperty("sun.stdout.encoding"));
         //这个是错误流的默认编码
         System.out.println("System.getProperty(\"sun.stderr.encoding\") = " + System.getProperty("sun.stderr.encoding"));
+        System.out.println("System.getProperty(\"stdout.encoding\") = " + System.getProperty("stdout.encoding"));
+        System.out.println("System.getProperty(\"stderr.encoding\") = " + System.getProperty("stderr.encoding"));
         //console默认编码
         if (System.console() != null) {
             System.out.println("System.console().charset()                  = " + System.console().charset());
