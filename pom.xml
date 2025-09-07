@@ -56,7 +56,7 @@
           <dependency>
                <groupId>org.apache.commons</groupId>
                <artifactId>commons-lang3</artifactId>
-               <version>3.14.0</version>
+               <version>3.18.0</version>
           </dependency>
      </dependencies>
 
@@ -80,7 +80,7 @@
                     <plugin>
                          <groupId>org.apache.maven.plugins</groupId>
                          <artifactId>maven-shade-plugin</artifactId>
-                         <version>3.5.1</version>
+                         <version>3.6.0</version>
                          <configuration>
                               <createDependencyReducedPom>false</createDependencyReducedPom>
                          </configuration>
