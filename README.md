@@ -7,11 +7,37 @@
 ## Deployment
 
 * Ubuntu 22.04 LTS
-* JDK: jdk-17_linux-x64_bin
-* Maven: apache-maven-3.8.1
-* Tomcat: apache-tomcat-10.1.9
-* MySQL: mysql-5.7.19-linux-glibc2.12-x86_64
+* JDK21
+* Tomcat 11
+* MySQL 5.7.19
 * 数据初始化脚本 `InitDbData.sql`
+
+## 常用maven命令备忘
+
+```shell
+mvn help:effective-pom -rf java-bigdata #打印生效的pom文件
+mvn dependency:tree -rf java-bigdata #打印依赖树
+mvn clean package -DskipTests #不执行测试用例，但编译测试用例类生成相应的class文件至target/test-classes下
+mvn clean package -D"maven.test.skip=true" #不执行测试用例，也不编译测试用例类
+```
+
+## TODO
+
+* 解决编译告警
+* 解决运行告警
+* 将main方法改为单元测试
+* 统一使用UTF-8编码
+
++ 批量文件重命名，批量文件备份和恢复；
++ 批量源代码文件注释删除；
++ 批量代码文件行数统计等等。
+
++ 增强系统鲁棒性
++ 随机身份证号码输出
++ 随机姓氏输出
++ 去除不必要的文档信息输出，如果必要，该用xml方式输出，便于扩展
++ Verify log4j related content.
++ Use the properties instead of xml to store password.
 
 ## 版本改动
 
@@ -109,30 +135,3 @@ Some tests and exercises in Java.
 
 * 原工程：component
 * 所在包：cn.itcast.storm.component
-
-## TODO
-
-* 解决编译告警
-* 解决运行告警
-* 将main方法改为单元测试
-* 统一使用UTF-8编码
-
-+ 批量文件重命名，批量文件备份和恢复；
-+ 批量源代码文件注释删除；
-+ 批量代码文件行数统计等等。
-
-+ 增强系统鲁棒性
-+ 随机身份证号码输出
-+ 随机姓氏输出
-+ 去除不必要的文档信息输出，如果必要，该用xml方式输出，便于扩展
-+ Verify log4j related content.
-+ Use the properties instead of xml to store password.
-
-## 常用maven命令备忘
-
-```shell
-mvn help:effective-pom -rf java-bigdata #打印生效的pom文件
-mvn dependency:tree -rf java-bigdata #打印依赖树
-mvn clean package -DskipTests #不执行测试用例，但编译测试用例类生成相应的class文件至target/test-classes下
-mvn clean package -D"maven.test.skip=true" #不执行测试用例，也不编译测试用例类
-```
