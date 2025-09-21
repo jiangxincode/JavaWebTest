@@ -1,0 +1,71 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Set up JDK
+        uses: actions/setup-java@v5
+        with:
+          java-version: 21
+          distribution: 'zulu'
+
+      - name: Start MySQL
+        run: sudo systemctl start mysql.service
+
+      - name: Create MySQL database
+        run: |
+          mysql --user=root --password=root < java-web-test/InitDbData.sql
+
+      - name: Replace config file
+        run: |
+          cp java-web-test/src/main/resources/javawebtest_ci.properties java-web-test/src/main/resources/javawebtest.properties
+
+      - name: Cache Maven packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+      - name: Build with Maven
+        run: |
+          mvn clean package
+
+      - name: Rename WAR file
+        run: |
+          set -x
+          CURRENT_DIR=$(pwd)
+          TARGET_DIR="$CURRENT_DIR/java-web-test/target"
+          ORIGINAL_WAR_FILE=$(ls -al java-web-test/target/java-web-test-*.war | awk '{print $9}')
+          cp "$ORIGINAL_WAR_FILE" "java-web-test/target/java-web-test.war"
+
+      - name: Download and Extract Tomcat
+        run: |
+          wget https://dlcdn.apache.org/tomcat/tomcat-11/v11.0.11/bin/apache-tomcat-11.0.11.tar.gz
+          tar -xzf apache-tomcat-11.0.11.tar.gz
+          mv apache-tomcat-11.0.11 tomcat
+
+      - name: Deploy WAR to Tomcat
+        run: |
+          cp java-web-test/target/java-web-test.war tomcat/webapps/
+          nohup tomcat/bin/catalina.sh start &
+          sleep 30
+
+      - name: Test Home Page Accessibility
+        run: |
+          STATUS_CODE=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8080/java-web-test/index.jsp)
+          if [ "$STATUS_CODE" -ne 200 ]; then
+            echo "Test Home Page Accessibility failed, state code: $STATUS_CODE"
+            exit 1
+          fi
+          echo "Test Home Page Accessibility successfully, state code: $STATUS_CODE"
