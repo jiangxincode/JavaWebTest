@@ -14,7 +14,7 @@ public class Crawler {
 	private static int m_maxThreads = 4;
 
 	public static void main(String[] args) {
-		String testUrl = "http://124.222.145.48:8080/JavaWebTest";
+		String testUrl = "https://news.baidu.com/";
 		Crawl(testUrl, Crawler.class.getResource("/").getPath() + "Crawler/");
 		System.out.println(HttpUtility.GetContent(HttpUtility.GetEntity(testUrl)));
 	}

@@ -3,7 +3,7 @@
 <hibernate-configuration>
 	<session-factory>
 
-		<property name="hibernate.connection.url">jdbc:mysql://124.222.145.48:3306/JavaWebTest?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false</property>
+		<property name="hibernate.connection.url">${jdbc.url}</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">test</property>
 		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
