@@ -15,6 +15,8 @@
           <module>java-test</module>
           <module>java-bigdata</module>
           <module>java-path-demo</module>
+          <module>search-engine</module>
+          <module>kaboom-zhihu</module>
      </modules>
 
      <properties>

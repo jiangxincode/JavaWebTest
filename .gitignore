@@ -11,9 +11,14 @@ target/
 *.idea/
 *.iml
 
+.vscode/
+
+tmp/
+
 # VIM
 *.swp
 
+*.idx
 *.log
 
 dependency-reduced-pom.xml
