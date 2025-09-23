@@ -1,7 +1,5 @@
 # SearchEngine
 
-[![Build and Release](https://github.com/jiangxincode/SearchEngine/actions/workflows/BuildAndRelease.yml/badge.svg)](https://github.com/jiangxincode/SearchEngine/actions/workflows/BuildAndRelease.yml)
-
 ## Authors
 
 + JiangXin jiangxinnju@163.com

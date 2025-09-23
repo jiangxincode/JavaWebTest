@@ -1,7 +1,5 @@
 # KaboomZhihu
 
-[![Build and Release](https://github.com/jiangxincode/KaboomZhihu/actions/workflows/BuildAndRelease.yml/badge.svg)](https://github.com/jiangxincode/KaboomZhihu/actions/workflows/BuildAndRelease.yml)
-
 ## Authors and Contributors
 
 + JiangXin jiangxinnju@163.com
