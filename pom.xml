@@ -17,6 +17,7 @@
          <module>java-path-demo</module>
          <module>java-encrypt-decrypt</module>
          <module>java-web-test</module>
+         <module>front-page</module>
      </modules>
 
      <properties>
