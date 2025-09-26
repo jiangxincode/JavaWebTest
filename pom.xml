@@ -19,6 +19,7 @@
          <module>java-web-test</module>
          <module>front-page</module>
          <module>yuqiaokeji</module>
+         <module>java-design-pattern</module>
      </modules>
 
      <properties>
