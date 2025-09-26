@@ -1,0 +1,25 @@
+# Maven project
+target/
+
+# Eclipse project
+.settings/
+.classpath
+
+
+# IDEA project
+*.idea/
+*.iml
+
+# VS Code project
+.vscode/
+
+# VIM
+*.swp
+
+# Others
+tmp/
+*.idx
+*.log
+.checkstyle
+.springBeans
+dependency-reduced-pom.xml
