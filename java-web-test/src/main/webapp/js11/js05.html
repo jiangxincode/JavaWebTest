@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>New Document</title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<script type="text/javascript">
+	//工厂方式创建对象
+
+	/*
+	 function createObject()
+	 {
+	 var object = new Object();
+
+	 object.username = "zhangsan";
+	 object.password = "123";
+
+	 object.get = function()
+	 {
+	 alert(this.username + ", " + this.password);
+	 }
+
+	 return object;
+	 }
+
+	 var object1 = createObject();
+	 var object2 = createObject();
+
+	 object1.get();
+	 */
+
+	/*
+	 function createObject(username, password)
+	 {
+	 var object = new Object();
+
+	 object.username = username;
+	 object.password = password;
+
+	 object.get = function()
+	 {
+	 alert(this.username + ", " + this.password);
+	 }
+
+	 return object;
+	 }
+
+	 var object1 = createObject("zhangsan", "123");
+	 object1.get();
+	 */
+
+	function get() {
+		alert(this.username + ", " + this.password);
+	}
+
+	function createObject(username, password) {
+		var object = new Object();
+
+		object.username = username;
+		object.password = password;
+
+		object.get = get;
+
+		return object;
+	}
+
+	var object = createObject("zhangsan", "123");
+	var object2 = createObject("lisi", "456");
+
+	object.get();
+	object2.get();
+</script>
+</head>
+<body>
+</body>
+</html>

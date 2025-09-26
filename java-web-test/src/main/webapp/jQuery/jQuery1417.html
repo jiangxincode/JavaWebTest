@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 13px;
+	line-height: 130%;
+	padding: 60px;
+}
+
+#content {
+	width: 220px;
+	border: 1px solid #0050D0;
+	background: #96E555
+}
+
+span {
+	width: 200px;
+	margin: 10px;
+	background: #666666;
+	cursor: pointer;
+	color: white;
+	display: block;
+}
+
+p {
+	width: 200px;
+	background: #888;
+	color: white;
+	height: 16px;
+}
+</style>
+<script type="text/javascript" src="jquery-1.4.4.js"></script>
+<script type="text/javascript">
+    var method1 = function() {
+	alert("div clicked");
+
+    }
+
+    var method2 = function(event) {
+	alert("span clicked");
+
+	event.stopPropogation();
+	event.preventDefault();
+
+    }
+
+    var method3 = function() {
+	alert("body clicked");
+
+    }
+</script>
+</head>
+<body onclick="method3();">
+	<div id="content" onclick="method1();">
+		外层div元素 <span onclick="method2(event);">内层span元素</span> 外层div元素
+	</div>
+	<div id="msg"></div>
+</body>
+</html>

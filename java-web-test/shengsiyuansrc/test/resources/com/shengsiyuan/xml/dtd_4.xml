@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE NEWSPAPER SYSTEM "dtd_3.dtd">
+<NEWSPAPER>
+	<ARTICLE AUTHOR="zhanglong" DATE="2010-12-12" EDITOR="helloworld">
+		<HEADLINE>hello</HEADLINE>
+		<BYLINE/>
+		<LEAD/>
+		<BODY/>
+		<NOTES/>
+	</ARTICLE>
+	<ARTICLE AUTHOR="zhanglong" DATE="2010-12-12" EDITOR="helloworld">
+		<HEADLINE>hello</HEADLINE>
+		<BYLINE/>
+		<LEAD/>
+		<BODY/>
+		<NOTES/>
+	</ARTICLE>
+</NEWSPAPER>

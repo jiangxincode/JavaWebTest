@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>免费MP3/flv音乐列表播放器功能,免费MP3播放器,MP3播放器列表播放,flv音乐列表播放器</title>
+<meta name="keywords" content="免费MP3播放器,MP3播放器列表播放,flv音乐列表播放器" />
+<meta name="description" content="免费MP3/flv音乐列表播放器功能,1.支持FlashVars调用html代码中的参数2.支持mp3音乐格式和flv格式文件播放3.支持音量控制(默认为75)4.显示视频总时长和当前播放进度的位置时间5.支持xml,asp,php,aspx,jsp程序列表,免费MP3播放器,MP3播放器列表播放,flv音乐列表播放器" />
+<link rel="shortcut icon" href="/favicon.ico" >
+<link rel="stylesheet" type="text/css" href="http://www.52player.com/Demos/Images/common.css">
+<style type="text/css">
+<!--
+body { background:#ffffff; }
+.mark{color:#FF5A15;}
+.blue{color:blue;}
+.green{color:green;}
+.red{color:red;}
+.cGray,a.cGray:link,a.cGray:visited{ color:#6D6359; }
+.cOrange2,a.cOrange2:link,a.cOrange2:visited{ color:#ce0400; }
+.cOrange3,a.cOrange3:link,a.cOrange3:visited{ color:#ce0400;text-decoration:underline; }
+a.cOrange3:hover{  color:#6D6359; }
+.f12,h5{font-size:12px; font-weight:normal;}
+.cGreen2,a.cGreen2:link,a.cGreen2:visited{ color:#336600; }
+.en {font-family:Verdana, Arial, Helvetica, sans-serif,"宋体"; }
+
+div#code {background:#ffffff;}
+fieldset{border:1px #cccccc solid;padding:10px;margin-bottom:10px;display:block; font-family:Verdana, Arial, Helvetica, sans-serif;line-height:28px; text-align:left; background:#ffffff;}
+fieldset dl dt { line-height:28px;font-weight:bold; display:inline;}
+fieldset dl dd { line-height:28px; display:inline;}
+.cOrange21 {color:#ce0400; }
+.f121 {font-size:12px; font-weight:normal;}
+textarea { font-size:12px;#cccccc; line-height:24px; font-family:Verdana, Arial, Helvetica, sans-serif; background:#efefef; border:1px #666 solid;}
+div.maincontent { width:980px;margin:0 auto;}
+
+ul.downurllist { padding-left:28px;}
+ul.downurllist li a,ul.downurllist li a:link,ul.downurllist li a:visited { color:#ffffff; height:34px;line-height:34px; display:block;}
+ul.downurllist li { width:118px;margin-right:10px;float:left; height:34px; line-height:34px; font-weight:bold; font-size:14px; color:#ffffff; text-align:center;background:url(http://www.52player.com/Images/btn_down.gif) no-repeat center center;margin-top:10px;} 
+ul.downurllist li.demo { width:118px;margin-right:10px;float:left; height:34px; line-height:34px; font-weight:bold; font-size:14px; color:#ffffff; text-align:center;background:url(http://www.52player.com/Images/btn_demo.gif) no-repeat center center;margin-top:10px;} 
+ul.downurllist li.demo a,ul.downurllist li.demo a:link,ul.downurllist li.demo a:visited { color:#975b02;}
+-->
+</style>
+</head>
+<body>
+<!--header/begin-->
+<div id="header">
+<div class="subnav">
+<p class="sublogo"><a href="http://www.52player.com/" target="_blank"><img src="http://www.52player.com/Demos/Images/Culogo.gif" alt="进入我爱播放器官方网站www.52player.com" width="160" height="40" border="0" /></a></p>
+<p class="sublink"><a href="http://www.52player.com/Top/" target="_blank" >下载排行榜</a> <a href="http://www.52player.com/WebPlayer/">网页播放器</a> <a href="http://www.52player.com/MusicPlayer/">音乐播放器</a> <a href="http://www.52player.com/VideoPlayer/">视频播放器</a></p>
+</div>
+</div>
+<!--header/end-->
+
+<!--maincontent/begin-->
+<div class="maincontent">
+<div class="cuplayer" style="margin-top:50px;">
+<fieldset>
+<legend>
+<h4>播放器演示(请在IIS下或其它网站环境下测试)</h4></legend>
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="360" height="26">
+  <param name="movie" value="player_S.swf" />
+  <param name="quality" value="high" />
+  <param name="allowScriptAccess" value="always" />
+  <param name="wmode" value="transparent">
+   <embed src="player_S.swf" quality="high" type="application/x-shockwave-flash" WMODE="transparent" width="360" height="26" pluginspage="http://www.macromedia.com/go/getflashplayer" allowScriptAccess="always" />
+</object>
+<h1>免费MP3/flv音乐列表播放器</h1>
+
+<ul class="downurllist">
+<li class="demo"><a href="http://www.52player.com/Demos/14MP3ListPlayer/" target="_blank">官方演示</a></li>
+<li><a href="http://www.52player.com/plus/download.php?open=2&id=14&uhash=e1c5338b8f41c4084fd61451" target="_blank">官方下载</a></li>
+</ul>
+</fieldset>
+</div>
+
+<!--line-->
+<div style="margin-top:50px;">
+<fieldset>
+<legend><h4>播放器介绍</h4></legend>
+  <p> 免费MP3/flv音乐列表播放器功能(<span class="cRed2">提示：请在IIS下或其它网站环境下测试</span>)：</p>
+  <p> 1.支持FlashVars调用html代码中的参数；<br />
+    2.支持mp3音乐格式和flv格式文件播放；<br />
+    3.支持音量控制(默认为75)；<br />
+    4.显示视频总时长和当前播放进度的位置时间；<br />
+    5.支持xml,asp,php,aspx,jsp程序列表；<br />
+    6.支持列表自动连播；<br />
+    7.支持歌曲名称滚动显示；<br />
+    8.支持ASP,PHP,.NET等程序，可以实现后台管理视频的功能；<br />
+    9.可以与动易、织梦、帝国等各类CMS系统结合，实现与此类CMS系统后台的融合；<br />
+    10.代码简洁明了，界面美观，适合各类网站使用。</p>
+</fieldset>
+</div>
+<!--line-->
+<div style="margin-top:50px;">
+<fieldset>
+<legend><h4>播放器使用示例1(调用默认文件地址)</h4></legend>
+<textarea cols="95" rows="10" id="code4"  name="89525.com">
+<!--我爱播放器(www.52player.com)代码开始-->
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="360" height="26">
+  <param name="movie" value="player_S.swf" />
+  <param name="quality" value="high" />
+  <param name="allowScriptAccess" value="always" />
+  <param name="wmode" value="transparent">
+   <embed src="player_S.swf" quality="high" type="application/x-shockwave-flash" WMODE="transparent" width="360" height="26" pluginspage="http://www.macromedia.com/go/getflashplayer" allowScriptAccess="always" />
+</object>
+<!--我爱播放器(www.52player.com)代码结束-->
+</textarea>
+</fieldset>
+</div>
+<!--line-->
+<div style="margin-top:50px;">
+<fieldset>
+<legend><h4>播放器使用示例2(调用指定xml,asp,php,aspx,jsp列表地址)</h4></legend>
+<p>参数写法：<span class="b"> <span class="cRed2">player_S.swf?listfile=mylist.xml</span></span>  <br />
+  参数写法：<span class="b"> <span class="cRed2">player_S.swf?listfile=mylist.php</span></span><br />
+  参数写法：<span class="b"> <span class="cRed2">player_S.swf?listfile=mylist.asp</span></span></p>
+<p>参数写法：<span class="b"> <span class="cRed2">player_S.swf?listfile=mylist.aspx</span></span><br />
+  参数写法：<span class="b"> <span class="cRed2">player_S.swf?listfile=mylist.jsp<br />
+  注意的，以上列表的内容结构，请参见player_S.xml，与它是一样的<br />
+    </span></span>
+  <textarea cols="95" rows="10" id="code4"  name="89525.com">
+<!--我爱播放器(www.52player.com)代码开始-->
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="360" height="26">
+  <param name="movie" value="player_S.swf?listfile=mylist.php" />
+  <param name="quality" value="high" />
+  <param name="allowScriptAccess" value="always" />
+  <param name="wmode" value="transparent">
+   <embed src="player_S.swf?listfile=mylist.php" quality="high" type="application/x-shockwave-flash" WMODE="transparent" width="360" height="26" pluginspage="http://www.macromedia.com/go/getflashplayer" allowScriptAccess="always" />
+</object>
+<!--我爱播放器(www.52player.com)代码结束-->
+  </textarea>
+</p>
+</fieldset>
+</div>
+<!--line-->
+<div style="margin-top:50px;">
+<fieldset>
+<legend><h4>播放器下载</h4></legend>
+<p><ul class="downurllist">
+<li class="demo"><a href="http://www.52player.com/Demos/14MP3ListPlayer/" target="_blank">官方演示</a></li>
+<li><a href="http://www.52player.com/plus/download.php?open=2&id=14&uhash=e1c5338b8f41c4084fd61451" target="_blank">官方下载</a></li>
+</ul>
+</p>
+</fieldset>
+</div>
+
+
+
+
+
+</div>
+<!--maincontent/end-->
+
+
+
+
+<div id="footer" class="clearfix">
+
+<div class="copyright">2010-2013(C) <strong><a href="http://www.52player.com/" target="_blank" title="我爱播放器" class="cRed">www.52player.com</a></strong> 我爱播放器 Powered by <strong>iWebPlayer</strong> Center  </div>
+<div style="display:none;">
+			<script src="http://s20.cnzz.com/stat.php?id=3992412&web_id=3992412&show=pic" 
+			language="JavaScript"></script>
+  </div>
+</div>
+</body>
+</html>

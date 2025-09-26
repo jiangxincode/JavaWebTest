@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>New Document</title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="jquery-1.4.4.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+	var pElement = document.getElementsByTagName("p")[0];
+
+	//将DOM对象转换为jQuery对象
+
+	var pElementjQuery = $(pElement);
+
+	//alert("DOM对象结果：" + pElement.innerHTML);
+	//alert("jQuery对象结果：" + pElementjQuery.html());
+
+	var cm = $("#clickMe"); //获得的是jQuery对象
+
+	// jQuery对象转换为DOM对象(第一种方式)
+
+	var t = cm[0]; // t是DOM对象
+	alert(t.innerHTML);
+
+	// jQuery对象转换为DOM对象(第二种方式)
+
+	var s = cm.get(0);
+
+	alert(s.innerHTML); //s是DOM对象
+
+    });
+</script>
+</head>
+<body>
+	<p id="clickMe">点击我</p>
+</body>
+</html>
