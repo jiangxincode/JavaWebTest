@@ -14,6 +14,7 @@
          <module>search-engine</module>
          <module>java-bigdata</module>
          <module>java-test</module>
+         <module>java-path-demo</module>
      </modules>
 
      <properties>
