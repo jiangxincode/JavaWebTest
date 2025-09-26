@@ -10,6 +10,7 @@
      <packaging>pom</packaging>
 
      <modules>
+         <module>kaboom-zhihu</module>
      </modules>
 
      <properties>
