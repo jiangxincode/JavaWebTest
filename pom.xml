@@ -18,6 +18,7 @@
          <module>java-encrypt-decrypt</module>
          <module>java-web-test</module>
          <module>front-page</module>
+         <module>yuqiaokeji</module>
      </modules>
 
      <properties>

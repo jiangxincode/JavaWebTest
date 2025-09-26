@@ -1,4 +1,4 @@
-package edu.jiangxin.xml;
+package com.yuqiaokeji.helloj2ee.xml;
 
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
