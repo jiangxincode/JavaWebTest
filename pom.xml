@@ -11,6 +11,7 @@
 
      <modules>
          <module>kaboom-zhihu</module>
+         <module>search-engine</module>
      </modules>
 
      <properties>
