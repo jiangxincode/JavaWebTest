@@ -12,6 +12,7 @@
      <modules>
          <module>kaboom-zhihu</module>
          <module>search-engine</module>
+         <module>java-bigdata</module>
      </modules>
 
      <properties>
