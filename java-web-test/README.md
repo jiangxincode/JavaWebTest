@@ -6,15 +6,6 @@
 * MySQL 5.7.19
 * 数据初始化脚本 `InitDbData.sql`
 
-## 常用maven命令备忘
-
-```shell
-mvn help:effective-pom -rf java-bigdata #打印生效的pom文件
-mvn dependency:tree -rf java-bigdata #打印依赖树
-mvn clean package -DskipTests #不执行测试用例，但编译测试用例类生成相应的class文件至target/test-classes下
-mvn clean package -D"maven.test.skip=true" #不执行测试用例，也不编译测试用例类
-```
-
 ## TODO
 
 * 解决编译告警
