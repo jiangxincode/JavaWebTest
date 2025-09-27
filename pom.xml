@@ -23,6 +23,7 @@
          <module>shengsiyuan-java</module>
          <module>shengsiyuan-java-web</module>
          <module>scala-test</module>
+         <module>groovy-test</module>
      </modules>
 
      <properties>
