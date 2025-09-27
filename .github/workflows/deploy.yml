@@ -44,10 +44,10 @@ jobs:
       - name: Rename WAR file
         run: |
           set -x
-          CURRENT_DIR=$(pwd)
-          TARGET_DIR="$CURRENT_DIR/java-web-test/target"
           ORIGINAL_WAR_FILE=$(ls -al java-web-test/target/java-web-test-*.war | awk '{print $9}')
           cp "$ORIGINAL_WAR_FILE" "java-web-test/target/java-web-test.war"
+          ORIGINAL_WAR_FILE=$(ls -al front-end/target/front-end-*.war | awk '{print $9}')
+          cp "$ORIGINAL_WAR_FILE" "front-end/target/front-end.war"
 
       - name: Download and Extract Tomcat
         run: |
@@ -58,6 +58,7 @@ jobs:
       - name: Deploy WAR to Tomcat
         run: |
           cp java-web-test/target/java-web-test.war tomcat/webapps/
+          cp front-end/target/front-end.war tomcat/webapps/
           nohup tomcat/bin/catalina.sh start &
           sleep 30
 
@@ -65,7 +66,14 @@ jobs:
         run: |
           STATUS_CODE=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8080/java-web-test/index.jsp)
           if [ "$STATUS_CODE" -ne 200 ]; then
-            echo "Test Home Page Accessibility failed, state code: $STATUS_CODE"
+            echo "Test java-web-test Home Page Accessibility failed, state code: $STATUS_CODE"
             exit 1
           fi
-          echo "Test Home Page Accessibility successfully, state code: $STATUS_CODE"
+          echo "Test java-web-test Home Page Accessibility successfully, state code: $STATUS_CODE"
+          
+          STATUS_CODE=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8080/front-end/index.html)
+          if [ "$STATUS_CODE" -ne 200 ]; then
+            echo "Test front-end Home Page Accessibility failed, state code: $STATUS_CODE"
+            exit 1
+          fi
+          echo "Test front-end Home Page Accessibility successfully, state code: $STATUS_CODE"

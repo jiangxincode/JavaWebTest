@@ -12,7 +12,7 @@
 
     <packaging>war</packaging>
 
-    <artifactId>front-page</artifactId>
+    <artifactId>front-end</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
      <build>

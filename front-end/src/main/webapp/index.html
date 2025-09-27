@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8" %>
 <%
-    String path = request.getContextPath();
-    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
+String path = request.getContextPath();
+String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -20,13 +20,8 @@
 
 <body>
 <h1>Some Java Web Examples</h1>
-<ol>
-    <li><a href="index.jsp">This index page</a></li>
-    <li><a href="rest/hello">Jersey demo 1</a></li>
-    <li><a href="rest/contacts">Jersey demo 2</a></li>
-    <li><a href="Click">历史访问量统计</a></li>
-    <li><a href="BookAdmin">数据库应用</a></li>
-    <li><a href="JSP/MongoDB/mongodb.jsp">MongoDB连接池</a></li>
+<ol class="rounded-list">
+    <li><a href="aloys.html">Static page demo(HTML+CSS+JS)</a></li>
 </ol>
 </body>
 </html>
