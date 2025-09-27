@@ -55,16 +55,6 @@
              <version>2.2.0</version>
          </dependency>
           <dependency>
-               <groupId>com.fasterxml.jackson.core</groupId>
-               <artifactId>jackson-core</artifactId>
-               <version>${jackson.version}</version>
-          </dependency>
-          <dependency>
-               <groupId>com.fasterxml.jackson.core</groupId>
-               <artifactId>jackson-databind</artifactId>
-               <version>${jackson.version}</version>
-          </dependency>
-          <dependency>
                <groupId>org.json</groupId>
                <artifactId>json</artifactId>
                <version>20250517</version>
@@ -78,12 +68,6 @@
                <groupId>org.mongodb</groupId>
                <artifactId>mongo-java-driver</artifactId>
                <version>3.12.14</version>
-          </dependency>
-          <!-- https://mvnrepository.com/artifact/org.mvel/mvel2 -->
-          <dependency>
-               <groupId>org.mvel</groupId>
-               <artifactId>mvel2</artifactId>
-               <version>2.5.2.Final</version>
           </dependency>
           <dependency>
                <groupId>com.oracle.database.jdbc</groupId>
@@ -157,11 +141,6 @@
                <groupId>org.hibernate</groupId>
                <artifactId>hibernate-ehcache</artifactId>
                <version>${hibernate.version}</version>
-          </dependency>
-          <dependency>
-               <groupId>org.jsoup</groupId>
-               <artifactId>jsoup</artifactId>
-               <version>1.21.2</version>
           </dependency>
           <dependency>
                <groupId>net.sourceforge.jchardet</groupId>
