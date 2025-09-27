@@ -20,6 +20,8 @@
          <module>front-page</module>
          <module>yuqiaokeji</module>
          <module>java-design-pattern</module>
+         <module>shengsiyuan-java</module>
+         <module>shengsiyuan-java-web</module>
      </modules>
 
      <properties>

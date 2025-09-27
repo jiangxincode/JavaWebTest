@@ -95,10 +95,4 @@ mvn clean package -D"maven.test.skip=true" #不执行测试用例，也不编译
 * 控制层在filter，显示层配置在*.xml，逻辑层还是需要servlet来完成
 * eclipse快捷键
 
-## 圣思园
-
-shengsiyuansrc/
-
-目录结构有调整
-
 Some tests and exercises in Java.
