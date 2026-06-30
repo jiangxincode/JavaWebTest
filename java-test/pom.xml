@@ -18,7 +18,7 @@
         <poi.version>5.5.1</poi.version>
         <drools.version>10.1.0</drools.version>
         <antlr.version>4.13.2</antlr.version>
-        <jackson.version>2.21.1</jackson.version>
+        <jackson.version>2.22.0</jackson.version>
     </properties>
 
     <dependencies>
